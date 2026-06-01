@@ -1,6 +1,29 @@
+# Dependency and build directories
 node_modules/
 dist/
-*.generated.py
-docy/
-lib/generated/
 .next/
+out/
+build/
+
+# Generated Prisma Client and database migrations
+**/lib/generated/
+**/prisma/migrations/
+
+# Agent templates, workflows, and rules
+.agents/
+AGENTS.md
+CLAUDE.md
+
+# Project configurations and metadata
+*package.json
+*tsconfig.json
+postcss.config.mjs
+eslint.config.mjs
+next.config.ts
+next-env.d.ts
+prisma.config.ts
+
+# Default assets and images
+**/public/*.svg
+**/public/*.png
+**/public/*.ico
