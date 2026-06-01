@@ -31,3 +31,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+
+/lib/generated/prisma
+/docy
+.agent_cache
+graphify-out/cache/
+graphify-out/manifest.json
+graphify-out/cost.json
+
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json

@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.generated.py
+docy/
+lib/generated/
+.next/
