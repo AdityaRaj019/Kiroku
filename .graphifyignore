@@ -27,3 +27,6 @@ prisma.config.ts
 **/public/*.svg
 **/public/*.png
 **/public/*.ico
+
+# Plan folder
+plan/
