@@ -16,7 +16,7 @@
       "label": "app",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L11",
+      "source_location": "L17",
       "id": "src_index_app",
       "community": 31,
       "norm_label": "app"
@@ -25,28 +25,379 @@
       "label": "server",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L12",
+      "source_location": "L18",
       "id": "src_index_server",
       "community": 31,
       "norm_label": "server"
     },
     {
-      "label": "prisma",
+      "label": "globalLimiter",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L22",
-      "id": "src_index_prisma",
+      "source_location": "L30",
+      "id": "src_index_globallimiter",
       "community": 31,
-      "norm_label": "prisma"
+      "norm_label": "globallimiter"
+    },
+    {
+      "label": "authLimiter",
+      "file_type": "code",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L40",
+      "id": "src_index_authlimiter",
+      "community": 31,
+      "norm_label": "authlimiter"
     },
     {
       "label": "io",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L25",
+      "source_location": "L89",
       "id": "src_index_io",
       "community": 31,
       "norm_label": "io"
+    },
+    {
+      "label": "auth.middleware.ts",
+      "file_type": "code",
+      "source_file": "backend/src/middlewares/auth.middleware.ts",
+      "source_location": "L1",
+      "id": "backend_src_middlewares_auth_middleware_ts",
+      "community": 0,
+      "norm_label": "auth.middleware.ts"
+    },
+    {
+      "label": "Request",
+      "file_type": "code",
+      "source_file": "backend/src/middlewares/auth.middleware.ts",
+      "source_location": "L8",
+      "id": "middlewares_auth_middleware_request",
+      "community": 0,
+      "norm_label": "request"
+    },
+    {
+      "label": "authMiddleware()",
+      "file_type": "code",
+      "source_file": "backend/src/middlewares/auth.middleware.ts",
+      "source_location": "L26",
+      "id": "middlewares_auth_middleware_authmiddleware",
+      "community": 0,
+      "norm_label": "authmiddleware()"
+    },
+    {
+      "label": "error.middleware.ts",
+      "file_type": "code",
+      "source_file": "backend/src/middlewares/error.middleware.ts",
+      "source_location": "L1",
+      "id": "backend_src_middlewares_error_middleware_ts",
+      "community": 31,
+      "norm_label": "error.middleware.ts"
+    },
+    {
+      "label": "AppError",
+      "file_type": "code",
+      "source_file": "backend/src/middlewares/error.middleware.ts",
+      "source_location": "L7",
+      "id": "middlewares_error_middleware_apperror",
+      "community": 31,
+      "norm_label": "apperror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "backend/src/middlewares/error.middleware.ts",
+      "source_location": "L8",
+      "id": "middlewares_error_middleware_apperror_constructor",
+      "community": 31,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": "errorMiddleware()",
+      "file_type": "code",
+      "source_file": "backend/src/middlewares/error.middleware.ts",
+      "source_location": "L25",
+      "id": "middlewares_error_middleware_errormiddleware",
+      "community": 31,
+      "norm_label": "errormiddleware()"
+    },
+    {
+      "label": "validation.middleware.ts",
+      "file_type": "code",
+      "source_file": "backend/src/middlewares/validation.middleware.ts",
+      "source_location": "L1",
+      "id": "backend_src_middlewares_validation_middleware_ts",
+      "community": 0,
+      "norm_label": "validation.middleware.ts"
+    },
+    {
+      "label": "validate()",
+      "file_type": "code",
+      "source_file": "backend/src/middlewares/validation.middleware.ts",
+      "source_location": "L11",
+      "id": "middlewares_validation_middleware_validate",
+      "community": 0,
+      "norm_label": "validate()"
+    },
+    {
+      "label": "auth.controller.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_auth_auth_controller_ts",
+      "community": 0,
+      "norm_label": "auth.controller.ts"
+    },
+    {
+      "label": "setRefreshCookie()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L26",
+      "id": "auth_auth_controller_setrefreshcookie",
+      "community": 0,
+      "norm_label": "setrefreshcookie()"
+    },
+    {
+      "label": "clearRefreshCookie()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L37",
+      "id": "auth_auth_controller_clearrefreshcookie",
+      "community": 0,
+      "norm_label": "clearrefreshcookie()"
+    },
+    {
+      "label": "register()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L54",
+      "id": "auth_auth_controller_register",
+      "community": 0,
+      "norm_label": "register()"
+    },
+    {
+      "label": "login()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L107",
+      "id": "auth_auth_controller_login",
+      "community": 0,
+      "norm_label": "login()"
+    },
+    {
+      "label": "refresh()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L168",
+      "id": "auth_auth_controller_refresh",
+      "community": 0,
+      "norm_label": "refresh()"
+    },
+    {
+      "label": "logout()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L240",
+      "id": "auth_auth_controller_logout",
+      "community": 0,
+      "norm_label": "logout()"
+    },
+    {
+      "label": "profile()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L269",
+      "id": "auth_auth_controller_profile",
+      "community": 0,
+      "norm_label": "profile()"
+    },
+    {
+      "label": "auth.routes.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_auth_auth_routes_ts",
+      "community": 0,
+      "norm_label": "auth.routes.ts"
+    },
+    {
+      "label": "authRouter",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L7",
+      "id": "auth_auth_routes_authrouter",
+      "community": 31,
+      "norm_label": "authrouter"
+    },
+    {
+      "label": "auth.schema.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.schema.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_auth_auth_schema_ts",
+      "community": 0,
+      "norm_label": "auth.schema.ts"
+    },
+    {
+      "label": "registerSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.schema.ts",
+      "source_location": "L5",
+      "id": "auth_auth_schema_registerschema",
+      "community": 0,
+      "norm_label": "registerschema"
+    },
+    {
+      "label": "RegisterInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.schema.ts",
+      "source_location": "L28",
+      "id": "auth_auth_schema_registerinput",
+      "community": 0,
+      "norm_label": "registerinput"
+    },
+    {
+      "label": "loginSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.schema.ts",
+      "source_location": "L32",
+      "id": "auth_auth_schema_loginschema",
+      "community": 0,
+      "norm_label": "loginschema"
+    },
+    {
+      "label": "LoginInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/auth/auth.schema.ts",
+      "source_location": "L43",
+      "id": "auth_auth_schema_logininput",
+      "community": 0,
+      "norm_label": "logininput"
+    },
+    {
+      "label": "crypto.ts",
+      "file_type": "code",
+      "source_file": "backend/src/utils/crypto.ts",
+      "source_location": "L1",
+      "id": "backend_src_utils_crypto_ts",
+      "community": 0,
+      "norm_label": "crypto.ts"
+    },
+    {
+      "label": "hashPassword()",
+      "file_type": "code",
+      "source_file": "backend/src/utils/crypto.ts",
+      "source_location": "L16",
+      "id": "utils_crypto_hashpassword",
+      "community": 0,
+      "norm_label": "hashpassword()"
+    },
+    {
+      "label": "comparePassword()",
+      "file_type": "code",
+      "source_file": "backend/src/utils/crypto.ts",
+      "source_location": "L24",
+      "id": "utils_crypto_comparepassword",
+      "community": 0,
+      "norm_label": "comparepassword()"
+    },
+    {
+      "label": "hashRefreshToken()",
+      "file_type": "code",
+      "source_file": "backend/src/utils/crypto.ts",
+      "source_location": "L37",
+      "id": "utils_crypto_hashrefreshtoken",
+      "community": 0,
+      "norm_label": "hashrefreshtoken()"
+    },
+    {
+      "label": "jwt.ts",
+      "file_type": "code",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L1",
+      "id": "backend_src_utils_jwt_ts",
+      "community": 0,
+      "norm_label": "jwt.ts"
+    },
+    {
+      "label": "TokenPayload",
+      "file_type": "code",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L6",
+      "id": "utils_jwt_tokenpayload",
+      "community": 0,
+      "norm_label": "tokenpayload"
+    },
+    {
+      "label": "getSecret()",
+      "file_type": "code",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L19",
+      "id": "utils_jwt_getsecret",
+      "community": 0,
+      "norm_label": "getsecret()"
+    },
+    {
+      "label": "generateAccessToken()",
+      "file_type": "code",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L35",
+      "id": "utils_jwt_generateaccesstoken",
+      "community": 0,
+      "norm_label": "generateaccesstoken()"
+    },
+    {
+      "label": "generateRefreshToken()",
+      "file_type": "code",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L51",
+      "id": "utils_jwt_generaterefreshtoken",
+      "community": 0,
+      "norm_label": "generaterefreshtoken()"
+    },
+    {
+      "label": "verifyToken()",
+      "file_type": "code",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L69",
+      "id": "utils_jwt_verifytoken",
+      "community": 0,
+      "norm_label": "verifytoken()"
+    },
+    {
+      "label": "prisma.ts",
+      "file_type": "code",
+      "source_file": "backend/src/utils/prisma.ts",
+      "source_location": "L1",
+      "id": "backend_src_utils_prisma_ts",
+      "community": 31,
+      "norm_label": "prisma.ts"
+    },
+    {
+      "label": "createPrismaClient()",
+      "file_type": "code",
+      "source_file": "backend/src/utils/prisma.ts",
+      "source_location": "L14",
+      "id": "utils_prisma_createprismaclient",
+      "community": 31,
+      "norm_label": "createprismaclient()"
+    },
+    {
+      "label": "PrismaClientInstance",
+      "file_type": "code",
+      "source_file": "backend/src/utils/prisma.ts",
+      "source_location": "L26",
+      "id": "utils_prisma_prismaclientinstance",
+      "community": 31,
+      "norm_label": "prismaclientinstance"
+    },
+    {
+      "label": "globalForPrisma",
+      "file_type": "code",
+      "source_file": "backend/src/utils/prisma.ts",
+      "source_location": "L28",
+      "id": "utils_prisma_globalforprisma",
+      "community": 31,
+      "norm_label": "globalforprisma"
     },
     {
       "label": "layout.tsx",
@@ -112,6 +463,834 @@
       "norm_label": "home()"
     },
     {
+      "label": "PRD.md",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L1",
+      "id": "prd_md",
+      "community": 4,
+      "norm_label": "prd.md"
+    },
+    {
+      "label": "Product Requirement Document (PRD)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L1",
+      "id": "kiroku_prd_product_requirement_document_prd",
+      "community": 4,
+      "norm_label": "product requirement document (prd)"
+    },
+    {
+      "label": "Project Name: MangaPulse (Manga Notification Platform)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L3",
+      "id": "kiroku_prd_project_name_mangapulse_manga_notification_platform",
+      "community": 4,
+      "norm_label": "project name: mangapulse (manga notification platform)"
+    },
+    {
+      "label": "1. Executive Summary",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L10",
+      "id": "kiroku_prd_1_executive_summary",
+      "community": 4,
+      "norm_label": "1. executive summary"
+    },
+    {
+      "label": "2. Product Vision",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L15",
+      "id": "kiroku_prd_2_product_vision",
+      "community": 4,
+      "norm_label": "2. product vision"
+    },
+    {
+      "label": "3. Problem Statement",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L24",
+      "id": "kiroku_prd_3_problem_statement",
+      "community": 4,
+      "norm_label": "3. problem statement"
+    },
+    {
+      "label": "4. Goals & Objectives",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L39",
+      "id": "kiroku_prd_4_goals_objectives",
+      "community": 4,
+      "norm_label": "4. goals & objectives"
+    },
+    {
+      "label": "5. Target Audience",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L48",
+      "id": "kiroku_prd_5_target_audience",
+      "community": 4,
+      "norm_label": "5. target audience"
+    },
+    {
+      "label": "6. Feature Requirements",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L57",
+      "id": "kiroku_prd_6_feature_requirements",
+      "community": 6,
+      "norm_label": "6. feature requirements"
+    },
+    {
+      "label": "6.1 User Authentication (MVP)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L59",
+      "id": "kiroku_prd_6_1_user_authentication_mvp",
+      "community": 6,
+      "norm_label": "6.1 user authentication (mvp)"
+    },
+    {
+      "label": "6.2 Manga Search & Discovery (MVP)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L64",
+      "id": "kiroku_prd_6_2_manga_search_discovery_mvp",
+      "community": 6,
+      "norm_label": "6.2 manga search & discovery (mvp)"
+    },
+    {
+      "label": "6.3 Manga Tracking & Progress (MVP)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L69",
+      "id": "kiroku_prd_6_3_manga_tracking_progress_mvp",
+      "community": 6,
+      "norm_label": "6.3 manga tracking & progress (mvp)"
+    },
+    {
+      "label": "6.4 Chapter Monitoring System (MVP Backend Worker)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L74",
+      "id": "kiroku_prd_6_4_chapter_monitoring_system_mvp_backend_worker",
+      "community": 6,
+      "norm_label": "6.4 chapter monitoring system (mvp backend worker)"
+    },
+    {
+      "label": "6.5 Notification Dispatch System (MVP)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L79",
+      "id": "kiroku_prd_6_5_notification_dispatch_system_mvp",
+      "community": 6,
+      "norm_label": "6.5 notification dispatch system (mvp)"
+    },
+    {
+      "label": "6.6 Notification Preferences (MVP)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L84",
+      "id": "kiroku_prd_6_6_notification_preferences_mvp",
+      "community": 6,
+      "norm_label": "6.6 notification preferences (mvp)"
+    },
+    {
+      "label": "6.7 Advanced Features (Post-MVP)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L89",
+      "id": "kiroku_prd_6_7_advanced_features_post_mvp",
+      "community": 6,
+      "norm_label": "6.7 advanced features (post-mvp)"
+    },
+    {
+      "label": "7. User Flows",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L97",
+      "id": "kiroku_prd_7_user_flows",
+      "community": 5,
+      "norm_label": "7. user flows"
+    },
+    {
+      "label": "7.1 Onboarding & Authentication Flow",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L99",
+      "id": "kiroku_prd_7_1_onboarding_authentication_flow",
+      "community": 5,
+      "norm_label": "7.1 onboarding & authentication flow"
+    },
+    {
+      "label": "code:block1 ([Landing Page] \u2794 [Register / Login Screen] \u2794 [OAuth/Credenti)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L100",
+      "id": "kiroku_prd_codeblock_1",
+      "community": 5,
+      "norm_label": "code:block1 ([landing page] \u2794 [register / login screen] \u2794 [oauth/credenti)"
+    },
+    {
+      "label": "7.2 Search & Follow Flow",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L106",
+      "id": "kiroku_prd_7_2_search_follow_flow",
+      "community": 5,
+      "norm_label": "7.2 search & follow flow"
+    },
+    {
+      "label": "code:block2 ([User Dashboard] \u2794 [Type query in Search Bar] \u2794 [Results Mod)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L107",
+      "id": "kiroku_prd_codeblock_2",
+      "community": 5,
+      "norm_label": "code:block2 ([user dashboard] \u2794 [type query in search bar] \u2794 [results mod)"
+    },
+    {
+      "label": "7.3 Reading Progress & Dashboard Flow",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L115",
+      "id": "kiroku_prd_7_3_reading_progress_dashboard_flow",
+      "community": 5,
+      "norm_label": "7.3 reading progress & dashboard flow"
+    },
+    {
+      "label": "code:block3 ([Dashboard Home] \u2794 [Shows followed manga with unread chapter)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L116",
+      "id": "kiroku_prd_codeblock_3",
+      "community": 5,
+      "norm_label": "code:block3 ([dashboard home] \u2794 [shows followed manga with unread chapter)"
+    },
+    {
+      "label": "7.4 Notification Preference Tuning Flow",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L124",
+      "id": "kiroku_prd_7_4_notification_preference_tuning_flow",
+      "community": 5,
+      "norm_label": "7.4 notification preference tuning flow"
+    },
+    {
+      "label": "code:block4 ([User Settings] \u2794 [Notification Preferences Tab])",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L125",
+      "id": "kiroku_prd_codeblock_4",
+      "community": 5,
+      "norm_label": "code:block4 ([user settings] \u2794 [notification preferences tab])"
+    },
+    {
+      "label": "8. System Workflows",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L133",
+      "id": "kiroku_prd_8_system_workflows",
+      "community": 8,
+      "norm_label": "8. system workflows"
+    },
+    {
+      "label": "8.1 Manga Follow Flow",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L135",
+      "id": "kiroku_prd_8_1_manga_follow_flow",
+      "community": 8,
+      "norm_label": "8.1 manga follow flow"
+    },
+    {
+      "label": "code:mermaid (sequenceDiagram)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L136",
+      "id": "kiroku_prd_codeblock_5",
+      "community": 8,
+      "norm_label": "code:mermaid (sequencediagram)"
+    },
+    {
+      "label": "8.2 Chapter Detection & Aggregation Flow (Cron-Scheduled)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L153",
+      "id": "kiroku_prd_8_2_chapter_detection_aggregation_flow_cron_scheduled",
+      "community": 8,
+      "norm_label": "8.2 chapter detection & aggregation flow (cron-scheduled)"
+    },
+    {
+      "label": "code:mermaid (sequenceDiagram)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L154",
+      "id": "kiroku_prd_codeblock_6",
+      "community": 8,
+      "norm_label": "code:mermaid (sequencediagram)"
+    },
+    {
+      "label": "8.3 Notification Dispatch Queue Flow",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L176",
+      "id": "kiroku_prd_8_3_notification_dispatch_queue_flow",
+      "community": 8,
+      "norm_label": "8.3 notification dispatch queue flow"
+    },
+    {
+      "label": "code:mermaid (sequenceDiagram)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L177",
+      "id": "kiroku_prd_codeblock_7",
+      "community": 8,
+      "norm_label": "code:mermaid (sequencediagram)"
+    },
+    {
+      "label": "9. Technical Architecture",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L207",
+      "id": "kiroku_prd_9_technical_architecture",
+      "community": 54,
+      "norm_label": "9. technical architecture"
+    },
+    {
+      "label": "code:block8 (+-------------------+)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L211",
+      "id": "kiroku_prd_codeblock_8",
+      "community": 54,
+      "norm_label": "code:block8 (+-------------------+)"
+    },
+    {
+      "label": "Infrastructure Specs:",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L241",
+      "id": "kiroku_prd_infrastructure_specs",
+      "community": 54,
+      "norm_label": "infrastructure specs:"
+    },
+    {
+      "label": "10. Database Design",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L251",
+      "id": "kiroku_prd_10_database_design",
+      "community": 11,
+      "norm_label": "10. database design"
+    },
+    {
+      "label": "10.1 Prisma Schema (`schema.prisma`)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L253",
+      "id": "kiroku_prd_10_1_prisma_schema_schema_prisma",
+      "community": 11,
+      "norm_label": "10.1 prisma schema (`schema.prisma`)"
+    },
+    {
+      "label": "code:prisma (datasource db {)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L254",
+      "id": "kiroku_prd_codeblock_9",
+      "community": 11,
+      "norm_label": "code:prisma (datasource db {)"
+    },
+    {
+      "label": "10.2 Database Indexes & Constraints (SQL DDL)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L367",
+      "id": "kiroku_prd_10_2_database_indexes_constraints_sql_ddl",
+      "community": 11,
+      "norm_label": "10.2 database indexes & constraints (sql ddl)"
+    },
+    {
+      "label": "code:sql (-- Composite Key and Relational Foreign Keys)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L368",
+      "id": "kiroku_prd_codeblock_10",
+      "community": 11,
+      "norm_label": "code:sql (-- composite key and relational foreign keys)"
+    },
+    {
+      "label": "11. API Design",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L435",
+      "id": "kiroku_prd_11_api_design",
+      "community": 1,
+      "norm_label": "11. api design"
+    },
+    {
+      "label": "11.1 Public API Endpoints",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L439",
+      "id": "kiroku_prd_11_1_public_api_endpoints",
+      "community": 1,
+      "norm_label": "11.1 public api endpoints"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L446",
+      "id": "kiroku_prd_codeblock_11",
+      "community": 1,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L464",
+      "id": "kiroku_prd_codeblock_12",
+      "community": 1,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L482",
+      "id": "kiroku_prd_codeblock_13",
+      "community": 1,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "11.2 Protected API Endpoints (Required Token: JWT)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L496",
+      "id": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
+      "community": 1,
+      "norm_label": "11.2 protected api endpoints (required token: jwt)"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L499",
+      "id": "kiroku_prd_codeblock_14",
+      "community": 1,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L507",
+      "id": "kiroku_prd_codeblock_15",
+      "community": 1,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "code:json ({ \"message\": \"Successfully unfollowed manga.\" })",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L520",
+      "id": "kiroku_prd_codeblock_16",
+      "community": 1,
+      "norm_label": "code:json ({ \"message\": \"successfully unfollowed manga.\" })"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L528",
+      "id": "kiroku_prd_codeblock_17",
+      "community": 1,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L544",
+      "id": "kiroku_prd_codeblock_18",
+      "community": 1,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "code:json ({ \"message\": \"Notifications updated successfully.\", \"modifie)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L550",
+      "id": "kiroku_prd_codeblock_19",
+      "community": 1,
+      "norm_label": "code:json ({ \"message\": \"notifications updated successfully.\", \"modifie)"
+    },
+    {
+      "label": "11.3 Protected Push Token Endpoints",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L554",
+      "id": "kiroku_prd_11_3_protected_push_token_endpoints",
+      "community": 1,
+      "norm_label": "11.3 protected push token endpoints"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L557",
+      "id": "kiroku_prd_codeblock_20",
+      "community": 1,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "code:json ({ \"message\": \"Push token registered successfully.\" })",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L564",
+      "id": "kiroku_prd_codeblock_21",
+      "community": 1,
+      "norm_label": "code:json ({ \"message\": \"push token registered successfully.\" })"
+    },
+    {
+      "label": "11.4 Admin/System Control Endpoints (Requires API Key Header: `x-admin-key`)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L568",
+      "id": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
+      "community": 1,
+      "norm_label": "11.4 admin/system control endpoints (requires api key header: `x-admin-key`)"
+    },
+    {
+      "label": "code:json ({ \"queueName\": \"notification-dispatcher\", \"jobId\": \"job-1094)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L571",
+      "id": "kiroku_prd_codeblock_22",
+      "community": 1,
+      "norm_label": "code:json ({ \"queuename\": \"notification-dispatcher\", \"jobid\": \"job-1094)"
+    },
+    {
+      "label": "code:json ({ \"status\": \"retried\", \"jobId\": \"job-1094\" })",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L575",
+      "id": "kiroku_prd_codeblock_23",
+      "community": 1,
+      "norm_label": "code:json ({ \"status\": \"retried\", \"jobid\": \"job-1094\" })"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L581",
+      "id": "kiroku_prd_codeblock_24",
+      "community": 1,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "12. Notification System Logic",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L595",
+      "id": "kiroku_prd_12_notification_system_logic",
+      "community": 48,
+      "norm_label": "12. notification system logic"
+    },
+    {
+      "label": "12.1 Jobs Structure & Payload",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L599",
+      "id": "kiroku_prd_12_1_jobs_structure_payload",
+      "community": 48,
+      "norm_label": "12.1 jobs structure & payload"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L602",
+      "id": "kiroku_prd_codeblock_25",
+      "community": 48,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "12.2 Channels Implementation",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L612",
+      "id": "kiroku_prd_12_2_channels_implementation",
+      "community": 48,
+      "norm_label": "12.2 channels implementation"
+    },
+    {
+      "label": "12.3 Retry and Backoff Logic",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L619",
+      "id": "kiroku_prd_12_3_retry_and_backoff_logic",
+      "community": 48,
+      "norm_label": "12.3 retry and backoff logic"
+    },
+    {
+      "label": "13. Scalability Plan",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L628",
+      "id": "kiroku_prd_13_scalability_plan",
+      "community": 50,
+      "norm_label": "13. scalability plan"
+    },
+    {
+      "label": "13.1 Staggered & Conditional Polling",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L632",
+      "id": "kiroku_prd_13_1_staggered_conditional_polling",
+      "community": 50,
+      "norm_label": "13.1 staggered & conditional polling"
+    },
+    {
+      "label": "13.2 Queue Prioritization & Batching",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L640",
+      "id": "kiroku_prd_13_2_queue_prioritization_batching",
+      "community": 50,
+      "norm_label": "13.2 queue prioritization & batching"
+    },
+    {
+      "label": "13.3 Notification Deduplication Keys",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L644",
+      "id": "kiroku_prd_13_3_notification_deduplication_keys",
+      "community": 50,
+      "norm_label": "13.3 notification deduplication keys"
+    },
+    {
+      "label": "14. Security Considerations",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L652",
+      "id": "kiroku_prd_14_security_considerations",
+      "community": 52,
+      "norm_label": "14. security considerations"
+    },
+    {
+      "label": "14.1 Authentication & Token Safety",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L654",
+      "id": "kiroku_prd_14_1_authentication_token_safety",
+      "community": 52,
+      "norm_label": "14.1 authentication & token safety"
+    },
+    {
+      "label": "14.2 API Security Controls",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L659",
+      "id": "kiroku_prd_14_2_api_security_controls",
+      "community": 52,
+      "norm_label": "14.2 api security controls"
+    },
+    {
+      "label": "14.3 Input Validation",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L668",
+      "id": "kiroku_prd_14_3_input_validation",
+      "community": 52,
+      "norm_label": "14.3 input validation"
+    },
+    {
+      "label": "15. CI/CD Strategy",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L673",
+      "id": "kiroku_prd_15_ci_cd_strategy",
+      "community": 53,
+      "norm_label": "15. ci/cd strategy"
+    },
+    {
+      "label": "code:block26 (+----------------------------------+)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L677",
+      "id": "kiroku_prd_codeblock_26",
+      "community": 53,
+      "norm_label": "code:block26 (+----------------------------------+)"
+    },
+    {
+      "label": "15.1 GitHub Actions Workflow: `.github/workflows/ci.yml`",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L704",
+      "id": "kiroku_prd_15_1_github_actions_workflow_github_workflows_ci_yml",
+      "community": 53,
+      "norm_label": "15.1 github actions workflow: `.github/workflows/ci.yml`"
+    },
+    {
+      "label": "code:yaml (name: Continuous Integration & Deployment)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L705",
+      "id": "kiroku_prd_codeblock_27",
+      "community": 53,
+      "norm_label": "code:yaml (name: continuous integration & deployment)"
+    },
+    {
+      "label": "16. Deployment Architecture",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L804",
+      "id": "kiroku_prd_16_deployment_architecture",
+      "community": 7,
+      "norm_label": "16. deployment architecture"
+    },
+    {
+      "label": "16.1 Environment Topology",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L806",
+      "id": "kiroku_prd_16_1_environment_topology",
+      "community": 7,
+      "norm_label": "16.1 environment topology"
+    },
+    {
+      "label": "16.2 Environment Variable Declarations",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L815",
+      "id": "kiroku_prd_16_2_environment_variable_declarations",
+      "community": 7,
+      "norm_label": "16.2 environment variable declarations"
+    },
+    {
+      "label": "Backend Configuration (`backend/.env`):",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L817",
+      "id": "kiroku_prd_backend_configuration_backend_env",
+      "community": 7,
+      "norm_label": "backend configuration (`backend/.env`):"
+    },
+    {
+      "label": "code:ini (NODE_ENV=production)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L818",
+      "id": "kiroku_prd_codeblock_28",
+      "community": 7,
+      "norm_label": "code:ini (node_env=production)"
+    },
+    {
+      "label": "Frontend Configuration (`frontend/.env.local`):",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L831",
+      "id": "kiroku_prd_frontend_configuration_frontend_env_local",
+      "community": 7,
+      "norm_label": "frontend configuration (`frontend/.env.local`):"
+    },
+    {
+      "label": "code:ini (NEXT_PUBLIC_API_URL=https://api.mangapulse.net)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L832",
+      "id": "kiroku_prd_codeblock_29",
+      "community": 7,
+      "norm_label": "code:ini (next_public_api_url=https://api.mangapulse.net)"
+    },
+    {
+      "label": "17. Monitoring Strategy",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L839",
+      "id": "kiroku_prd_17_monitoring_strategy",
+      "community": 49,
+      "norm_label": "17. monitoring strategy"
+    },
+    {
+      "label": "17.1 Structured Log Specifications",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L843",
+      "id": "kiroku_prd_17_1_structured_log_specifications",
+      "community": 49,
+      "norm_label": "17.1 structured log specifications"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L845",
+      "id": "kiroku_prd_codeblock_30",
+      "community": 49,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "17.2 Metrics Tracker Dashboard (Prometheus/Grafana)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L860",
+      "id": "kiroku_prd_17_2_metrics_tracker_dashboard_prometheus_grafana",
+      "community": 49,
+      "norm_label": "17.2 metrics tracker dashboard (prometheus/grafana)"
+    },
+    {
+      "label": "17.3 Sentry Integration",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L866",
+      "id": "kiroku_prd_17_3_sentry_integration",
+      "community": 49,
+      "norm_label": "17.3 sentry integration"
+    },
+    {
+      "label": "18. Future Roadmap",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L871",
+      "id": "kiroku_prd_18_future_roadmap",
+      "community": 4,
+      "norm_label": "18. future roadmap"
+    },
+    {
+      "label": "code:block31 (+--------------------------------------------------------+)",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L873",
+      "id": "kiroku_prd_codeblock_31",
+      "community": 4,
+      "norm_label": "code:block31 (+--------------------------------------------------------+)"
+    },
+    {
+      "label": "19. Risks & Constraints",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L903",
+      "id": "kiroku_prd_19_risks_constraints",
+      "community": 4,
+      "norm_label": "19. risks & constraints"
+    },
+    {
+      "label": "20. Success Metrics",
+      "file_type": "document",
+      "source_file": "PRD.md",
+      "source_location": "L914",
+      "id": "kiroku_prd_20_success_metrics",
+      "community": 4,
+      "norm_label": "20. success metrics"
+    },
+    {
       "label": "README.md",
       "file_type": "document",
       "source_file": "README.md",
@@ -155,6 +1334,15 @@
       "id": "kiroku_readme_deploy_on_vercel",
       "community": 30,
       "norm_label": "deploy on vercel"
+    },
+    {
+      "label": "prisma",
+      "file_type": "code",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L22",
+      "community": 31,
+      "norm_label": "prisma",
+      "id": "src_index_prisma"
     },
     {
       "label": "AGENTS.md",
@@ -1799,7 +2987,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L959",
-      "community": 0,
+      "community": 2,
       "norm_label": "for /graphify query",
       "id": "graphify_skill_for_graphify_query"
     },
@@ -1808,7 +2996,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L968",
-      "community": 0,
+      "community": 2,
       "norm_label": "step 0 \u2014 constrained query expansion (required before traversal)",
       "id": "graphify_skill_step_0_constrained_query_expansion_required_before_traversal"
     },
@@ -1817,7 +3005,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L975",
-      "community": 0,
+      "community": 2,
       "norm_label": "code:bash ($(cat graphify-out/.graphify_python) -c \")",
       "id": "graphify_skill_codeblock_40"
     },
@@ -1826,7 +3014,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L1001",
-      "community": 0,
+      "community": 2,
       "norm_label": "code:block41 (query expanded to (from graph vocab, n tokens): [token1, tok)",
       "id": "graphify_skill_codeblock_41"
     },
@@ -1835,7 +3023,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L1006",
-      "community": 0,
+      "community": 2,
       "norm_label": "step 1 \u2014 traversal",
       "id": "graphify_skill_step_1_traversal"
     },
@@ -1844,7 +3032,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L1010",
-      "community": 0,
+      "community": 2,
       "norm_label": "code:bash (graphify query \"question\")",
       "id": "graphify_skill_codeblock_42"
     },
@@ -1853,7 +3041,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L1019",
-      "community": 0,
+      "community": 2,
       "norm_label": "code:bash ($(cat graphify-out/.graphify_python) -m graphify save-result)",
       "id": "graphify_skill_codeblock_43"
     },
@@ -2571,6 +3759,61 @@
   ],
   "links": [
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "backend_src_index_ts",
+      "target": "auth_auth_routes_authrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "backend_src_index_ts",
+      "target": "backend_src_middlewares_error_middleware_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "backend_src_index_ts",
+      "target": "backend_src_modules_auth_auth_routes_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "backend_src_index_ts",
+      "target": "backend_src_utils_prisma_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "backend_src_index_ts",
+      "target": "middlewares_error_middleware_errormiddleware",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/index.ts",
@@ -2579,6 +3822,26 @@
       "confidence_score": 1.0,
       "source": "backend_src_index_ts",
       "target": "src_index_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "backend_src_index_ts",
+      "target": "src_index_authlimiter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "backend_src_index_ts",
+      "target": "src_index_globallimiter",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2609,6 +3872,868 @@
       "confidence_score": 1.0,
       "source": "backend_src_index_ts",
       "target": "src_index_server"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/middlewares/auth.middleware.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_middlewares_auth_middleware_ts",
+      "target": "backend_src_utils_jwt_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/middlewares/auth.middleware.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "backend_src_middlewares_auth_middleware_ts",
+      "target": "middlewares_auth_middleware_authmiddleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/middlewares/auth.middleware.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "backend_src_middlewares_auth_middleware_ts",
+      "target": "middlewares_auth_middleware_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/middlewares/auth.middleware.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_middlewares_auth_middleware_ts",
+      "target": "utils_jwt_tokenpayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/middlewares/auth.middleware.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_middlewares_auth_middleware_ts",
+      "target": "utils_jwt_verifytoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "backend_src_middlewares_auth_middleware_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/middlewares/auth.middleware.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "middlewares_auth_middleware_request",
+      "target": "utils_jwt_tokenpayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "middlewares_auth_middleware_authmiddleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/middlewares/auth.middleware.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "middlewares_auth_middleware_authmiddleware",
+      "target": "utils_jwt_verifytoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/middlewares/error.middleware.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_src_middlewares_error_middleware_ts",
+      "target": "middlewares_error_middleware_apperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/middlewares/error.middleware.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "backend_src_middlewares_error_middleware_ts",
+      "target": "middlewares_error_middleware_errormiddleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "backend_src_middlewares_error_middleware_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "middlewares_error_middleware_apperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/middlewares/error.middleware.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "middlewares_error_middleware_apperror",
+      "target": "middlewares_error_middleware_apperror_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/middlewares/validation.middleware.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "backend_src_middlewares_validation_middleware_ts",
+      "target": "middlewares_validation_middleware_validate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "backend_src_middlewares_validation_middleware_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "middlewares_validation_middleware_validate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "auth_auth_controller_clearrefreshcookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "auth_auth_controller_login",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L240",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "auth_auth_controller_logout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "auth_auth_controller_profile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "auth_auth_controller_refresh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "auth_auth_controller_register",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "auth_auth_controller_setrefreshcookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "auth_auth_schema_logininput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "auth_auth_schema_registerinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "backend_src_modules_auth_auth_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "backend_src_utils_crypto_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "backend_src_utils_jwt_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "backend_src_utils_prisma_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "utils_crypto_comparepassword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "utils_crypto_hashpassword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "utils_crypto_hashrefreshtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "utils_jwt_generateaccesstoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "utils_jwt_generaterefreshtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "utils_jwt_verifytoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "backend_src_modules_auth_auth_controller_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "auth_auth_controller_login",
+      "target": "auth_auth_controller_setrefreshcookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "auth_auth_controller_refresh",
+      "target": "auth_auth_controller_setrefreshcookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "auth_auth_controller_register",
+      "target": "auth_auth_controller_setrefreshcookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L255",
+      "weight": 1.0,
+      "source": "auth_auth_controller_logout",
+      "target": "auth_auth_controller_clearrefreshcookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "auth_auth_controller_refresh",
+      "target": "auth_auth_controller_clearrefreshcookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "auth_auth_controller_register",
+      "target": "utils_crypto_hashpassword"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "auth_auth_controller_register",
+      "target": "utils_crypto_hashrefreshtoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "auth_auth_controller_register",
+      "target": "utils_jwt_generateaccesstoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "auth_auth_controller_register",
+      "target": "utils_jwt_generaterefreshtoken"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "auth_auth_controller_register",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "auth_auth_controller_login",
+      "target": "utils_crypto_comparepassword"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "auth_auth_controller_login",
+      "target": "utils_crypto_hashrefreshtoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "auth_auth_controller_login",
+      "target": "utils_jwt_generateaccesstoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "auth_auth_controller_login",
+      "target": "utils_jwt_generaterefreshtoken"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "auth_auth_controller_login",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "auth_auth_controller_refresh",
+      "target": "utils_crypto_hashrefreshtoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "auth_auth_controller_refresh",
+      "target": "utils_jwt_generateaccesstoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "auth_auth_controller_refresh",
+      "target": "utils_jwt_generaterefreshtoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/auth/auth.controller.ts",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "auth_auth_controller_refresh",
+      "target": "utils_jwt_verifytoken"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "auth_auth_controller_refresh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "auth_auth_controller_logout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "auth_auth_controller_profile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "auth_auth_routes_authrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "auth_auth_schema_loginschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "auth_auth_schema_registerschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_routes_ts",
+      "target": "backend_src_modules_auth_auth_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.schema.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_schema_ts",
+      "target": "auth_auth_schema_logininput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.schema.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_schema_ts",
+      "target": "auth_auth_schema_loginschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.schema.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_schema_ts",
+      "target": "auth_auth_schema_registerinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/auth/auth.schema.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_auth_auth_schema_ts",
+      "target": "auth_auth_schema_registerschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/crypto.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "backend_src_utils_crypto_ts",
+      "target": "utils_crypto_comparepassword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/crypto.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "backend_src_utils_crypto_ts",
+      "target": "utils_crypto_hashpassword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/crypto.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "backend_src_utils_crypto_ts",
+      "target": "utils_crypto_hashrefreshtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "backend_src_utils_jwt_ts",
+      "target": "utils_jwt_generateaccesstoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "backend_src_utils_jwt_ts",
+      "target": "utils_jwt_generaterefreshtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "backend_src_utils_jwt_ts",
+      "target": "utils_jwt_getsecret",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_utils_jwt_ts",
+      "target": "utils_jwt_tokenpayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "backend_src_utils_jwt_ts",
+      "target": "utils_jwt_verifytoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "utils_jwt_generateaccesstoken",
+      "target": "utils_jwt_getsecret",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "utils_jwt_generaterefreshtoken",
+      "target": "utils_jwt_getsecret",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/jwt.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "utils_jwt_verifytoken",
+      "target": "utils_jwt_getsecret",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/prisma.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "backend_src_utils_prisma_ts",
+      "target": "utils_prisma_createprismaclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/prisma.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "backend_src_utils_prisma_ts",
+      "target": "utils_prisma_globalforprisma",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/utils/prisma.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "backend_src_utils_prisma_ts",
+      "target": "utils_prisma_prismaclientinstance",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2659,6 +4784,916 @@
       "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
       "target": "app_page_home"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "prd_md",
+      "target": "kiroku_prd_product_requirement_document_prd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L251",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_10_database_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L435",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_11_api_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L595",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_12_notification_system_logic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L628",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_13_scalability_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L652",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_14_security_considerations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L673",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_15_ci_cd_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L804",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_16_deployment_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L839",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_17_monitoring_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L871",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_18_future_roadmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L903",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_19_risks_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_1_executive_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L914",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_20_success_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_2_product_vision",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_3_problem_statement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_4_goals_objectives",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_5_target_audience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_6_feature_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_7_user_flows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_8_system_workflows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L207",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_9_technical_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "kiroku_prd_product_requirement_document_prd",
+      "target": "kiroku_prd_project_name_mangapulse_manga_notification_platform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "kiroku_prd_6_feature_requirements",
+      "target": "kiroku_prd_6_1_user_authentication_mvp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "kiroku_prd_6_feature_requirements",
+      "target": "kiroku_prd_6_2_manga_search_discovery_mvp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "kiroku_prd_6_feature_requirements",
+      "target": "kiroku_prd_6_3_manga_tracking_progress_mvp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "kiroku_prd_6_feature_requirements",
+      "target": "kiroku_prd_6_4_chapter_monitoring_system_mvp_backend_worker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "kiroku_prd_6_feature_requirements",
+      "target": "kiroku_prd_6_5_notification_dispatch_system_mvp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "kiroku_prd_6_feature_requirements",
+      "target": "kiroku_prd_6_6_notification_preferences_mvp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "kiroku_prd_6_feature_requirements",
+      "target": "kiroku_prd_6_7_advanced_features_post_mvp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "kiroku_prd_7_user_flows",
+      "target": "kiroku_prd_7_1_onboarding_authentication_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "kiroku_prd_7_user_flows",
+      "target": "kiroku_prd_7_2_search_follow_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "kiroku_prd_7_user_flows",
+      "target": "kiroku_prd_7_3_reading_progress_dashboard_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "kiroku_prd_7_user_flows",
+      "target": "kiroku_prd_7_4_notification_preference_tuning_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "kiroku_prd_7_1_onboarding_authentication_flow",
+      "target": "kiroku_prd_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "kiroku_prd_7_2_search_follow_flow",
+      "target": "kiroku_prd_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "kiroku_prd_7_3_reading_progress_dashboard_flow",
+      "target": "kiroku_prd_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "kiroku_prd_7_4_notification_preference_tuning_flow",
+      "target": "kiroku_prd_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "kiroku_prd_8_system_workflows",
+      "target": "kiroku_prd_8_1_manga_follow_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "kiroku_prd_8_system_workflows",
+      "target": "kiroku_prd_8_2_chapter_detection_aggregation_flow_cron_scheduled",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "kiroku_prd_8_system_workflows",
+      "target": "kiroku_prd_8_3_notification_dispatch_queue_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "kiroku_prd_8_1_manga_follow_flow",
+      "target": "kiroku_prd_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "kiroku_prd_8_2_chapter_detection_aggregation_flow_cron_scheduled",
+      "target": "kiroku_prd_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "kiroku_prd_8_3_notification_dispatch_queue_flow",
+      "target": "kiroku_prd_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L211",
+      "weight": 1.0,
+      "source": "kiroku_prd_9_technical_architecture",
+      "target": "kiroku_prd_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L241",
+      "weight": 1.0,
+      "source": "kiroku_prd_9_technical_architecture",
+      "target": "kiroku_prd_infrastructure_specs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L253",
+      "weight": 1.0,
+      "source": "kiroku_prd_10_database_design",
+      "target": "kiroku_prd_10_1_prisma_schema_schema_prisma",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L367",
+      "weight": 1.0,
+      "source": "kiroku_prd_10_database_design",
+      "target": "kiroku_prd_10_2_database_indexes_constraints_sql_ddl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L254",
+      "weight": 1.0,
+      "source": "kiroku_prd_10_1_prisma_schema_schema_prisma",
+      "target": "kiroku_prd_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L368",
+      "weight": 1.0,
+      "source": "kiroku_prd_10_2_database_indexes_constraints_sql_ddl",
+      "target": "kiroku_prd_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L439",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_api_design",
+      "target": "kiroku_prd_11_1_public_api_endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L496",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_api_design",
+      "target": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L554",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_api_design",
+      "target": "kiroku_prd_11_3_protected_push_token_endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L568",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_api_design",
+      "target": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L446",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_1_public_api_endpoints",
+      "target": "kiroku_prd_codeblock_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L464",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_1_public_api_endpoints",
+      "target": "kiroku_prd_codeblock_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L482",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_1_public_api_endpoints",
+      "target": "kiroku_prd_codeblock_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L499",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
+      "target": "kiroku_prd_codeblock_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L507",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
+      "target": "kiroku_prd_codeblock_15",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L520",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
+      "target": "kiroku_prd_codeblock_16",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L528",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
+      "target": "kiroku_prd_codeblock_17",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L544",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
+      "target": "kiroku_prd_codeblock_18",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L550",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
+      "target": "kiroku_prd_codeblock_19",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L557",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_3_protected_push_token_endpoints",
+      "target": "kiroku_prd_codeblock_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L564",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_3_protected_push_token_endpoints",
+      "target": "kiroku_prd_codeblock_21",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L571",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
+      "target": "kiroku_prd_codeblock_22",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L575",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
+      "target": "kiroku_prd_codeblock_23",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L581",
+      "weight": 1.0,
+      "source": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
+      "target": "kiroku_prd_codeblock_24",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L599",
+      "weight": 1.0,
+      "source": "kiroku_prd_12_notification_system_logic",
+      "target": "kiroku_prd_12_1_jobs_structure_payload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L612",
+      "weight": 1.0,
+      "source": "kiroku_prd_12_notification_system_logic",
+      "target": "kiroku_prd_12_2_channels_implementation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L619",
+      "weight": 1.0,
+      "source": "kiroku_prd_12_notification_system_logic",
+      "target": "kiroku_prd_12_3_retry_and_backoff_logic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L602",
+      "weight": 1.0,
+      "source": "kiroku_prd_12_1_jobs_structure_payload",
+      "target": "kiroku_prd_codeblock_25",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L632",
+      "weight": 1.0,
+      "source": "kiroku_prd_13_scalability_plan",
+      "target": "kiroku_prd_13_1_staggered_conditional_polling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L640",
+      "weight": 1.0,
+      "source": "kiroku_prd_13_scalability_plan",
+      "target": "kiroku_prd_13_2_queue_prioritization_batching",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L644",
+      "weight": 1.0,
+      "source": "kiroku_prd_13_scalability_plan",
+      "target": "kiroku_prd_13_3_notification_deduplication_keys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L654",
+      "weight": 1.0,
+      "source": "kiroku_prd_14_security_considerations",
+      "target": "kiroku_prd_14_1_authentication_token_safety",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L659",
+      "weight": 1.0,
+      "source": "kiroku_prd_14_security_considerations",
+      "target": "kiroku_prd_14_2_api_security_controls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L668",
+      "weight": 1.0,
+      "source": "kiroku_prd_14_security_considerations",
+      "target": "kiroku_prd_14_3_input_validation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L704",
+      "weight": 1.0,
+      "source": "kiroku_prd_15_ci_cd_strategy",
+      "target": "kiroku_prd_15_1_github_actions_workflow_github_workflows_ci_yml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L677",
+      "weight": 1.0,
+      "source": "kiroku_prd_15_ci_cd_strategy",
+      "target": "kiroku_prd_codeblock_26",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L705",
+      "weight": 1.0,
+      "source": "kiroku_prd_15_1_github_actions_workflow_github_workflows_ci_yml",
+      "target": "kiroku_prd_codeblock_27",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L806",
+      "weight": 1.0,
+      "source": "kiroku_prd_16_deployment_architecture",
+      "target": "kiroku_prd_16_1_environment_topology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L815",
+      "weight": 1.0,
+      "source": "kiroku_prd_16_deployment_architecture",
+      "target": "kiroku_prd_16_2_environment_variable_declarations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L817",
+      "weight": 1.0,
+      "source": "kiroku_prd_16_2_environment_variable_declarations",
+      "target": "kiroku_prd_backend_configuration_backend_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L831",
+      "weight": 1.0,
+      "source": "kiroku_prd_16_2_environment_variable_declarations",
+      "target": "kiroku_prd_frontend_configuration_frontend_env_local",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L818",
+      "weight": 1.0,
+      "source": "kiroku_prd_backend_configuration_backend_env",
+      "target": "kiroku_prd_codeblock_28",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L832",
+      "weight": 1.0,
+      "source": "kiroku_prd_frontend_configuration_frontend_env_local",
+      "target": "kiroku_prd_codeblock_29",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L843",
+      "weight": 1.0,
+      "source": "kiroku_prd_17_monitoring_strategy",
+      "target": "kiroku_prd_17_1_structured_log_specifications",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L860",
+      "weight": 1.0,
+      "source": "kiroku_prd_17_monitoring_strategy",
+      "target": "kiroku_prd_17_2_metrics_tracker_dashboard_prometheus_grafana",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L866",
+      "weight": 1.0,
+      "source": "kiroku_prd_17_monitoring_strategy",
+      "target": "kiroku_prd_17_3_sentry_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L845",
+      "weight": 1.0,
+      "source": "kiroku_prd_17_1_structured_log_specifications",
+      "target": "kiroku_prd_codeblock_30",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRD.md",
+      "source_location": "L873",
+      "weight": 1.0,
+      "source": "kiroku_prd_18_future_roadmap",
+      "target": "kiroku_prd_codeblock_31",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5032,5 +8067,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2456c5dfa89022f6b3f45b86bc3dd513fd17e961"
+  "built_at_commit": "1c0fb6822c4866ce5615679381d18f510153acb3"
 }
