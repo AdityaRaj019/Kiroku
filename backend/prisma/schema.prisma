@@ -1,7 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
+// Kiroku — Prisma Schema
+// Docs: https://pris.ly/d/prisma-schema
 
 generator client {
   provider = "prisma-client-js"
@@ -11,8 +9,111 @@ datasource db {
   provider = "postgresql"
 }
 
+// ─── Enums ───────────────────────────────────────────────────
+
+enum NotificationType {
+  NEW_CHAPTER
+  STATUS_CHANGE
+  SYSTEM
+}
+
+enum MangaStatus {
+  ONGOING
+  COMPLETED
+  HIATUS
+  CANCELLED
+}
+
+// ─── Models ──────────────────────────────────────────────────
+
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id               Int       @id @default(autoincrement())
+  email            String    @unique
+  name             String?
+  passwordHash     String    @map("password_hash")
+  refreshTokenHash String?   @map("refresh_token_hash")
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime  @updatedAt @map("updated_at")
+
+  pushTokens    PushToken[]
+  follows       UserFollow[]
+  notifications Notification[]
+
+  @@map("users")
+}
+
+model PushToken {
+  id        Int      @id @default(autoincrement())
+  token     String   @unique
+  userId    Int      @map("user_id")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("push_tokens")
+}
+
+model Manga {
+  id          Int         @id @default(autoincrement())
+  title       String
+  slug        String      @unique
+  coverUrl    String?     @map("cover_url")
+  synopsis    String?
+  author      String?
+  status      MangaStatus @default(ONGOING)
+  sourceUrl   String?     @map("source_url")
+  createdAt   DateTime    @default(now()) @map("created_at")
+  updatedAt   DateTime    @updatedAt @map("updated_at")
+
+  chapters  Chapter[]
+  followers UserFollow[]
+
+  @@map("manga")
+}
+
+model Chapter {
+  id          Int      @id @default(autoincrement())
+  number      Float
+  title       String?
+  sourceUrl   String?  @map("source_url")
+  mangaId     Int      @map("manga_id")
+  releasedAt  DateTime @default(now()) @map("released_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  manga Manga @relation(fields: [mangaId], references: [id], onDelete: Cascade)
+
+  @@unique([mangaId, number])
+  @@index([mangaId])
+  @@map("chapters")
+}
+
+model UserFollow {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  mangaId   Int      @map("manga_id")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  manga Manga @relation(fields: [mangaId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, mangaId])
+  @@index([userId])
+  @@index([mangaId])
+  @@map("user_follows")
+}
+
+model Notification {
+  id        Int              @id @default(autoincrement())
+  userId    Int              @map("user_id")
+  type      NotificationType
+  title     String
+  body      String?
+  read      Boolean          @default(false)
+  createdAt DateTime         @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, read])
+  @@map("notifications")
 }
