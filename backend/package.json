@@ -27,6 +27,9 @@
     "socket.io": "^4.7.5",
     "zod": "^3.24.4"
   },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\",\"rootDir\":\".\",\"strict\":true} prisma/seed.ts"
+  },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/cookie-parser": "^1.4.10",
