@@ -291,9 +291,47 @@ export async function searchManga(
 }
 
 /**
+ * Fetches the authenticated user's tracking record for a given manga.
+ * Returns a structured tracking object, or a default "not following" state.
+ *
+ * @param userId - The authenticated user's database primary key.
+ * @param mangaLocalId - The local database ID of the manga.
+ */
+async function fetchUserTracking(
+  userId: number,
+  mangaLocalId: number
+): Promise<{ isFollowing: boolean; lastReadChapter: string | null; followedAt: Date | null }> {
+  const follow = await prisma.userFollow.findUnique({
+    where: {
+      userId_mangaId: {
+        userId,
+        mangaId: mangaLocalId,
+      },
+    },
+    select: {
+      lastReadChapter: true,
+      createdAt: true,
+    },
+  });
+
+  if (!follow) {
+    return { isFollowing: false, lastReadChapter: null, followedAt: null };
+  }
+
+  return {
+    isFollowing: true,
+    lastReadChapter: follow.lastReadChapter,
+    followedAt: follow.createdAt,
+  };
+}
+
+/**
  * GET /api/v1/manga/:id
  *
- * Returns detailed information for a single manga.
+ * Returns detailed information for a single manga, enriched with the
+ * authenticated user's tracking status (follow state + last read chapter).
+ *
+ * Requires authentication (enforced by authMiddleware on the route).
  *
  * Lookup strategy:
  *  1. Check local DB by `sourceId` (fast, no external calls)
@@ -320,6 +358,9 @@ export async function getMangaDetails(
       throw new AppError(400, "Invalid manga ID format — expected a UUID");
     }
 
+    // Extract user ID from the authenticated token payload
+    const userId = Number(req.user!.sub);
+
     // 1. Check local DB first (avoids external API call)
     const localManga = await prisma.manga.findUnique({
       where: { sourceId: id },
@@ -339,9 +380,11 @@ export async function getMangaDetails(
     });
 
     if (localManga) {
-      // Refresh from MangaDex in the background to keep data fresh,
-      // but return the local copy immediately for speed
-      res.status(200).json({ data: localManga, source: "local" });
+      // Fetch the user's tracking status for this manga
+      const tracking = await fetchUserTracking(userId, localManga.id);
+
+      // Return the local copy immediately with tracking data
+      res.status(200).json({ data: localManga, tracking, source: "local" });
 
       // Fire-and-forget background refresh (best-effort)
       mangaDexService
@@ -385,6 +428,11 @@ export async function getMangaDetails(
     // 3. Persist locally
     const persisted = await upsertMangaBatch([entity]);
 
+    // 4. Fetch user tracking (manga was just created, so likely not following)
+    const tracking = persisted[0]
+      ? await fetchUserTracking(userId, persisted[0].id)
+      : { isFollowing: false, lastReadChapter: null, followedAt: null };
+
     const result = {
       localId: persisted[0]?.id ?? null,
       sourceId: entity.id,
@@ -416,7 +464,7 @@ export async function getMangaDetails(
       updatedAt: entity.attributes.updatedAt,
     };
 
-    res.status(200).json({ data: result, source: "mangadex" });
+    res.status(200).json({ data: result, tracking, source: "mangadex" });
   } catch (err) {
     if (err instanceof MangaDexApiError) {
       const statusCode = err.isRateLimit ? 429 : err.statusCode >= 500 ? 502 : 500;

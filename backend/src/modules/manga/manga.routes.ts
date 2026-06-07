@@ -1,23 +1,25 @@
 import { Router } from "express";
 import { validateQuery } from "../../middlewares/validateQuery.middleware";
+import { authMiddleware } from "../../middlewares/auth.middleware";
 import { searchQuerySchema, chaptersQuerySchema } from "./manga.schema";
 import { searchManga, getMangaDetails, getMangaChapters } from "./manga.controller";
 
 export const mangaRouter = Router();
 
 // ─── Public routes ───────────────────────────────────────────
-// All manga endpoints are public — authentication is not required
-// to search or browse manga. Follow/track endpoints will be
-// added in a separate module and will require auth.
 
 // Search manga by title
 // GET /api/v1/manga?q=chainsaw&limit=10&offset=0
 mangaRouter.get("/", validateQuery(searchQuerySchema), searchManga);
 
-// Get manga details by MangaDex UUID
+// ─── Protected routes ────────────────────────────────────────
+// Manga detail and chapter routes require authentication so the
+// response can include user-specific tracking data.
+
+// Get manga details by MangaDex UUID (includes user tracking status)
 // GET /api/v1/manga/:id
-mangaRouter.get("/:id", getMangaDetails);
+mangaRouter.get("/:id", authMiddleware, getMangaDetails);
 
 // Get chapter feed for a manga
 // GET /api/v1/manga/:id/chapters?limit=100&offset=0&language=en
-mangaRouter.get("/:id/chapters", validateQuery(chaptersQuerySchema), getMangaChapters);
+mangaRouter.get("/:id/chapters", authMiddleware, validateQuery(chaptersQuerySchema), getMangaChapters);

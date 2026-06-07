@@ -90,10 +90,11 @@ model Chapter {
 }
 
 model UserFollow {
-  id        Int      @id @default(autoincrement())
-  userId    Int      @map("user_id")
-  mangaId   Int      @map("manga_id")
-  createdAt DateTime @default(now()) @map("created_at")
+  id              Int      @id @default(autoincrement())
+  userId          Int      @map("user_id")
+  mangaId         Int      @map("manga_id")
+  lastReadChapter String?  @map("last_read_chapter")
+  createdAt       DateTime @default(now()) @map("created_at")
 
   user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
   manga Manga @relation(fields: [mangaId], references: [id], onDelete: Cascade)
