@@ -57,3 +57,42 @@ export async function authMiddleware(
     res.status(401).json({ error: "Invalid or expired token" });
   }
 }
+
+/**
+ * Optional authentication — enriches the request with user data if a valid
+ * token is present, but does NOT reject unauthenticated requests.
+ *
+ * Use this on public routes where behaviour differs for logged-in users
+ * (e.g. showing tracking status on the manga detail page for logged-in
+ * users while still allowing guests to browse freely).
+ */
+export async function optionalAuthMiddleware(
+  req: Request,
+  _res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const header = req.headers.authorization;
+
+    if (!header || !header.startsWith("Bearer ")) {
+      next();
+      return;
+    }
+
+    const token = header.slice(7);
+    if (!token) {
+      next();
+      return;
+    }
+
+    const payload = await verifyToken(token);
+
+    if (payload.type === "access") {
+      req.user = payload;
+    }
+  } catch {
+    // Token invalid or expired — treat as unauthenticated guest
+  }
+
+  next();
+}

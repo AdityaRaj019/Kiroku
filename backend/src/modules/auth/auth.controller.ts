@@ -1,7 +1,8 @@
 import type { Request, Response, NextFunction } from "express";
 import { prisma } from "../../utils/prisma";
 import { hashPassword, comparePassword, hashRefreshToken } from "../../utils/crypto";
-import { generateAccessToken, generateRefreshToken, verifyToken } from "../../utils/jwt";
+import { parseUserId } from "../../utils/auth.helpers";
+import { generateAccessToken, generateRefreshToken, verifyRefreshToken } from "../../utils/jwt";
 import { AppError } from "../../middlewares/error.middleware";
 import type { RegisterInput, LoginInput } from "./auth.schema";
 
@@ -179,7 +180,7 @@ export async function refresh(
 
     let payload;
     try {
-      payload = await verifyToken(token);
+      payload = await verifyRefreshToken(token);
     } catch {
       clearRefreshCookie(res);
       throw new AppError(401, "Invalid or expired refresh token");
@@ -189,7 +190,7 @@ export async function refresh(
       throw new AppError(401, "Invalid token type");
     }
 
-    const userId = Number(payload.sub);
+    const userId = parseUserId(payload.sub);
     const user = await prisma.user.findUnique({ where: { id: userId } });
 
     if (!user || !user.refreshTokenHash) {
@@ -245,7 +246,7 @@ export async function logout(
   try {
     // If authenticated, clear the stored refresh hash
     if (req.user?.sub) {
-      const userId = Number(req.user.sub);
+      const userId = parseUserId(req.user.sub);
       await prisma.user.update({
         where: { id: userId },
         data: { refreshTokenHash: null },
@@ -276,7 +277,7 @@ export async function profile(
       throw new AppError(401, "Authentication required");
     }
 
-    const userId = Number(req.user.sub);
+    const userId = parseUserId(req.user.sub);
     const user = await prisma.user.findUnique({
       where: { id: userId },
       select: {

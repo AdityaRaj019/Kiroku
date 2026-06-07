@@ -67,3 +67,15 @@ export const chaptersQuerySchema = z.object({
 });
 
 export type ChaptersQueryInput = z.infer<typeof chaptersQuerySchema>;
+
+// ─── Manga ID Param ──────────────────────────────────────────
+
+/**
+ * Validates the `:id` route parameter for manga detail / chapter routes.
+ * MangaDex uses UUID v4 identifiers.
+ */
+export const mangaIdParamSchema = z.object({
+  id: z.string().uuid("Invalid manga ID format — expected a UUID"),
+});
+
+export type MangaIdParam = z.infer<typeof mangaIdParamSchema>;

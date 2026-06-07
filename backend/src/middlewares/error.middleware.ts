@@ -44,7 +44,11 @@ export function errorMiddleware(
   const httpErr = err as Error & { status?: number; statusCode?: number; type?: string };
   const errStatus = httpErr.status ?? httpErr.statusCode;
   if (errStatus && errStatus >= 400 && errStatus < 600) {
-    res.status(errStatus).json({ error: err.message });
+    const safeMessage =
+      process.env.NODE_ENV === "production"
+        ? "Request error"
+        : err.message;
+    res.status(errStatus).json({ error: safeMessage });
     return;
   }
 
