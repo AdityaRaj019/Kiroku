@@ -13,6 +13,7 @@ import rateLimit from "express-rate-limit";
 import { prisma } from "./utils/prisma";
 import { connectRedis } from "./utils/redis";
 import { authRouter } from "./modules/auth/auth.routes";
+import { mangaRouter } from "./modules/manga/manga.routes";
 import { errorMiddleware } from "./middlewares/error.middleware";
 
 const app = express();
@@ -46,6 +47,17 @@ const authLimiter = rateLimit({
   message: { error: "Too many authentication attempts, please try again later" },
 });
 
+// Search-specific rate limiter — 30 requests per 15 minutes.
+// Generous enough for real browsing but prevents runaway search-bar
+// spam from a single IP. Frontend should also debounce (300-500ms).
+const searchLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 30,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: "Too many search requests, please try again later" },
+});
+
 // ─── Body parsing & cookies ─────────────────────────────────
 
 app.use(express.json({ limit: "10kb" })); // cap body size to prevent payload bombs
@@ -65,6 +77,9 @@ app.use(
 
 // Auth routes with tighter rate-limiting
 app.use("/api/v1/auth", authLimiter, authRouter);
+
+// Manga search & discovery routes with search-specific rate-limiting
+app.use("/api/v1/manga", searchLimiter, mangaRouter);
 
 // Health check
 app.get("/health", async (_req, res) => {
