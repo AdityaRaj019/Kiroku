@@ -56,6 +56,7 @@ model PushToken {
 
 model Manga {
   id          Int         @id @default(autoincrement())
+  sourceId    String?     @unique @map("source_id")
   title       String
   slug        String      @unique
   coverUrl    String?     @map("cover_url")
