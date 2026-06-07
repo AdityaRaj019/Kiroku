@@ -232,7 +232,11 @@ class MangaDexService {
     params.append("includes[]", "author");
 
     const url = `${MANGADEX_BASE_URL}/manga?${params.toString()}`;
-    const cacheKey = `${CACHE_PREFIX_SEARCH}${query}:${limit}:${offset}`;
+
+    // Normalize query for cache key: lowercase, trim, collapse whitespace
+    // so "Chainsaw Man" and "chainsaw  man" hit the same cache entry.
+    const normalizedQuery = query.toLowerCase().trim().replace(/\s+/g, " ");
+    const cacheKey = `${CACHE_PREFIX_SEARCH}${normalizedQuery}:${limit}:${offset}`;
 
     return this.fetchWithCache<
       MangaDexCollectionResponse<MangaDexMangaEntity>
