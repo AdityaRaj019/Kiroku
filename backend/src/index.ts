@@ -11,6 +11,7 @@ import cookieParser from "cookie-parser";
 import rateLimit from "express-rate-limit";
 
 import { prisma } from "./utils/prisma";
+import { connectRedis } from "./utils/redis";
 import { authRouter } from "./modules/auth/auth.routes";
 import { errorMiddleware } from "./middlewares/error.middleware";
 
@@ -124,6 +125,21 @@ app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;
 
-server.listen(PORT, () => {
-  console.log(`Kiroku server is running on port ${PORT}`);
-});
+async function bootstrap(): Promise<void> {
+  try {
+    await connectRedis();
+  } catch (err) {
+    console.error(
+      "[Bootstrap] Redis connection failed:",
+      err instanceof Error ? err.message : err
+    );
+    // Redis is non-critical — server can start without it.
+    // The MangaDex service will skip caching gracefully.
+  }
+
+  server.listen(PORT, () => {
+    console.log(`Kiroku server is running on port ${PORT}`);
+  });
+}
+
+bootstrap();
