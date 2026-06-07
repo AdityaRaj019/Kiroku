@@ -1,16 +1,16 @@
 # Graph Report - kiroku  (2026-06-07)
 
 ## Corpus Check
-- 22 files · ~12,246 words
+- 22 files · ~12,435 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 479 nodes · 541 edges · 58 communities (54 shown, 4 thin omitted)
+- 480 nodes · 545 edges · 58 communities (54 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `40324c67`
+- Built from commit: `40c911fd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -79,8 +79,8 @@
 3. `/graphify` - 15 edges
 4. `MangaDexService` - 10 edges
 5. `upsertMangaBatch()` - 9 edges
-6. `refresh()` - 8 edges
-7. `getMangaDetails()` - 8 edges
+6. `getMangaDetails()` - 9 edges
+7. `refresh()` - 8 edges
 8. `6. Feature Requirements` - 8 edges
 9. `Part B - Semantic extraction (parallel subagents)` - 8 edges
 10. `register()` - 7 edges
@@ -304,8 +304,8 @@ Cohesion: 0.15
 Nodes (13): globalForMangaDex, MangaDexApiError, MangaDexService, LocalizedString, MangaDexChapterAttributes, MangaDexChapterEntity, MangaDexCollectionResponse, MangaDexEntityResponse (+5 more)
 
 ### Community 56 - "Community 56"
-Cohesion: 0.22
-Nodes (16): extractArtist(), extractAuthor(), extractCoverUrl(), getMangaChapters(), getMangaDetails(), mapMangaDexStatus(), resolveDescription(), resolveTitle() (+8 more)
+Cohesion: 0.20
+Nodes (17): extractArtist(), extractAuthor(), extractCoverUrl(), fetchUserTracking(), getMangaChapters(), getMangaDetails(), mapMangaDexStatus(), resolveDescription() (+9 more)
 
 ### Community 57 - "Community 57"
 Cohesion: 0.22
