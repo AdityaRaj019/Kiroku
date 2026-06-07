@@ -1,16 +1,16 @@
-# Graph Report - kiroku  (2026-06-03)
+# Graph Report - kiroku  (2026-06-07)
 
 ## Corpus Check
-- 14 files · ~7,169 words
+- 22 files · ~12,246 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 417 nodes · 425 edges · 55 communities (51 shown, 4 thin omitted)
+- 479 nodes · 541 edges · 58 communities (54 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1c0fb682`
+- Built from commit: `40324c67`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -69,20 +69,25 @@
 - [[_COMMUNITY_Community 52|Community 52]]
 - [[_COMMUNITY_Community 53|Community 53]]
 - [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
+- [[_COMMUNITY_Community 57|Community 57]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Product Requirement Document (PRD)` - 22 edges
 2. `What You Must Do When Invoked` - 16 edges
 3. `/graphify` - 15 edges
-4. `refresh()` - 8 edges
-5. `6. Feature Requirements` - 8 edges
-6. `Part B - Semantic extraction (parallel subagents)` - 8 edges
-7. `register()` - 7 edges
-8. `login()` - 7 edges
-9. `11.2 Protected API Endpoints (Required Token: JWT)` - 7 edges
-10. `1. The Workflow Lifecycle` - 7 edges
+4. `MangaDexService` - 10 edges
+5. `upsertMangaBatch()` - 9 edges
+6. `refresh()` - 8 edges
+7. `getMangaDetails()` - 8 edges
+8. `6. Feature Requirements` - 8 edges
+9. `Part B - Semantic extraction (parallel subagents)` - 8 edges
+10. `register()` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `bootstrap()` --calls--> `connectRedis()`  [EXTRACTED]
+  backend/src/index.ts → backend/src/utils/redis.ts
 - `Request` --references--> `TokenPayload`  [EXTRACTED]
   backend/src/middlewares/auth.middleware.ts → backend/src/utils/jwt.ts
 - `authMiddleware()` --calls--> `verifyToken()`  [EXTRACTED]
@@ -91,10 +96,8 @@
   backend/src/modules/auth/auth.controller.ts → backend/src/utils/crypto.ts
 - `register()` --calls--> `hashRefreshToken()`  [EXTRACTED]
   backend/src/modules/auth/auth.controller.ts → backend/src/utils/crypto.ts
-- `register()` --calls--> `generateAccessToken()`  [EXTRACTED]
-  backend/src/modules/auth/auth.controller.ts → backend/src/utils/jwt.ts
 
-## Communities (55 total, 4 thin omitted)
+## Communities (58 total, 4 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -221,8 +224,8 @@ Cohesion: 0.40
 Nodes (4): code:bash (npm run dev), Deploy on Vercel, Getting Started, Learn More
 
 ### Community 31 - "Community 31"
-Cohesion: 0.13
-Nodes (11): authRouter, AppError, errorMiddleware(), app, authLimiter, globalLimiter, io, prisma (+3 more)
+Cohesion: 0.09
+Nodes (16): authRouter, mangaRouter, AppError, errorMiddleware(), app, authLimiter, bootstrap(), globalLimiter (+8 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.50
@@ -296,8 +299,20 @@ Nodes (4): 15.1 GitHub Actions Workflow: `.github/workflows/ci.yml`, 15. CI/CD S
 Cohesion: 0.67
 Nodes (3): 9. Technical Architecture, code:block8 (+-------------------+), Infrastructure Specs:
 
+### Community 55 - "Community 55"
+Cohesion: 0.15
+Nodes (13): globalForMangaDex, MangaDexApiError, MangaDexService, LocalizedString, MangaDexChapterAttributes, MangaDexChapterEntity, MangaDexCollectionResponse, MangaDexEntityResponse (+5 more)
+
+### Community 56 - "Community 56"
+Cohesion: 0.22
+Nodes (16): extractArtist(), extractAuthor(), extractCoverUrl(), getMangaChapters(), getMangaDetails(), mapMangaDexStatus(), resolveDescription(), resolveTitle() (+8 more)
+
+### Community 57 - "Community 57"
+Cohesion: 0.22
+Nodes (9): adapter, chapterCounts, followMap, generateChapters(), HASHED_PASSWORD, main(), mangaData, prisma (+1 more)
+
 ## Knowledge Gaps
-- **240 isolated node(s):** `app`, `server`, `globalLimiter`, `authLimiter`, `io` (+235 more)
+- **251 isolated node(s):** `adapter`, `prisma`, `HASHED_PASSWORD`, `usersData`, `mangaData` (+246 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -305,13 +320,13 @@ Nodes (3): 9. Technical Architecture, code:block8 (+-------------------+), Infra
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Product Requirement Document (PRD)` connect `Community 4` to `Community 1`, `Community 5`, `Community 6`, `Community 7`, `Community 8`, `Community 11`, `Community 48`, `Community 49`, `Community 50`, `Community 52`, `Community 53`, `Community 54`?**
-  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+  _High betweenness centrality (0.033) - this node is a cross-community bridge._
 - **Why does `What You Must Do When Invoked` connect `Community 3` to `Community 9`, `Community 2`?**
-  _High betweenness centrality (0.034) - this node is a cross-community bridge._
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **Why does `/graphify` connect `Community 2` to `Community 3`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **What connects `app`, `server`, `globalLimiter` to the rest of the system?**
-  _240 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+- **What connects `adapter`, `prisma`, `HASHED_PASSWORD` to the rest of the system?**
+  _251 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
