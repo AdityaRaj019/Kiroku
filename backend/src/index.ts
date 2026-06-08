@@ -15,6 +15,7 @@ import { connectRedis, disconnectRedis } from "./utils/redis";
 import { verifyToken } from "./utils/jwt";
 import { authRouter } from "./modules/auth/auth.routes";
 import { mangaRouter } from "./modules/manga/manga.routes";
+import { followRouter } from "./modules/follow/follow.routes";
 import { errorMiddleware } from "./middlewares/error.middleware";
 
 const app = express();
@@ -112,6 +113,9 @@ app.use("/api/v1/auth", authLimiter, authRouter);
 
 // Manga search & discovery routes with search-specific rate-limiting
 app.use("/api/v1/manga", searchLimiter, mangaRouter);
+
+// Follow / tracking routes (all auth-protected)
+app.use("/api/v1/follows", followRouter);
 
 // Health check
 app.get("/health", async (_req, res) => {
