@@ -1,81 +1,121 @@
-# MangaPulse Anime-Style Design System (MangaVibe UI)
+# Shonen Command Center (MangaVibe UI)
 
-This document establishes the styling tokens, visual guidelines, and component rules to enforce a high-influence **Anime/Manga Design Language** (MangaVibe UI) across all frontend pages and components. It draws inspiration from shonen titles, cyberpunk aesthetics, and halftone print textures.
-
----
-
-## 1. Visual Theme & Color Palette
-
-We utilize a **Harajuku Neon & Cyberpunk Dark** palette. It combines a dark, moody canvas with piercing, vibrant neon accents reminiscent of night-time Tokyo.
-
-```text
-Midnight Violet (Canvas) ──> Neon Sakura Pink (Primary) ──> Electric Cyan (Secondary) ──> Toxic Lime (Success)
-```
-
-| Token Name | Hex Code | Tailwind Equivalent | Use Case |
-| :--- | :--- | :--- | :--- |
-| **Midnight Base** | `#080511` | `bg-neutral-950` | Primary application canvas background |
-| **Dark Violet** | `#120A2A` | `bg-violet-950/20` | Card and secondary container backgrounds |
-| **Neon Sakura** | `#FF1E75` | `text-pink-500` / `bg-pink-600` | Primary actions, follow buttons, unread badges |
-| **Electric Cyan** | `#00F0FF` | `text-cyan-400` / `bg-cyan-500` | Webhooks, sockets, loading states, secondary links |
-| **Toxic Lime** | `#39FF14` | `text-lime-400` | Read chapter progress indicators, status online |
-| **Aura Gold** | `#FFD700` | `text-amber-400` | Popular tags, system announcements, highlights |
+This document establishes the styling tokens, visual guidelines, and component rules to enforce a high-influence **Anime/Manga Design Language** (Shonen Command Center UI) across all frontend pages and components. It draws inspiration from shonen battle tropes, power-level scanner interfaces, futuristic tracking dashboards, and classic print manga magazine aesthetics while maintaining a clean, professional visual structure.
 
 ---
 
-## 2. Signature Design Elements (The Manga Vibe)
+## 1. Visual Theme & Concept
 
-To make components feel distinctly "Anime/Manga", we use four signature CSS effects:
+The **"Shonen Command Center"** fuses four distinct worlds into a unified user interface:
+1. **Classic Manga Page Layout:** Heavy black ink boarders, screentones, and dynamic panel frames.
+2. **Futuristic Power-Level Scanner:** Battle scanner displays (e.g., green/red tracking guides, holographic grids).
+3. **Command Dashboard:** Clean, legible telemetry for tracking chapter lists and viewing stats.
+4. **Japanese Manga Magazine Covers:** Bold, aggressive typography, slanted accents, and high-contrast color highlights.
 
-### A. Halftone Print Texture (Manga Screentones)
-Classic manga uses dots for shading. We replicate this in CSS using repeating radial gradients as backdrops for panels and headers:
-```css
-.manga-screentone {
-  background-image: radial-gradient(rgba(255, 30, 117, 0.15) 1px, transparent 0);
-  background-size: 12px 12px;
-}
-```
+---
 
-### B. Asymmetric Cuts & Skewed Bounds
-Perfect boxes look like standard SaaS templates. Anime UI should feel sharp, dynamic, and angled:
-* Use minor skews: `hover:skew-x-1 hover:-rotate-1`
-* Use polygon clip-paths for diagonal button cuts:
+## 2. Color System & Design Tokens
+
+### A. Primary Brand Colors
+| Token Name | Hex Code | Use Case / Application |
+| :--- | :--- | :--- |
+| **Shonen Orange** | `#FF6B00` | Primary actions (CTA), active tabs, dynamic highlights, hover glows |
+| **Ninja Blue** | `#0077FF` | Links, status tags, notification indicators, AI feature borders |
+| **Super Saiyan Gold** | `#FFD700` | Ranking indicators (#1-3), premium badges, trending tags, legendary stats |
+
+### B. Dark Theme Background & Surfaces
+| Token Name | Hex Code | Use Case / Application |
+| :--- | :--- | :--- |
+| **Main Background** | `#0B0F1A` | Canvas background (very dark, moody navy) |
+| **Secondary Background** | `#121827` | Content cards, manga panels, input form fills |
+| **Surface Hover** | `#1A2336` | Active item selections, menu item hover, elevated state outlines |
+| **Accent Red** | `#FF2E63` | Alerts, critical deletions, trending/hot icons, special action highlights |
+
+### C. Typography Rules
+* **Headings (Anime Title Energy):** Use `Bebas Neue` or `Anton`. These fonts are optimized for uppercase, high-impact headlines (e.g., `TRACK EVERY CHAPTER. MISS NOTHING.`).
+* **Body Text (Modern Readability):** Use `Inter`. Clean, neutral, high-legibility sans-serif font for stats, logs, summaries, and forms.
+* **Japanese Accent (Decorative Labels):** Use `Noto Sans JP` (e.g., `友情` [Friendship], `努力` [Effort], `勝利` [Victory]) in low opacity backdrops to add authentic manga-culture accents.
+
+---
+
+## 3. Signature Layout & Components
+
+### A. Hero Section
+* **Left Content:** Big titles in `Bebas Neue`, subheadlines detailing features, and clip-path buttons.
+* **Right Content:** Holographic "Command Center" dashboard mockups displaying:
+  * Power Scanner UI elements.
+  * System telemetry (e.g., `Tracking: 342 Manga`, `Watching: 87 Anime`, `Unread: 12`).
+  * Floating notification toast: `⚡ New Chapter Detected: Kingdom Ch. 850 (2m ago)`.
+  * AI sensei chat bubble: `Ask Sensei AI: "Recommend dark fantasy like Berserk"`.
+
+### B. Top Ranked Manga (Bounty Poster Cards)
+* Styled as manga **Bounty Posters** using heavy box shadows and thin borders.
+* Includes rank badges using **Super Saiyan Gold** (`#FFD700`).
+* **Hover State:** Card "powers up" with an outer glow using `box-shadow: 0 0 15px rgba(255, 107, 0, 0.4)` and a translateY shift.
+
+### C. Feature Panels (Manga Panels)
+* Arrange features in irregular comic book panel frames using CSS grids and `clip-path` cuts.
+* Features to include:
+  1. **Chapter Tracking:** Radar scanner icon; automatic updates of followed series.
+  2. **Anime Tracking:** TV monitor icon; episode release schedules.
+  3. **Notifications:** Lightning bolt icon; real-time browser push alerts.
+  4. **AI Sensei:** Robot + book icon; recommendation and summary engine.
+  5. **Rankings:** Crown icon; tracking of trending weekly hits.
+  6. **Reading Statistics:** Bar chart icon; personal dashboard metrics.
+
+### D. AI Sensei Terminal
+* Styled as an anime battle scanner or diagnostic terminal.
+* Text uses an animated typewriter typing effect.
+* Prompt example: `Recommend me manga similar to Vinland Saga.`
+* Response recommendation chips: `Kingdom`, `Golden Kamuy`, `Vagabond`, `Historie`.
+
+### E. Live Notification Demo
+* An interactive phone or app mockup showing alerts sliding in from the right:
+  * `🔥 Solo Leveling Chapter 250 Released`
+  * `⚡ One Piece Chapter 1115 Released`
+  * `⭐ New Episode Available`
+
+---
+
+## 4. Key Visual & Styling Guidelines
+
+### A. Angled Elements (Clip-Paths)
+* Avoid standard rounded boxes for main call-to-actions. Buttons and prominent tabs must use angled edges:
   ```css
-  .anime-cut {
-    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+  .anime-button-cut {
+    clip-path: polygon(6% 0%, 100% 0%, 94% 100%, 0% 100%);
   }
   ```
 
-### C. Bold Borders & Hard Shadows (Cell-Shading)
-Use thick, high-contrast borders and offsets instead of soft, blurry box-shadows:
-```css
-.manga-card {
-  border: 2px solid #ffffff;
-  box-shadow: 4px 4px 0px #FF1E75;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.manga-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px #00F0FF;
-}
-```
+### B. Manga Speed Lines & Halftones
+* Backdrop details should include subtle speed lines using CSS repeating linear gradients:
+  ```css
+  .manga-speedlines {
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  }
+  ```
+* Incorporate floating decorative Japanese characters (`友情`, `努力`, `勝利`) at a very low opacity (`opacity: 0.04 - 0.08`) absolute positioned in the layout background.
 
-### D. Action/Speedlines (Active Hover backdrops)
-Add subtle overlay animations simulating shonen action/speed lines on hovered states or details backdrops.
+### C. Bold Shadows (Cell Shading)
+* Outlines and shadows should replicate clean manga shading:
+  ```css
+  .manga-shadow {
+    border: 2px solid #FFFFFF;
+    box-shadow: 5px 5px 0px var(--shonen-orange, #FF6B00);
+  }
+  ```
 
 ---
 
-## 3. Typography Guide
+## 5. Animation Token Specifications
 
-Use Google Fonts loaded in the Next.js root layout:
-* **Headings (Display):** **Space Grotesk** or **Oxanium** (cyberpunk, futuristic, hard angles).
-* **Body Text:** **Inter** or **Plus Jakarta Sans** (clean, high legibility on dark backgrounds).
-
----
-
-## 4. Component Rules
-
-* **Buttons:** Must have hard borders and offset card shadows. Hovering should slide a neon background diagonally from left to right.
-* **Cards:** Cover images must zoom slightly on hover (`overflow-hidden group-hover:scale-105 transition-transform duration-300`).
-* **Tags:** Badges should resemble stamp cuts or neon warning tags (e.g. `[ EN ]` or `[ HOT ]`).
-* **Modals:** Slide into view with a scale pop effect (`scale-95 to scale-100`) and a dark violet glassmorphism backdrop (`backdrop-blur-md bg-neutral-950/70`).
+* **Parallax Scroll:** Applied on background floating items in the Hero section.
+* **Glow Rise:** Hover transitions on cards: `transform: translateY(-8px)` with a fast easing transition (`transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease`).
+* **Alert Slide-in:** Slide animations for notifications: `keyframes slideInFromRight { from { transform: translateX(120%); } to { transform: translateX(0); } }`.
+* **Pulse Core:** Soft pulse animations on AI Assistant components to denote scanner/idle listening activity.
