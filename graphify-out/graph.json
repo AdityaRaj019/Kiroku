@@ -106,7 +106,7 @@
       "label": "app",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L20",
+      "source_location": "L21",
       "id": "src_index_app",
       "community": 31,
       "norm_label": "app"
@@ -115,7 +115,7 @@
       "label": "server",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L21",
+      "source_location": "L22",
       "id": "src_index_server",
       "community": 31,
       "norm_label": "server"
@@ -124,7 +124,7 @@
       "label": "parseCorsOrigins()",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L30",
+      "source_location": "L31",
       "id": "src_index_parsecorsorigins",
       "community": 31,
       "norm_label": "parsecorsorigins()"
@@ -133,7 +133,7 @@
       "label": "corsOrigins",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L39",
+      "source_location": "L40",
       "id": "src_index_corsorigins",
       "community": 31,
       "norm_label": "corsorigins"
@@ -142,7 +142,7 @@
       "label": "globalLimiter",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L63",
+      "source_location": "L64",
       "id": "src_index_globallimiter",
       "community": 31,
       "norm_label": "globallimiter"
@@ -151,7 +151,7 @@
       "label": "authLimiter",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L74",
+      "source_location": "L75",
       "id": "src_index_authlimiter",
       "community": 31,
       "norm_label": "authlimiter"
@@ -160,7 +160,7 @@
       "label": "searchLimiter",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L85",
+      "source_location": "L86",
       "id": "src_index_searchlimiter",
       "community": 31,
       "norm_label": "searchlimiter"
@@ -169,7 +169,7 @@
       "label": "io",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L137",
+      "source_location": "L141",
       "id": "src_index_io",
       "community": 31,
       "norm_label": "io"
@@ -178,7 +178,7 @@
       "label": "token",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L159",
+      "source_location": "L163",
       "id": "src_index_token",
       "community": 31,
       "norm_label": "token"
@@ -187,7 +187,7 @@
       "label": "userId",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L180",
+      "source_location": "L184",
       "id": "src_index_userid",
       "community": 31,
       "norm_label": "userid"
@@ -196,7 +196,7 @@
       "label": "shutdown()",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L203",
+      "source_location": "L207",
       "id": "src_index_shutdown",
       "community": 31,
       "norm_label": "shutdown()"
@@ -205,7 +205,7 @@
       "label": "bootstrap()",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L261",
+      "source_location": "L265",
       "id": "src_index_bootstrap",
       "community": 31,
       "norm_label": "bootstrap()"
@@ -252,7 +252,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_error_middleware_ts",
-      "community": 56,
+      "community": 58,
       "norm_label": "error.middleware.ts"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L7",
       "id": "middlewares_error_middleware_apperror",
-      "community": 56,
+      "community": 58,
       "norm_label": "apperror"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L8",
       "id": "middlewares_error_middleware_apperror_constructor",
-      "community": 56,
+      "community": 58,
       "norm_label": ".constructor()"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L25",
       "id": "middlewares_error_middleware_errormiddleware",
-      "community": 56,
+      "community": 58,
       "norm_label": "errormiddleware()"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validation_middleware_ts",
-      "community": 0,
+      "community": 58,
       "norm_label": "validation.middleware.ts"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L11",
       "id": "middlewares_validation_middleware_validate",
-      "community": 0,
+      "community": 58,
       "norm_label": "validate()"
     },
     {
@@ -472,6 +472,186 @@
       "norm_label": "logininput"
     },
     {
+      "label": "follow.controller.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_follow_follow_controller_ts",
+      "community": 58,
+      "norm_label": "follow.controller.ts"
+    },
+    {
+      "label": "mapMangaDexStatus()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L19",
+      "id": "follow_follow_controller_mapmangadexstatus",
+      "community": 58,
+      "norm_label": "mapmangadexstatus()"
+    },
+    {
+      "label": "resolveTitle()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L35",
+      "id": "follow_follow_controller_resolvetitle",
+      "community": 58,
+      "norm_label": "resolvetitle()"
+    },
+    {
+      "label": "resolveDescription()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L42",
+      "id": "follow_follow_controller_resolvedescription",
+      "community": 58,
+      "norm_label": "resolvedescription()"
+    },
+    {
+      "label": "extractCoverUrl()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L50",
+      "id": "follow_follow_controller_extractcoverurl",
+      "community": 58,
+      "norm_label": "extractcoverurl()"
+    },
+    {
+      "label": "extractAuthor()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L66",
+      "id": "follow_follow_controller_extractauthor",
+      "community": 58,
+      "norm_label": "extractauthor()"
+    },
+    {
+      "label": "slugify()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L76",
+      "id": "follow_follow_controller_slugify",
+      "community": 58,
+      "norm_label": "slugify()"
+    },
+    {
+      "label": "ensureLocalManga()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L94",
+      "id": "follow_follow_controller_ensurelocalmanga",
+      "community": 58,
+      "norm_label": "ensurelocalmanga()"
+    },
+    {
+      "label": "followManga()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L192",
+      "id": "follow_follow_controller_followmanga",
+      "community": 58,
+      "norm_label": "followmanga()"
+    },
+    {
+      "label": "unfollowManga()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L257",
+      "id": "follow_follow_controller_unfollowmanga",
+      "community": 58,
+      "norm_label": "unfollowmanga()"
+    },
+    {
+      "label": "updateProgress()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L308",
+      "id": "follow_follow_controller_updateprogress",
+      "community": 58,
+      "norm_label": "updateprogress()"
+    },
+    {
+      "label": "follow.routes.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_follow_follow_routes_ts",
+      "community": 58,
+      "norm_label": "follow.routes.ts"
+    },
+    {
+      "label": "followRouter",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L8",
+      "id": "follow_follow_routes_followrouter",
+      "community": 31,
+      "norm_label": "followrouter"
+    },
+    {
+      "label": "follow.schema.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_follow_follow_schema_ts",
+      "community": 58,
+      "norm_label": "follow.schema.ts"
+    },
+    {
+      "label": "followInputSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L12",
+      "id": "follow_follow_schema_followinputschema",
+      "community": 58,
+      "norm_label": "followinputschema"
+    },
+    {
+      "label": "FollowInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L18",
+      "id": "follow_follow_schema_followinput",
+      "community": 58,
+      "norm_label": "followinput"
+    },
+    {
+      "label": "progressInputSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L28",
+      "id": "follow_follow_schema_progressinputschema",
+      "community": 58,
+      "norm_label": "progressinputschema"
+    },
+    {
+      "label": "ProgressInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L36",
+      "id": "follow_follow_schema_progressinput",
+      "community": 58,
+      "norm_label": "progressinput"
+    },
+    {
+      "label": "followMangaIdParamSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L44",
+      "id": "follow_follow_schema_followmangaidparamschema",
+      "community": 58,
+      "norm_label": "followmangaidparamschema"
+    },
+    {
+      "label": "FollowMangaIdParam",
+      "file_type": "code",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L50",
+      "id": "follow_follow_schema_followmangaidparam",
+      "community": 58,
+      "norm_label": "followmangaidparam"
+    },
+    {
       "label": "manga.controller.ts",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
@@ -603,7 +783,7 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L16",
       "id": "manga_manga_routes_mangarouter",
-      "community": 31,
+      "community": 56,
       "norm_label": "mangarouter"
     },
     {
@@ -891,7 +1071,7 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L1",
       "id": "backend_src_utils_auth_helpers_ts",
-      "community": 56,
+      "community": 58,
       "norm_label": "auth.helpers.ts"
     },
     {
@@ -1105,7 +1285,7 @@
       "label": "geistSans",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L5",
+      "source_location": "L7",
       "id": "app_layout_geistsans",
       "community": 29,
       "norm_label": "geistsans"
@@ -1114,7 +1294,7 @@
       "label": "geistMono",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L10",
+      "source_location": "L12",
       "id": "app_layout_geistmono",
       "community": 29,
       "norm_label": "geistmono"
@@ -1123,7 +1303,7 @@
       "label": "metadata",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L15",
+      "source_location": "L17",
       "id": "app_layout_metadata",
       "community": 29,
       "norm_label": "metadata"
@@ -1132,7 +1312,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L20",
+      "source_location": "L23",
       "id": "app_layout_rootlayout",
       "community": 29,
       "norm_label": "rootlayout()"
@@ -1154,6 +1334,303 @@
       "id": "app_page_home",
       "community": 47,
       "norm_label": "home()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L1",
+      "id": "frontend_app_login_page_tsx",
+      "community": 59,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "FieldErrors",
+      "file_type": "code",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L12",
+      "id": "login_page_fielderrors",
+      "community": 59,
+      "norm_label": "fielderrors"
+    },
+    {
+      "label": "validateLogin()",
+      "file_type": "code",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L17",
+      "id": "login_page_validatelogin",
+      "community": 59,
+      "norm_label": "validatelogin()"
+    },
+    {
+      "label": "LoginPage()",
+      "file_type": "code",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L35",
+      "id": "login_page_loginpage",
+      "community": 59,
+      "norm_label": "loginpage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L1",
+      "id": "frontend_app_register_page_tsx",
+      "community": 59,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "FieldErrors",
+      "file_type": "code",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L12",
+      "id": "register_page_fielderrors",
+      "community": 59,
+      "norm_label": "fielderrors"
+    },
+    {
+      "label": "validateRegister()",
+      "file_type": "code",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L18",
+      "id": "register_page_validateregister",
+      "community": 59,
+      "norm_label": "validateregister()"
+    },
+    {
+      "label": "StrengthRule",
+      "file_type": "code",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L55",
+      "id": "register_page_strengthrule",
+      "community": 59,
+      "norm_label": "strengthrule"
+    },
+    {
+      "label": "PASSWORD_RULES",
+      "file_type": "code",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L60",
+      "id": "register_page_password_rules",
+      "community": 59,
+      "norm_label": "password_rules"
+    },
+    {
+      "label": "PasswordStrength()",
+      "file_type": "code",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L67",
+      "id": "register_page_passwordstrength",
+      "community": 59,
+      "norm_label": "passwordstrength()"
+    },
+    {
+      "label": "RegisterPage()",
+      "file_type": "code",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L145",
+      "id": "register_page_registerpage",
+      "community": 59,
+      "norm_label": "registerpage()"
+    },
+    {
+      "label": "HydrationGuard.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/guards/HydrationGuard.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_guards_hydrationguard_tsx",
+      "community": 29,
+      "norm_label": "hydrationguard.tsx"
+    },
+    {
+      "label": "emptySubscribe()",
+      "file_type": "code",
+      "source_file": "frontend/components/guards/HydrationGuard.tsx",
+      "source_location": "L9",
+      "id": "guards_hydrationguard_emptysubscribe",
+      "community": 29,
+      "norm_label": "emptysubscribe()"
+    },
+    {
+      "label": "getClientSnapshot()",
+      "file_type": "code",
+      "source_file": "frontend/components/guards/HydrationGuard.tsx",
+      "source_location": "L12",
+      "id": "guards_hydrationguard_getclientsnapshot",
+      "community": 29,
+      "norm_label": "getclientsnapshot()"
+    },
+    {
+      "label": "getServerSnapshot()",
+      "file_type": "code",
+      "source_file": "frontend/components/guards/HydrationGuard.tsx",
+      "source_location": "L15",
+      "id": "guards_hydrationguard_getserversnapshot",
+      "community": 29,
+      "norm_label": "getserversnapshot()"
+    },
+    {
+      "label": "HydrationGuard()",
+      "file_type": "code",
+      "source_file": "frontend/components/guards/HydrationGuard.tsx",
+      "source_location": "L32",
+      "id": "guards_hydrationguard_hydrationguard",
+      "community": 29,
+      "norm_label": "hydrationguard()"
+    },
+    {
+      "label": "QueryProvider.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/providers/QueryProvider.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_providers_queryprovider_tsx",
+      "community": 29,
+      "norm_label": "queryprovider.tsx"
+    },
+    {
+      "label": "QueryProvider()",
+      "file_type": "code",
+      "source_file": "frontend/components/providers/QueryProvider.tsx",
+      "source_location": "L18",
+      "id": "providers_queryprovider_queryprovider",
+      "community": 29,
+      "norm_label": "queryprovider()"
+    },
+    {
+      "label": "useAuthStore.ts",
+      "file_type": "code",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L1",
+      "id": "frontend_hooks_useauthstore_ts",
+      "community": 59,
+      "norm_label": "useauthstore.ts"
+    },
+    {
+      "label": "AuthState",
+      "file_type": "code",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L6",
+      "id": "hooks_useauthstore_authstate",
+      "community": 59,
+      "norm_label": "authstate"
+    },
+    {
+      "label": "AuthActions",
+      "file_type": "code",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L20",
+      "id": "hooks_useauthstore_authactions",
+      "community": 59,
+      "norm_label": "authactions"
+    },
+    {
+      "label": "initialState",
+      "file_type": "code",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L33",
+      "id": "hooks_useauthstore_initialstate",
+      "community": 59,
+      "norm_label": "initialstate"
+    },
+    {
+      "label": "useAuthStore",
+      "file_type": "code",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L41",
+      "id": "hooks_useauthstore_useauthstore",
+      "community": 59,
+      "norm_label": "useauthstore"
+    },
+    {
+      "label": "useRouteGuard.ts",
+      "file_type": "code",
+      "source_file": "frontend/hooks/useRouteGuard.ts",
+      "source_location": "L1",
+      "id": "frontend_hooks_userouteguard_ts",
+      "community": 59,
+      "norm_label": "userouteguard.ts"
+    },
+    {
+      "label": "useRouteGuard()",
+      "file_type": "code",
+      "source_file": "frontend/hooks/useRouteGuard.ts",
+      "source_location": "L24",
+      "id": "hooks_userouteguard_userouteguard",
+      "community": 59,
+      "norm_label": "userouteguard()"
+    },
+    {
+      "label": "auth.ts",
+      "file_type": "code",
+      "source_file": "frontend/types/auth.ts",
+      "source_location": "L1",
+      "id": "frontend_types_auth_ts",
+      "community": 59,
+      "norm_label": "auth.ts"
+    },
+    {
+      "label": "UserPayload",
+      "file_type": "code",
+      "source_file": "frontend/types/auth.ts",
+      "source_location": "L9",
+      "id": "types_auth_userpayload",
+      "community": 59,
+      "norm_label": "userpayload"
+    },
+    {
+      "label": "AuthResponse",
+      "file_type": "code",
+      "source_file": "frontend/types/auth.ts",
+      "source_location": "L20",
+      "id": "types_auth_authresponse",
+      "community": 59,
+      "norm_label": "authresponse"
+    },
+    {
+      "label": "RefreshResponse",
+      "file_type": "code",
+      "source_file": "frontend/types/auth.ts",
+      "source_location": "L29",
+      "id": "types_auth_refreshresponse",
+      "community": 59,
+      "norm_label": "refreshresponse"
+    },
+    {
+      "label": "api.ts",
+      "file_type": "code",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L1",
+      "id": "frontend_utils_api_ts",
+      "community": 59,
+      "norm_label": "api.ts"
+    },
+    {
+      "label": "executeRefresh()",
+      "file_type": "code",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L24",
+      "id": "utils_api_executerefresh",
+      "community": 59,
+      "norm_label": "executerefresh()"
+    },
+    {
+      "label": "refreshAccessToken()",
+      "file_type": "code",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L53",
+      "id": "utils_api_refreshaccesstoken",
+      "community": 59,
+      "norm_label": "refreshaccesstoken()"
+    },
+    {
+      "label": "apiFetch()",
+      "file_type": "code",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L91",
+      "id": "utils_api_apifetch",
+      "community": 59,
+      "norm_label": "apifetch()"
     },
     {
       "label": "PRD.md",
@@ -4599,6 +5076,17 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/index.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "backend_src_index_ts",
+      "target": "backend_src_modules_follow_follow_routes_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/index.ts",
       "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4612,9 +5100,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_index_ts",
-      "target": "backend_src_utils_jwt_ts",
-      "confidence_score": 1.0
+      "target": "backend_src_utils_jwt_ts"
     },
     {
       "relation": "imports_from",
@@ -4637,6 +5125,17 @@
       "confidence_score": 1.0,
       "source": "backend_src_index_ts",
       "target": "backend_src_utils_redis_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "backend_src_index_ts",
+      "target": "follow_follow_routes_followrouter",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -4696,9 +5195,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_index_ts",
-      "target": "src_index_corsorigins",
-      "confidence_score": 1.0
+      "target": "src_index_corsorigins"
     },
     {
       "relation": "contains",
@@ -4726,9 +5225,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_index_ts",
-      "target": "src_index_parsecorsorigins",
-      "confidence_score": 1.0
+      "target": "src_index_parsecorsorigins"
     },
     {
       "relation": "contains",
@@ -4766,9 +5265,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L203",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_index_ts",
-      "target": "src_index_shutdown",
-      "confidence_score": 1.0
+      "target": "src_index_shutdown"
     },
     {
       "relation": "contains",
@@ -4776,9 +5275,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_index_ts",
-      "target": "src_index_token",
-      "confidence_score": 1.0
+      "target": "src_index_token"
     },
     {
       "relation": "contains",
@@ -4786,9 +5285,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L180",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_index_ts",
-      "target": "src_index_userid",
-      "confidence_score": 1.0
+      "target": "src_index_userid"
     },
     {
       "relation": "imports",
@@ -4797,9 +5296,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_index_ts",
-      "target": "utils_jwt_verifytoken",
-      "confidence_score": 1.0
+      "target": "utils_jwt_verifytoken"
     },
     {
       "relation": "imports",
@@ -4819,9 +5318,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_index_ts",
-      "target": "utils_redis_disconnectredis",
-      "confidence_score": 1.0
+      "target": "utils_redis_disconnectredis"
     },
     {
       "relation": "calls",
@@ -4830,9 +5329,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L227",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_index_shutdown",
-      "target": "utils_redis_disconnectredis",
-      "confidence_score": 1.0
+      "target": "utils_redis_disconnectredis"
     },
     {
       "relation": "calls",
@@ -4872,9 +5371,9 @@
       "source_file": "backend/src/middlewares/auth.middleware.ts",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_middlewares_auth_middleware_ts",
-      "target": "middlewares_auth_middleware_optionalauthmiddleware",
-      "confidence_score": 1.0
+      "target": "middlewares_auth_middleware_optionalauthmiddleware"
     },
     {
       "relation": "contains",
@@ -4923,6 +5422,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "backend_src_middlewares_auth_middleware_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -4956,6 +5466,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "middlewares_auth_middleware_authmiddleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -4981,9 +5502,9 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_routes_ts",
-      "target": "middlewares_auth_middleware_optionalauthmiddleware",
-      "confidence_score": 1.0
+      "target": "middlewares_auth_middleware_optionalauthmiddleware"
     },
     {
       "relation": "calls",
@@ -5031,6 +5552,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "backend_src_middlewares_error_middleware_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L4",
       "weight": 1.0,
@@ -5045,9 +5577,9 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_auth_helpers_ts",
-      "target": "backend_src_middlewares_error_middleware_ts",
-      "confidence_score": 1.0
+      "target": "backend_src_middlewares_error_middleware_ts"
     },
     {
       "relation": "imports",
@@ -5064,6 +5596,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "middlewares_error_middleware_apperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L4",
       "weight": 1.0,
@@ -5078,9 +5621,9 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_auth_helpers_ts",
-      "target": "middlewares_error_middleware_apperror",
-      "confidence_score": 1.0
+      "target": "middlewares_error_middleware_apperror"
     },
     {
       "relation": "method",
@@ -5098,8 +5641,19 @@
       "source_file": "backend/src/middlewares/validateParams.middleware.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_middlewares_validateparams_middleware_ts",
-      "target": "middlewares_validateparams_middleware_validateparams",
+      "target": "middlewares_validateparams_middleware_validateparams"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "backend_src_middlewares_validateparams_middleware_ts",
       "confidence_score": 1.0
     },
     {
@@ -5109,8 +5663,19 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_routes_ts",
-      "target": "backend_src_middlewares_validateparams_middleware_ts",
+      "target": "backend_src_middlewares_validateparams_middleware_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "middlewares_validateparams_middleware_validateparams",
       "confidence_score": 1.0
     },
     {
@@ -5120,9 +5685,9 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_routes_ts",
-      "target": "middlewares_validateparams_middleware_validateparams",
-      "confidence_score": 1.0
+      "target": "middlewares_validateparams_middleware_validateparams"
     },
     {
       "relation": "contains",
@@ -5178,6 +5743,17 @@
       "target": "backend_src_middlewares_validation_middleware_ts"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "backend_src_middlewares_validation_middleware_ts",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -5187,6 +5763,17 @@
       "confidence_score": 1.0,
       "source": "backend_src_modules_auth_auth_routes_ts",
       "target": "middlewares_validation_middleware_validate"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "middlewares_validation_middleware_validate",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5298,9 +5885,9 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_auth_auth_controller_ts",
-      "target": "backend_src_utils_auth_helpers_ts",
-      "confidence_score": 1.0
+      "target": "backend_src_utils_auth_helpers_ts"
     },
     {
       "relation": "imports_from",
@@ -5342,9 +5929,9 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_auth_auth_controller_ts",
-      "target": "utils_auth_helpers_parseuserid",
-      "confidence_score": 1.0
+      "target": "utils_auth_helpers_parseuserid"
     },
     {
       "relation": "imports",
@@ -5408,9 +5995,9 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_auth_auth_controller_ts",
-      "target": "utils_jwt_verifyrefreshtoken",
-      "confidence_score": 1.0
+      "target": "utils_jwt_verifyrefreshtoken"
     },
     {
       "relation": "imports",
@@ -5807,6 +6394,517 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "backend_src_modules_follow_follow_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "backend_src_services_mangadex_service_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "backend_src_types_mangadex_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "backend_src_utils_auth_helpers_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "backend_src_utils_prisma_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_controller_ensurelocalmanga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_controller_extractauthor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_controller_extractcoverurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_controller_followmanga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_controller_mapmangadexstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_controller_resolvedescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_controller_resolvetitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_controller_slugify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L257",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_controller_unfollowmanga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_controller_updateprogress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_schema_followinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "follow_follow_schema_progressinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "services_mangadex_service_mangadexapierror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "services_mangadex_service_mangadexservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "types_mangadex_types_localizedstring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "types_mangadex_types_mangadexmangaentity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "types_mangadex_types_mangadexrelationship",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_controller_ts",
+      "target": "utils_auth_helpers_parseuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "backend_src_modules_follow_follow_controller_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "follow_follow_controller_ensurelocalmanga",
+      "target": "follow_follow_controller_mapmangadexstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "follow_follow_controller_ensurelocalmanga",
+      "target": "follow_follow_controller_resolvetitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "follow_follow_controller_ensurelocalmanga",
+      "target": "follow_follow_controller_resolvedescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "follow_follow_controller_ensurelocalmanga",
+      "target": "follow_follow_controller_extractcoverurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "follow_follow_controller_ensurelocalmanga",
+      "target": "follow_follow_controller_extractauthor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "follow_follow_controller_ensurelocalmanga",
+      "target": "follow_follow_controller_slugify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "follow_follow_controller_followmanga",
+      "target": "follow_follow_controller_ensurelocalmanga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "follow_follow_controller_followmanga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "follow_follow_controller_followmanga",
+      "target": "utils_auth_helpers_parseuserid"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "follow_follow_controller_unfollowmanga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L263",
+      "weight": 1.0,
+      "source": "follow_follow_controller_unfollowmanga",
+      "target": "utils_auth_helpers_parseuserid"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "follow_follow_controller_updateprogress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_location": "L314",
+      "weight": 1.0,
+      "source": "follow_follow_controller_updateprogress",
+      "target": "utils_auth_helpers_parseuserid"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "backend_src_modules_follow_follow_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "follow_follow_routes_followrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "follow_follow_schema_followinputschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "follow_follow_schema_followmangaidparamschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_routes_ts",
+      "target": "follow_follow_schema_progressinputschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_schema_ts",
+      "target": "follow_follow_schema_followinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_schema_ts",
+      "target": "follow_follow_schema_followinputschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_schema_ts",
+      "target": "follow_follow_schema_followmangaidparam",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_schema_ts",
+      "target": "follow_follow_schema_followmangaidparamschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_schema_ts",
+      "target": "follow_follow_schema_progressinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "backend_src_modules_follow_follow_schema_ts",
+      "target": "follow_follow_schema_progressinputschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L5",
       "weight": 1.0,
@@ -5843,9 +6941,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "backend_src_utils_auth_helpers_ts",
-      "confidence_score": 1.0
+      "target": "backend_src_utils_auth_helpers_ts"
     },
     {
       "relation": "imports_from",
@@ -6062,9 +7160,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_auth_helpers_parseuserid",
-      "confidence_score": 1.0
+      "target": "utils_auth_helpers_parseuserid"
     },
     {
       "relation": "imports_from",
@@ -6314,9 +7412,9 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_routes_ts",
-      "target": "manga_manga_schema_mangaidparamschema",
-      "confidence_score": 1.0
+      "target": "manga_manga_schema_mangaidparamschema"
     },
     {
       "relation": "imports",
@@ -6355,9 +7453,9 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_schema_ts",
-      "target": "manga_manga_schema_mangaidparam",
-      "confidence_score": 1.0
+      "target": "manga_manga_schema_mangaidparam"
     },
     {
       "relation": "contains",
@@ -6365,9 +7463,9 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_schema_ts",
-      "target": "manga_manga_schema_mangaidparamschema",
-      "confidence_score": 1.0
+      "target": "manga_manga_schema_mangaidparamschema"
     },
     {
       "relation": "contains",
@@ -6846,9 +7944,9 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_auth_helpers_ts",
-      "target": "utils_auth_helpers_parseuserid",
-      "confidence_score": 1.0
+      "target": "utils_auth_helpers_parseuserid"
     },
     {
       "relation": "contains",
@@ -6906,9 +8004,9 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_jwt_ts",
-      "target": "utils_jwt_getaccesssecret",
-      "confidence_score": 1.0
+      "target": "utils_jwt_getaccesssecret"
     },
     {
       "relation": "contains",
@@ -6916,9 +8014,9 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_jwt_ts",
-      "target": "utils_jwt_getrefreshsecret",
-      "confidence_score": 1.0
+      "target": "utils_jwt_getrefreshsecret"
     },
     {
       "relation": "contains",
@@ -6946,9 +8044,9 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_jwt_ts",
-      "target": "utils_jwt_verifyrefreshtoken",
-      "confidence_score": 1.0
+      "target": "utils_jwt_verifyrefreshtoken"
     },
     {
       "relation": "contains",
@@ -6967,9 +8065,9 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "utils_jwt_generateaccesstoken",
-      "target": "utils_jwt_getaccesssecret",
-      "confidence_score": 1.0
+      "target": "utils_jwt_getaccesssecret"
     },
     {
       "relation": "calls",
@@ -6978,9 +8076,9 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L99",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "utils_jwt_verifytoken",
-      "target": "utils_jwt_getaccesssecret",
-      "confidence_score": 1.0
+      "target": "utils_jwt_getaccesssecret"
     },
     {
       "relation": "calls",
@@ -6989,9 +8087,9 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "utils_jwt_generaterefreshtoken",
-      "target": "utils_jwt_getrefreshsecret",
-      "confidence_score": 1.0
+      "target": "utils_jwt_getrefreshsecret"
     },
     {
       "relation": "calls",
@@ -7000,9 +8098,9 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L112",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "utils_jwt_verifyrefreshtoken",
-      "target": "utils_jwt_getrefreshsecret",
-      "confidence_score": 1.0
+      "target": "utils_jwt_getrefreshsecret"
     },
     {
       "relation": "calls",
@@ -7148,6 +8246,50 @@
       "target": "app_layout_rootlayout"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_app_layout_tsx",
+      "target": "frontend_components_guards_hydrationguard_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_app_layout_tsx",
+      "target": "frontend_components_providers_queryprovider_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_app_layout_tsx",
+      "target": "guards_hydrationguard_hydrationguard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_app_layout_tsx",
+      "target": "providers_queryprovider_queryprovider",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/app/page.tsx",
@@ -7156,6 +8298,553 @@
       "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
       "target": "app_page_home"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_app_login_page_tsx",
+      "target": "frontend_hooks_useauthstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_app_login_page_tsx",
+      "target": "frontend_types_auth_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_app_login_page_tsx",
+      "target": "frontend_utils_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_app_login_page_tsx",
+      "target": "hooks_useauthstore_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_app_login_page_tsx",
+      "target": "login_page_fielderrors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "frontend_app_login_page_tsx",
+      "target": "login_page_loginpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "frontend_app_login_page_tsx",
+      "target": "login_page_validatelogin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_app_login_page_tsx",
+      "target": "types_auth_authresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_app_login_page_tsx",
+      "target": "utils_api_apifetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/app/login/page.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "login_page_loginpage",
+      "target": "hooks_useauthstore_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "frontend_hooks_useauthstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "frontend_types_auth_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "frontend_utils_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "hooks_useauthstore_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "register_page_fielderrors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "register_page_password_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "register_page_passwordstrength",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "register_page_registerpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "register_page_strengthrule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "register_page_validateregister",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "types_auth_authresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "utils_api_apifetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "register_page_registerpage",
+      "target": "hooks_useauthstore_useauthstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/guards/HydrationGuard.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_components_guards_hydrationguard_tsx",
+      "target": "guards_hydrationguard_emptysubscribe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/guards/HydrationGuard.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_components_guards_hydrationguard_tsx",
+      "target": "guards_hydrationguard_getclientsnapshot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/guards/HydrationGuard.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "frontend_components_guards_hydrationguard_tsx",
+      "target": "guards_hydrationguard_getserversnapshot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/guards/HydrationGuard.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "frontend_components_guards_hydrationguard_tsx",
+      "target": "guards_hydrationguard_hydrationguard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/providers/QueryProvider.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "frontend_components_providers_queryprovider_tsx",
+      "target": "providers_queryprovider_queryprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_hooks_useauthstore_ts",
+      "target": "frontend_types_auth_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "frontend_hooks_useauthstore_ts",
+      "target": "hooks_useauthstore_authactions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_hooks_useauthstore_ts",
+      "target": "hooks_useauthstore_authstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "frontend_hooks_useauthstore_ts",
+      "target": "hooks_useauthstore_initialstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "frontend_hooks_useauthstore_ts",
+      "target": "hooks_useauthstore_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_hooks_useauthstore_ts",
+      "target": "types_auth_userpayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useRouteGuard.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_hooks_userouteguard_ts",
+      "target": "frontend_hooks_useauthstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_utils_api_ts",
+      "target": "frontend_hooks_useauthstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "hooks_useauthstore_authstate",
+      "target": "types_auth_userpayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useAuthStore.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "hooks_useauthstore_authactions",
+      "target": "types_auth_userpayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useRouteGuard.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_hooks_userouteguard_ts",
+      "target": "hooks_useauthstore_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_utils_api_ts",
+      "target": "hooks_useauthstore_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/hooks/useRouteGuard.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "hooks_userouteguard_userouteguard",
+      "target": "hooks_useauthstore_useauthstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/hooks/useRouteGuard.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "frontend_hooks_userouteguard_ts",
+      "target": "hooks_userouteguard_userouteguard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/types/auth.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "frontend_types_auth_ts",
+      "target": "types_auth_authresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/types/auth.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "frontend_types_auth_ts",
+      "target": "types_auth_refreshresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/types/auth.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_types_auth_ts",
+      "target": "types_auth_userpayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_utils_api_ts",
+      "target": "frontend_types_auth_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_utils_api_ts",
+      "target": "types_auth_refreshresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "frontend_utils_api_ts",
+      "target": "utils_api_apifetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "frontend_utils_api_ts",
+      "target": "utils_api_executerefresh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "frontend_utils_api_ts",
+      "target": "utils_api_refreshaccesstoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "utils_api_refreshaccesstoken",
+      "target": "utils_api_executerefresh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/api.ts",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "utils_api_apifetch",
+      "target": "utils_api_refreshaccesstoken",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10439,5 +12128,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "35845059ae7e8ffd26439f93d3480b226934139b"
+  "built_at_commit": "7af47d76d07948bee71148481dc421fc23cab165"
 }
