@@ -276,6 +276,7 @@ async function bootstrap(): Promise<void> {
 
   server.listen(PORT, () => {
     console.log(`Kiroku server is running on port ${PORT}`);
+    console.log(`[Env] NODE_ENV: "${process.env.NODE_ENV}", FRONTEND_URL: "${process.env.FRONTEND_URL}"`);
   });
 }
 
