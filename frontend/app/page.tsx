@@ -2,6 +2,7 @@ import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { Features } from "@/components/landing/Features";
 import { AIAssistant } from "@/components/landing/AIAssistant";
+import { Footer } from "@/components/landing/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Features />
         <AIAssistant />
       </main>
+      <Footer />
     </div>
   );
 }

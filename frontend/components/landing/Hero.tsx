@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative w-screen min-h-screen bg-[#0A0A0C] overflow-hidden flex flex-col items-center justify-end pb-2 md:pb-3 p-0 m-0">
+    <section className="relative w-full min-h-screen bg-[#0A0A0C] overflow-hidden flex flex-col items-center justify-end pb-2 md:pb-3 p-0 m-0">
       {/* Screen Screentone overlay for manga dot-matrix feel */}
       <div className="absolute inset-0 manga-screentone pointer-events-none opacity-15 z-0" />
 
