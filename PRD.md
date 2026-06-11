@@ -92,6 +92,14 @@ Manga readers face several systemic challenges today:
 - **Community Hub**: In-app comments section per chapter and shareable reading lists.
 - **Release Prediction**: Machine learning regression modeling historical release patterns to estimate the hour/day of the next chapter's release.
 
+### 6.8 Phase 2 Advanced Core Features
+- **Multi-Platform Library Aggregator**: Consolidates active followed lists and "currently reading" progress from Webtoon, MangaDex, Shonen Jump, Manga Plus, and Tappytoon. Stores authenticated session credentials securely using AES-256 and syncs lists via background workers.
+- **Spoiler-Free Community Comments**: Threaded discussion boards tied directly to chapter IDs/numbers. Hides and blurs comments associated with chapters that are higher than the user's current tracked progress.
+- **Intelligent Manga Recommendation Engine**: Recommends titles based on specific tropes (e.g., "Active Protagonist"), art styles ("Rough Sketch-style"), and pacing ("Slow-burn Romance"), rather than broad genres, utilizing AI embeddings and vector similarity.
+- **Physical & Digital Hybrid Ledger**: A collection manager mapping digital chapters read versus physical book volumes owned on a shelf. Includes a "Shopping List Generator" to compute and recommend purchases of missing physical volumes.
+- **Scan-to-Track**: A camera feature allowing users to snap a photo of a physical manga cover or a screenshot of a digital reader. The backend uses OCR and AI image analysis to automatically detect the series and log progress.
+- **Social "Read-Along" Rooms**: Synchronized reading rooms where friends sync progress. The room lock prevents members from tracking progress or viewing discussion notes ahead of the locked threshold or the slowest member. Includes real-time Socket.IO chat.
+
 ---
 
 ## 7. User Flows
@@ -126,6 +134,50 @@ Manga readers face several systemic challenges today:
 [User Settings] ➔ [Notification Preferences Tab]
        ↓
 [Set Quiet Hours: 22:00 - 08:00] ➔ [Toggle Web Push: ON] ➔ [Select Language: English] ➔ [Save Changes]
+```
+
+### 7.5 Phase 2 Feature Flows
+
+#### 7.5.1 Multi-Platform Sync Flow
+```
+[User Dashboard] ➔ [Manage Integrations] ➔ [Click "Connect Webtoon"]
+       ↓
+[Input Login/Session Cookie] ➔ [Validate Credentials] ➔ [Queue Aggregator Sync]
+       ↓
+[Dashboard updates with combined "Currently Reading" feed]
+```
+
+#### 7.5.2 Spoiler-Free Comments Flow
+```
+[Manga Details Page] ➔ [Click "Chapter 50 Comments"]
+       ↓
+[System checks user's UserFollow lastReadChapter]
+       ↓
+      alt User lastReadChapter >= 50
+          [Display comments normally]
+      else User lastReadChapter < 50
+          [Blur comments with overlay: "Locked - Catch up to Chapter 50 to unlock"]
+      end
+```
+
+#### 7.5.3 Scan-to-Track Flow
+```
+[User Dashboard] ➔ [Click "Scan Cover"] ➔ [Camera Interface Overlay]
+       ↓
+[Capture Image] ➔ [Image Uploaded to Backend] ➔ [AI/OCR matches title & volume]
+       ↓
+[Modal displays match: "Vol. 5 of Chainsaw Man" - "Track Digitally" or "Add to Physical Bookshelf"]
+```
+
+#### 7.5.4 Social "Read-Along" Room Flow
+```
+[Social Hub] ➔ [Create Room] ➔ [Select Manga & Set Target Chapter: 15] ➔ [Generate Invite Code]
+       ↓
+[Friends Join Room] ➔ [Members chat and read up to Chapter 15]
+       ↓
+[Attempting to read Chapter 16 displays warning: "Locked - Wait for all members to catch up"]
+       ↓
+[All members hit Chapter 15] ➔ [Target unlocks and increments to Chapter 20]
 ```
 
 ---
@@ -200,6 +252,62 @@ sequenceDiagram
         end
     end
     Worker->>DB: Record Notification Job stats (sent_status = Sent)
+```
+
+### 8.4 Phase 2 System Workflows
+
+#### 8.4.1 Multi-Platform Aggregation Flow (Cron-Scheduled)
+```mermaid
+sequenceDiagram
+    participant Cron as Scheduler (BullMQ)
+    participant Worker as Sync Worker
+    participant DB as PostgreSQL Database
+    participant Ext as External Site API/Web scraper
+    
+    Cron->>Worker: Trigger Platform Sync (Every 1 hour)
+    Worker->>DB: Fetch user_platform_accounts with credentials
+    DB-->>Worker: Accounts List (Webtoon, MangaPlus, etc.)
+    loop For each platform account
+        Worker->>Ext: Fetch user's "currently reading" list using credentials
+        Ext-->>Worker: Return array of { manga_title, last_read_chapter }
+        Worker->>DB: Match manga titles to local catalog
+        Worker->>DB: Upsert UserFollow (userId, mangaId, lastReadChapter)
+    end
+```
+
+#### 8.4.2 Scan-to-Track Image Reconciliation Flow
+```mermaid
+sequenceDiagram
+    participant User as Frontend Client
+    participant API as Express API Server
+    participant Vision as AI/OCR Engine
+    participant DB as PostgreSQL Database
+    
+    User->>API: POST /api/v1/track/scan (Multipart Image File)
+    API->>Vision: Analyze image for title, volume & chapter numbers
+    Vision-->>API: Returns identified text/metadata (e.g. "Chainsaw Man Volume 12")
+    API->>DB: Search catalog for matched Manga & Volume
+    alt Match found
+        DB-->>API: Return Manga details & Volume Chapters
+        API-->>User: HTTP 200 (Matched details & Action prompt)
+    else Match not found
+        API-->>User: HTTP 404 (Manual selection fallback)
+    end
+```
+
+#### 8.4.3 Social Read-Along Room Progress Sync
+```mermaid
+sequenceDiagram
+    participant User as Frontend Client
+    participant Socket as Socket.IO Server
+    participant DB as PostgreSQL Database
+    
+    User->>Socket: Emit room:progress_update { roomId, chapterNumber }
+    Socket->>DB: Update read_along_room_members currentChapter
+    Socket->>DB: Fetch all member progress for roomId
+    DB-->>Socket: List of member progress
+    Socket->>Socket: Evaluate slowest member progress & target lock
+    Socket-->>User: Broadcast room:state_change { roomId, members, unlockedUntil }
 ```
 
 ---
@@ -430,6 +538,207 @@ CREATE INDEX idx_notifications_user_unread ON "Notification"("userId", "readStat
 CREATE INDEX idx_notifications_manga ON "Notification"("mangaId");
 ```
 
+### 10.3 Prisma Schema Extensions for Phase 2
+```prisma
+enum IntegrationPlatform {
+  WEBTOON
+  MANGADEX
+  SHONEN_JUMP
+  MANGA_PLUS
+  TAPPYTOON
+}
+
+model UserPlatformAccount {
+  id            Int                 @id @default(autoincrement())
+  userId        Int                 @map("user_id")
+  platform      IntegrationPlatform
+  username      String?
+  credentialRaw String?             @map("credential_raw") @db.Text // Encrypted session data
+  syncStatus    String              @default("PENDING") @map("sync_status")
+  lastSyncedAt  DateTime?           @map("last_synced_at")
+  createdAt     DateTime            @default(now()) @map("created_at")
+  updatedAt     DateTime            @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, platform])
+  @@map("user_platform_accounts")
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  chapterId Int      @map("chapter_id")
+  content   String   @db.Text
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+
+  @@index([chapterId])
+  @@map("comments")
+}
+
+model MangaMetadata {
+  id        Int       @id @default(autoincrement())
+  mangaId   Int       @unique @map("manga_id")
+  tropes    String[]
+  artStyle  String?   @map("art_style")
+  pacing    String?
+  embedding Unsupported("vector(1536)")? // pgvector embeddings support
+  updatedAt DateTime  @updatedAt @map("updated_at")
+
+  manga Manga @relation(fields: [mangaId], references: [id], onDelete: Cascade)
+
+  @@map("manga_metadata")
+}
+
+model UserMangaLedger {
+  id            Int      @id @default(autoincrement())
+  userId        Int      @map("user_id")
+  mangaId       Int      @map("manga_id")
+  volumeNumber  Int      @map("volume_number")
+  ownedPhysical Boolean  @default(false) @map("owned_physical")
+  readDigitally Boolean  @default(false) @map("read_digitally")
+  readPhysical  Boolean  @default(false) @map("read_physical")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  manga Manga @relation(fields: [mangaId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, mangaId, volumeNumber])
+  @@map("user_manga_ledgers")
+}
+
+model ReadAlongRoom {
+  id         Int                   @id @default(autoincrement())
+  name       String
+  code       String                @unique
+  mangaId    Int                   @map("manga_id")
+  maxChapter Float                 @default(1.0) @map("max_chapter")
+  creatorId  Int                   @map("creator_id")
+  createdAt  DateTime              @default(now()) @map("created_at")
+  updatedAt  DateTime              @updatedAt @map("updated_at")
+
+  manga        Manga                  @relation(fields: [mangaId], references: [id], onDelete: Cascade)
+  creator      User                   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+  members      ReadAlongRoomMember[]
+  chatMessages ReadAlongChatMessage[]
+
+  @@map("read_along_rooms")
+}
+
+model ReadAlongRoomMember {
+  id             Int      @id @default(autoincrement())
+  roomId         Int      @map("room_id")
+  userId         Int      @map("user_id")
+  currentChapter Float    @default(0.0) @map("current_chapter")
+  joinedAt       DateTime @default(now()) @map("joined_at")
+
+  room ReadAlongRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  user User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([roomId, userId])
+  @@map("read_along_room_members")
+}
+
+model ReadAlongChatMessage {
+  id             Int      @id @default(autoincrement())
+  roomId         Int      @map("room_id")
+  userId         Int      @map("user_id")
+  message        String   @db.Text
+  chapterContext Float?   @map("chapter_context")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  room ReadAlongRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  user User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("read_along_chat_messages")
+}
+```
+
+### 10.4 SQL DDL Extensions for Phase 2
+```sql
+CREATE TYPE "IntegrationPlatform" AS ENUM ('WEBTOON', 'MANGADEX', 'SHONEN_JUMP', 'MANGA_PLUS', 'TAPPYTOON');
+
+CREATE TABLE "user_platform_accounts" (
+    "id" SERIAL PRIMARY KEY,
+    "user_id" INTEGER NOT NULL REFERENCES "users"("id") ON DELETE CASCADE,
+    "platform" "IntegrationPlatform" NOT NULL,
+    "username" VARCHAR(255),
+    "credential_raw" TEXT,
+    "sync_status" VARCHAR(50) DEFAULT 'PENDING' NOT NULL,
+    "last_synced_at" TIMESTAMP WITH TIME ZONE,
+    "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+CREATE UNIQUE INDEX idx_user_platform ON "user_platform_accounts"("user_id", "platform");
+
+CREATE TABLE "comments" (
+    "id" SERIAL PRIMARY KEY,
+    "user_id" INTEGER NOT NULL REFERENCES "users"("id") ON DELETE CASCADE,
+    "chapter_id" INTEGER NOT NULL REFERENCES "chapters"("id") ON DELETE CASCADE,
+    "content" TEXT NOT NULL,
+    "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX idx_comments_chapter ON "comments"("chapter_id");
+
+CREATE TABLE "manga_metadata" (
+    "id" SERIAL PRIMARY KEY,
+    "manga_id" INTEGER UNIQUE NOT NULL REFERENCES "manga"("id") ON DELETE CASCADE,
+    "tropes" TEXT[] NOT NULL,
+    "art_style" VARCHAR(255),
+    "pacing" VARCHAR(255),
+    "embedding" vector(1536), -- Requires pgvector extension
+    "updated_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE "user_manga_ledgers" (
+    "id" SERIAL PRIMARY KEY,
+    "user_id" INTEGER NOT NULL REFERENCES "users"("id") ON DELETE CASCADE,
+    "manga_id" INTEGER NOT NULL REFERENCES "manga"("id") ON DELETE CASCADE,
+    "volume_number" INTEGER NOT NULL,
+    "owned_physical" BOOLEAN DEFAULT FALSE NOT NULL,
+    "read_digitally" BOOLEAN DEFAULT FALSE NOT NULL,
+    "read_physical" BOOLEAN DEFAULT FALSE NOT NULL,
+    "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+CREATE UNIQUE INDEX idx_user_manga_volume ON "user_manga_ledgers"("user_id", "manga_id", "volume_number");
+
+CREATE TABLE "read_along_rooms" (
+    "id" SERIAL PRIMARY KEY,
+    "name" VARCHAR(255) NOT NULL,
+    "code" VARCHAR(50) UNIQUE NOT NULL,
+    "manga_id" INTEGER NOT NULL REFERENCES "manga"("id") ON DELETE CASCADE,
+    "max_chapter" DOUBLE PRECISION DEFAULT 1.0 NOT NULL,
+    "creator_id" INTEGER NOT NULL REFERENCES "users"("id") ON DELETE CASCADE,
+    "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE "read_along_room_members" (
+    "id" SERIAL PRIMARY KEY,
+    "room_id" INTEGER NOT NULL REFERENCES "read_along_rooms"("id") ON DELETE CASCADE,
+    "user_id" INTEGER NOT NULL REFERENCES "users"("id") ON DELETE CASCADE,
+    "current_chapter" DOUBLE PRECISION DEFAULT 0.0 NOT NULL,
+    "joined_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+CREATE UNIQUE INDEX idx_room_member ON "read_along_room_members"("room_id", "user_id");
+
+CREATE TABLE "read_along_chat_messages" (
+    "id" SERIAL PRIMARY KEY,
+    "room_id" INTEGER NOT NULL REFERENCES "read_along_rooms"("id") ON DELETE CASCADE,
+    "user_id" INTEGER NOT NULL REFERENCES "users"("id") ON DELETE CASCADE,
+    "message" TEXT NOT NULL,
+    "chapter_context" DOUBLE PRECISION,
+    "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+```
+
 ---
 
 ## 11. API Design
@@ -589,6 +898,41 @@ All endpoints require content headers: `Content-Type: application/json`. Protect
       "database": { "connected": true, "poolSize": 8 }
     }
     ```
+
+### 11.5 Phase 2 API Endpoints
+
+#### 11.5.1 Multi-Platform Library Aggregator
+- **GET `/api/v1/integrations`**: Retrieve status of all user platform account connections.
+- **POST `/api/v1/integrations/connect`**: Save and verify session credentials for an external platform.
+  - **Payload**: `{ "platform": "WEBTOON", "credentialRaw": "cookie_string_or_oauth_token" }`
+- **POST `/api/v1/integrations/sync`**: Manually trigger sync worker for a specific platform.
+
+#### 11.5.2 Spoiler-Free Community Comments
+- **GET `/api/v1/chapters/:chapterId/comments`**: Fetch comments for a specific chapter. Performs spoiler checks comparing target chapter index against user's progress. Returns blurs or hides comments if locked.
+- **POST `/api/v1/chapters/:chapterId/comments`**: Post a comment to a chapter.
+  - **Payload**: `{ "content": "Woah, what a plot twist!" }`
+
+#### 11.5.3 Intelligent Manga Recommendation Engine
+- **GET `/api/v1/recommendations/ai`**: Fetch personalized recommendations.
+  - **Query Parameters**: `trope`, `artStyle`, `pacing` (options to filter by explicit trope/art embeddings)
+
+#### 11.5.4 Physical & Digital Hybrid Ledger
+- **GET `/api/v1/ledger`**: Fetch user bookshelf items and reading ledgers.
+- **POST `/api/v1/ledger/volume`**: Set volume ownership or progress.
+  - **Payload**: `{ "mangaId": 1, "volumeNumber": 5, "ownedPhysical": true, "readPhysical": false, "readDigitally": true }`
+- **GET `/api/v1/ledger/shopping-list`**: Generate shopping list of missing volumes.
+
+#### 11.5.5 Scan-to-Track
+- **POST `/api/v1/track/scan`**: Receives an uploaded photo of a cover or screenshot, runs OCR/AI matching, and returns the suggested series/volume.
+  - **Payload**: `multipart/form-data` with key `image`.
+
+#### 11.5.6 Social "Read-Along" Rooms
+- **POST `/api/v1/rooms`**: Create a new read-along room.
+  - **Payload**: `{ "name": "Chainsaw Man Fan Club", "mangaId": 1, "targetChapter": 20 }`
+- **POST `/api/v1/rooms/join`**: Join an existing room via code.
+  - **Payload**: `{ "code": "X78Y90" }`
+- **Socket.IO Event: `room:progress_update`**: Send current read progress to room.
+- **Socket.IO Event: `room:chat`**: Send real-time chat message to the room.
 
 ---
 
@@ -894,6 +1238,16 @@ Any unhandled exception inside the worker processes is piped directly to Sentry,
 |  * Native iOS & Android companion applications        |
 |  * Browser Extension (Firefox/Chrome quick view)       |
 |  * Discord/Telegram alerting Webhook integrations      |
+|                                                        |
+|  Phase 5: Phase 2 Advanced Core Features (Weeks 17-20) |
+|  * Multi-Platform Aggregator sync & credential vault   |
+|  * Spoiler-Free comment restrictions on chapters      |
+|  * Physical/Digital Shelf ledger & shopping list       |
+|                                                        |
+|  Phase 6: AI & Social Sync (Weeks 21-24)               |
+|  * Scan-to-Track Vision AI cover OCR parsing           |
+|  * Trope/Art/Pacing recommendation vectors (pgvector)  |
+|  * Social Read-Along Socket.IO rooms & locks           |
 |                                                        |
 +--------------------------------------------------------+
 ```
