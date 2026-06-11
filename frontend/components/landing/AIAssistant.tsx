@@ -100,6 +100,7 @@ export const AIAssistant: React.FC = () => {
                     width={210}
                     height={280}
                     className="w-full h-auto object-contain filter drop-shadow-[0_8px_20px_rgba(168,85,247,0.25)]"
+                    style={{ height: "auto" }}
                     priority
                   />
                 </div>
@@ -163,6 +164,7 @@ export const AIAssistant: React.FC = () => {
                     width={195}
                     height={195}
                     className="w-full h-auto object-contain filter drop-shadow-[0_8px_20px_rgba(168,85,247,0.3)]"
+                    style={{ height: "auto" }}
                     priority
                   />
                 </div>
