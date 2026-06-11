@@ -80,8 +80,16 @@
   --color-input-bg: hsl(var(--input-bg));
   --color-input-border: hsl(var(--input-border));
   --color-input-focus: hsl(var(--input-focus));
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-plus-jakarta-sans), var(--font-geist-sans), sans-serif;
   --font-mono: var(--font-geist-mono);
+  --font-bebas: var(--font-bebas-neue), sans-serif;
+  --font-japanese: var(--font-noto-sans-jp), sans-serif;
+
+  /* Shonen palette */
+  --color-shonen-orange: #FF6B00;
+  --color-leaf-gold: #FFD700;
+  --color-akatsuki-red: #E52521;
+  --color-neon-purple: #A855F7;
 }
 
 /* ─── Base ────────────────────────────────────────────────────── */
@@ -89,7 +97,7 @@
 body {
   background: hsl(var(--background));
   color: hsl(var(--foreground));
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
 }
 
 /* ─── Animations ──────────────────────────────────────────────── */
@@ -138,3 +146,34 @@ body {
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
+
+/* Manga/Anime Aesthetics */
+.manga-screentone {
+  background-image: radial-gradient(rgba(255, 107, 0, 0.08) 1.5px, transparent 0);
+  background-size: 16px 16px;
+}
+
+.manga-speedlines {
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 12px);
+}
+
+.cell-shade {
+  border: 2px solid #ffffff;
+  box-shadow: 4px 4px 0px #FF6B00;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cell-shade:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #FFD700;
+}
+
+.cell-shade-purple {
+  border: 2px solid #ffffff;
+  box-shadow: 4px 4px 0px #A855F7;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cell-shade-purple:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #FF1E75;
+}
+
