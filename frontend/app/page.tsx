@@ -1,7 +1,8 @@
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { Features } from "@/components/landing/Features";
-import { TopManga } from "@/components/landing/TopManga";
+import { AIAssistant } from "@/components/landing/AIAssistant";
+import { Footer } from "@/components/landing/Footer";
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <Features />
-        <TopManga />
+        <AIAssistant />
       </main>
+      <Footer />
     </div>
   );
 }
