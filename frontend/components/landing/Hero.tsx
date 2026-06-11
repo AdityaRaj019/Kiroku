@@ -32,6 +32,7 @@ export const Hero: React.FC = () => {
             width={850}
             height={298}
             className="w-full max-w-[320px] sm:max-w-[480px] md:max-w-[720px] lg:max-w-[850px] h-auto object-contain select-none animate-fade-in-up filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.7)]"
+            style={{ height: "auto" }}
             draggable="false"
             priority
           />
@@ -88,6 +89,7 @@ export const Hero: React.FC = () => {
               width={360}
               height={100}
               className="w-full h-auto object-contain select-none filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]"
+              style={{ height: "auto" }}
               draggable="false"
               priority
             />

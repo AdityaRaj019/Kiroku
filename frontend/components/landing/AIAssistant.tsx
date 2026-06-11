@@ -46,6 +46,7 @@ export const AIAssistant: React.FC = () => {
           alt="AI Manga panels backdrop"
           fill
           className="object-cover opacity-[0.14] mix-blend-color-dodge filter contrast-125 brightness-50"
+          sizes="100vw"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0C] via-transparent to-[#050508]" />
@@ -96,8 +97,10 @@ export const AIAssistant: React.FC = () => {
                   <Image
                     src="/images/adult_sasuke.png"
                     alt="Adult Sasuke Uchiha"
-                    fill
-                    className="object-contain filter drop-shadow-[0_8px_20px_rgba(168,85,247,0.25)]"
+                    width={210}
+                    height={280}
+                    className="w-full h-auto object-contain filter drop-shadow-[0_8px_20px_rgba(168,85,247,0.25)]"
+                    style={{ height: "auto" }}
                     priority
                   />
                 </div>
@@ -158,8 +161,10 @@ export const AIAssistant: React.FC = () => {
                   <Image
                     src="/images/bot_screens.png"
                     alt="Mascot with screens"
-                    fill
-                    className="object-contain filter drop-shadow-[0_8px_20px_rgba(168,85,247,0.3)]"
+                    width={195}
+                    height={195}
+                    className="w-full h-auto object-contain filter drop-shadow-[0_8px_20px_rgba(168,85,247,0.3)]"
+                    style={{ height: "auto" }}
                     priority
                   />
                 </div>
@@ -220,7 +225,7 @@ export const AIAssistant: React.FC = () => {
                       alt="Luffy preview notification"
                       fill
                       className="object-cover object-top"
-                      sizes="180px"
+                      sizes="218px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   </div>
