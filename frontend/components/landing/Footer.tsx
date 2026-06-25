@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const LeafSwirl = () => (
   <svg 
@@ -87,15 +88,15 @@ export const Footer: React.FC = () => {
 
         {/* Right Side: Skewed cell-shaded CTA button */}
         <div className="z-10 flex flex-col items-center md:items-end">
-          <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="group relative bg-[#FFB800] border-2 border-black text-black font-bebas text-sm font-bold tracking-widest py-2 px-6 rounded-lg shadow-[4px_4px_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#000] transition-all flex items-center gap-2.5 cursor-pointer uppercase"
+          <Link 
+            href="/manga"
+            className="group relative bg-[#FFB800] border-2 border-black text-black font-bebas text-sm font-bold tracking-widest py-2 px-6 rounded-lg shadow-[4px_4px_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#000] transition-all flex items-center gap-2.5 uppercase"
           >
             <span>Start Your Journey</span>
             <div className="w-5 h-5 rounded-full bg-white/95 flex items-center justify-center text-black shadow-inner">
               <LeafSwirl />
             </div>
-          </button>
+          </Link>
           
           <span className="text-[10px] text-white/20 font-sans tracking-wide mt-3 select-none">
             © 2026 MANGATREK. ALL RIGHTS RESERVED.
