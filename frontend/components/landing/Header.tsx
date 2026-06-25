@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 const LeafSwirl = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg 
@@ -77,15 +78,15 @@ export const Header: React.FC = () => {
       </nav>
 
       {/* CTA Button */}
-      <button 
-        onClick={() => scrollToSection("features")}
+      <Link 
+        href="/manga"
         className="relative group overflow-hidden bg-gradient-to-r from-[#FF9F00] to-[#FF6B00] text-black font-bebas text-sm font-bold tracking-wider px-5 py-2 rounded-full border border-black/20 shadow-[0_4px_0_#000] hover:shadow-[0_2px_0_#000] hover:translate-y-[2px] transition-all flex items-center"
       >
         <span>GET STARTED</span>
         <div className="ml-2 w-5 h-5 rounded-full bg-white/90 flex items-center justify-center text-black shadow-inner">
           <LeafSwirl className="w-3.5 h-3.5" />
         </div>
-      </button>
+      </Link>
     </header>
   );
 };

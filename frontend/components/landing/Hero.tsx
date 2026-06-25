@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -75,12 +76,9 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Action Button */}
-        <div 
-          onClick={() => {
-            const el = document.getElementById("features");
-            if (el) el.scrollIntoView({ behavior: "smooth" });
-          }}
-          className="relative group pt-0 cursor-pointer transition-transform hover:scale-105 active:scale-95 duration-200"
+        <Link 
+          href="/manga"
+          className="relative group pt-0 block transition-transform hover:scale-105 active:scale-95 duration-200"
         >
           <div className="w-[300px] sm:w-[360px]">
             <Image
@@ -94,7 +92,7 @@ export const Hero: React.FC = () => {
               priority
             />
           </div>
-        </div>
+        </Link>
       </div>
 
       {/* Distress Border Border Bottom decor (manga line style) */}
