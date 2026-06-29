@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Sparkles, 
   User, 
   Mail, 
   Lock, 
@@ -174,6 +173,7 @@ export default function RegisterPage() {
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [serverError, setServerError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [focusedField, setFocusedField] = useState<string | null>(null);
 
   // Rotation Index State (changes anime theme/experience every 9 seconds)
   const [activeIndex, setActiveIndex] = useState(0);
@@ -363,6 +363,8 @@ export default function RegisterPage() {
                       setFieldErrors((prev) => ({ ...prev, name: undefined }));
                     }
                   }}
+                  onFocus={() => setFocusedField("name")}
+                  onBlur={() => setFocusedField(null)}
                   placeholder="Your display name"
                   aria-invalid={!!fieldErrors.name}
                   aria-describedby={
@@ -374,7 +376,7 @@ export default function RegisterPage() {
                       : "border-white/10 hover:border-white/20"
                   }`}
                   style={
-                    !fieldErrors.name && name
+                    !fieldErrors.name && (name || focusedField === "name")
                       ? { borderColor: activeAnime.accentColor, boxShadow: `0 0 0 1px ${activeAnime.accentColor}` }
                       : {}
                   }
@@ -408,6 +410,8 @@ export default function RegisterPage() {
                       setFieldErrors((prev) => ({ ...prev, email: undefined }));
                     }
                   }}
+                  onFocus={() => setFocusedField("email")}
+                  onBlur={() => setFocusedField(null)}
                   placeholder="you@example.com"
                   aria-invalid={!!fieldErrors.email}
                   aria-describedby={
@@ -419,7 +423,7 @@ export default function RegisterPage() {
                       : "border-white/10 hover:border-white/20"
                   }`}
                   style={
-                    !fieldErrors.email && email
+                    !fieldErrors.email && (email || focusedField === "email")
                       ? { borderColor: activeAnime.accentColor, boxShadow: `0 0 0 1px ${activeAnime.accentColor}` }
                       : {}
                   }
@@ -458,6 +462,8 @@ export default function RegisterPage() {
                       }));
                     }
                   }}
+                  onFocus={() => setFocusedField("password")}
+                  onBlur={() => setFocusedField(null)}
                   placeholder="Create a strong password"
                   aria-invalid={!!fieldErrors.password}
                   aria-describedby={
@@ -469,7 +475,7 @@ export default function RegisterPage() {
                       : "border-white/10 hover:border-white/20"
                   }`}
                   style={
-                    !fieldErrors.password && password
+                    !fieldErrors.password && (password || focusedField === "password")
                       ? { borderColor: activeAnime.accentColor, boxShadow: `0 0 0 1px ${activeAnime.accentColor}` }
                       : {}
                   }
@@ -554,16 +560,243 @@ export default function RegisterPage() {
       </div>
 
       {/* ─── RIGHT SIDE (60%) ─── */}
-      {/* Shell placeholder for Phase 3 */}
-      <div className="hidden lg:flex lg:w-[60%] relative h-screen items-center justify-center bg-[#050507]">
-        <div className="text-center text-muted-foreground">
-          <Sparkles className="w-8 h-8 mx-auto animate-pulse mb-2 text-white/20" />
-          <p className="text-xs uppercase tracking-widest font-mono text-white/40">
-            [ Live Dashboard Preview — Coming in Phase 3 ]
-          </p>
-          <p className="text-[10px] font-sans text-white/20 mt-1">
-            Active Theme: {activeAnime.title} ({activeAnime.accentColor})
-          </p>
+      <div className="hidden lg:flex lg:w-[60%] relative h-screen bg-[#050507] border-l border-white/5 overflow-hidden flex-col justify-between p-12">
+        {/* Subtle grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+
+        {/* Animated Volumetric Smoke/Fog Effect syncing to active anime's glow color */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-30 mix-blend-screen">
+          <motion.div
+            animate={{
+              x: [-100, 80, -100],
+              y: [-30, 30, -30],
+              scale: [1, 1.25, 1],
+              rotate: [0, 180, 360]
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute -top-[15%] -left-[15%] w-[600px] h-[600px] rounded-full blur-[110px]"
+            style={{
+              background: `radial-gradient(circle, ${activeAnime.glowColor} 0%, transparent 70%)`
+            }}
+          />
+          <motion.div
+            animate={{
+              x: [80, -100, 80],
+              y: [30, -30, 30],
+              scale: [1.25, 0.9, 1.25],
+              rotate: [360, 180, 0]
+            }}
+            transition={{
+              duration: 32,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute -bottom-[15%] -right-[15%] w-[700px] h-[700px] rounded-full blur-[130px]"
+            style={{
+              background: `radial-gradient(circle, ${activeAnime.glowColor} 0%, transparent 70%)`
+            }}
+          />
+          <motion.div
+            animate={{
+              x: [-60, 60, -60],
+              y: [40, -40, 40],
+              scale: [0.95, 1.15, 0.95]
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute top-[25%] left-[20%] w-[450px] h-[450px] rounded-full blur-[90px]"
+            style={{
+              background: `radial-gradient(circle, ${activeAnime.glowColor} 0%, transparent 60%)`
+            }}
+          />
+        </div>
+
+        {/* Noise overlay filter */}
+        <div 
+          className="absolute inset-0 opacity-[0.015] pointer-events-none mix-blend-overlay"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+          }}
+        />
+
+        {/* Top Header of Showcase (e.g. current dashboard preview status) */}
+        <div className="flex items-center justify-between z-10 w-full">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-success animate-pulse" />
+            <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">Live Application Teaser</span>
+          </div>
+          <div className="text-[10px] font-mono text-muted-foreground/60">
+            Preview Mode • Rotates 9s
+          </div>
+        </div>
+
+        {/* Background Character Art (More visible with vignette) */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeAnime.id}
+              initial={{ opacity: 0, scale: 1.01 }}
+              animate={{ opacity: 0.52, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.99 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="absolute inset-0"
+            >
+              {/* Radial gradient mask to fade image at edges */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050507] via-[#050507]/90 to-[#050507]/45 z-10" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,#050507_80%)] z-10" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={activeAnime.imagePath}
+                alt={activeAnime.character}
+                className="w-full h-full object-cover object-center"
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Main Content Dashboard */}
+        <div className="flex-1 flex flex-col justify-between z-10 w-full relative mt-16 pb-6">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeAnime.id}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="flex flex-col justify-between h-full w-full"
+            >
+              {/* Top/Middle Area: Clean dynamic banner showing title, progress, details */}
+              <div className="max-w-xl space-y-5">
+                <div className="space-y-2">
+                  <div className="flex items-center gap-3">
+                    <span 
+                      className="text-[10px] font-extrabold tracking-widest uppercase px-2.5 py-0.5 rounded border bg-white/5 transition-all duration-1000"
+                      style={{ 
+                        color: activeAnime.accentColor, 
+                        borderColor: `${activeAnime.accentColor}30`,
+                        boxShadow: `0 0 10px ${activeAnime.glowColor}`
+                      }}
+                    >
+                      {activeAnime.trendingBadge}
+                    </span>
+                    <span className="text-[10px] text-muted-foreground uppercase font-mono tracking-wider">
+                      {activeAnime.status}
+                    </span>
+                  </div>
+                  
+                  <h2 className="text-5xl font-bold tracking-tight text-white font-sans">
+                    {activeAnime.title}
+                  </h2>
+                  <div className="text-xs text-muted-foreground flex items-center gap-2 font-mono">
+                    <span className="font-japanese text-white/60">{activeAnime.japaneseTitle}</span>
+                    <span>•</span>
+                    <span>{activeAnime.details}</span>
+                  </div>
+                </div>
+
+                {/* Star rating + Clean progress bar */}
+                <div className="bg-black/50 backdrop-blur-md border border-white/10 p-5 rounded-2xl max-w-md space-y-3.5 shadow-xl">
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <span 
+                          key={i} 
+                          className="text-sm select-none transition-colors duration-1000"
+                          style={{ color: i < activeAnime.ratingStars ? activeAnime.accentColor : "rgba(255,255,255,0.1)" }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <span className="text-xs font-mono font-bold text-white/90" style={{ color: activeAnime.accentColor }}>
+                      Rating: {activeAnime.rating}/10
+                    </span>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <div className="flex justify-between text-[10px] font-bold tracking-wider">
+                      <span className="text-muted-foreground uppercase">Tracking Progress</span>
+                      <span style={{ color: activeAnime.accentColor }}>{activeAnime.progress}%</span>
+                    </div>
+                    <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden border border-white/5">
+                      <div 
+                        className="h-full rounded-full transition-all duration-1000 ease-out"
+                        style={{ 
+                          width: `${activeAnime.progress}%`,
+                          backgroundColor: activeAnime.accentColor,
+                          boxShadow: `0 0 8px ${activeAnime.glowColor}`
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Friends Activity log */}
+              <div className="max-w-md bg-black/45 backdrop-blur-md border border-white/5 px-4 py-3 rounded-xl shadow-lg mt-auto mb-6">
+                <span className="text-[9px] font-extrabold uppercase tracking-widest text-muted-foreground block mb-2">Friends Activity</span>
+                <div className="flex items-center gap-2.5 text-xs">
+                  <div 
+                    className="w-6.5 h-6.5 rounded-full flex items-center justify-center text-[9px] font-bold text-white shrink-0 border transition-all duration-1000"
+                    style={{ 
+                      borderColor: `${activeAnime.accentColor}30`,
+                      backgroundColor: `${activeAnime.accentColor}10`
+                    }}
+                  >
+                    {activeAnime.friendsActivity[0].avatarText}
+                  </div>
+                  <div className="flex-1 min-w-0 leading-tight">
+                    <p className="text-[10px] text-neutral-300 truncate">
+                      <span className="font-semibold text-white">{activeAnime.friendsActivity[0].user}</span> {activeAnime.friendsActivity[0].action}
+                    </p>
+                    <span className="text-[8px] text-muted-foreground font-mono">{activeAnime.friendsActivity[0].time}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Row: Stats & Badges in a single horizontal bar */}
+              <div className="w-full bg-black/55 backdrop-blur-md border border-white/10 p-3.5 rounded-xl shadow-2xl flex flex-row items-center justify-between gap-4">
+                {/* Stats flex container */}
+                <div className="flex items-center gap-5">
+                  {activeAnime.stats.map((stat, idx) => (
+                    <div key={idx} className="flex items-baseline gap-1.5 border-r border-white/10 pr-5 last:border-0 last:pr-0">
+                      <span className="text-[9px] text-muted-foreground uppercase font-bold tracking-wider">{stat.label}:</span>
+                      <span className="text-xs font-bold text-white font-mono">{stat.value}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Badges flex container */}
+                <div className="flex items-center gap-2">
+                  {activeAnime.floatingCards.map((badge) => (
+                    <div 
+                      key={badge.id}
+                      className="flex items-center gap-1 px-2.5 py-1 rounded bg-white/5 border text-[9px] font-bold text-white transition-colors duration-1000 shrink-0"
+                      style={{ 
+                        borderColor: `${activeAnime.accentColor}20`
+                      }}
+                    >
+                      <span>{badge.icon}</span>
+                      <span>{badge.title}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Footer Area */}
+        <div className="z-10 w-full flex items-center justify-between text-muted-foreground text-[10px] font-mono border-t border-white/5 pt-2">
+          <span>Kiroku Premium Tracker v1.0</span>
+          <span>Security Verified</span>
         </div>
       </div>
     </div>
