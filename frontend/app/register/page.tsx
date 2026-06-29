@@ -564,15 +564,59 @@ export default function RegisterPage() {
         {/* Subtle grid pattern overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
 
-        {/* Ambient background blur circles syncing to active theme color */}
-        <div 
-          className="absolute top-[10%] right-[10%] w-[380px] h-[380px] rounded-full blur-[140px] pointer-events-none opacity-20 mix-blend-screen transition-all duration-1000 ease-in-out"
-          style={{ backgroundColor: activeAnime.accentColor }}
-        />
-        <div 
-          className="absolute bottom-[10%] left-[20%] w-[420px] h-[420px] rounded-full blur-[150px] pointer-events-none opacity-10 mix-blend-screen transition-all duration-1000 ease-in-out"
-          style={{ backgroundColor: activeAnime.accentColor }}
-        />
+        {/* Animated Volumetric Smoke/Fog Effect syncing to active anime's glow color */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-30 mix-blend-screen">
+          <motion.div
+            animate={{
+              x: [-100, 80, -100],
+              y: [-30, 30, -30],
+              scale: [1, 1.25, 1],
+              rotate: [0, 180, 360]
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute -top-[15%] -left-[15%] w-[600px] h-[600px] rounded-full blur-[110px]"
+            style={{
+              background: `radial-gradient(circle, ${activeAnime.glowColor} 0%, transparent 70%)`
+            }}
+          />
+          <motion.div
+            animate={{
+              x: [80, -100, 80],
+              y: [30, -30, 30],
+              scale: [1.25, 0.9, 1.25],
+              rotate: [360, 180, 0]
+            }}
+            transition={{
+              duration: 32,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute -bottom-[15%] -right-[15%] w-[700px] h-[700px] rounded-full blur-[130px]"
+            style={{
+              background: `radial-gradient(circle, ${activeAnime.glowColor} 0%, transparent 70%)`
+            }}
+          />
+          <motion.div
+            animate={{
+              x: [-60, 60, -60],
+              y: [40, -40, 40],
+              scale: [0.95, 1.15, 0.95]
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute top-[25%] left-[20%] w-[450px] h-[450px] rounded-full blur-[90px]"
+            style={{
+              background: `radial-gradient(circle, ${activeAnime.glowColor} 0%, transparent 60%)`
+            }}
+          />
+        </div>
 
         {/* Noise overlay filter */}
         <div 
@@ -593,14 +637,14 @@ export default function RegisterPage() {
           </div>
         </div>
 
-        {/* Background Character Art (Slightly more visible, cover) */}
+        {/* Background Character Art (More visible with vignette) */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeAnime.id}
-              initial={{ opacity: 0, scale: 1.02 }}
-              animate={{ opacity: 0.35, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
+              initial={{ opacity: 0, scale: 1.01 }}
+              animate={{ opacity: 0.52, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.99 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="absolute inset-0"
             >
