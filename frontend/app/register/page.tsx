@@ -1,13 +1,25 @@
 "use client";
 
-import { useState, useMemo, type FormEvent } from "react";
+import { useState, useMemo, useEffect, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Sparkles, 
+  User, 
+  Mail, 
+  Lock, 
+  ArrowRight, 
+  Eye, 
+  EyeOff, 
+  Quote
+} from "lucide-react";
 import { useAuthStore } from "@/hooks/useAuthStore";
 import { apiFetch } from "@/utils/api";
+import { ANIME_SHOWCASE_DATA } from "@/utils/animeShowcaseData";
 import type { AuthResponse } from "@/types/auth";
 
-// ─── Validation (mirrors backend auth.schema.ts) ─────────────
+// ─── Validation ──────────────────────────────────────────────
 
 interface FieldErrors {
   email?: string;
@@ -64,7 +76,7 @@ const PASSWORD_RULES: StrengthRule[] = [
   { label: "One digit", test: (pw) => /\d/.test(pw) },
 ];
 
-function PasswordStrength({ password }: { password: string }) {
+function PasswordStrength({ password, accentColor }: { password: string; accentColor: string }) {
   const results = useMemo(
     () => PASSWORD_RULES.map((rule) => ({ ...rule, passed: rule.test(password) })),
     [password]
@@ -78,39 +90,47 @@ function PasswordStrength({ password }: { password: string }) {
     <div className="mt-3 space-y-2">
       {/* Strength bar */}
       <div className="flex gap-1">
-        {PASSWORD_RULES.map((_, i) => (
-          <div
-            key={i}
-            className={`h-1 flex-1 rounded-full transition-all duration-300 ${
-              i < passedCount
-                ? passedCount <= 1
-                  ? "bg-destructive"
-                  : passedCount <= 2
-                    ? "bg-amber-500"
-                    : passedCount <= 3
-                      ? "bg-yellow-500"
-                      : "bg-success"
-                : "bg-muted"
-            }`}
-          />
-        ))}
+        {PASSWORD_RULES.map((_, i) => {
+          const isPassed = i < passedCount;
+          let barBg = "bg-muted";
+          
+          if (isPassed) {
+            if (passedCount <= 1) barBg = "bg-destructive";
+            else if (passedCount <= 2) barBg = "bg-amber-500";
+            else if (passedCount <= 3) barBg = "bg-yellow-500";
+            else barBg = "bg-success";
+          }
+
+          return (
+            <div
+              key={i}
+              className={`h-1 flex-1 rounded-full transition-all duration-300 ${barBg}`}
+              style={
+                isPassed && passedCount === 4 
+                  ? { backgroundColor: accentColor } 
+                  : {}
+              }
+            />
+          );
+        })}
       </div>
 
       {/* Rule checklist */}
-      <ul className="space-y-1">
+      <ul className="grid grid-cols-2 gap-x-3 gap-y-1">
         {results.map((rule) => (
           <li
             key={rule.label}
-            className={`flex items-center gap-2 text-xs transition-colors duration-200 ${
+            className={`flex items-center gap-1.5 text-[11px] transition-colors duration-200 ${
               rule.passed ? "text-success" : "text-muted-foreground"
             }`}
+            style={rule.passed ? { color: accentColor } : {}}
           >
             {rule.passed ? (
               <svg
-                className="h-3.5 w-3.5"
+                className="h-3 w-3 shrink-0"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={2.5}
+                strokeWidth={3}
                 stroke="currentColor"
                 aria-hidden="true"
               >
@@ -122,10 +142,10 @@ function PasswordStrength({ password }: { password: string }) {
               </svg>
             ) : (
               <svg
-                className="h-3.5 w-3.5"
+                className="h-3 w-3 shrink-0 text-muted-foreground/40"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={2.5}
+                strokeWidth={2}
                 stroke="currentColor"
                 aria-hidden="true"
               >
@@ -140,18 +160,32 @@ function PasswordStrength({ password }: { password: string }) {
   );
 }
 
-// ─── Page Component ──────────────────────────────────────────
+// ─── Main Page Component ─────────────────────────────────────
 
 export default function RegisterPage() {
   const router = useRouter();
   const setSession = useAuthStore((state) => state.setSession);
 
+  // Form states
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [serverError, setServerError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Rotation Index State (changes anime theme/experience every 9 seconds)
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % ANIME_SHOWCASE_DATA.length);
+    }, 9000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const activeAnime = ANIME_SHOWCASE_DATA[activeIndex];
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -194,34 +228,101 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="flex flex-1 items-center justify-center px-4 py-12">
-      {/* Ambient glow */}
-      <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
-      </div>
+    <div 
+      className="min-h-screen w-full flex bg-[#060608] text-foreground overflow-hidden font-sans relative"
+      style={{
+        transition: "background-color 1s ease-in-out"
+      }}
+    >
+      {/* Background glow circle that transitions colors */}
+      <div 
+        className="absolute -top-[20%] -left-[10%] w-[500px] h-[500px] rounded-full blur-[150px] pointer-events-none opacity-20 mix-blend-screen transition-all duration-1000 ease-in-out"
+        style={{
+          backgroundColor: activeAnime.accentColor,
+        }}
+      />
 
-      {/* Card */}
-      <div className="animate-fade-in-up relative z-10 w-full max-w-md">
-        <div className="rounded-2xl border border-border bg-surface-elevated/80 p-8 shadow-2xl shadow-primary/5 backdrop-blur-xl sm:p-10">
-          {/* Header */}
-          <div className="mb-8 text-center">
-            <h1 className="text-3xl font-bold tracking-tight text-foreground">
+      {/* ─── LEFT SIDE (40%) ─── */}
+      <div className="w-full lg:w-[40%] flex flex-col justify-between p-8 md:p-12 xl:p-16 z-10 border-r border-white/5 bg-[#08080C]/80 backdrop-blur-xl relative">
+        
+        {/* Top Brand Logo */}
+        <div className="flex items-center gap-2.5">
+          <div 
+            className="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-white transition-all duration-1000 shadow-md"
+            style={{ 
+              backgroundColor: activeAnime.accentColor,
+              boxShadow: `0 4px 12px ${activeAnime.glowColor}`
+            }}
+          >
+            K
+          </div>
+          <span className="font-bebas text-2xl tracking-widest text-white">
+            KIROKU
+          </span>
+        </div>
+
+        {/* Dynamic Japanese Welcome Greeting & Blessings */}
+        <div className="my-auto py-8 space-y-8 max-w-sm w-full">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeAnime.id}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="space-y-4"
+            >
+              {/* Welcoming Japanese banner */}
+              <div className="space-y-1">
+                <span 
+                  className="text-xs uppercase tracking-widest font-semibold px-2.5 py-1 rounded-full bg-white/5 border border-white/10 transition-colors duration-1000"
+                  style={{ color: activeAnime.accentColor }}
+                >
+                  {activeAnime.japaneseTitle}
+                </span>
+                
+                <h1 className="text-xl md:text-2xl font-japanese font-bold text-white tracking-wide mt-2">
+                  {activeAnime.japaneseWelcome}
+                </h1>
+                <p className="text-xs text-muted-foreground italic font-sans">
+                  {activeAnime.welcomeSub}
+                </p>
+              </div>
+
+              {/* Dynamic Inspirational Journey Quote */}
+              <div className="relative pl-4 border-l-2 transition-all duration-1000 py-1 bg-white/[0.01] rounded-r-md pr-2"
+                   style={{ borderColor: activeAnime.accentColor }}>
+                <Quote className="absolute -top-3 -left-1.5 w-3.5 h-3.5 opacity-20" style={{ color: activeAnime.accentColor }} />
+                <p className="text-xs md:text-sm text-neutral-300 leading-relaxed font-medium">
+                  &ldquo;{activeAnime.quote}&rdquo;
+                </p>
+                <p className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1.5 font-bold">
+                  — {activeAnime.quoteSpeaker}
+                </p>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Form Header */}
+          <div className="space-y-1">
+            <h2 className="text-2xl font-bold tracking-tight text-white">
               Create your account
-            </h1>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Start tracking your manga reading journey
+            </h2>
+            <p className="text-xs text-muted-foreground">
+              Track. Discover. Share. Start your epic cataloging journey.
             </p>
           </div>
 
           {/* Server error alert */}
           {serverError && (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
               role="alert"
-              className="animate-fade-in-up mb-6 flex items-start gap-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-3"
+              className="flex items-start gap-2.5 rounded-lg border border-destructive/20 bg-destructive/10 px-3.5 py-2.5"
             >
               <svg
-                className="mt-0.5 h-5 w-5 shrink-0 text-destructive"
+                className="mt-0.5 h-4.5 w-4.5 shrink-0 text-destructive"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
@@ -234,171 +335,235 @@ export default function RegisterPage() {
                   d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
                 />
               </svg>
-              <p className="text-sm text-destructive">{serverError}</p>
-            </div>
+              <p className="text-xs text-destructive">{serverError}</p>
+            </motion.div>
           )}
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} noValidate className="space-y-5">
-            {/* Name */}
-            <div className="animate-fade-in-up delay-100">
+          {/* Registration Form */}
+          <form onSubmit={handleSubmit} noValidate className="space-y-4">
+            
+            {/* Display Name Input */}
+            <div className="space-y-1">
               <label
                 htmlFor="register-name"
-                className="mb-1.5 block text-sm font-medium text-foreground"
+                className="text-xs font-semibold text-neutral-300 flex items-center gap-1.5"
               >
-                Name
+                <User className="w-3.5 h-3.5 opacity-60" /> Username
               </label>
-              <input
-                id="register-name"
-                type="text"
-                autoComplete="name"
-                required
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                  if (fieldErrors.name) {
-                    setFieldErrors((prev) => ({ ...prev, name: undefined }));
+              <div className="relative">
+                <input
+                  id="register-name"
+                  type="text"
+                  autoComplete="name"
+                  required
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                    if (fieldErrors.name) {
+                      setFieldErrors((prev) => ({ ...prev, name: undefined }));
+                    }
+                  }}
+                  placeholder="Your display name"
+                  aria-invalid={!!fieldErrors.name}
+                  aria-describedby={
+                    fieldErrors.name ? "register-name-error" : undefined
                   }
-                }}
-                placeholder="Your display name"
-                aria-invalid={!!fieldErrors.name}
-                aria-describedby={
-                  fieldErrors.name ? "register-name-error" : undefined
-                }
-                className={`w-full rounded-lg border bg-input-bg px-4 py-2.5 text-sm text-foreground placeholder-muted-foreground outline-none transition-all duration-200 focus:ring-2 focus:ring-ring/40 ${
-                  fieldErrors.name
-                    ? "border-destructive focus:ring-destructive/40"
-                    : "border-input-border hover:border-muted-foreground/40 focus:border-input-focus"
-                }`}
-              />
+                  className={`w-full rounded-lg border bg-white/[0.02] px-3.5 py-2 text-xs text-foreground placeholder-muted-foreground outline-none transition-all duration-300 ${
+                    fieldErrors.name
+                      ? "border-destructive focus:ring-1 focus:ring-destructive"
+                      : "border-white/10 hover:border-white/20"
+                  }`}
+                  style={
+                    !fieldErrors.name && name
+                      ? { borderColor: activeAnime.accentColor, boxShadow: `0 0 0 1px ${activeAnime.accentColor}` }
+                      : {}
+                  }
+                />
+              </div>
               {fieldErrors.name && (
-                <p
-                  id="register-name-error"
-                  className="mt-1.5 text-xs text-destructive"
-                >
+                <p id="register-name-error" className="text-[10px] text-destructive">
                   {fieldErrors.name}
                 </p>
               )}
             </div>
 
-            {/* Email */}
-            <div className="animate-fade-in-up delay-200">
+            {/* Email Input */}
+            <div className="space-y-1">
               <label
                 htmlFor="register-email"
-                className="mb-1.5 block text-sm font-medium text-foreground"
+                className="text-xs font-semibold text-neutral-300 flex items-center gap-1.5"
               >
-                Email
+                <Mail className="w-3.5 h-3.5 opacity-60" /> Email
               </label>
-              <input
-                id="register-email"
-                type="email"
-                autoComplete="email"
-                required
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                  if (fieldErrors.email) {
-                    setFieldErrors((prev) => ({ ...prev, email: undefined }));
+              <div className="relative">
+                <input
+                  id="register-email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (fieldErrors.email) {
+                      setFieldErrors((prev) => ({ ...prev, email: undefined }));
+                    }
+                  }}
+                  placeholder="you@example.com"
+                  aria-invalid={!!fieldErrors.email}
+                  aria-describedby={
+                    fieldErrors.email ? "register-email-error" : undefined
                   }
-                }}
-                placeholder="you@example.com"
-                aria-invalid={!!fieldErrors.email}
-                aria-describedby={
-                  fieldErrors.email ? "register-email-error" : undefined
-                }
-                className={`w-full rounded-lg border bg-input-bg px-4 py-2.5 text-sm text-foreground placeholder-muted-foreground outline-none transition-all duration-200 focus:ring-2 focus:ring-ring/40 ${
-                  fieldErrors.email
-                    ? "border-destructive focus:ring-destructive/40"
-                    : "border-input-border hover:border-muted-foreground/40 focus:border-input-focus"
-                }`}
-              />
+                  className={`w-full rounded-lg border bg-white/[0.02] px-3.5 py-2 text-xs text-foreground placeholder-muted-foreground outline-none transition-all duration-300 ${
+                    fieldErrors.email
+                      ? "border-destructive focus:ring-1 focus:ring-destructive"
+                      : "border-white/10 hover:border-white/20"
+                  }`}
+                  style={
+                    !fieldErrors.email && email
+                      ? { borderColor: activeAnime.accentColor, boxShadow: `0 0 0 1px ${activeAnime.accentColor}` }
+                      : {}
+                  }
+                />
+              </div>
               {fieldErrors.email && (
-                <p
-                  id="register-email-error"
-                  className="mt-1.5 text-xs text-destructive"
-                >
+                <p id="register-email-error" className="text-[10px] text-destructive">
                   {fieldErrors.email}
                 </p>
               )}
             </div>
 
-            {/* Password */}
-            <div className="animate-fade-in-up delay-300">
-              <label
-                htmlFor="register-password"
-                className="mb-1.5 block text-sm font-medium text-foreground"
-              >
-                Password
-              </label>
-              <input
-                id="register-password"
-                type="password"
-                autoComplete="new-password"
-                required
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                  if (fieldErrors.password) {
-                    setFieldErrors((prev) => ({
-                      ...prev,
-                      password: undefined,
-                    }));
-                  }
-                }}
-                placeholder="Create a strong password"
-                aria-invalid={!!fieldErrors.password}
-                aria-describedby={
-                  fieldErrors.password ? "register-password-error" : undefined
-                }
-                className={`w-full rounded-lg border bg-input-bg px-4 py-2.5 text-sm text-foreground placeholder-muted-foreground outline-none transition-all duration-200 focus:ring-2 focus:ring-ring/40 ${
-                  fieldErrors.password
-                    ? "border-destructive focus:ring-destructive/40"
-                    : "border-input-border hover:border-muted-foreground/40 focus:border-input-focus"
-                }`}
-              />
-              {fieldErrors.password && (
-                <p
-                  id="register-password-error"
-                  className="mt-1.5 text-xs text-destructive"
+            {/* Password Input */}
+            <div className="space-y-1">
+              <div className="flex items-center justify-between">
+                <label
+                  htmlFor="register-password"
+                  className="text-xs font-semibold text-neutral-300 flex items-center gap-1.5"
                 >
+                  <Lock className="w-3.5 h-3.5 opacity-60" /> Password
+                </label>
+              </div>
+              <div className="relative">
+                <input
+                  id="register-password"
+                  type={showPassword ? "text" : "password"}
+                  autoComplete="new-password"
+                  required
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                    if (fieldErrors.password) {
+                      setFieldErrors((prev) => ({
+                        ...prev,
+                        password: undefined,
+                      }));
+                    }
+                  }}
+                  placeholder="Create a strong password"
+                  aria-invalid={!!fieldErrors.password}
+                  aria-describedby={
+                    fieldErrors.password ? "register-password-error" : undefined
+                  }
+                  className={`w-full rounded-lg border bg-white/[0.02] pl-3.5 pr-10 py-2 text-xs text-foreground placeholder-muted-foreground outline-none transition-all duration-300 ${
+                    fieldErrors.password
+                      ? "border-destructive focus:ring-1 focus:ring-destructive"
+                      : "border-white/10 hover:border-white/20"
+                  }`}
+                  style={
+                    !fieldErrors.password && password
+                      ? { borderColor: activeAnime.accentColor, boxShadow: `0 0 0 1px ${activeAnime.accentColor}` }
+                      : {}
+                  }
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-2.5 text-muted-foreground hover:text-white transition-colors"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+              {fieldErrors.password && (
+                <p id="register-password-error" className="text-[10px] text-destructive">
                   {fieldErrors.password}
                 </p>
               )}
-              <PasswordStrength password={password} />
+              <PasswordStrength password={password} accentColor={activeAnime.accentColor} />
             </div>
 
-            {/* Submit */}
-            <div className="animate-fade-in-up delay-400 pt-2">
+            {/* Continue Submit Button */}
+            <div className="pt-2">
               <button
                 id="register-submit"
                 type="submit"
                 disabled={isSubmitting}
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:bg-primary-hover hover:shadow-primary/40 focus:outline-none focus:ring-2 focus:ring-ring/40 focus:ring-offset-2 focus:ring-offset-background active:scale-[0.98] disabled:pointer-events-none disabled:opacity-60"
+                className="flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-xs font-bold text-white shadow-lg transition-all duration-500 ease-in-out cursor-pointer active:scale-[0.98] disabled:pointer-events-none disabled:opacity-60"
+                style={{
+                  backgroundColor: activeAnime.accentColor,
+                  boxShadow: `0 4px 16px ${activeAnime.glowColor}`,
+                }}
               >
                 {isSubmitting ? (
                   <>
-                    <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-primary-foreground/30 border-t-primary-foreground" />
+                    <span className="inline-block h-3.5 w-3.5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
                     Creating account…
                   </>
                 ) : (
-                  "Create account"
+                  <>
+                    Continue <ArrowRight className="w-3.5 h-3.5" />
+                  </>
                 )}
               </button>
             </div>
           </form>
 
-          {/* Footer */}
-          <div className="animate-fade-in-up delay-400 mt-8 text-center">
-            <p className="text-sm text-muted-foreground">
-              Already have an account?{" "}
-              <Link
-                href="/login"
-                className="font-medium text-primary transition-colors hover:text-primary-hover"
-              >
-                Sign in
-              </Link>
-            </p>
+          {/* Divider */}
+          <div className="relative flex py-1 items-center">
+            <div className="flex-grow border-t border-white/5"></div>
+            <span className="flex-shrink mx-3 text-[10px] uppercase font-bold tracking-widest text-muted-foreground/60">
+              or
+            </span>
+            <div className="flex-grow border-t border-white/5"></div>
           </div>
+
+          {/* OAuth Buttons */}
+          <button
+            type="button"
+            className="flex w-full items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/[0.01] hover:bg-white/[0.04] px-3.5 py-2 text-xs font-semibold text-white transition-colors duration-200 cursor-pointer"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05" />
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+            </svg>
+            Continue with Google
+          </button>
+        </div>
+
+        {/* Footer Redirect */}
+        <div className="text-center text-xs text-muted-foreground mt-4">
+          Already have an account?{" "}
+          <Link
+            href="/login"
+            className="font-semibold text-white hover:underline transition-all"
+            style={{ color: activeAnime.accentColor }}
+          >
+            Sign in
+          </Link>
+        </div>
+      </div>
+
+      {/* ─── RIGHT SIDE (60%) ─── */}
+      {/* Shell placeholder for Phase 3 */}
+      <div className="hidden lg:flex lg:w-[60%] relative h-screen items-center justify-center bg-[#050507]">
+        <div className="text-center text-muted-foreground">
+          <Sparkles className="w-8 h-8 mx-auto animate-pulse mb-2 text-white/20" />
+          <p className="text-xs uppercase tracking-widest font-mono text-white/40">
+            [ Live Dashboard Preview — Coming in Phase 3 ]
+          </p>
+          <p className="text-[10px] font-sans text-white/20 mt-1">
+            Active Theme: {activeAnime.title} ({activeAnime.accentColor})
+          </p>
         </div>
       </div>
     </div>
