@@ -1,16 +1,16 @@
 # Graph Report - kiroku  (2026-06-30)
 
 ## Corpus Check
-- 42 files · ~30,342 words
+- 46 files · ~30,450 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 623 nodes · 804 edges · 57 communities (52 shown, 5 thin omitted)
+- 639 nodes · 831 edges · 57 communities (52 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ffde94d7`
+- Built from commit: `04645abf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -82,8 +82,8 @@
 6. `parseUserId()` - 11 edges
 7. `refresh()` - 10 edges
 8. `getMangaDetails()` - 10 edges
-9. `upsertMangaBatch()` - 9 edges
-10. `verifyToken()` - 9 edges
+9. `useAuthStore` - 10 edges
+10. `upsertMangaBatch()` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `followManga()` --calls--> `parseUserId()`  [EXTRACTED]
@@ -120,8 +120,8 @@ Cohesion: 0.05
 Nodes (41): 12.1 Jobs Structure & Payload, 12.2 Channels Implementation, 12.3 Retry and Backoff Logic, 12. Notification System Logic, 13.1 Staggered & Conditional Polling, 13.2 Queue Prioritization & Batching, 13.3 Notification Deduplication Keys, 13. Scalability Plan (+33 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.12
-Nodes (18): 7.5.1 Multi-Platform Sync Flow, 7.5.2 Spoiler-Free Comments Flow, 7.5.3 Scan-to-Track Flow, 7.5.4 Social "Read-Along" Room Flow, 7.5 Phase 2 Feature Flows, 8.1 Manga Follow Flow, 8.2 Chapter Detection & Aggregation Flow (Cron-Scheduled), 8.3 Notification Dispatch Queue Flow (+10 more)
+Cohesion: 0.08
+Nodes (27): 7.1 Onboarding & Authentication Flow, 7.2 Search & Follow Flow, 7.3 Reading Progress & Dashboard Flow, 7.4 Notification Preference Tuning Flow, 7.5.1 Multi-Platform Sync Flow, 7.5.2 Spoiler-Free Comments Flow, 7.5.3 Scan-to-Track Flow, 7.5.4 Social "Read-Along" Room Flow (+19 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.14
@@ -140,8 +140,8 @@ Cohesion: 0.17
 Nodes (11): 1. Identity & Mindset, 2.1 The Sandbox Rule (Test in Isolation), 2.2 Strict Boundary Safety, 2.3 Project Memory & Context Bootstrap, 2. Engineering Philosophy, 3.1 Response Structure, 3. Communication & Response Protocols, 4. Forbidden Actions (+3 more)
 
 ### Community 11 - "Community 11"
-Cohesion: 0.16
-Nodes (16): 10.1 Prisma Schema (`schema.prisma`), 10.2 Database Indexes & Constraints (SQL DDL), 10.3 Prisma Schema Extensions for Phase 2, 10.4 SQL DDL Extensions for Phase 2, 10. Database Design, 11.2 Protected API Endpoints (Required Token: JWT), 11.4 Admin/System Control Endpoints (Requires API Key Header: `x-admin-key`), code:mermaid (sequenceDiagram) (+8 more)
+Cohesion: 0.20
+Nodes (10): 10.1 Prisma Schema (`schema.prisma`), 10.2 Database Indexes & Constraints (SQL DDL), 10.3 Prisma Schema Extensions for Phase 2, 10.4 SQL DDL Extensions for Phase 2, 10. Database Design, code:prisma (datasource db {), code:sql (-- Composite Key and Relational Foreign Keys), code:prisma (enum IntegrationPlatform {) (+2 more)
 
 ### Community 12 - "Community 12"
 Cohesion: 0.20
@@ -284,8 +284,8 @@ Cohesion: 0.47
 Nodes (6): 11.1 Public API Endpoints, 11.3 Protected Push Token Endpoints, 11. API Design, code:json ({), code:json ({), code:json ({)
 
 ### Community 50 - "Community 50"
-Cohesion: 0.22
-Nodes (9): 7.1 Onboarding & Authentication Flow, 7.2 Search & Follow Flow, 7.3 Reading Progress & Dashboard Flow, 7.4 Notification Preference Tuning Flow, 7. User Flows, code:block1 ([Landing Page] ➔ [Register / Login Screen] ➔ [OAuth/Credenti), code:block2 ([User Dashboard] ➔ [Type query in Search Bar] ➔ [Results Mod), code:block3 ([Dashboard Home] ➔ [Shows followed manga with unread chapter) (+1 more)
+Cohesion: 0.40
+Nodes (6): 11.2 Protected API Endpoints (Required Token: JWT), 11.4 Admin/System Control Endpoints (Requires API Key Header: `x-admin-key`), code:json ({), code:json ({), code:json ({ "status": "retried", "jobId": "job-1094" }), code:json ({)
 
 ### Community 53 - "Community 53"
 Cohesion: 0.33
@@ -304,25 +304,25 @@ Cohesion: 0.22
 Nodes (9): adapter, chapterCounts, followMap, generateChapters(), HASHED_PASSWORD, main(), mangaData, prisma (+1 more)
 
 ### Community 59 - "Community 59"
-Cohesion: 0.10
-Nodes (24): AuthActions, AuthState, initialState, useAuthStore, useRouteGuard(), FieldErrors, HERO_THEMES, HeroTheme (+16 more)
+Cohesion: 0.07
+Nodes (35): AuthActions, AuthState, initialState, useAuthStore, useRouteGuard(), GlassCard(), GlassCardProps, HERO_THEMES (+27 more)
 
 ## Knowledge Gaps
-- **261 isolated node(s):** `adapter`, `prisma`, `HASHED_PASSWORD`, `usersData`, `mangaData` (+256 more)
+- **268 isolated node(s):** `adapter`, `prisma`, `HASHED_PASSWORD`, `usersData`, `mangaData` (+263 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Product Requirement Document (PRD)` connect `Community 4` to `Community 5`, `Community 7`, `Community 11`, `Community 49`, `Community 50`, `Community 53`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
+- **Why does `Product Requirement Document (PRD)` connect `Community 4` to `Community 5`, `Community 7`, `Community 11`, `Community 49`, `Community 53`?**
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **Why does `What You Must Do When Invoked` connect `Community 3` to `Community 9`, `Community 2`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **Why does `/graphify` connect `Community 2` to `Community 3`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **What connects `adapter`, `prisma`, `HASHED_PASSWORD` to the rest of the system?**
-  _261 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _268 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
