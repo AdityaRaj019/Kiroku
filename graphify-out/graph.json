@@ -252,7 +252,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_error_middleware_ts",
-      "community": 0,
+      "community": 6,
       "norm_label": "error.middleware.ts"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L7",
       "id": "middlewares_error_middleware_apperror",
-      "community": 0,
+      "community": 6,
       "norm_label": "apperror"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L8",
       "id": "middlewares_error_middleware_apperror_constructor",
-      "community": 0,
+      "community": 6,
       "norm_label": ".constructor()"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L25",
       "id": "middlewares_error_middleware_errormiddleware",
-      "community": 31,
+      "community": 6,
       "norm_label": "errormiddleware()"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validation_middleware_ts",
-      "community": 55,
+      "community": 6,
       "norm_label": "validation.middleware.ts"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L11",
       "id": "middlewares_validation_middleware_validate",
-      "community": 55,
+      "community": 6,
       "norm_label": "validate()"
     },
     {
@@ -405,7 +405,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L270",
       "id": "auth_auth_controller_profile",
-      "community": 0,
+      "community": 6,
       "norm_label": "profile()"
     },
     {
@@ -423,7 +423,7 @@
       "source_file": "backend/src/modules/auth/auth.routes.ts",
       "source_location": "L7",
       "id": "auth_auth_routes_authrouter",
-      "community": 31,
+      "community": 0,
       "norm_label": "authrouter"
     },
     {
@@ -477,7 +477,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L1",
       "id": "backend_src_modules_follow_follow_controller_ts",
-      "community": 55,
+      "community": 6,
       "norm_label": "follow.controller.ts"
     },
     {
@@ -486,7 +486,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L19",
       "id": "follow_follow_controller_mapmangadexstatus",
-      "community": 55,
+      "community": 6,
       "norm_label": "mapmangadexstatus()"
     },
     {
@@ -495,7 +495,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L35",
       "id": "follow_follow_controller_resolvetitle",
-      "community": 55,
+      "community": 6,
       "norm_label": "resolvetitle()"
     },
     {
@@ -504,7 +504,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L42",
       "id": "follow_follow_controller_resolvedescription",
-      "community": 55,
+      "community": 6,
       "norm_label": "resolvedescription()"
     },
     {
@@ -513,7 +513,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L50",
       "id": "follow_follow_controller_extractcoverurl",
-      "community": 55,
+      "community": 6,
       "norm_label": "extractcoverurl()"
     },
     {
@@ -522,7 +522,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L66",
       "id": "follow_follow_controller_extractauthor",
-      "community": 55,
+      "community": 6,
       "norm_label": "extractauthor()"
     },
     {
@@ -531,7 +531,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L76",
       "id": "follow_follow_controller_slugify",
-      "community": 55,
+      "community": 6,
       "norm_label": "slugify()"
     },
     {
@@ -540,7 +540,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L94",
       "id": "follow_follow_controller_ensurelocalmanga",
-      "community": 55,
+      "community": 6,
       "norm_label": "ensurelocalmanga()"
     },
     {
@@ -549,7 +549,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L192",
       "id": "follow_follow_controller_followmanga",
-      "community": 55,
+      "community": 6,
       "norm_label": "followmanga()"
     },
     {
@@ -558,7 +558,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L257",
       "id": "follow_follow_controller_unfollowmanga",
-      "community": 55,
+      "community": 6,
       "norm_label": "unfollowmanga()"
     },
     {
@@ -567,7 +567,7 @@
       "source_file": "backend/src/modules/follow/follow.controller.ts",
       "source_location": "L308",
       "id": "follow_follow_controller_updateprogress",
-      "community": 55,
+      "community": 6,
       "norm_label": "updateprogress()"
     },
     {
@@ -576,7 +576,7 @@
       "source_file": "backend/src/modules/follow/follow.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_follow_follow_routes_ts",
-      "community": 55,
+      "community": 6,
       "norm_label": "follow.routes.ts"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "backend/src/modules/follow/follow.routes.ts",
       "source_location": "L8",
       "id": "follow_follow_routes_followrouter",
-      "community": 55,
+      "community": 6,
       "norm_label": "followrouter"
     },
     {
@@ -594,7 +594,7 @@
       "source_file": "backend/src/modules/follow/follow.schema.ts",
       "source_location": "L1",
       "id": "backend_src_modules_follow_follow_schema_ts",
-      "community": 55,
+      "community": 6,
       "norm_label": "follow.schema.ts"
     },
     {
@@ -603,7 +603,7 @@
       "source_file": "backend/src/modules/follow/follow.schema.ts",
       "source_location": "L12",
       "id": "follow_follow_schema_followinputschema",
-      "community": 55,
+      "community": 6,
       "norm_label": "followinputschema"
     },
     {
@@ -612,7 +612,7 @@
       "source_file": "backend/src/modules/follow/follow.schema.ts",
       "source_location": "L18",
       "id": "follow_follow_schema_followinput",
-      "community": 55,
+      "community": 6,
       "norm_label": "followinput"
     },
     {
@@ -621,7 +621,7 @@
       "source_file": "backend/src/modules/follow/follow.schema.ts",
       "source_location": "L28",
       "id": "follow_follow_schema_progressinputschema",
-      "community": 55,
+      "community": 6,
       "norm_label": "progressinputschema"
     },
     {
@@ -630,7 +630,7 @@
       "source_file": "backend/src/modules/follow/follow.schema.ts",
       "source_location": "L36",
       "id": "follow_follow_schema_progressinput",
-      "community": 55,
+      "community": 6,
       "norm_label": "progressinput"
     },
     {
@@ -639,7 +639,7 @@
       "source_file": "backend/src/modules/follow/follow.schema.ts",
       "source_location": "L44",
       "id": "follow_follow_schema_followmangaidparamschema",
-      "community": 55,
+      "community": 6,
       "norm_label": "followmangaidparamschema"
     },
     {
@@ -648,7 +648,7 @@
       "source_file": "backend/src/modules/follow/follow.schema.ts",
       "source_location": "L50",
       "id": "follow_follow_schema_followmangaidparam",
-      "community": 55,
+      "community": 6,
       "norm_label": "followmangaidparam"
     },
     {
@@ -783,7 +783,7 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L16",
       "id": "manga_manga_routes_mangarouter",
-      "community": 56,
+      "community": 31,
       "norm_label": "mangarouter"
     },
     {
@@ -1071,7 +1071,7 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L1",
       "id": "backend_src_utils_auth_helpers_ts",
-      "community": 0,
+      "community": 6,
       "norm_label": "auth.helpers.ts"
     },
     {
@@ -1080,7 +1080,7 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L15",
       "id": "utils_auth_helpers_parseuserid",
-      "community": 0,
+      "community": 6,
       "norm_label": "parseuserid()"
     },
     {
@@ -1411,7 +1411,7 @@
       "label": "FieldErrors",
       "file_type": "code",
       "source_file": "frontend/app/register/page.tsx",
-      "source_location": "L12",
+      "source_location": "L24",
       "id": "register_page_fielderrors",
       "community": 59,
       "norm_label": "fielderrors"
@@ -1420,7 +1420,7 @@
       "label": "validateRegister()",
       "file_type": "code",
       "source_file": "frontend/app/register/page.tsx",
-      "source_location": "L18",
+      "source_location": "L30",
       "id": "register_page_validateregister",
       "community": 59,
       "norm_label": "validateregister()"
@@ -1429,7 +1429,7 @@
       "label": "StrengthRule",
       "file_type": "code",
       "source_file": "frontend/app/register/page.tsx",
-      "source_location": "L55",
+      "source_location": "L67",
       "id": "register_page_strengthrule",
       "community": 59,
       "norm_label": "strengthrule"
@@ -1438,7 +1438,7 @@
       "label": "PASSWORD_RULES",
       "file_type": "code",
       "source_file": "frontend/app/register/page.tsx",
-      "source_location": "L60",
+      "source_location": "L72",
       "id": "register_page_password_rules",
       "community": 59,
       "norm_label": "password_rules"
@@ -1447,7 +1447,7 @@
       "label": "PasswordStrength()",
       "file_type": "code",
       "source_file": "frontend/app/register/page.tsx",
-      "source_location": "L67",
+      "source_location": "L79",
       "id": "register_page_passwordstrength",
       "community": 59,
       "norm_label": "passwordstrength()"
@@ -1456,7 +1456,7 @@
       "label": "RegisterPage()",
       "file_type": "code",
       "source_file": "frontend/app/register/page.tsx",
-      "source_location": "L145",
+      "source_location": "L165",
       "id": "register_page_registerpage",
       "community": 59,
       "norm_label": "registerpage()"
@@ -1939,6 +1939,51 @@
       "norm_label": "refreshresponse"
     },
     {
+      "label": "animeShowcaseData.ts",
+      "file_type": "code",
+      "source_file": "frontend/utils/animeShowcaseData.ts",
+      "source_location": "L1",
+      "id": "frontend_utils_animeshowcasedata_ts",
+      "community": 59,
+      "norm_label": "animeshowcasedata.ts"
+    },
+    {
+      "label": "FriendActivity",
+      "file_type": "code",
+      "source_file": "frontend/utils/animeShowcaseData.ts",
+      "source_location": "L1",
+      "id": "utils_animeshowcasedata_friendactivity",
+      "community": 59,
+      "norm_label": "friendactivity"
+    },
+    {
+      "label": "FloatingCard",
+      "file_type": "code",
+      "source_file": "frontend/utils/animeShowcaseData.ts",
+      "source_location": "L9",
+      "id": "utils_animeshowcasedata_floatingcard",
+      "community": 59,
+      "norm_label": "floatingcard"
+    },
+    {
+      "label": "AnimeSeriesData",
+      "file_type": "code",
+      "source_file": "frontend/utils/animeShowcaseData.ts",
+      "source_location": "L17",
+      "id": "utils_animeshowcasedata_animeseriesdata",
+      "community": 59,
+      "norm_label": "animeseriesdata"
+    },
+    {
+      "label": "ANIME_SHOWCASE_DATA",
+      "file_type": "code",
+      "source_file": "frontend/utils/animeShowcaseData.ts",
+      "source_location": "L43",
+      "id": "utils_animeshowcasedata_anime_showcase_data",
+      "community": 59,
+      "norm_label": "anime_showcase_data"
+    },
+    {
       "label": "api.ts",
       "file_type": "code",
       "source_file": "frontend/utils/api.ts",
@@ -2052,7 +2097,7 @@
       "source_file": "PRD.md",
       "source_location": "L57",
       "id": "kiroku_prd_6_feature_requirements",
-      "community": 6,
+      "community": 4,
       "norm_label": "6. feature requirements"
     },
     {
@@ -2061,7 +2106,7 @@
       "source_file": "PRD.md",
       "source_location": "L59",
       "id": "kiroku_prd_6_1_user_authentication_mvp",
-      "community": 6,
+      "community": 4,
       "norm_label": "6.1 user authentication (mvp)"
     },
     {
@@ -2070,7 +2115,7 @@
       "source_file": "PRD.md",
       "source_location": "L64",
       "id": "kiroku_prd_6_2_manga_search_discovery_mvp",
-      "community": 6,
+      "community": 4,
       "norm_label": "6.2 manga search & discovery (mvp)"
     },
     {
@@ -2079,7 +2124,7 @@
       "source_file": "PRD.md",
       "source_location": "L69",
       "id": "kiroku_prd_6_3_manga_tracking_progress_mvp",
-      "community": 6,
+      "community": 4,
       "norm_label": "6.3 manga tracking & progress (mvp)"
     },
     {
@@ -2088,7 +2133,7 @@
       "source_file": "PRD.md",
       "source_location": "L74",
       "id": "kiroku_prd_6_4_chapter_monitoring_system_mvp_backend_worker",
-      "community": 6,
+      "community": 4,
       "norm_label": "6.4 chapter monitoring system (mvp backend worker)"
     },
     {
@@ -2097,7 +2142,7 @@
       "source_file": "PRD.md",
       "source_location": "L79",
       "id": "kiroku_prd_6_5_notification_dispatch_system_mvp",
-      "community": 6,
+      "community": 4,
       "norm_label": "6.5 notification dispatch system (mvp)"
     },
     {
@@ -2106,7 +2151,7 @@
       "source_file": "PRD.md",
       "source_location": "L84",
       "id": "kiroku_prd_6_6_notification_preferences_mvp",
-      "community": 6,
+      "community": 4,
       "norm_label": "6.6 notification preferences (mvp)"
     },
     {
@@ -2115,7 +2160,7 @@
       "source_file": "PRD.md",
       "source_location": "L89",
       "id": "kiroku_prd_6_7_advanced_features_post_mvp",
-      "community": 6,
+      "community": 4,
       "norm_label": "6.7 advanced features (post-mvp)"
     },
     {
@@ -2124,7 +2169,7 @@
       "source_file": "PRD.md",
       "source_location": "L95",
       "id": "kiroku_prd_6_8_phase_2_advanced_core_features",
-      "community": 6,
+      "community": 4,
       "norm_label": "6.8 phase 2 advanced core features"
     },
     {
@@ -2277,7 +2322,7 @@
       "source_file": "PRD.md",
       "source_location": "L172",
       "id": "kiroku_prd_7_5_4_social_read_along_room_flow",
-      "community": 54,
+      "community": 5,
       "norm_label": "7.5.4 social \"read-along\" room flow"
     },
     {
@@ -2286,7 +2331,7 @@
       "source_file": "PRD.md",
       "source_location": "L173",
       "id": "kiroku_prd_codeblock_8",
-      "community": 54,
+      "community": 5,
       "norm_label": "code:block8 ([social hub] \u2794 [create room] \u2794 [select manga & set target ch)"
     },
     {
@@ -2358,7 +2403,7 @@
       "source_file": "PRD.md",
       "source_location": "L257",
       "id": "kiroku_prd_8_4_phase_2_system_workflows",
-      "community": 1,
+      "community": 48,
       "norm_label": "8.4 phase 2 system workflows"
     },
     {
@@ -2367,7 +2412,7 @@
       "source_file": "PRD.md",
       "source_location": "L259",
       "id": "kiroku_prd_8_4_1_multi_platform_aggregation_flow_cron_scheduled",
-      "community": 1,
+      "community": 48,
       "norm_label": "8.4.1 multi-platform aggregation flow (cron-scheduled)"
     },
     {
@@ -2376,7 +2421,7 @@
       "source_file": "PRD.md",
       "source_location": "L260",
       "id": "kiroku_prd_codeblock_12",
-      "community": 1,
+      "community": 48,
       "norm_label": "code:mermaid (sequencediagram)"
     },
     {
@@ -2385,7 +2430,7 @@
       "source_file": "PRD.md",
       "source_location": "L278",
       "id": "kiroku_prd_8_4_2_scan_to_track_image_reconciliation_flow",
-      "community": 1,
+      "community": 48,
       "norm_label": "8.4.2 scan-to-track image reconciliation flow"
     },
     {
@@ -2394,7 +2439,7 @@
       "source_file": "PRD.md",
       "source_location": "L279",
       "id": "kiroku_prd_codeblock_13",
-      "community": 1,
+      "community": 48,
       "norm_label": "code:mermaid (sequencediagram)"
     },
     {
@@ -2403,7 +2448,7 @@
       "source_file": "PRD.md",
       "source_location": "L298",
       "id": "kiroku_prd_8_4_3_social_read_along_room_progress_sync",
-      "community": 1,
+      "community": 48,
       "norm_label": "8.4.3 social read-along room progress sync"
     },
     {
@@ -2412,7 +2457,7 @@
       "source_file": "PRD.md",
       "source_location": "L299",
       "id": "kiroku_prd_codeblock_14",
-      "community": 1,
+      "community": 48,
       "norm_label": "code:mermaid (sequencediagram)"
     },
     {
@@ -2421,7 +2466,7 @@
       "source_file": "PRD.md",
       "source_location": "L315",
       "id": "kiroku_prd_9_technical_architecture",
-      "community": 54,
+      "community": 5,
       "norm_label": "9. technical architecture"
     },
     {
@@ -2430,7 +2475,7 @@
       "source_file": "PRD.md",
       "source_location": "L319",
       "id": "kiroku_prd_codeblock_15",
-      "community": 54,
+      "community": 5,
       "norm_label": "code:block15 (+-------------------+)"
     },
     {
@@ -2439,7 +2484,7 @@
       "source_file": "PRD.md",
       "source_location": "L349",
       "id": "kiroku_prd_infrastructure_specs",
-      "community": 54,
+      "community": 5,
       "norm_label": "infrastructure specs:"
     },
     {
@@ -2529,7 +2574,7 @@
       "source_file": "PRD.md",
       "source_location": "L744",
       "id": "kiroku_prd_11_api_design",
-      "community": 1,
+      "community": 49,
       "norm_label": "11. api design"
     },
     {
@@ -2538,7 +2583,7 @@
       "source_file": "PRD.md",
       "source_location": "L748",
       "id": "kiroku_prd_11_1_public_api_endpoints",
-      "community": 1,
+      "community": 49,
       "norm_label": "11.1 public api endpoints"
     },
     {
@@ -2547,7 +2592,7 @@
       "source_file": "PRD.md",
       "source_location": "L755",
       "id": "kiroku_prd_codeblock_20",
-      "community": 1,
+      "community": 49,
       "norm_label": "code:json ({)"
     },
     {
@@ -2556,7 +2601,7 @@
       "source_file": "PRD.md",
       "source_location": "L773",
       "id": "kiroku_prd_codeblock_21",
-      "community": 1,
+      "community": 49,
       "norm_label": "code:json ({)"
     },
     {
@@ -2565,7 +2610,7 @@
       "source_file": "PRD.md",
       "source_location": "L791",
       "id": "kiroku_prd_codeblock_22",
-      "community": 1,
+      "community": 49,
       "norm_label": "code:json ({)"
     },
     {
@@ -2574,7 +2619,7 @@
       "source_file": "PRD.md",
       "source_location": "L805",
       "id": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
-      "community": 11,
+      "community": 50,
       "norm_label": "11.2 protected api endpoints (required token: jwt)"
     },
     {
@@ -2583,7 +2628,7 @@
       "source_file": "PRD.md",
       "source_location": "L808",
       "id": "kiroku_prd_codeblock_23",
-      "community": 11,
+      "community": 50,
       "norm_label": "code:json ({)"
     },
     {
@@ -2592,7 +2637,7 @@
       "source_file": "PRD.md",
       "source_location": "L816",
       "id": "kiroku_prd_codeblock_24",
-      "community": 1,
+      "community": 50,
       "norm_label": "code:json ({)"
     },
     {
@@ -2601,7 +2646,7 @@
       "source_file": "PRD.md",
       "source_location": "L829",
       "id": "kiroku_prd_codeblock_25",
-      "community": 48,
+      "community": 4,
       "norm_label": "code:json ({ \"message\": \"successfully unfollowed manga.\" })"
     },
     {
@@ -2637,7 +2682,7 @@
       "source_file": "PRD.md",
       "source_location": "L863",
       "id": "kiroku_prd_11_3_protected_push_token_endpoints",
-      "community": 1,
+      "community": 49,
       "norm_label": "11.3 protected push token endpoints"
     },
     {
@@ -2655,7 +2700,7 @@
       "source_file": "PRD.md",
       "source_location": "L873",
       "id": "kiroku_prd_codeblock_30",
-      "community": 1,
+      "community": 4,
       "norm_label": "code:json ({ \"message\": \"push token registered successfully.\" })"
     },
     {
@@ -2664,7 +2709,7 @@
       "source_file": "PRD.md",
       "source_location": "L877",
       "id": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
-      "community": 1,
+      "community": 50,
       "norm_label": "11.4 admin/system control endpoints (requires api key header: `x-admin-key`)"
     },
     {
@@ -2673,7 +2718,7 @@
       "source_file": "PRD.md",
       "source_location": "L880",
       "id": "kiroku_prd_codeblock_31",
-      "community": 1,
+      "community": 4,
       "norm_label": "code:json ({ \"queuename\": \"notification-dispatcher\", \"jobid\": \"job-1094)"
     },
     {
@@ -2682,7 +2727,7 @@
       "source_file": "PRD.md",
       "source_location": "L884",
       "id": "kiroku_prd_codeblock_32",
-      "community": 1,
+      "community": 50,
       "norm_label": "code:json ({ \"status\": \"retried\", \"jobid\": \"job-1094\" })"
     },
     {
@@ -2691,7 +2736,7 @@
       "source_file": "PRD.md",
       "source_location": "L890",
       "id": "kiroku_prd_codeblock_33",
-      "community": 1,
+      "community": 50,
       "norm_label": "code:json ({)"
     },
     {
@@ -2763,7 +2808,7 @@
       "source_file": "PRD.md",
       "source_location": "L939",
       "id": "kiroku_prd_12_notification_system_logic",
-      "community": 48,
+      "community": 4,
       "norm_label": "12. notification system logic"
     },
     {
@@ -2772,7 +2817,7 @@
       "source_file": "PRD.md",
       "source_location": "L943",
       "id": "kiroku_prd_12_1_jobs_structure_payload",
-      "community": 48,
+      "community": 4,
       "norm_label": "12.1 jobs structure & payload"
     },
     {
@@ -2781,7 +2826,7 @@
       "source_file": "PRD.md",
       "source_location": "L946",
       "id": "kiroku_prd_codeblock_34",
-      "community": 48,
+      "community": 4,
       "norm_label": "code:json ({)"
     },
     {
@@ -2790,7 +2835,7 @@
       "source_file": "PRD.md",
       "source_location": "L956",
       "id": "kiroku_prd_12_2_channels_implementation",
-      "community": 48,
+      "community": 4,
       "norm_label": "12.2 channels implementation"
     },
     {
@@ -2799,7 +2844,7 @@
       "source_file": "PRD.md",
       "source_location": "L963",
       "id": "kiroku_prd_12_3_retry_and_backoff_logic",
-      "community": 48,
+      "community": 4,
       "norm_label": "12.3 retry and backoff logic"
     },
     {
@@ -2808,7 +2853,7 @@
       "source_file": "PRD.md",
       "source_location": "L972",
       "id": "kiroku_prd_13_scalability_plan",
-      "community": 50,
+      "community": 4,
       "norm_label": "13. scalability plan"
     },
     {
@@ -2817,7 +2862,7 @@
       "source_file": "PRD.md",
       "source_location": "L976",
       "id": "kiroku_prd_13_1_staggered_conditional_polling",
-      "community": 50,
+      "community": 4,
       "norm_label": "13.1 staggered & conditional polling"
     },
     {
@@ -2826,7 +2871,7 @@
       "source_file": "PRD.md",
       "source_location": "L984",
       "id": "kiroku_prd_13_2_queue_prioritization_batching",
-      "community": 50,
+      "community": 4,
       "norm_label": "13.2 queue prioritization & batching"
     },
     {
@@ -2835,7 +2880,7 @@
       "source_file": "PRD.md",
       "source_location": "L988",
       "id": "kiroku_prd_13_3_notification_deduplication_keys",
-      "community": 50,
+      "community": 4,
       "norm_label": "13.3 notification deduplication keys"
     },
     {
@@ -2844,7 +2889,7 @@
       "source_file": "PRD.md",
       "source_location": "L996",
       "id": "kiroku_prd_14_security_considerations",
-      "community": 52,
+      "community": 4,
       "norm_label": "14. security considerations"
     },
     {
@@ -2853,7 +2898,7 @@
       "source_file": "PRD.md",
       "source_location": "L998",
       "id": "kiroku_prd_14_1_authentication_token_safety",
-      "community": 52,
+      "community": 4,
       "norm_label": "14.1 authentication & token safety"
     },
     {
@@ -2862,7 +2907,7 @@
       "source_file": "PRD.md",
       "source_location": "L1003",
       "id": "kiroku_prd_14_2_api_security_controls",
-      "community": 52,
+      "community": 4,
       "norm_label": "14.2 api security controls"
     },
     {
@@ -2871,7 +2916,7 @@
       "source_file": "PRD.md",
       "source_location": "L1012",
       "id": "kiroku_prd_14_3_input_validation",
-      "community": 52,
+      "community": 4,
       "norm_label": "14.3 input validation"
     },
     {
@@ -2979,7 +3024,7 @@
       "source_file": "PRD.md",
       "source_location": "L1183",
       "id": "kiroku_prd_17_monitoring_strategy",
-      "community": 1,
+      "community": 4,
       "norm_label": "17. monitoring strategy"
     },
     {
@@ -2988,7 +3033,7 @@
       "source_file": "PRD.md",
       "source_location": "L1187",
       "id": "kiroku_prd_17_1_structured_log_specifications",
-      "community": 1,
+      "community": 4,
       "norm_label": "17.1 structured log specifications"
     },
     {
@@ -2997,7 +3042,7 @@
       "source_file": "PRD.md",
       "source_location": "L1189",
       "id": "kiroku_prd_codeblock_39",
-      "community": 1,
+      "community": 4,
       "norm_label": "code:json ({)"
     },
     {
@@ -3006,7 +3051,7 @@
       "source_file": "PRD.md",
       "source_location": "L1204",
       "id": "kiroku_prd_17_2_metrics_tracker_dashboard_prometheus_grafana",
-      "community": 1,
+      "community": 4,
       "norm_label": "17.2 metrics tracker dashboard (prometheus/grafana)"
     },
     {
@@ -3015,7 +3060,7 @@
       "source_file": "PRD.md",
       "source_location": "L1210",
       "id": "kiroku_prd_17_3_sentry_integration",
-      "community": 1,
+      "community": 4,
       "norm_label": "17.3 sentry integration"
     },
     {
@@ -3024,7 +3069,7 @@
       "source_file": "PRD.md",
       "source_location": "L1215",
       "id": "kiroku_prd_18_future_roadmap",
-      "community": 1,
+      "community": 4,
       "norm_label": "18. future roadmap"
     },
     {
@@ -3033,7 +3078,7 @@
       "source_file": "PRD.md",
       "source_location": "L1217",
       "id": "kiroku_prd_codeblock_40",
-      "community": 1,
+      "community": 4,
       "norm_label": "code:block40 (+--------------------------------------------------------+)"
     },
     {
@@ -8805,9 +8850,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_bebasneue",
-      "confidence_score": 1.0
+      "target": "app_layout_bebasneue"
     },
     {
       "relation": "contains",
@@ -8845,9 +8890,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_notosansjp",
-      "confidence_score": 1.0
+      "target": "app_layout_notosansjp"
     },
     {
       "relation": "contains",
@@ -8855,9 +8900,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_plusjakartasans",
-      "confidence_score": 1.0
+      "target": "app_layout_plusjakartasans"
     },
     {
       "relation": "contains",
@@ -8930,9 +8975,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "frontend_components_landing_aiassistant_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_components_landing_aiassistant_tsx"
     },
     {
       "relation": "imports_from",
@@ -8941,9 +8986,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "frontend_components_landing_features_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_components_landing_features_tsx"
     },
     {
       "relation": "imports_from",
@@ -8952,9 +8997,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "frontend_components_landing_footer_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_components_landing_footer_tsx"
     },
     {
       "relation": "imports_from",
@@ -8963,9 +9008,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "frontend_components_landing_header_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_components_landing_header_tsx"
     },
     {
       "relation": "imports_from",
@@ -8974,9 +9019,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "frontend_components_landing_hero_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_components_landing_hero_tsx"
     },
     {
       "relation": "imports",
@@ -8985,9 +9030,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "landing_aiassistant_aiassistant",
-      "confidence_score": 1.0
+      "target": "landing_aiassistant_aiassistant"
     },
     {
       "relation": "imports",
@@ -8996,9 +9041,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "landing_features_features",
-      "confidence_score": 1.0
+      "target": "landing_features_features"
     },
     {
       "relation": "imports",
@@ -9007,9 +9052,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "landing_footer_footer",
-      "confidence_score": 1.0
+      "target": "landing_footer_footer"
     },
     {
       "relation": "imports",
@@ -9018,9 +9063,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "landing_header_header",
-      "confidence_score": 1.0
+      "target": "landing_header_header"
     },
     {
       "relation": "imports",
@@ -9029,9 +9074,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "landing_hero_hero",
-      "confidence_score": 1.0
+      "target": "landing_hero_hero"
     },
     {
       "relation": "imports_from",
@@ -9167,6 +9212,17 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "frontend_utils_animeshowcasedata_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -9260,6 +9316,17 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/app/register/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "frontend_app_register_page_tsx",
+      "target": "utils_animeshowcasedata_anime_showcase_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/register/page.tsx",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -9323,9 +9390,9 @@
       "source_file": "frontend/components/landing/AIAssistant.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_aiassistant_tsx",
-      "target": "landing_aiassistant_aiassistant",
-      "confidence_score": 1.0
+      "target": "landing_aiassistant_aiassistant"
     },
     {
       "relation": "contains",
@@ -9333,9 +9400,9 @@
       "source_file": "frontend/components/landing/Features.tsx",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_features_tsx",
-      "target": "landing_features_bellbadge",
-      "confidence_score": 1.0
+      "target": "landing_features_bellbadge"
     },
     {
       "relation": "contains",
@@ -9343,9 +9410,9 @@
       "source_file": "frontend/components/landing/Features.tsx",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_features_tsx",
-      "target": "landing_features_crownbadge",
-      "confidence_score": 1.0
+      "target": "landing_features_crownbadge"
     },
     {
       "relation": "contains",
@@ -9353,9 +9420,9 @@
       "source_file": "frontend/components/landing/Features.tsx",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_features_tsx",
-      "target": "landing_features_featurecard",
-      "confidence_score": 1.0
+      "target": "landing_features_featurecard"
     },
     {
       "relation": "contains",
@@ -9363,9 +9430,9 @@
       "source_file": "frontend/components/landing/Features.tsx",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_features_tsx",
-      "target": "landing_features_featurecardprops",
-      "confidence_score": 1.0
+      "target": "landing_features_featurecardprops"
     },
     {
       "relation": "contains",
@@ -9373,9 +9440,9 @@
       "source_file": "frontend/components/landing/Features.tsx",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_features_tsx",
-      "target": "landing_features_features",
-      "confidence_score": 1.0
+      "target": "landing_features_features"
     },
     {
       "relation": "contains",
@@ -9383,9 +9450,9 @@
       "source_file": "frontend/components/landing/Features.tsx",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_features_tsx",
-      "target": "landing_features_infobadge",
-      "confidence_score": 1.0
+      "target": "landing_features_infobadge"
     },
     {
       "relation": "contains",
@@ -9393,9 +9460,9 @@
       "source_file": "frontend/components/landing/Features.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_features_tsx",
-      "target": "landing_features_shuriken",
-      "confidence_score": 1.0
+      "target": "landing_features_shuriken"
     },
     {
       "relation": "contains",
@@ -9403,9 +9470,9 @@
       "source_file": "frontend/components/landing/Features.tsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_features_tsx",
-      "target": "landing_features_skullbadge",
-      "confidence_score": 1.0
+      "target": "landing_features_skullbadge"
     },
     {
       "relation": "contains",
@@ -9413,9 +9480,9 @@
       "source_file": "frontend/components/landing/Features.tsx",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_features_tsx",
-      "target": "landing_features_starbadge",
-      "confidence_score": 1.0
+      "target": "landing_features_starbadge"
     },
     {
       "relation": "contains",
@@ -9423,9 +9490,9 @@
       "source_file": "frontend/components/landing/Features.tsx",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_features_tsx",
-      "target": "landing_features_syncbadge",
-      "confidence_score": 1.0
+      "target": "landing_features_syncbadge"
     },
     {
       "relation": "contains",
@@ -9433,9 +9500,9 @@
       "source_file": "frontend/components/landing/Footer.tsx",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_footer_tsx",
-      "target": "landing_footer_footer",
-      "confidence_score": 1.0
+      "target": "landing_footer_footer"
     },
     {
       "relation": "contains",
@@ -9443,9 +9510,9 @@
       "source_file": "frontend/components/landing/Footer.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_footer_tsx",
-      "target": "landing_footer_leafswirl",
-      "confidence_score": 1.0
+      "target": "landing_footer_leafswirl"
     },
     {
       "relation": "contains",
@@ -9453,9 +9520,9 @@
       "source_file": "frontend/components/landing/Header.tsx",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_header_tsx",
-      "target": "landing_header_header",
-      "confidence_score": 1.0
+      "target": "landing_header_header"
     },
     {
       "relation": "contains",
@@ -9463,9 +9530,9 @@
       "source_file": "frontend/components/landing/Header.tsx",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_header_tsx",
-      "target": "landing_header_jollyroger",
-      "confidence_score": 1.0
+      "target": "landing_header_jollyroger"
     },
     {
       "relation": "contains",
@@ -9473,9 +9540,9 @@
       "source_file": "frontend/components/landing/Header.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_header_tsx",
-      "target": "landing_header_leafswirl",
-      "confidence_score": 1.0
+      "target": "landing_header_leafswirl"
     },
     {
       "relation": "contains",
@@ -9483,9 +9550,9 @@
       "source_file": "frontend/components/landing/Hero.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_hero_tsx",
-      "target": "landing_hero_hero",
-      "confidence_score": 1.0
+      "target": "landing_hero_hero"
     },
     {
       "relation": "contains",
@@ -9493,9 +9560,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_akatsukicloud",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_akatsukicloud"
     },
     {
       "relation": "contains",
@@ -9503,9 +9570,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_chainsawicon",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_chainsawicon"
     },
     {
       "relation": "contains",
@@ -9513,9 +9580,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_cursedflameicon",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_cursedflameicon"
     },
     {
       "relation": "contains",
@@ -9523,9 +9590,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_dragonballicon",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_dragonballicon"
     },
     {
       "relation": "contains",
@@ -9533,9 +9600,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_hollowmaskicon",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_hollowmaskicon"
     },
     {
       "relation": "contains",
@@ -9543,9 +9610,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_leafswirlicon",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_leafswirlicon"
     },
     {
       "relation": "contains",
@@ -9553,9 +9620,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_mangacard",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_mangacard"
     },
     {
       "relation": "contains",
@@ -9563,9 +9630,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_mangacardprops",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_mangacardprops"
     },
     {
       "relation": "contains",
@@ -9573,9 +9640,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_rankbadge",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_rankbadge"
     },
     {
       "relation": "contains",
@@ -9583,9 +9650,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_strawhaticon",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_strawhaticon"
     },
     {
       "relation": "contains",
@@ -9593,9 +9660,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_sunswirlicon",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_sunswirlicon"
     },
     {
       "relation": "contains",
@@ -9603,9 +9670,9 @@
       "source_file": "frontend/components/landing/TopManga.tsx",
       "source_location": "L156",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
-      "target": "landing_topmanga_topmanga",
-      "confidence_score": 1.0
+      "target": "landing_topmanga_topmanga"
     },
     {
       "relation": "contains",
@@ -9817,6 +9884,46 @@
       "confidence_score": 1.0,
       "source": "frontend_utils_api_ts",
       "target": "types_auth_refreshresponse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/animeShowcaseData.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "frontend_utils_animeshowcasedata_ts",
+      "target": "utils_animeshowcasedata_anime_showcase_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/animeShowcaseData.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "frontend_utils_animeshowcasedata_ts",
+      "target": "utils_animeshowcasedata_animeseriesdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/animeShowcaseData.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_utils_animeshowcasedata_ts",
+      "target": "utils_animeshowcasedata_floatingcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/animeShowcaseData.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_utils_animeshowcasedata_ts",
+      "target": "utils_animeshowcasedata_friendactivity",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10166,9 +10273,9 @@
       "source_file": "PRD.md",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_6_feature_requirements",
-      "target": "kiroku_prd_6_8_phase_2_advanced_core_features",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_6_8_phase_2_advanced_core_features"
     },
     {
       "relation": "contains",
@@ -10216,9 +10323,9 @@
       "source_file": "PRD.md",
       "source_location": "L139",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_7_user_flows",
-      "target": "kiroku_prd_7_5_phase_2_feature_flows",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_7_5_phase_2_feature_flows"
     },
     {
       "relation": "contains",
@@ -10266,9 +10373,9 @@
       "source_file": "PRD.md",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_7_5_phase_2_feature_flows",
-      "target": "kiroku_prd_7_5_1_multi_platform_sync_flow",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_7_5_1_multi_platform_sync_flow"
     },
     {
       "relation": "contains",
@@ -10276,9 +10383,9 @@
       "source_file": "PRD.md",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_7_5_phase_2_feature_flows",
-      "target": "kiroku_prd_7_5_2_spoiler_free_comments_flow",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_7_5_2_spoiler_free_comments_flow"
     },
     {
       "relation": "contains",
@@ -10286,9 +10393,9 @@
       "source_file": "PRD.md",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_7_5_phase_2_feature_flows",
-      "target": "kiroku_prd_7_5_3_scan_to_track_flow",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_7_5_3_scan_to_track_flow"
     },
     {
       "relation": "contains",
@@ -10296,9 +10403,9 @@
       "source_file": "PRD.md",
       "source_location": "L172",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_7_5_phase_2_feature_flows",
-      "target": "kiroku_prd_7_5_4_social_read_along_room_flow",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_7_5_4_social_read_along_room_flow"
     },
     {
       "relation": "contains",
@@ -10306,9 +10413,9 @@
       "source_file": "PRD.md",
       "source_location": "L142",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_7_5_1_multi_platform_sync_flow",
-      "target": "kiroku_prd_codeblock_5",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_5"
     },
     {
       "relation": "contains",
@@ -10326,9 +10433,9 @@
       "source_file": "PRD.md",
       "source_location": "L151",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_7_5_2_spoiler_free_comments_flow",
-      "target": "kiroku_prd_codeblock_6",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_6"
     },
     {
       "relation": "contains",
@@ -10346,9 +10453,9 @@
       "source_file": "PRD.md",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_7_5_3_scan_to_track_flow",
-      "target": "kiroku_prd_codeblock_7",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_7"
     },
     {
       "relation": "contains",
@@ -10366,9 +10473,9 @@
       "source_file": "PRD.md",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_7_5_4_social_read_along_room_flow",
-      "target": "kiroku_prd_codeblock_8",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_8"
     },
     {
       "relation": "contains",
@@ -10416,9 +10523,9 @@
       "source_file": "PRD.md",
       "source_location": "L257",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_8_system_workflows",
-      "target": "kiroku_prd_8_4_phase_2_system_workflows",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_8_4_phase_2_system_workflows"
     },
     {
       "relation": "contains",
@@ -10426,9 +10533,9 @@
       "source_file": "PRD.md",
       "source_location": "L188",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_8_1_manga_follow_flow",
-      "target": "kiroku_prd_codeblock_9",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_9"
     },
     {
       "relation": "contains",
@@ -10446,9 +10553,9 @@
       "source_file": "PRD.md",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_8_2_chapter_detection_aggregation_flow_cron_scheduled",
-      "target": "kiroku_prd_codeblock_10",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_10"
     },
     {
       "relation": "contains",
@@ -10466,9 +10573,9 @@
       "source_file": "PRD.md",
       "source_location": "L229",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_8_3_notification_dispatch_queue_flow",
-      "target": "kiroku_prd_codeblock_11",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_11"
     },
     {
       "relation": "contains",
@@ -10486,9 +10593,9 @@
       "source_file": "PRD.md",
       "source_location": "L259",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_8_4_phase_2_system_workflows",
-      "target": "kiroku_prd_8_4_1_multi_platform_aggregation_flow_cron_scheduled",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_8_4_1_multi_platform_aggregation_flow_cron_scheduled"
     },
     {
       "relation": "contains",
@@ -10496,9 +10603,9 @@
       "source_file": "PRD.md",
       "source_location": "L278",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_8_4_phase_2_system_workflows",
-      "target": "kiroku_prd_8_4_2_scan_to_track_image_reconciliation_flow",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_8_4_2_scan_to_track_image_reconciliation_flow"
     },
     {
       "relation": "contains",
@@ -10506,9 +10613,9 @@
       "source_file": "PRD.md",
       "source_location": "L298",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_8_4_phase_2_system_workflows",
-      "target": "kiroku_prd_8_4_3_social_read_along_room_progress_sync",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_8_4_3_social_read_along_room_progress_sync"
     },
     {
       "relation": "contains",
@@ -10516,9 +10623,9 @@
       "source_file": "PRD.md",
       "source_location": "L260",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_8_4_1_multi_platform_aggregation_flow_cron_scheduled",
-      "target": "kiroku_prd_codeblock_12",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_12"
     },
     {
       "relation": "contains",
@@ -10536,9 +10643,9 @@
       "source_file": "PRD.md",
       "source_location": "L279",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_8_4_2_scan_to_track_image_reconciliation_flow",
-      "target": "kiroku_prd_codeblock_13",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_13"
     },
     {
       "relation": "contains",
@@ -10556,9 +10663,9 @@
       "source_file": "PRD.md",
       "source_location": "L299",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_8_4_3_social_read_along_room_progress_sync",
-      "target": "kiroku_prd_codeblock_14",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_14"
     },
     {
       "relation": "contains",
@@ -10576,9 +10683,9 @@
       "source_file": "PRD.md",
       "source_location": "L319",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_9_technical_architecture",
-      "target": "kiroku_prd_codeblock_15",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_15"
     },
     {
       "relation": "contains",
@@ -10626,9 +10733,9 @@
       "source_file": "PRD.md",
       "source_location": "L541",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_10_database_design",
-      "target": "kiroku_prd_10_3_prisma_schema_extensions_for_phase_2",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_10_3_prisma_schema_extensions_for_phase_2"
     },
     {
       "relation": "contains",
@@ -10636,9 +10743,9 @@
       "source_file": "PRD.md",
       "source_location": "L662",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_10_database_design",
-      "target": "kiroku_prd_10_4_sql_ddl_extensions_for_phase_2",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_10_4_sql_ddl_extensions_for_phase_2"
     },
     {
       "relation": "contains",
@@ -10646,9 +10753,9 @@
       "source_file": "PRD.md",
       "source_location": "L362",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_10_1_prisma_schema_schema_prisma",
-      "target": "kiroku_prd_codeblock_16",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_16"
     },
     {
       "relation": "contains",
@@ -10666,9 +10773,9 @@
       "source_file": "PRD.md",
       "source_location": "L476",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_10_2_database_indexes_constraints_sql_ddl",
-      "target": "kiroku_prd_codeblock_17",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_17"
     },
     {
       "relation": "contains",
@@ -10686,9 +10793,9 @@
       "source_file": "PRD.md",
       "source_location": "L542",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_10_3_prisma_schema_extensions_for_phase_2",
-      "target": "kiroku_prd_codeblock_18",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_18"
     },
     {
       "relation": "contains",
@@ -10706,9 +10813,9 @@
       "source_file": "PRD.md",
       "source_location": "L663",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_10_4_sql_ddl_extensions_for_phase_2",
-      "target": "kiroku_prd_codeblock_19",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_19"
     },
     {
       "relation": "contains",
@@ -10766,9 +10873,9 @@
       "source_file": "PRD.md",
       "source_location": "L902",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_api_design",
-      "target": "kiroku_prd_11_5_phase_2_api_endpoints",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_11_5_phase_2_api_endpoints"
     },
     {
       "relation": "contains",
@@ -10776,9 +10883,9 @@
       "source_file": "PRD.md",
       "source_location": "L755",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_1_public_api_endpoints",
-      "target": "kiroku_prd_codeblock_20",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_20"
     },
     {
       "relation": "contains",
@@ -10786,9 +10893,9 @@
       "source_file": "PRD.md",
       "source_location": "L773",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_1_public_api_endpoints",
-      "target": "kiroku_prd_codeblock_21",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_21"
     },
     {
       "relation": "contains",
@@ -10796,9 +10903,9 @@
       "source_file": "PRD.md",
       "source_location": "L791",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_1_public_api_endpoints",
-      "target": "kiroku_prd_codeblock_22",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_22"
     },
     {
       "relation": "contains",
@@ -10836,9 +10943,9 @@
       "source_file": "PRD.md",
       "source_location": "L808",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
-      "target": "kiroku_prd_codeblock_23",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_23"
     },
     {
       "relation": "contains",
@@ -10846,9 +10953,9 @@
       "source_file": "PRD.md",
       "source_location": "L816",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
-      "target": "kiroku_prd_codeblock_24",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_24"
     },
     {
       "relation": "contains",
@@ -10856,9 +10963,9 @@
       "source_file": "PRD.md",
       "source_location": "L829",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
-      "target": "kiroku_prd_codeblock_25",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_25"
     },
     {
       "relation": "contains",
@@ -10866,9 +10973,9 @@
       "source_file": "PRD.md",
       "source_location": "L837",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
-      "target": "kiroku_prd_codeblock_26",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_26"
     },
     {
       "relation": "contains",
@@ -10876,9 +10983,9 @@
       "source_file": "PRD.md",
       "source_location": "L853",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
-      "target": "kiroku_prd_codeblock_27",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_27"
     },
     {
       "relation": "contains",
@@ -10886,9 +10993,9 @@
       "source_file": "PRD.md",
       "source_location": "L859",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_2_protected_api_endpoints_required_token_jwt",
-      "target": "kiroku_prd_codeblock_28",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_28"
     },
     {
       "relation": "contains",
@@ -10956,9 +11063,9 @@
       "source_file": "PRD.md",
       "source_location": "L866",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_3_protected_push_token_endpoints",
-      "target": "kiroku_prd_codeblock_29",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_29"
     },
     {
       "relation": "contains",
@@ -10966,9 +11073,9 @@
       "source_file": "PRD.md",
       "source_location": "L873",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_3_protected_push_token_endpoints",
-      "target": "kiroku_prd_codeblock_30",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_30"
     },
     {
       "relation": "contains",
@@ -10996,9 +11103,9 @@
       "source_file": "PRD.md",
       "source_location": "L880",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
-      "target": "kiroku_prd_codeblock_31",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_31"
     },
     {
       "relation": "contains",
@@ -11006,9 +11113,9 @@
       "source_file": "PRD.md",
       "source_location": "L884",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
-      "target": "kiroku_prd_codeblock_32",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_32"
     },
     {
       "relation": "contains",
@@ -11016,9 +11123,9 @@
       "source_file": "PRD.md",
       "source_location": "L890",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
-      "target": "kiroku_prd_codeblock_33",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_33"
     },
     {
       "relation": "contains",
@@ -11036,9 +11143,9 @@
       "source_file": "PRD.md",
       "source_location": "L904",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_5_phase_2_api_endpoints",
-      "target": "kiroku_prd_11_5_1_multi_platform_library_aggregator",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_11_5_1_multi_platform_library_aggregator"
     },
     {
       "relation": "contains",
@@ -11046,9 +11153,9 @@
       "source_file": "PRD.md",
       "source_location": "L910",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_5_phase_2_api_endpoints",
-      "target": "kiroku_prd_11_5_2_spoiler_free_community_comments",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_11_5_2_spoiler_free_community_comments"
     },
     {
       "relation": "contains",
@@ -11056,9 +11163,9 @@
       "source_file": "PRD.md",
       "source_location": "L915",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_5_phase_2_api_endpoints",
-      "target": "kiroku_prd_11_5_3_intelligent_manga_recommendation_engine",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_11_5_3_intelligent_manga_recommendation_engine"
     },
     {
       "relation": "contains",
@@ -11066,9 +11173,9 @@
       "source_file": "PRD.md",
       "source_location": "L919",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_5_phase_2_api_endpoints",
-      "target": "kiroku_prd_11_5_4_physical_digital_hybrid_ledger",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_11_5_4_physical_digital_hybrid_ledger"
     },
     {
       "relation": "contains",
@@ -11076,9 +11183,9 @@
       "source_file": "PRD.md",
       "source_location": "L925",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_5_phase_2_api_endpoints",
-      "target": "kiroku_prd_11_5_5_scan_to_track",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_11_5_5_scan_to_track"
     },
     {
       "relation": "contains",
@@ -11086,9 +11193,9 @@
       "source_file": "PRD.md",
       "source_location": "L929",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_11_5_phase_2_api_endpoints",
-      "target": "kiroku_prd_11_5_6_social_read_along_rooms",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_11_5_6_social_read_along_rooms"
     },
     {
       "relation": "contains",
@@ -11126,9 +11233,9 @@
       "source_file": "PRD.md",
       "source_location": "L946",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_12_1_jobs_structure_payload",
-      "target": "kiroku_prd_codeblock_34",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_34"
     },
     {
       "relation": "contains",
@@ -11206,9 +11313,9 @@
       "source_file": "PRD.md",
       "source_location": "L1021",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_15_ci_cd_strategy",
-      "target": "kiroku_prd_codeblock_35",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_35"
     },
     {
       "relation": "contains",
@@ -11216,9 +11323,9 @@
       "source_file": "PRD.md",
       "source_location": "L1049",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_15_1_github_actions_workflow_github_workflows_ci_yml",
-      "target": "kiroku_prd_codeblock_36",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_36"
     },
     {
       "relation": "contains",
@@ -11266,9 +11373,9 @@
       "source_file": "PRD.md",
       "source_location": "L1162",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_backend_configuration_backend_env",
-      "target": "kiroku_prd_codeblock_37",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_37"
     },
     {
       "relation": "contains",
@@ -11276,9 +11383,9 @@
       "source_file": "PRD.md",
       "source_location": "L1176",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_frontend_configuration_frontend_env_local",
-      "target": "kiroku_prd_codeblock_38",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_38"
     },
     {
       "relation": "contains",
@@ -11316,9 +11423,9 @@
       "source_file": "PRD.md",
       "source_location": "L1189",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_17_1_structured_log_specifications",
-      "target": "kiroku_prd_codeblock_39",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_39"
     },
     {
       "relation": "contains",
@@ -11326,9 +11433,9 @@
       "source_file": "PRD.md",
       "source_location": "L1217",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "kiroku_prd_18_future_roadmap",
-      "target": "kiroku_prd_codeblock_40",
-      "confidence_score": 1.0
+      "target": "kiroku_prd_codeblock_40"
     },
     {
       "relation": "contains",
@@ -13702,5 +13809,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bd1268349d0e208fb3d9225e20f7b0d8cf146e6d"
+  "built_at_commit": "ebaa5b6d30a9ecb0b878517aaee5c3ffe469554c"
 }
