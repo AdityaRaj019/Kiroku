@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   User, 
@@ -651,11 +652,13 @@ export default function RegisterPage() {
               {/* Radial gradient mask to fade image at edges */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#050507] via-[#050507]/90 to-[#050507]/45 z-10" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,#050507_80%)] z-10" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={activeAnime.imagePath}
                 alt={activeAnime.character}
-                className="w-full h-full object-cover object-center"
+                fill
+                sizes="(min-width: 1024px) 60vw, 0px"
+                className="object-cover object-center"
+                priority
               />
             </motion.div>
           </AnimatePresence>
