@@ -128,11 +128,17 @@ app.get("/health", async (_req, res) => {
       timestamp: new Date().toISOString(),
     });
   } catch (error) {
+    const safeError =
+      process.env.NODE_ENV === "production"
+        ? "Database connection failed"
+        : error instanceof Error
+        ? error.message
+        : "Unknown database error";
+
     res.status(500).json({
       status: "degraded",
       database: "disconnected",
-      error:
-        error instanceof Error ? error.message : "Unknown database error",
+      error: safeError,
     });
   }
 });
