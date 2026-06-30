@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bebas_Neue, Noto_Sans_JP, Plus_Jakarta_Sans } from "next/font/google";
-import { HydrationGuard } from "@/components/guards/HydrationGuard";
 import { QueryProvider } from "@/components/providers/QueryProvider";
 import "./globals.css";
 
@@ -47,9 +46,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${notoSansJP.variable} ${plusJakartaSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#0A0A0C]">
-        <HydrationGuard>
-          <QueryProvider>{children}</QueryProvider>
-        </HydrationGuard>
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
