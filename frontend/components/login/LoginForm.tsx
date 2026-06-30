@@ -136,6 +136,8 @@ export const LoginForm: React.FC = () => {
                 }
               }}
               placeholder="Email Address"
+              aria-invalid={!!fieldErrors.email}
+              aria-describedby={fieldErrors.email ? "login-email-error" : undefined}
               className="flex-1 bg-transparent text-sm text-white placeholder-[#A1A1AA]/35 outline-none h-full"
             />
           </div>
@@ -174,6 +176,8 @@ export const LoginForm: React.FC = () => {
                 }
               }}
               placeholder="Password"
+              aria-invalid={!!fieldErrors.password}
+              aria-describedby={fieldErrors.password ? "login-password-error" : undefined}
               className="flex-1 bg-transparent text-sm text-white placeholder-[#A1A1AA]/35 outline-none h-full"
             />
             <button
