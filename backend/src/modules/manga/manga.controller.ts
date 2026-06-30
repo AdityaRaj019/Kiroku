@@ -1,4 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
+import { Prisma } from "@prisma/client";
 import { prisma } from "../../utils/prisma";
 import { parseUserId } from "../../utils/auth.helpers";
 import { mangaDexService, MangaDexApiError } from "../../services/mangadex.service";
@@ -9,68 +10,16 @@ import type {
   MangaDexRelationship,
   LocalizedString,
 } from "../../types/mangadex.types";
+import {
+  mapMangaDexStatus,
+  resolveTitle,
+  resolveDescription,
+  extractCoverUrl,
+  extractAuthor,
+  slugify,
+} from "../../utils/mangadex.helpers";
 
 // ─── Helpers ─────────────────────────────────────────────────
-
-/**
- * Maps MangaDex status strings to our Prisma MangaStatus enum.
- * Falls back to ONGOING for unknown values.
- */
-function mapMangaDexStatus(
-  status: string
-): "ONGOING" | "COMPLETED" | "HIATUS" | "CANCELLED" {
-  const statusMap: Record<string, "ONGOING" | "COMPLETED" | "HIATUS" | "CANCELLED"> = {
-    ongoing: "ONGOING",
-    completed: "COMPLETED",
-    hiatus: "HIATUS",
-    cancelled: "CANCELLED",
-  };
-  return statusMap[status.toLowerCase()] ?? "ONGOING";
-}
-
-/**
- * Resolves the preferred English title from a MangaDex localized string,
- * falling back to Japanese, then the first available locale.
- */
-function resolveTitle(title: LocalizedString): string {
-  return title.en ?? title["ja-ro"] ?? title.ja ?? Object.values(title)[0] ?? "Untitled";
-}
-
-/**
- * Resolves the English description from a MangaDex localized string.
- */
-function resolveDescription(desc: LocalizedString): string | null {
-  return desc.en ?? desc["ja-ro"] ?? desc.ja ?? Object.values(desc)[0] ?? null;
-}
-
-/**
- * Extracts the cover art filename from MangaDex relationships.
- * Returns the full cover URL if found, otherwise null.
- *
- * @see https://api.mangadex.org/docs/04-covers/
- */
-function extractCoverUrl(
-  mangaId: string,
-  relationships: MangaDexRelationship[]
-): string | null {
-  const coverRel = relationships.find((r) => r.type === "cover_art");
-  if (!coverRel?.attributes) return null;
-
-  const filename = coverRel.attributes["fileName"] as string | undefined;
-  if (!filename) return null;
-
-  return `https://uploads.mangadex.org/covers/${mangaId}/${filename}.256.jpg`;
-}
-
-/**
- * Extracts the author name from MangaDex relationships.
- */
-function extractAuthor(relationships: MangaDexRelationship[]): string | null {
-  const authorRel = relationships.find((r) => r.type === "author");
-  if (!authorRel?.attributes) return null;
-
-  return (authorRel.attributes["name"] as string) ?? null;
-}
 
 /**
  * Extracts the artist name from MangaDex relationships.
@@ -80,18 +29,6 @@ function extractArtist(relationships: MangaDexRelationship[]): string | null {
   if (!artistRel?.attributes) return null;
 
   return (artistRel.attributes["name"] as string) ?? null;
-}
-
-/**
- * Creates a URL-friendly slug from a title string.
- * Strips non-alphanumeric characters, collapses hyphens.
- */
-function slugify(title: string): string {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 200);
 }
 
 /**
@@ -176,8 +113,8 @@ async function upsertMangaBatch(
     } catch (err) {
       // If slug collision occurs (different manga, same slug), retry with UUID suffix
       if (
-        err instanceof Error &&
-        err.message.includes("Unique constraint")
+        err instanceof Prisma.PrismaClientKnownRequestError &&
+        err.code === "P2002"
       ) {
         const fallbackSlug = `${slug}-${entity.id.slice(0, 8)}`;
         const record = await prisma.manga.upsert({
