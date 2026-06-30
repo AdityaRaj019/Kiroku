@@ -96,9 +96,13 @@ export async function apiFetch(
 
   const buildHeaders = (): HeadersInit => {
     const headers: Record<string, string> = {
-      "Content-Type": "application/json",
       ...(init.headers as Record<string, string>),
     };
+
+    // Only set Content-Type if a body is present and it hasn't been set manually
+    if (init.body && !headers["Content-Type"]) {
+      headers["Content-Type"] = "application/json";
+    }
 
     const token = useAuthStore.getState().accessToken;
     if (token) {
@@ -124,16 +128,10 @@ export async function apiFetch(
     }
 
     // Retry the original request with the fresh token
-    const retryHeaders: Record<string, string> = {
-      "Content-Type": "application/json",
-      ...(init.headers as Record<string, string>),
-      Authorization: `Bearer ${newToken}`,
-    };
-
     return fetch(url, {
       ...init,
       credentials: "include",
-      headers: retryHeaders,
+      headers: buildHeaders(),
     });
   }
 
