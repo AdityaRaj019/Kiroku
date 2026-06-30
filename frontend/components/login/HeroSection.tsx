@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { GlassCard } from "./GlassCard";
 
 interface HeroSectionProps {
   isTabActive: boolean;
@@ -86,7 +85,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
 
   const [petals, setPetals] = useState<Petal[]>([]);
   const [ambientParticles, setAmbientParticles] = useState<{ id: number; x: number; size: number; duration: number; delay: number }[]>([]);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   // Compute daily parameters (client-side only to prevent SSR hydration mismatch)
   useEffect(() => {
@@ -140,17 +138,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Track Mouse Movements for Parallax
+  // Auto-rotate themes (pictures) every 6 seconds
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const { clientWidth, clientHeight } = document.documentElement;
-      const x = (e.clientX / clientWidth - 0.5) * 2;
-      const y = (e.clientY / clientHeight - 0.5) * 2;
-      setMousePos({ x, y });
-    };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+    if (!isTabActive) return;
+    const rotationTimer = setInterval(() => {
+      setCurrentThemeIndex((prev) => (prev + 1) % HERO_THEMES.length);
+    }, 6000);
+    return () => clearInterval(rotationTimer);
+  }, [isTabActive]);
 
   const activeTheme = HERO_THEMES[currentThemeIndex];
 
@@ -220,7 +215,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
         ))}
       </motion.div>
 
-      {/* ─── Hero Illustration Layer with breathing loop ─── */}
+      {/* ─── Hero Illustration Layer with breathing loop and season transitions ─── */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 w-full h-full">
           {/* Internal breathing animation */}
@@ -236,27 +231,31 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
             }}
             className="absolute inset-0 w-full h-full"
           >
-            {/* Parallax mouse offset wrapper */}
-            <motion.div
-              animate={{
-                x: mousePos.x * 12,
-                y: mousePos.y * 7
-              }}
-              transition={{ type: "spring", stiffness: 100, damping: 25 }}
-              className="absolute inset-0 w-full h-full"
-            >
-              <Image
-                src={activeTheme.imagePath}
-                alt={activeTheme.description}
-                fill
-                priority
-                sizes="58vw"
-                className="object-cover object-center select-none"
-              />
-              {/* Subtle warm sunset lighting mask */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#09090B] via-[#09090B]/10 to-[#09090B]/40 opacity-70 z-10" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,#09090B_95%)] opacity-85 z-10" />
-            </motion.div>
+            {/* Static wrapper (no mouse parallax movement on hover) */}
+            <div className="absolute inset-0 w-full h-full overflow-hidden">
+              <AnimatePresence mode="popLayout">
+                <motion.div
+                  key={activeTheme.imagePath}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1.2, ease: "easeInOut" }}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  <Image
+                    src={activeTheme.imagePath}
+                    alt={activeTheme.description}
+                    fill
+                    priority
+                    sizes="58vw"
+                    className="object-cover object-center select-none"
+                  />
+                  {/* Subtle warm sunset lighting mask */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#09090B] via-[#09090B]/10 to-[#09090B]/40 opacity-75 z-10" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,#09090B_95%)] opacity-85 z-10" />
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -266,17 +265,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
       {/* Card 1: Top Left Welcoming Greeting */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          x: mousePos.x * 20,
-          y: mousePos.y * 12,
-          rotateX: mousePos.y * -8,
-          rotateY: mousePos.x * 8
-        }}
+        animate={{ opacity: 1, scale: 1 }}
         whileHover={{
-          scale: 1.03,
-          boxShadow: "0 20px 40px rgba(255, 95, 168, 0.15)",
+          scale: 1.05,
+          rotate: "1deg",
+          boxShadow: "0 25px 50px -12px rgba(255, 95, 168, 0.25)"
         }}
         transition={{
           type: "spring",
@@ -287,28 +280,33 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
         className="absolute top-[12%] left-[8%] z-30 pointer-events-auto cursor-pointer"
       >
         <div className="animate-float-a">
-          <GlassCard className="max-w-[220px]">
-            <span className="text-xl">🌸</span>
-            <h4 className="font-japanese font-bold text-sm text-pink-300 mt-1">{activeTheme.card1.greeting}</h4>
-            <p className="text-[10px] text-zinc-400 mt-0.5 leading-normal">{activeTheme.card1.subtitle}</p>
-          </GlassCard>
+          {/* Polaroid style badge */}
+          <div className="relative bg-white text-zinc-900 p-3 pb-5 rounded-xs shadow-2xl border border-white/90 rotate-[-4deg] w-[190px] select-none">
+            {/* Washi Tape */}
+            <div className="absolute -top-3 left-[28%] w-16 h-5 bg-pink-100/60 border border-white/20 backdrop-blur-[1px] rotate-[-6deg] shadow-xs" />
+            <div className="w-full aspect-[4/3] bg-pink-50/50 rounded-xs mb-3 flex items-center justify-center text-3xl border border-pink-100/80">
+              🌸
+            </div>
+            <div className="px-0.5 text-center">
+              <h4 className="font-japanese font-bold text-xs text-pink-600 leading-tight">
+                {activeTheme.card1.greeting}
+              </h4>
+              <p className="text-[9px] font-medium text-zinc-500 mt-1 leading-normal italic">
+                {activeTheme.card1.subtitle}
+              </p>
+            </div>
+          </div>
         </div>
       </motion.div>
 
       {/* Card 2: Lower Right Daily Reminder */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          x: mousePos.x * 20,
-          y: mousePos.y * 12,
-          rotateX: mousePos.y * -8,
-          rotateY: mousePos.x * 8
-        }}
+        animate={{ opacity: 1, scale: 1 }}
         whileHover={{
-          scale: 1.03,
-          boxShadow: "0 20px 40px rgba(255, 95, 168, 0.15)",
+          scale: 1.05,
+          rotate: "-1deg",
+          boxShadow: "0 25px 50px -12px rgba(245, 158, 11, 0.25)"
         }}
         transition={{
           type: "spring",
@@ -319,16 +317,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
         className="absolute bottom-[22%] right-[6%] z-30 pointer-events-auto cursor-pointer"
       >
         <div className="animate-float-b">
-          <GlassCard className="max-w-[230px]">
-            <h4 className="font-bold text-xs text-pink-300 flex items-center gap-1.5 leading-none">
-              <span>📖</span> {activeTheme.card2.title}
+          {/* Memo Pad / Sticky Note style badge */}
+          <div className="relative bg-[#FFFDF2] text-zinc-800 p-4 rounded-lg shadow-2xl border border-[#EDE7CE] rotate-[3deg] w-[210px] select-none bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:12px_12px]">
+            {/* Cute Paperclip */}
+            <div className="absolute -top-3.5 right-6 w-3.5 h-7.5 bg-zinc-300/90 rounded-full border border-zinc-400/80 flex items-center justify-center shadow-xs">
+              <div className="w-1.5 h-5 border border-zinc-400/50 rounded-full" />
+            </div>
+            <h4 className="font-bold text-[11px] text-amber-700 flex items-center gap-1.5 leading-none border-b border-dashed border-[#ECE6CD] pb-2 font-mono uppercase tracking-wide">
+              <span>🗒️</span> {activeTheme.card2.title}
             </h4>
-            <div className="text-[10px] text-zinc-400 mt-2 space-y-0.5 leading-relaxed font-semibold">
+            <div className="text-[9.5px] text-zinc-600 mt-2 space-y-1.5 leading-relaxed font-mono font-medium">
               {activeTheme.card2.lines.map((line, idx) => (
-                <p key={idx}>{line}</p>
+                <p key={idx} className="border-b border-[#ECE6CD]/60 pb-0.5 last:border-b-0">{line}</p>
               ))}
             </div>
-          </GlassCard>
+          </div>
         </div>
       </motion.div>
 
@@ -336,17 +339,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
       {quote.text && (
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            x: mousePos.x * 20,
-            y: mousePos.y * 12,
-            rotateX: mousePos.y * -6,
-            rotateY: mousePos.x * 6
-          }}
+          animate={{ opacity: 1, scale: 1 }}
           whileHover={{
-            scale: 1.03,
-            boxShadow: "0 20px 40px rgba(168, 85, 247, 0.15)",
+            scale: 1.05,
+            boxShadow: "0 0 35px rgba(168, 85, 247, 0.4)"
           }}
           transition={{
             type: "spring",
@@ -357,11 +353,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
           className="absolute bottom-[16%] left-[6%] z-30 pointer-events-auto cursor-pointer"
         >
           <div className="animate-float-c">
-            <GlassCard className="max-w-[240px]">
-              <span className="text-[9px] font-bold uppercase tracking-wider text-purple-400 block mb-1">Today&apos;s Quote 💬</span>
-              <p className="text-[11px] text-zinc-300 leading-relaxed italic font-semibold">&ldquo;{quote.text}&rdquo;</p>
-              <span className="text-[9px] text-zinc-500 block mt-1.5 text-right font-semibold">— {quote.author}</span>
-            </GlassCard>
+            {/* Elegant Speech Bubble / Diary Entry badge */}
+            <div className="relative bg-purple-950/30 backdrop-blur-md border border-purple-400/35 p-4 rounded-2xl shadow-[0_0_20px_rgba(168,85,247,0.15)] w-[230px] text-white">
+              {/* Cute Sparkle decoration */}
+              <div className="absolute -top-2.5 -right-1 text-sm animate-bounce">✨</div>
+              <span className="text-[8px] font-bold uppercase tracking-widest text-purple-300 block mb-1.5 font-mono">
+                Today&apos;s Thought 💬
+              </span>
+              <p className="text-[10.5px] text-purple-100 leading-relaxed italic font-medium">
+                &ldquo;{quote.text}&rdquo;
+              </p>
+              <div className="flex items-center justify-between mt-2 pt-2 border-t border-purple-400/20 text-[8px] text-purple-300/80 font-semibold font-mono">
+                <span>KIROKU DIARY</span>
+                <span className="text-purple-200">— {quote.author}</span>
+              </div>
+            </div>
           </div>
         </motion.div>
       )}
@@ -369,17 +375,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
       {/* Card 4: Bottom Center Music Player */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          x: mousePos.x * 20,
-          y: mousePos.y * 12,
-          rotateX: mousePos.y * -6,
-          rotateY: mousePos.x * 6
-        }}
+        animate={{ opacity: 1, scale: 1 }}
         whileHover={{
-          scale: 1.03,
-          boxShadow: "0 20px 40px rgba(168, 85, 247, 0.15)",
+          scale: 1.04,
+          boxShadow: "0 25px 50px -12px rgba(168, 85, 247, 0.25)"
         }}
         transition={{
           type: "spring",
@@ -390,26 +389,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isTabActive }) => {
         className="absolute bottom-[4%] left-[22%] z-30 pointer-events-auto cursor-pointer"
       >
         <div className="animate-float-d">
-          <GlassCard className="min-w-[260px] p-4 flex items-center gap-3">
+          {/* Aesthetic Music Tape / Vinyl deck */}
+          <div className="bg-[#15131C]/90 backdrop-blur-md border border-white/[0.08] p-3.5 rounded-2xl shadow-2xl flex items-center gap-3 w-[260px]">
             {/* Rotating Disc */}
-            <div className="relative w-10 h-10 rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center shrink-0 animate-disc">
-              <div className="w-3.5 h-3.5 rounded-full bg-pink-500 border border-black/40" />
+            <div className="relative w-10.5 h-10.5 rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center shrink-0">
+              <div className="absolute inset-0.5 rounded-full border border-dashed border-zinc-700/60 animate-disc" />
+              <div className="w-3.5 h-3.5 rounded-full bg-pink-500 border border-black/40 flex items-center justify-center">
+                <div className="w-1 h-1 rounded-full bg-zinc-950" />
+              </div>
             </div>
             <div className="flex-1 min-w-0 select-none">
-              <span className="text-[9px] font-bold uppercase tracking-wider text-pink-400 block">Now Playing 🎵</span>
-              <h4 className="font-bold text-xs text-white truncate">{activeTheme.card4.song}</h4>
-              <p className="text-[9px] text-zinc-400 truncate">{activeTheme.card4.artist}</p>
+              <span className="text-[8px] font-bold uppercase tracking-wider text-pink-400 block font-mono">Now Playing 🎵</span>
+              <h4 className="font-bold text-xs text-white truncate leading-none mt-1">{activeTheme.card4.song}</h4>
+              <p className="text-[9px] text-zinc-400 truncate mt-1">{activeTheme.card4.artist}</p>
+              
+              {/* Music Progress Bar */}
+              <div className="w-full bg-zinc-800 h-1 rounded-full mt-2 relative overflow-hidden">
+                <motion.div
+                  initial={{ width: "15%" }}
+                  animate={{ width: ["15%", "85%", "15%"] }}
+                  transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+                  className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#FF5FA8] to-[#A855F7] rounded-full"
+                />
+              </div>
             </div>
             {/* Waveform visual bars */}
-            <div className="flex items-end gap-0.5 h-3 shrink-0">
+            <div className="flex items-end gap-0.5 h-4 shrink-0 pb-0.5">
               <div className="w-[2px] bg-[#FF5FA8] rounded-full animate-bar-grow animate-bar-1" />
               <div className="w-[2px] bg-[#FF5FA8] rounded-full animate-bar-grow animate-bar-2" style={{ animationDelay: "0.15s" }} />
               <div className="w-[2px] bg-[#FF5FA8] rounded-full animate-bar-grow animate-bar-3" style={{ animationDelay: "0.3s" }} />
               <div className="w-[2px] bg-[#A855F7] rounded-full animate-bar-grow animate-bar-4" style={{ animationDelay: "0.45s" }} />
               <div className="w-[2px] bg-[#A855F7] rounded-full animate-bar-grow animate-bar-5" style={{ animationDelay: "0.6s" }} />
-              <div className="w-[2px] bg-[#A855F7] rounded-full animate-bar-grow animate-bar-6" style={{ animationDelay: "0.75s" }} />
             </div>
-          </GlassCard>
+          </div>
         </div>
       </motion.div>
     </div>

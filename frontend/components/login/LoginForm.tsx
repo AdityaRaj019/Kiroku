@@ -113,16 +113,16 @@ export const LoginForm: React.FC = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4, duration: 0.5 }}
-          className="space-y-1"
+          className="space-y-1.5"
         >
           <div
-            className={`flex items-center gap-3 w-full h-[56px] rounded-[18px] bg-[#121217] border px-4 transition-all duration-200 ${
+            className={`flex items-center gap-3 w-full h-[56px] rounded-[18px] bg-[#12111A]/80 backdrop-blur-md border px-4 transition-all duration-250 ${
               fieldErrors.email
                 ? "border-destructive focus-within:ring-2 focus-within:ring-destructive/20"
-                : "border-white/5 hover:border-[#A855F7]/60 focus-within:border-[#FF5FA8] focus-within:ring-2 focus-within:ring-[#FF5FA8]/20"
+                : "border-white/[0.06] hover:border-[#A855F7]/50 focus-within:border-[#FF5FA8] focus-within:ring-2 focus-within:ring-[#FF5FA8]/15 focus-within:shadow-[0_0_15px_rgba(255,95,168,0.1)]"
             }`}
           >
-            <Mail className="w-[18px] h-[18px] text-[#A1A1AA]/60 shrink-0" />
+            <Mail className="w-[18px] h-[18px] text-[#A1A1AA]/50 shrink-0" />
             <input
               id="login-email"
               type="email"
@@ -136,7 +136,7 @@ export const LoginForm: React.FC = () => {
                 }
               }}
               placeholder="Email Address"
-              className="flex-1 bg-transparent text-sm text-white placeholder-[#A1A1AA]/40 outline-none h-full"
+              className="flex-1 bg-transparent text-sm text-white placeholder-[#A1A1AA]/35 outline-none h-full"
             />
           </div>
           {fieldErrors.email && (
@@ -151,16 +151,16 @@ export const LoginForm: React.FC = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.55, duration: 0.5 }}
-          className="space-y-1"
+          className="space-y-1.5"
         >
           <div
-            className={`flex items-center gap-3 w-full h-[56px] rounded-[18px] bg-[#121217] border px-4 transition-all duration-200 ${
+            className={`flex items-center gap-3 w-full h-[56px] rounded-[18px] bg-[#12111A]/80 backdrop-blur-md border px-4 transition-all duration-250 ${
               fieldErrors.password
                 ? "border-destructive focus-within:ring-2 focus-within:ring-destructive/20"
-                : "border-white/5 hover:border-[#A855F7]/60 focus-within:border-[#FF5FA8] focus-within:ring-2 focus-within:ring-[#FF5FA8]/20"
+                : "border-white/[0.06] hover:border-[#A855F7]/50 focus-within:border-[#FF5FA8] focus-within:ring-2 focus-within:ring-[#FF5FA8]/15 focus-within:shadow-[0_0_15px_rgba(255,95,168,0.1)]"
             }`}
           >
-            <Lock className="w-[18px] h-[18px] text-[#A1A1AA]/60 shrink-0" />
+            <Lock className="w-[18px] h-[18px] text-[#A1A1AA]/50 shrink-0" />
             <input
               id="login-password"
               type={showPassword ? "text" : "password"}
@@ -174,12 +174,12 @@ export const LoginForm: React.FC = () => {
                 }
               }}
               placeholder="Password"
-              className="flex-1 bg-transparent text-sm text-white placeholder-[#A1A1AA]/40 outline-none h-full"
+              className="flex-1 bg-transparent text-sm text-white placeholder-[#A1A1AA]/35 outline-none h-full"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="text-[#A1A1AA]/60 hover:text-white transition-colors shrink-0 outline-none"
+              className="text-[#A1A1AA]/50 hover:text-white transition-colors shrink-0 outline-none"
             >
               {showPassword ? <EyeOff className="w-4.5 h-4.5" /> : <Eye className="w-4.5 h-4.5" />}
             </button>
@@ -198,7 +198,7 @@ export const LoginForm: React.FC = () => {
           transition={{ delay: 1.7, duration: 0.5 }}
           className="flex items-center justify-between text-xs text-[#A1A1AA]"
         >
-          <label className="flex items-center gap-2 cursor-pointer group">
+          <label className="flex items-center gap-2 cursor-pointer group select-none">
             <input
               type="checkbox"
               checked={rememberMe}
@@ -209,7 +209,7 @@ export const LoginForm: React.FC = () => {
               className={`w-[18px] h-[18px] rounded-md border flex items-center justify-center transition-all ${
                 rememberMe
                   ? "bg-gradient-to-r from-[#FF5FA8] to-[#A855F7] border-transparent"
-                  : "border-white/10 group-hover:border-[#A855F7]/80 bg-[#121217]"
+                  : "border-white/10 group-hover:border-[#FF5FA8]/60 bg-[#12111A]"
               }`}
             >
               {rememberMe && (
@@ -224,7 +224,7 @@ export const LoginForm: React.FC = () => {
                 </svg>
               )}
             </div>
-            <span>Remember me</span>
+            <span className="group-hover:text-white transition-colors">Remember me</span>
           </label>
           <a
             href="/forgot-password"
@@ -245,9 +245,9 @@ export const LoginForm: React.FC = () => {
             id="login-submit"
             type="submit"
             disabled={isSubmitting}
-            whileHover={{ scale: 1.03 }}
+            whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="relative group w-full h-[58px] rounded-[18px] bg-gradient-to-r from-[#FF5FA8] to-[#A855F7] text-white text-sm font-bold shadow-[0_4px_20px_rgba(168,85,247,0.3)] hover:shadow-[0_8px_30px_rgba(255,95,168,0.5)] transition-shadow duration-300 outline-none flex items-center justify-center gap-2 overflow-hidden cursor-pointer"
+            className="relative group w-full h-[58px] rounded-[18px] bg-gradient-to-r from-[#FF5FA8] to-[#A855F7] text-white text-sm font-bold shadow-[0_4px_20px_rgba(168,85,247,0.2)] hover:shadow-[0_8px_30px_rgba(255,95,168,0.45)] transition-all duration-300 outline-none flex items-center justify-center gap-2 overflow-hidden cursor-pointer"
           >
             {isSubmitting ? (
               <>
@@ -256,7 +256,7 @@ export const LoginForm: React.FC = () => {
               </>
             ) : (
               <>
-                <span>Continue Journey</span>
+                <span>Continue Journey ✨</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
               </>
             )}
@@ -273,7 +273,7 @@ export const LoginForm: React.FC = () => {
       >
         <div className="relative flex py-1 items-center">
           <div className="flex-grow border-t border-white/5"></div>
-          <span className="flex-shrink mx-3 text-[10px] uppercase font-bold tracking-widest text-[#A1A1AA]/50">
+          <span className="flex-shrink mx-3 text-[10px] uppercase font-bold tracking-widest text-[#A1A1AA]/45">
             or continue with
           </span>
           <div className="flex-grow border-t border-white/5"></div>
@@ -283,8 +283,8 @@ export const LoginForm: React.FC = () => {
           {/* Google Button */}
           <motion.button
             type="button"
-            whileHover={{ y: -4, backgroundColor: "rgba(255,255,255,0.04)" }}
-            className="flex items-center justify-center gap-2 h-[50px] rounded-[14px] border border-white/[0.08] bg-white/[0.01] text-xs font-semibold text-white transition-all cursor-pointer select-none"
+            whileHover={{ y: -2, backgroundColor: "rgba(255,95,168,0.04)", borderColor: "rgba(255,95,168,0.25)" }}
+            className="flex items-center justify-center gap-2 h-[50px] rounded-[14px] border border-white/[0.06] bg-white/[0.01] text-xs font-semibold text-white transition-all cursor-pointer select-none"
           >
             <svg
               className="w-4.5 h-4.5"
@@ -315,8 +315,8 @@ export const LoginForm: React.FC = () => {
           {/* Discord Button */}
           <motion.button
             type="button"
-            whileHover={{ y: -4, backgroundColor: "rgba(255,255,255,0.04)" }}
-            className="flex items-center justify-center gap-2 h-[50px] rounded-[14px] border border-white/[0.08] bg-white/[0.01] text-xs font-semibold text-white transition-all cursor-pointer select-none"
+            whileHover={{ y: -2, backgroundColor: "rgba(168,85,247,0.04)", borderColor: "rgba(168,85,247,0.25)" }}
+            className="flex items-center justify-center gap-2 h-[50px] rounded-[14px] border border-white/[0.06] bg-white/[0.01] text-xs font-semibold text-white transition-all cursor-pointer select-none"
           >
             <svg className="w-4.5 h-4.5" viewBox="0 0 127.14 96.36" fill="currentColor">
               <path
