@@ -1,4 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
+import { Prisma } from "@prisma/client";
 import { prisma } from "../../utils/prisma";
 import { parseUserId } from "../../utils/auth.helpers";
 import { mangaDexService, MangaDexApiError } from "../../services/mangadex.service";
@@ -80,7 +81,10 @@ async function ensureLocalManga(sourceId: string): Promise<number> {
     return record.id;
   } catch (err) {
     // Handle slug collision — retry with UUID suffix
-    if (err instanceof Error && err.message.includes("Unique constraint")) {
+    if (
+      err instanceof Prisma.PrismaClientKnownRequestError &&
+      err.code === "P2002"
+    ) {
       const fallbackSlug = `${slug}-${entity.id.slice(0, 8)}`;
       const record = await prisma.manga.upsert({
         where: { sourceId: entity.id },
@@ -166,8 +170,8 @@ export async function followManga(
   } catch (err) {
     // Prisma unique constraint violation → user already follows this manga
     if (
-      err instanceof Error &&
-      err.message.includes("Unique constraint")
+      err instanceof Prisma.PrismaClientKnownRequestError &&
+      err.code === "P2002"
     ) {
       next(new AppError(409, "You are already following this manga"));
       return;
