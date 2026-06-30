@@ -111,8 +111,9 @@ app.use(
 // Auth routes with tighter rate-limiting
 app.use("/api/v1/auth", authLimiter, authRouter);
 
-// Manga search & discovery routes with search-specific rate-limiting
-app.use("/api/v1/manga", searchLimiter, mangaRouter);
+// Scope search-specific rate-limiting ONLY to the GET search endpoint
+app.get("/api/v1/manga", searchLimiter);
+app.use("/api/v1/manga", mangaRouter);
 
 // Follow / tracking routes (all auth-protected)
 app.use("/api/v1/follows", followRouter);
