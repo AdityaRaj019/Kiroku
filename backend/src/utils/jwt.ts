@@ -12,18 +12,26 @@ export interface TokenPayload extends JWTPayload {
 
 // ─── Secret management ──────────────────────────────────────
 
+let cachedAccessSecret: Uint8Array | null = null;
+let cachedRefreshSecret: Uint8Array | null = null;
+
 /**
  * Lazily resolved access-token secret encoded as Uint8Array for HMAC-SHA256.
  * Throws on startup if the env var is missing — fail-fast by design.
  */
 function getAccessSecret(): Uint8Array {
+  if (cachedAccessSecret) {
+    return cachedAccessSecret;
+  }
+
   const raw = process.env.JWT_SECRET;
   if (!raw || raw.length < 32) {
     throw new Error(
       "JWT_SECRET must be set in the environment and be at least 32 characters long."
     );
   }
-  return new TextEncoder().encode(raw);
+  cachedAccessSecret = new TextEncoder().encode(raw);
+  return cachedAccessSecret;
 }
 
 /**
@@ -34,6 +42,10 @@ function getAccessSecret(): Uint8Array {
  * Falls back to JWT_SECRET only in development for convenience.
  */
 function getRefreshSecret(): Uint8Array {
+  if (cachedRefreshSecret) {
+    return cachedRefreshSecret;
+  }
+
   const raw = process.env.JWT_REFRESH_SECRET;
 
   if (process.env.NODE_ENV === "production" && (!raw || raw.length < 32)) {
@@ -51,7 +63,8 @@ function getRefreshSecret(): Uint8Array {
     );
   }
 
-  return new TextEncoder().encode(secret);
+  cachedRefreshSecret = new TextEncoder().encode(secret);
+  return cachedRefreshSecret;
 }
 
 // ─── Token generation ────────────────────────────────────────
