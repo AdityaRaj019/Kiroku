@@ -186,6 +186,19 @@ export default function LoginPage() {
         transition={{ duration: 0.8 }}
         className="w-full lg:w-[43%] flex flex-col justify-between p-8 md:p-12 lg:p-[72px] z-10 bg-[#09090B] relative overflow-hidden h-screen select-none shrink-0"
       >
+        {/* Subtle grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none z-0 opacity-40" />
+
+        {/* Ambient glows behind the login form */}
+        <div 
+          className="absolute top-[20%] -left-[20%] w-[380px] h-[380px] rounded-full blur-[110px] pointer-events-none opacity-20"
+          style={{ background: "radial-gradient(circle, rgba(255, 95, 168, 0.2) 0%, transparent 70%)" }}
+        />
+        <div 
+          className="absolute bottom-[20%] -right-[15%] w-[350px] h-[350px] rounded-full blur-[100px] pointer-events-none opacity-15"
+          style={{ background: "radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, transparent 70%)" }}
+        />
+
         {/* Left Side Drift Petals */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
           {leftPetals.map((petal) => (
