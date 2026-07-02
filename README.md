@@ -1,4 +1,4 @@
-# ⚡ MangaPulse
+# ⚡ Kiroku
 
 > A high-performance, centralized manga release tracking and multi-channel notification platform. Designed to eliminate update friction, consolidate reading progress, and deliver notifications within minutes of source releases.
 
@@ -6,7 +6,7 @@
 
 ## 🌟 The Vision
 
-**MangaPulse** is one of the coolest and most robust manga tracking systems built on a decoupled, asynchronous, worker-driven architecture. 
+**Kiroku** is one of the coolest and most robust manga tracking systems built on a decoupled, asynchronous, worker-driven architecture. 
 
 Rather than manually cycling through aggregator sites or checking bookmarks, readers register their favorite series, configure granular notification channels (Web Push, Email, and In-App feeds), and get alerts the instant a new chapter drops. The platform is designed from the ground up for high throughput, strict API rate-limit compliance, and maximum type safety.
 
@@ -14,7 +14,7 @@ Rather than manually cycling through aggregator sites or checking bookmarks, rea
 
 ## 🛠️ The Tech Stack
 
-MangaPulse is split into a modular backend service, a background queue worker system, and a modern frontend interface:
+Kiroku is split into a modular backend service, a background queue worker system, and a modern frontend interface:
 
 | Component | Technology | Description |
 | :--- | :--- | :--- |
