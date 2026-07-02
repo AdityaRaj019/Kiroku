@@ -5,7 +5,7 @@
  * - 3 test users with hashed passwords
  * - 5 manga series with MangaDex-style slugs
  * - 5-10 chapters per manga with sequential numbering
- * - Follow relations between users and manga
+ * - Library items linking users to manga with status, progress, ratings
  * - Unread notifications for testing the notification feed
  *
  * Idempotent: uses upsert() so it can be re-run safely without
@@ -115,17 +115,27 @@ function generateChapters(mangaId: number, count: number) {
 /** Chapter counts per manga (index-matched to mangaData) */
 const chapterCounts = [10, 8, 7, 6, 5];
 
-/** Follow mapping: which user indices follow which manga indices */
-const followMap: Array<{ userIdx: number; mangaIdx: number }> = [
-  { userIdx: 0, mangaIdx: 0 }, // Alice follows One Piece
-  { userIdx: 0, mangaIdx: 1 }, // Alice follows Jujutsu Kaisen
-  { userIdx: 0, mangaIdx: 4 }, // Alice follows Dandadan
-  { userIdx: 1, mangaIdx: 0 }, // Bob follows One Piece
-  { userIdx: 1, mangaIdx: 2 }, // Bob follows Chainsaw Man
-  { userIdx: 1, mangaIdx: 3 }, // Bob follows Spy x Family
-  { userIdx: 2, mangaIdx: 1 }, // Carol follows Jujutsu Kaisen
-  { userIdx: 2, mangaIdx: 3 }, // Carol follows Spy x Family
-  { userIdx: 2, mangaIdx: 4 }, // Carol follows Dandadan
+/** Library item mapping: which user indices track which manga indices with what status */
+const libraryItemMap: Array<{
+  userIdx: number;
+  mangaIdx: number;
+  status: "READING" | "COMPLETED" | "PLAN_TO_READ" | "DROPPED" | "PAUSED";
+  progress: number;
+  favorite: boolean;
+  rating: number | null;
+  startDate: Date | null;
+  endDate: Date | null;
+  reReadCount: number;
+}> = [
+  { userIdx: 0, mangaIdx: 0, status: "READING", progress: 7, favorite: true, rating: 9, startDate: new Date("2025-03-01"), endDate: null, reReadCount: 0 },   // Alice reads One Piece
+  { userIdx: 0, mangaIdx: 1, status: "COMPLETED", progress: 8, favorite: false, rating: 8, startDate: new Date("2025-01-15"), endDate: new Date("2025-06-01"), reReadCount: 1 }, // Alice finished Jujutsu Kaisen
+  { userIdx: 0, mangaIdx: 4, status: "PLAN_TO_READ", progress: 0, favorite: false, rating: null, startDate: null, endDate: null, reReadCount: 0 },             // Alice plans to read Dandadan
+  { userIdx: 1, mangaIdx: 0, status: "READING", progress: 5, favorite: true, rating: 10, startDate: new Date("2025-02-10"), endDate: null, reReadCount: 0 },   // Bob reads One Piece
+  { userIdx: 1, mangaIdx: 2, status: "READING", progress: 3, favorite: false, rating: 7, startDate: new Date("2025-04-01"), endDate: null, reReadCount: 0 },   // Bob reads Chainsaw Man
+  { userIdx: 1, mangaIdx: 3, status: "PAUSED", progress: 4, favorite: false, rating: 6, startDate: new Date("2025-01-20"), endDate: null, reReadCount: 0 },    // Bob paused Spy x Family
+  { userIdx: 2, mangaIdx: 1, status: "READING", progress: 6, favorite: true, rating: 9, startDate: new Date("2025-03-15"), endDate: null, reReadCount: 0 },    // Carol reads Jujutsu Kaisen
+  { userIdx: 2, mangaIdx: 3, status: "DROPPED", progress: 2, favorite: false, rating: 4, startDate: new Date("2025-02-01"), endDate: new Date("2025-03-10"), reReadCount: 0 }, // Carol dropped Spy x Family
+  { userIdx: 2, mangaIdx: 4, status: "READING", progress: 4, favorite: true, rating: 8, startDate: new Date("2025-05-01"), endDate: null, reReadCount: 0 },    // Carol reads Dandadan
 ];
 
 // ─── Main Seed Function ─────────────────────────────────────
@@ -189,20 +199,39 @@ async function main() {
     console.log(`   ✓ ${manga.title}: ${count} chapters`);
   }
 
-  // ── 4. Follows ─────────────────────────────────────────────
-  console.log("\n🔔 Upserting follow relations...");
-  for (const { userIdx, mangaIdx } of followMap) {
-    const userId = users[userIdx].id;
-    const mangaId = mangaRecords[mangaIdx].id;
+  // ── 4. Library Items ────────────────────────────────────────
+  console.log("\n📚 Upserting library items...");
+  for (const item of libraryItemMap) {
+    const userId = users[item.userIdx].id;
+    const mangaId = mangaRecords[item.mangaIdx].id;
 
-    await prisma.userFollow.upsert({
+    await prisma.libraryItem.upsert({
       where: {
         userId_mangaId: { userId, mangaId },
       },
-      update: {},
-      create: { userId, mangaId },
+      update: {
+        status: item.status,
+        progress: item.progress,
+        favorite: item.favorite,
+        rating: item.rating,
+        startDate: item.startDate,
+        endDate: item.endDate,
+        reReadCount: item.reReadCount,
+      },
+      create: {
+        userId,
+        mangaId,
+        mediaType: "MANGA",
+        status: item.status,
+        progress: item.progress,
+        favorite: item.favorite,
+        rating: item.rating,
+        startDate: item.startDate,
+        endDate: item.endDate,
+        reReadCount: item.reReadCount,
+      },
     });
-    console.log(`   ✓ ${users[userIdx].name} → ${mangaRecords[mangaIdx].title}`);
+    console.log(`   ✓ ${users[item.userIdx].name} → ${mangaRecords[item.mangaIdx].title} [${item.status}]`);
   }
 
   // ── 5. Notifications ──────────────────────────────────────
@@ -274,15 +303,15 @@ async function main() {
   const totalUsers = await prisma.user.count();
   const totalManga = await prisma.manga.count();
   const totalChapters = await prisma.chapter.count();
-  const totalFollows = await prisma.userFollow.count();
+  const totalLibraryItems = await prisma.libraryItem.count();
   const totalNotifs = await prisma.notification.count();
 
   console.log("\n─── Seed Summary ─────────────────────────────");
-  console.log(`   Users:         ${totalUsers}`);
-  console.log(`   Manga:         ${totalManga}`);
-  console.log(`   Chapters:      ${totalChapters}`);
-  console.log(`   Follows:       ${totalFollows}`);
-  console.log(`   Notifications: ${totalNotifs}`);
+  console.log(`   Users:          ${totalUsers}`);
+  console.log(`   Manga:          ${totalManga}`);
+  console.log(`   Chapters:       ${totalChapters}`);
+  console.log(`   Library Items:  ${totalLibraryItems}`);
+  console.log(`   Notifications:  ${totalNotifs}`);
   console.log("──────────────────────────────────────────────\n");
   console.log("✅ Seeding complete!");
   console.log(`\n   Test credentials: any seed user email + password "${TEST_PASSWORD}"\n`);

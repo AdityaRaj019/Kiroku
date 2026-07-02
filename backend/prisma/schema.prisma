@@ -17,6 +17,19 @@ enum NotificationType {
   SYSTEM
 }
 
+enum MediaType {
+  MANGA
+  ANIME
+}
+
+enum LibraryStatus {
+  READING
+  COMPLETED
+  PLAN_TO_READ
+  DROPPED
+  PAUSED
+}
+
 enum MangaStatus {
   ONGOING
   COMPLETED
@@ -36,7 +49,7 @@ model User {
   updatedAt        DateTime  @updatedAt @map("updated_at")
 
   pushTokens    PushToken[]
-  follows       UserFollow[]
+  libraryItems  LibraryItem[]
   notifications Notification[]
 
   @@map("users")
@@ -67,8 +80,8 @@ model Manga {
   createdAt   DateTime    @default(now()) @map("created_at")
   updatedAt   DateTime    @updatedAt @map("updated_at")
 
-  chapters  Chapter[]
-  followers UserFollow[]
+  chapters     Chapter[]
+  libraryItems LibraryItem[]
 
   @@map("manga")
 }
@@ -89,20 +102,33 @@ model Chapter {
   @@map("chapters")
 }
 
-model UserFollow {
-  id              Int      @id @default(autoincrement())
-  userId          Int      @map("user_id")
-  mangaId         Int      @map("manga_id")
-  lastReadChapter String?  @map("last_read_chapter")
-  createdAt       DateTime @default(now()) @map("created_at")
+model LibraryItem {
+  id                  Int           @id @default(autoincrement())
+  userId              Int           @map("user_id")
+  mangaId             Int?          @map("manga_id")
+  animeId             String?       @map("anime_id")
+  mediaType           MediaType     @default(MANGA) @map("media_type")
+  status              LibraryStatus @default(READING)
+  progress            Int           @default(0)
+  favorite            Boolean       @default(false)
+  enableNotifications Boolean       @default(true) @map("enable_notifications")
+  rating              Int?
+  startDate           DateTime?     @map("start_date")
+  endDate             DateTime?     @map("end_date")
+  reReadCount         Int           @default(0) @map("re_read_count")
+  createdAt           DateTime      @default(now()) @map("created_at")
+  updatedAt           DateTime      @updatedAt @map("updated_at")
 
-  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
-  manga Manga @relation(fields: [mangaId], references: [id], onDelete: Cascade)
+  user  User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  manga Manga? @relation(fields: [mangaId], references: [id], onDelete: Cascade)
 
   @@unique([userId, mangaId])
+  @@unique([userId, animeId])
   @@index([userId])
   @@index([mangaId])
-  @@map("user_follows")
+  @@index([userId, status])
+  @@index([userId, mediaType])
+  @@map("library_items")
 }
 
 model Notification {
