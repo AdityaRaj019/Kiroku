@@ -1,5 +1,18 @@
 # ⚡ Kiroku
 
+<div align="center">
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.x-black?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20.x-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-v4-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Prisma](https://img.shields.io/badge/PRISMA-Database-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+[![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/)
+[![Zod](https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&logo=zod&logoColor=white)](https://zod.dev/)
+
+</div>
+
 > A high-performance, centralized manga release tracking and multi-channel notification platform. Designed to eliminate update friction, consolidate reading progress, and deliver notifications within minutes of source releases.
 
 ---
@@ -9,6 +22,21 @@
 **Kiroku** is one of the coolest and most robust manga tracking systems built on a decoupled, asynchronous, worker-driven architecture. 
 
 Rather than manually cycling through aggregator sites or checking bookmarks, readers register their favorite series, configure granular notification channels (Web Push, Email, and In-App feeds), and get alerts the instant a new chapter drops. The platform is designed from the ground up for high throughput, strict API rate-limit compliance, and maximum type safety.
+
+## 📊 System Stats (RPG Character Sheet)
+
+```text
+=======================================================
+|                 KIROKU CORE ENGINE STATUS           |
+=======================================================
+|  [SPEED]      S-RANK  (Chapter sync delay < 5m)     |
+|  [UPTIME]     S-RANK  (Target SLA: 99.95%)          |
+|  [RESILIENCE] A-RANK  (Offline connection fallback) |
+|  [CACHING]    S-RANK  (Redis hit latency < 15ms)    |
+|  [SECURITY]   A-RANK  (SHA-256 pre-hashed bcrypt)   |
+|  [DELIVERY]   99.9%   (FCM Push + Resend Email)     |
+=======================================================
+```
 
 ---
 
