@@ -31,10 +31,13 @@ if (!connectionString) {
 const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });
 
+import { createHash } from "node:crypto";
+
 // ─── Seed Data Definitions ──────────────────────────────────
 
 const TEST_PASSWORD = "Test@1234";
-const HASHED_PASSWORD = hashSync(TEST_PASSWORD, 10);
+const preHashHex = createHash("sha256").update(TEST_PASSWORD).digest("hex");
+const HASHED_PASSWORD = hashSync(preHashHex, 12); // Matches crypto.ts (12 rounds + pre-hash)
 
 const usersData = [
   { email: "alice@mangapulse.dev", name: "Alice Nakamura", passwordHash: HASHED_PASSWORD },
@@ -44,6 +47,7 @@ const usersData = [
 
 const mangaData = [
   {
+    sourceId: "a1c7fceb-f80e-4e3b-8e1f-ae6c1d3e6c7f",
     title: "One Piece",
     slug: "one-piece-a1c7fceb",
     coverUrl: "https://uploads.mangadex.org/covers/a1c7fceb-f80e-4e3b-8e1f-ae6c1d3e6c7f/cover.jpg",
@@ -53,6 +57,7 @@ const mangaData = [
     sourceUrl: "https://mangadex.org/title/a1c7fceb-f80e-4e3b-8e1f-ae6c1d3e6c7f",
   },
   {
+    sourceId: "c52b2ce3-7f95-469c-96b0-479524fb7a1a",
     title: "Jujutsu Kaisen",
     slug: "jujutsu-kaisen-c52b2ce3",
     coverUrl: "https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/cover.jpg",
@@ -62,6 +67,7 @@ const mangaData = [
     sourceUrl: "https://mangadex.org/title/c52b2ce3-7f95-469c-96b0-479524fb7a1a",
   },
   {
+    sourceId: "a77742b1-befd-49a4-bff5-1f4e6bbf1c34",
     title: "Chainsaw Man",
     slug: "chainsaw-man-a77742b1",
     coverUrl: "https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1f4e6bbf1c34/cover.jpg",
@@ -71,6 +77,7 @@ const mangaData = [
     sourceUrl: "https://mangadex.org/title/a77742b1-befd-49a4-bff5-1f4e6bbf1c34",
   },
   {
+    sourceId: "6e3553b9-ddb5-4d37-b7a3-99998044774e",
     title: "Spy x Family",
     slug: "spy-x-family-6e3553b9",
     coverUrl: "https://uploads.mangadex.org/covers/6e3553b9-ddb5-4d37-b7a3-99998044774e/cover.jpg",
@@ -80,6 +87,7 @@ const mangaData = [
     sourceUrl: "https://mangadex.org/title/6e3553b9-ddb5-4d37-b7a3-99998044774e",
   },
   {
+    sourceId: "7f30dfc3-de40-46c3-8302-18907390aa80",
     title: "Dandadan",
     slug: "dandadan-7f30dfc3",
     coverUrl: "https://uploads.mangadex.org/covers/7f30dfc3-de40-46c3-8302-18907390aa80/cover.jpg",
@@ -163,6 +171,7 @@ async function main() {
     const manga = await prisma.manga.upsert({
       where: { slug: data.slug },
       update: {
+        sourceId: data.sourceId,
         title: data.title,
         coverUrl: data.coverUrl,
         synopsis: data.synopsis,

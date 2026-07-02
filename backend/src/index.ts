@@ -279,16 +279,13 @@ process.on("uncaughtException", (err) => {
 const PORT = process.env.PORT || 5000;
 
 async function bootstrap(): Promise<void> {
-  try {
-    await connectRedis();
-  } catch (err) {
+  // Connect to Redis in the background so it doesn't block server startup
+  connectRedis().catch((err) => {
     console.error(
       "[Bootstrap] Redis connection failed:",
       err instanceof Error ? err.message : err
     );
-    // Redis is non-critical — server can start without it.
-    // The MangaDex service will skip caching gracefully.
-  }
+  });
 
   server.listen(PORT, () => {
     console.log(`Kiroku server is running on port ${PORT}`);

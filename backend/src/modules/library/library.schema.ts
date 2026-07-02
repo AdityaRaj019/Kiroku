@@ -54,13 +54,13 @@ export const upsertLibraryItemSchema = z
       .datetime({ message: "startDate must be a valid ISO 8601 datetime" })
       .nullable()
       .optional()
-      .transform((v) => (v ? new Date(v) : null)),
+      .transform((v) => (v === undefined ? undefined : v ? new Date(v) : null)),
     endDate: z
       .string()
       .datetime({ message: "endDate must be a valid ISO 8601 datetime" })
       .nullable()
       .optional()
-      .transform((v) => (v ? new Date(v) : null)),
+      .transform((v) => (v === undefined ? undefined : v ? new Date(v) : null)),
     reReadCount: z
       .number({ invalid_type_error: "reReadCount must be a number" })
       .int("reReadCount must be an integer")
