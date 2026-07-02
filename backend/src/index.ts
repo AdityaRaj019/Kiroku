@@ -15,7 +15,7 @@ import { connectRedis, disconnectRedis } from "./utils/redis";
 import { verifyToken } from "./utils/jwt";
 import { authRouter } from "./modules/auth/auth.routes";
 import { mangaRouter } from "./modules/manga/manga.routes";
-import { followRouter } from "./modules/follow/follow.routes";
+import { libraryRouter } from "./modules/library/library.routes";
 import { errorMiddleware } from "./middlewares/error.middleware";
 
 const app = express();
@@ -91,6 +91,15 @@ const searchLimiter = rateLimit({
   message: { error: "Too many search requests, please try again later" },
 });
 
+// Library endpoints rate limiter — 60 requests per minute per IP
+const libraryLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 60,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: "Too many library requests, please try again later" },
+});
+
 // ─── Body parsing & cookies ─────────────────────────────────
 
 app.use(express.json({ limit: "10kb" })); // cap body size to prevent payload bombs
@@ -115,8 +124,8 @@ app.use("/api/v1/auth", authLimiter, authRouter);
 app.get("/api/v1/manga", searchLimiter);
 app.use("/api/v1/manga", mangaRouter);
 
-// Follow / tracking routes (all auth-protected)
-app.use("/api/v1/follows", followRouter);
+// Library routes (rate limited)
+app.use("/api/v1/library", libraryLimiter, libraryRouter);
 
 // Health check
 app.get("/health", async (_req, res) => {

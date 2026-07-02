@@ -173,7 +173,7 @@ async function fetchUserTracking(
   userId: number,
   mangaLocalId: number
 ): Promise<{ isFollowing: boolean; lastReadChapter: string | null; followedAt: Date | null }> {
-  const follow = await prisma.userFollow.findUnique({
+  const item = await prisma.libraryItem.findUnique({
     where: {
       userId_mangaId: {
         userId,
@@ -181,19 +181,19 @@ async function fetchUserTracking(
       },
     },
     select: {
-      lastReadChapter: true,
+      progress: true,
       createdAt: true,
     },
   });
 
-  if (!follow) {
+  if (!item) {
     return { isFollowing: false, lastReadChapter: null, followedAt: null };
   }
 
   return {
     isFollowing: true,
-    lastReadChapter: follow.lastReadChapter,
-    followedAt: follow.createdAt,
+    lastReadChapter: item.progress.toString(),
+    followedAt: item.createdAt,
   };
 }
 
