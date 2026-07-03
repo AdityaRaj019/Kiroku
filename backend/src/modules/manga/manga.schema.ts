@@ -79,3 +79,15 @@ export const mangaIdParamSchema = z.object({
 });
 
 export type MangaIdParam = z.infer<typeof mangaIdParamSchema>;
+
+// ─── Showcase Query ──────────────────────────────────────────
+
+/**
+ * Validates query parameters for `GET /api/v1/manga/showcase`.
+ */
+export const showcaseQuerySchema = z.object({
+  trendingPeriod: z.enum(["day", "month", "year"]).default("day"),
+});
+
+export type ShowcaseQueryInput = z.infer<typeof showcaseQuerySchema>;
+
