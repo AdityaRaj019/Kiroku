@@ -320,6 +320,10 @@ class MangaDexService {
       "includes[]": "cover_art",
     });
     params.append("includes[]", "author");
+    params.append("contentRating[]", "safe");
+    params.append("contentRating[]", "suggestive");
+    params.append("contentRating[]", "erotica");
+    params.append("contentRating[]", "pornographic");
 
     if (sort === "followedCount") {
       params.append("order[followedCount]", "desc");
@@ -364,6 +368,12 @@ class MangaDexService {
     });
     params.append("includes[]", "author");
     ids.forEach((id) => params.append("ids[]", id));
+
+    // Include all content ratings to avoid filtering out suggestive/mature series
+    params.append("contentRating[]", "safe");
+    params.append("contentRating[]", "suggestive");
+    params.append("contentRating[]", "erotica");
+    params.append("contentRating[]", "pornographic");
 
     const url = `${MANGADEX_BASE_URL}/manga?${params.toString()}`;
     
