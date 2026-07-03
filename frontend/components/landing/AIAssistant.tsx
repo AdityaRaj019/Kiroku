@@ -232,7 +232,7 @@ export const AIAssistant: React.FC = () => {
 
                   {/* Call to action read button */}
                   <button className="w-full bg-[#1A1A22] hover:bg-purple-950 border border-purple-500/20 text-white font-bebas text-[10px] tracking-widest py-1.5 rounded-lg transition-colors cursor-pointer uppercase font-bold">
-                    READ NOW
+                    CONTINUE
                   </button>
                 </div>
               </div>

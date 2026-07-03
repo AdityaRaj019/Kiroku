@@ -98,7 +98,7 @@ export const MangaCard: React.FC<MangaCardProps> = ({ manga }) => {
             </div>
             
             <span className="font-bebas text-xs font-bold tracking-widest text-[#CC0000] group-hover:translate-x-1 transition-transform uppercase">
-              READ NOW →
+              CONTINUE →
             </span>
           </div>
         </div>
