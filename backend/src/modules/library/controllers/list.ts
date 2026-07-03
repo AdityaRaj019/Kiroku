@@ -21,7 +21,7 @@ export async function getUserLibrary(
     const userId = parseUserId(req.user?.sub);
     const query = req.query as unknown as LibraryQueryInput;
 
-    const { page, limit, status, mediaType, favorite, sort, order } = query;
+    const { page, limit, status, mediaType, favorite, sort, order, genres, format, country, year } = query;
 
     // Build the dynamic where clause
     const where: any = {
@@ -36,6 +36,16 @@ export async function getUserLibrary(
     }
     if (favorite !== undefined) {
       where.favorite = favorite;
+    }
+
+    // Manga-level relation filters (Task 03)
+    const mangaFilter: any = {};
+    if (genres && genres.length > 0) mangaFilter.genres = { hasEvery: genres };
+    if (format) mangaFilter.format = format;
+    if (country) mangaFilter.country = { equals: country, mode: "insensitive" };
+    if (year !== undefined) mangaFilter.releaseYear = year;
+    if (Object.keys(mangaFilter).length > 0) {
+      where.manga = mangaFilter;
     }
 
     // Build the dynamic order clause
@@ -118,7 +128,7 @@ export async function getPublicUserLibrary(
     const targetUserId = parseInt(req.params.userId, 10);
     const query = req.query as unknown as LibraryQueryInput;
 
-    const { page, limit, status, mediaType, favorite, sort, order } = query;
+    const { page, limit, status, mediaType, favorite, sort, order, genres, format, country, year } = query;
 
     // Check if the target user actually exists first
     const targetUser = await prisma.user.findUnique({
@@ -143,6 +153,16 @@ export async function getPublicUserLibrary(
     }
     if (favorite !== undefined) {
       where.favorite = favorite;
+    }
+
+    // Manga-level relation filters (Task 03)
+    const mangaFilter: any = {};
+    if (genres && genres.length > 0) mangaFilter.genres = { hasEvery: genres };
+    if (format) mangaFilter.format = format;
+    if (country) mangaFilter.country = { equals: country, mode: "insensitive" };
+    if (year !== undefined) mangaFilter.releaseYear = year;
+    if (Object.keys(mangaFilter).length > 0) {
+      where.manga = mangaFilter;
     }
 
     // Build the dynamic order clause
