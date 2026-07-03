@@ -4,12 +4,14 @@ import { validateParams } from "../../middlewares/validateParams.middleware";
 import { optionalAuthMiddleware } from "../../middlewares/auth.middleware";
 import {
   searchQuerySchema,
+  advancedSearchQuerySchema,
   chaptersQuerySchema,
   mangaIdParamSchema,
   showcaseQuerySchema,
 } from "./manga.schema";
 import {
   searchManga,
+  advancedSearchManga,
   getMangaDetails,
   getMangaChapters,
   getMangaShowcase,
@@ -26,6 +28,12 @@ mangaRouter.get("/showcase", validateQuery(showcaseQuerySchema), getMangaShowcas
 // Search manga by title (no auth required)
 // GET /api/v1/manga?q=chainsaw&limit=10&offset=0
 mangaRouter.get("/", validateQuery(searchQuerySchema), searchManga);
+
+// Advanced multi-attribute search against the local database
+// Supports genre, format, country, year, chapter/episode ranges, and platform filters.
+// All params are optional and AND-combined. Frontend should debounce (300-500ms).
+// GET /api/v1/manga/search?genres=Action,Fantasy&format=MANGA&minChapters=50
+mangaRouter.get("/search", validateQuery(advancedSearchQuerySchema), advancedSearchManga);
 
 // Get manga details by MangaDex UUID
 // Publicly accessible; optional auth enriches response with user tracking data.

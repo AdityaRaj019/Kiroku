@@ -102,6 +102,14 @@ export type UpsertLibraryItemInput = z.infer<typeof upsertLibraryItemSchema>;
 
 const SortField = z.enum(["updated", "created", "rating", "title"]);
 const SortOrder = z.enum(["asc", "desc"]);
+const MangaFormatFilter = z.enum([
+  "MANGA",
+  "MANHWA",
+  "MANHUA",
+  "COMIC",
+  "ONE_SHOT",
+  "DOUJINSHI",
+]);
 
 export const libraryQuerySchema = z
   .object({
@@ -148,6 +156,34 @@ export const libraryQuerySchema = z
       .default("desc")
       .transform((v) => v.toLowerCase())
       .pipe(SortOrder),
+
+    // ── Manga-level filters (Task 03) ──
+    // These filter library items via a relation join on the manga model.
+    genres: z
+      .string()
+      .optional()
+      .transform((v) => {
+        if (!v || v.trim() === "") return undefined;
+        const items = v.split(",").map((s) => s.trim()).filter(Boolean);
+        return items.length > 0 ? items : undefined;
+      }),
+    format: z
+      .string()
+      .optional()
+      .transform((v) => (v ? v.toUpperCase() : undefined))
+      .pipe(MangaFormatFilter.optional()),
+    country: z
+      .string()
+      .max(10, "country must be 10 characters or fewer")
+      .optional()
+      .transform((v) => v?.trim()),
+    year: z
+      .string()
+      .optional()
+      .transform((v) => (v ? parseInt(v, 10) : undefined))
+      .pipe(
+        z.number().int().min(1900, "year must be 1900 or later").max(2100, "year must be 2100 or earlier").optional()
+      ),
   })
   .strict();
 

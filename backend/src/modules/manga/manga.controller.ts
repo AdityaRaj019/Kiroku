@@ -19,6 +19,10 @@ import {
   extractCoverUrl,
   extractAuthor,
   slugify,
+  extractGenres,
+  inferFormat,
+  inferCountry,
+  parseChapterCount,
 } from "../../utils/mangadex.helpers";
 
 // ─── Helpers ─────────────────────────────────────────────────
@@ -79,6 +83,13 @@ async function upsertMangaBatch(
     // append the last segment of the MangaDex UUID
     const slug = baseSlug || entity.id.slice(0, 8);
 
+    // Extract catalog fields from MangaDex entity
+    const genres = extractGenres(entity.attributes.tags);
+    const format = inferFormat(entity.attributes.originalLanguage);
+    const country = inferCountry(entity.attributes.originalLanguage);
+    const releaseYear = entity.attributes.year;
+    const chapterCount = parseChapterCount(entity.attributes.lastChapter);
+
     try {
       const record = await prisma.manga.upsert({
         where: { sourceId: entity.id },
@@ -91,6 +102,12 @@ async function upsertMangaBatch(
           author,
           status,
           sourceUrl: `https://mangadex.org/title/${entity.id}`,
+          genres,
+          format,
+          country,
+          releaseYear,
+          chapterCount,
+          readingSources: ["MangaDex"],
         },
         update: {
           title,
@@ -98,6 +115,12 @@ async function upsertMangaBatch(
           synopsis,
           author,
           status,
+          genres,
+          format,
+          country,
+          releaseYear,
+          chapterCount,
+          readingSources: ["MangaDex"],
         },
         select: {
           id: true,
@@ -130,6 +153,12 @@ async function upsertMangaBatch(
             author,
             status,
             sourceUrl: `https://mangadex.org/title/${entity.id}`,
+            genres,
+            format,
+            country,
+            releaseYear,
+            chapterCount,
+            readingSources: ["MangaDex"],
           },
           update: {
             title,
@@ -137,6 +166,12 @@ async function upsertMangaBatch(
             synopsis,
             author,
             status,
+            genres,
+            format,
+            country,
+            releaseYear,
+            chapterCount,
+            readingSources: ["MangaDex"],
           },
           select: {
             id: true,
@@ -345,6 +380,12 @@ export async function getMangaDetails(
               synopsis: resolveDescription(entity.attributes.description),
               author: extractAuthor(entity.relationships),
               status: mapMangaDexStatus(entity.attributes.status),
+              genres: extractGenres(entity.attributes.tags),
+              format: inferFormat(entity.attributes.originalLanguage),
+              country: inferCountry(entity.attributes.originalLanguage),
+              releaseYear: entity.attributes.year,
+              chapterCount: parseChapterCount(entity.attributes.lastChapter),
+              readingSources: ["MangaDex"],
             },
           });
         })

@@ -12,6 +12,10 @@ import {
   extractCoverUrl,
   extractAuthor,
   slugify,
+  extractGenres,
+  inferFormat,
+  inferCountry,
+  parseChapterCount,
 } from "../../../utils/mangadex.helpers";
 
 // ─── Helpers ─────────────────────────────────────────────────
@@ -40,6 +44,13 @@ async function ensureLocalManga(sourceId: string): Promise<number> {
   const title = resolveTitle(entity.attributes.title);
   const slug = slugify(title) || entity.id.slice(0, 8);
 
+  // Extract catalog fields from MangaDex entity
+  const genres = extractGenres(entity.attributes.tags);
+  const format = inferFormat(entity.attributes.originalLanguage);
+  const country = inferCountry(entity.attributes.originalLanguage);
+  const releaseYear = entity.attributes.year;
+  const chapterCount = parseChapterCount(entity.attributes.lastChapter);
+
   try {
     const record = await prisma.manga.upsert({
       where: { sourceId: entity.id },
@@ -52,6 +63,12 @@ async function ensureLocalManga(sourceId: string): Promise<number> {
         author: extractAuthor(entity.relationships),
         status: mapMangaDexStatus(entity.attributes.status),
         sourceUrl: `https://mangadex.org/title/${entity.id}`,
+        genres,
+        format,
+        country,
+        releaseYear,
+        chapterCount,
+        readingSources: ["MangaDex"],
       },
       update: {
         title,
@@ -59,6 +76,12 @@ async function ensureLocalManga(sourceId: string): Promise<number> {
         synopsis: resolveDescription(entity.attributes.description),
         author: extractAuthor(entity.relationships),
         status: mapMangaDexStatus(entity.attributes.status),
+        genres,
+        format,
+        country,
+        releaseYear,
+        chapterCount,
+        readingSources: ["MangaDex"],
       },
       select: { id: true },
     });
@@ -81,6 +104,12 @@ async function ensureLocalManga(sourceId: string): Promise<number> {
           author: extractAuthor(entity.relationships),
           status: mapMangaDexStatus(entity.attributes.status),
           sourceUrl: `https://mangadex.org/title/${entity.id}`,
+          genres,
+          format,
+          country,
+          releaseYear,
+          chapterCount,
+          readingSources: ["MangaDex"],
         },
         update: {
           title,
@@ -88,6 +117,12 @@ async function ensureLocalManga(sourceId: string): Promise<number> {
           synopsis: resolveDescription(entity.attributes.description),
           author: extractAuthor(entity.relationships),
           status: mapMangaDexStatus(entity.attributes.status),
+          genres,
+          format,
+          country,
+          releaseYear,
+          chapterCount,
+          readingSources: ["MangaDex"],
         },
         select: { id: true },
       });
