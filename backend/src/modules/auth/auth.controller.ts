@@ -28,8 +28,8 @@ function setRefreshCookie(res: Response, token: string): void {
   res.cookie(REFRESH_COOKIE, token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    path: "/api/v1/auth",
+    sameSite: "lax",
+    path: "/",
     maxAge: REFRESH_MAX_AGE_MS,
   });
 }
@@ -39,8 +39,8 @@ function clearRefreshCookie(res: Response): void {
   res.clearCookie(REFRESH_COOKIE, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    path: "/api/v1/auth",
+    sameSite: "lax",
+    path: "/",
   });
 }
 
