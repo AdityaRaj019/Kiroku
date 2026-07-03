@@ -200,6 +200,42 @@ async function upsertMangaBatch(
 }
 
 /**
+ * Maps MangaDex entities to local/frontend structures, attaching live statistics.
+ */
+async function mapMangaEntitiesWithStats(
+  entities: MangaDexMangaEntity[],
+  localRecords: any[]
+): Promise<any[]> {
+  const ids = entities.map((e) => e.id);
+  const statsMap = await mangaDexService.getMangaStatistics(ids);
+
+  return entities.map((entity) => {
+    const localMatch = localRecords.find((r) => r.sourceId === entity.id);
+    const stats = statsMap[entity.id];
+    return {
+      localId: localMatch?.id ?? null,
+      sourceId: entity.id,
+      title: resolveTitle(entity.attributes.title),
+      synopsis: resolveDescription(entity.attributes.description),
+      coverUrl: extractCoverUrl(entity.id, entity.relationships),
+      author: extractAuthor(entity.relationships),
+      status: entity.attributes.status,
+      year: entity.attributes.year,
+      contentRating: entity.attributes.contentRating,
+      rating: stats ? stats.rating.toFixed(1) : "8.5",
+      followsCount: stats ? stats.follows : 0,
+      tags: entity.attributes.tags.map((t) => ({
+        id: t.id,
+        name: t.attributes.name.en ?? Object.values(t.attributes.name)[0] ?? "Unknown",
+        group: t.attributes.group,
+      })),
+      lastChapter: entity.attributes.lastChapter,
+      demographicTag: entity.attributes.publicationDemographic,
+    };
+  });
+}
+
+/**
  * Fetches the authenticated user's tracking record for a given manga.
  * Returns a structured tracking object, or a default "not following" state.
  *
@@ -266,31 +302,8 @@ export async function searchManga(
     // 2. Upsert search results into local DB for future reference
     const localRecords = await upsertMangaBatch(mangaDexResponse.data);
 
-    // 3. Build enriched response combining local IDs with MangaDex data
-    const results = mangaDexResponse.data.map((entity) => {
-      const localMatch = localRecords.find((r) => r.sourceId === entity.id);
-
-      return {
-        // Local database ID (useful for follow/tracking endpoints)
-        localId: localMatch?.id ?? null,
-        // MangaDex source ID (UUID)
-        sourceId: entity.id,
-        title: resolveTitle(entity.attributes.title),
-        synopsis: resolveDescription(entity.attributes.description),
-        coverUrl: extractCoverUrl(entity.id, entity.relationships),
-        author: extractAuthor(entity.relationships),
-        status: entity.attributes.status,
-        year: entity.attributes.year,
-        contentRating: entity.attributes.contentRating,
-        tags: entity.attributes.tags.map((t) => ({
-          id: t.id,
-          name: t.attributes.name.en ?? Object.values(t.attributes.name)[0] ?? "Unknown",
-          group: t.attributes.group,
-        })),
-        lastChapter: entity.attributes.lastChapter,
-        demographicTag: entity.attributes.publicationDemographic,
-      };
-    });
+    // 3. Build enriched response combining local IDs with MangaDex data and stats
+    const results = await mapMangaEntitiesWithStats(mangaDexResponse.data, localRecords);
 
     res.status(200).json({
       data: results,
@@ -359,13 +372,21 @@ export async function getMangaDetails(
     });
 
     if (localManga) {
-      // Fetch tracking data only for authenticated users
-      const tracking = userId
-        ? await fetchUserTracking(userId, localManga.id)
-        : null;
+      // Fetch tracking data and live statistics in parallel
+      const [tracking, statsMap] = await Promise.all([
+        userId ? fetchUserTracking(userId, localManga.id) : null,
+        mangaDexService.getMangaStatistics([id]),
+      ]);
+      const stats = statsMap[id];
+
+      const enriched = {
+        ...localManga,
+        rating: stats ? stats.rating.toFixed(1) : "8.5",
+        followsCount: stats ? stats.follows : 0,
+      };
 
       // Return the local copy immediately (with tracking for auth users)
-      res.status(200).json({ data: localManga, tracking, source: "local" });
+      res.status(200).json({ data: enriched, tracking, source: "local" });
 
       // Fire-and-forget background refresh (best-effort)
       mangaDexService
@@ -415,11 +436,12 @@ export async function getMangaDetails(
     // 3. Persist locally
     const persisted = await upsertMangaBatch([entity]);
 
-    // 4. Fetch user tracking only for authenticated users
-    const tracking =
-      userId && persisted[0]
-        ? await fetchUserTracking(userId, persisted[0].id)
-        : null;
+    // 4. Fetch user tracking and live statistics in parallel
+    const [tracking, statsMap] = await Promise.all([
+      userId && persisted[0] ? fetchUserTracking(userId, persisted[0].id) : null,
+      mangaDexService.getMangaStatistics([id]),
+    ]);
+    const stats = statsMap[id];
 
     const result = {
       localId: persisted[0]?.id ?? null,
@@ -435,6 +457,8 @@ export async function getMangaDetails(
       status: entity.attributes.status,
       year: entity.attributes.year,
       contentRating: entity.attributes.contentRating,
+      rating: stats ? stats.rating.toFixed(1) : "8.5",
+      followsCount: stats ? stats.follows : 0,
       demographicTag: entity.attributes.publicationDemographic,
       originalLanguage: entity.attributes.originalLanguage,
       lastVolume: entity.attributes.lastVolume,
@@ -573,34 +597,18 @@ export async function getMangaShowcase(
     ];
     const localRecords = await upsertMangaBatch(allEntities);
 
-    // 6. Map results combining local IDs and attributes
-    const mapResult = (entity: MangaDexMangaEntity) => {
-      const localMatch = localRecords.find((r) => r.sourceId === entity.id);
-      return {
-        localId: localMatch?.id ?? null,
-        sourceId: entity.id,
-        title: resolveTitle(entity.attributes.title),
-        synopsis: resolveDescription(entity.attributes.description),
-        coverUrl: extractCoverUrl(entity.id, entity.relationships),
-        author: extractAuthor(entity.relationships),
-        status: entity.attributes.status,
-        year: entity.attributes.year,
-        contentRating: entity.attributes.contentRating,
-        tags: entity.attributes.tags.map((t) => ({
-          id: t.id,
-          name: t.attributes.name.en ?? Object.values(t.attributes.name)[0] ?? "Unknown",
-          group: t.attributes.group,
-        })),
-        lastChapter: entity.attributes.lastChapter,
-        demographicTag: entity.attributes.publicationDemographic,
-      };
-    };
+    // 6. Map results combining local IDs, attributes, and live statistics
+    const [trendingMapped, top5Mapped, top20Mapped] = await Promise.all([
+      mapMangaEntitiesWithStats(trendingResponse.data, localRecords),
+      mapMangaEntitiesWithStats(top5Response.data, localRecords),
+      mapMangaEntitiesWithStats(top20Response.data, localRecords),
+    ]);
 
     res.status(200).json({
       data: {
-        trending: trendingResponse.data.map(mapResult),
-        top5: top5Response.data.map(mapResult),
-        top20: top20Response.data.map(mapResult),
+        trending: trendingMapped,
+        top5: top5Mapped,
+        top20: top20Mapped,
       },
     });
   } catch (err) {
