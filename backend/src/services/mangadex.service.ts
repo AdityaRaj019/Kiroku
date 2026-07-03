@@ -385,6 +385,58 @@ class MangaDexService {
       MangaDexCollectionResponse<MangaDexMangaEntity>
     >(cacheKey, url, CACHE_TTL_SEARCH);
   }
+
+  /**
+   * Fetch statistics (bayesian rating and follows) for multiple manga IDs.
+   */
+  async getMangaStatistics(
+    ids: string[]
+  ): Promise<Record<string, { rating: number; follows: number }>> {
+    if (ids.length === 0) return {};
+
+    const params = new URLSearchParams();
+    ids.forEach((id) => params.append("manga[]", id));
+
+    const url = `${MANGADEX_BASE_URL}/statistics/manga?${params.toString()}`;
+    const sortedIds = [...ids].sort().join(",");
+    const cacheKey = `${CACHE_PREFIX_SEARCH}stats:${sortedIds}`;
+
+    interface StatisticsResponse {
+      result: string;
+      statistics: Record<
+        string,
+        {
+          follows: number;
+          rating: {
+            average?: number;
+            bayesian?: number;
+          };
+        }
+      >;
+    }
+
+    try {
+      const res = await this.fetchWithCache<StatisticsResponse>(
+        cacheKey,
+        url,
+        CACHE_TTL_SEARCH
+      );
+      
+      const statsMap: Record<string, { rating: number; follows: number }> = {};
+      if (res.statistics) {
+        Object.entries(res.statistics).forEach(([mangaId, stats]) => {
+          statsMap[mangaId] = {
+            rating: stats.rating.bayesian || stats.rating.average || 8.5,
+            follows: stats.follows || 0,
+          };
+        });
+      }
+      return statsMap;
+    } catch (err) {
+      console.warn("[MangaDexService] Failed to fetch statistics:", err);
+      return {};
+    }
+  }
 }
 
 // ─── Singleton Export ────────────────────────────────────────

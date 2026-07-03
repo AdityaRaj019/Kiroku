@@ -742,10 +742,19 @@
       "norm_label": "upsertmangabatch()"
     },
     {
+      "label": "mapMangaEntitiesWithStats()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/manga/manga.controller.ts",
+      "source_location": "L170",
+      "id": "manga_manga_controller_mapmangaentitieswithstats",
+      "community": 55,
+      "norm_label": "mapmangaentitieswithstats()"
+    },
+    {
       "label": "fetchUserTracking()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L174",
+      "source_location": "L210",
       "id": "manga_manga_controller_fetchusertracking",
       "community": 55,
       "norm_label": "fetchusertracking()"
@@ -754,7 +763,7 @@
       "label": "searchManga()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L220",
+      "source_location": "L256",
       "id": "manga_manga_controller_searchmanga",
       "community": 55,
       "norm_label": "searchmanga()"
@@ -763,7 +772,7 @@
       "label": "getMangaDetails()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L296",
+      "source_location": "L309",
       "id": "manga_manga_controller_getmangadetails",
       "community": 55,
       "norm_label": "getmangadetails()"
@@ -772,7 +781,7 @@
       "label": "getMangaChapters()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L434",
+      "source_location": "L458",
       "id": "manga_manga_controller_getmangachapters",
       "community": 55,
       "norm_label": "getmangachapters()"
@@ -781,7 +790,7 @@
       "label": "getMangaShowcase()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L495",
+      "source_location": "L519",
       "id": "manga_manga_controller_getmangashowcase",
       "community": 55,
       "norm_label": "getmangashowcase()"
@@ -1012,10 +1021,19 @@
       "norm_label": ".getmangalistbyids()"
     },
     {
-      "label": "globalForMangaDex",
+      "label": ".getMangaStatistics()",
       "file_type": "code",
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L392",
+      "id": "services_mangadex_service_mangadexservice_getmangastatistics",
+      "community": 49,
+      "norm_label": ".getmangastatistics()"
+    },
+    {
+      "label": "globalForMangaDex",
+      "file_type": "code",
+      "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L444",
       "id": "services_mangadex_service_globalformangadex",
       "community": 49,
       "norm_label": "globalformangadex"
@@ -2853,7 +2871,7 @@
       "source_file": "PRD.md",
       "source_location": "L172",
       "id": "kiroku_prd_7_5_4_social_read_along_room_flow",
-      "community": 65,
+      "community": 5,
       "norm_label": "7.5.4 social \"read-along\" room flow"
     },
     {
@@ -2862,7 +2880,7 @@
       "source_file": "PRD.md",
       "source_location": "L173",
       "id": "kiroku_prd_codeblock_8",
-      "community": 65,
+      "community": 5,
       "norm_label": "code:block8 ([social hub] \u2794 [create room] \u2794 [select manga & set target ch)"
     },
     {
@@ -2907,7 +2925,7 @@
       "source_file": "PRD.md",
       "source_location": "L206",
       "id": "kiroku_prd_codeblock_10",
-      "community": 11,
+      "community": 5,
       "norm_label": "code:mermaid (sequencediagram)"
     },
     {
@@ -2997,7 +3015,7 @@
       "source_file": "PRD.md",
       "source_location": "L315",
       "id": "kiroku_prd_9_technical_architecture",
-      "community": 65,
+      "community": 5,
       "norm_label": "9. technical architecture"
     },
     {
@@ -3006,7 +3024,7 @@
       "source_file": "PRD.md",
       "source_location": "L319",
       "id": "kiroku_prd_codeblock_15",
-      "community": 65,
+      "community": 5,
       "norm_label": "code:block15 (+-------------------+)"
     },
     {
@@ -3015,7 +3033,7 @@
       "source_file": "PRD.md",
       "source_location": "L349",
       "id": "kiroku_prd_infrastructure_specs",
-      "community": 65,
+      "community": 5,
       "norm_label": "infrastructure specs:"
     },
     {
@@ -8856,6 +8874,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "backend_src_modules_manga_manga_controller_ts",
+      "target": "manga_manga_controller_mapmangaentitieswithstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L41",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -9253,6 +9281,72 @@
       "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
       "target": "utils_mangadex_helpers_slugify"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/manga/manga.controller.ts",
+      "source_location": "L561",
+      "weight": 1.0,
+      "source": "manga_manga_controller_getmangashowcase",
+      "target": "manga_manga_controller_mapmangaentitieswithstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/manga/manga.controller.ts",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "manga_manga_controller_mapmangaentitieswithstats",
+      "target": "utils_mangadex_helpers_extractauthor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/manga/manga.controller.ts",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "manga_manga_controller_mapmangaentitieswithstats",
+      "target": "utils_mangadex_helpers_extractcoverurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/manga/manga.controller.ts",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "manga_manga_controller_mapmangaentitieswithstats",
+      "target": "utils_mangadex_helpers_resolvedescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/manga/manga.controller.ts",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "manga_manga_controller_mapmangaentitieswithstats",
+      "target": "utils_mangadex_helpers_resolvetitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/manga/manga.controller.ts",
+      "source_location": "L271",
+      "weight": 1.0,
+      "source": "manga_manga_controller_searchmanga",
+      "target": "manga_manga_controller_mapmangaentitieswithstats",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -9793,6 +9887,16 @@
       "confidence_score": 1.0,
       "source": "services_mangadex_service_mangadexservice",
       "target": "services_mangadex_service_mangadexservice_getmangalistbyids"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L392",
+      "weight": 1.0,
+      "source": "services_mangadex_service_mangadexservice",
+      "target": "services_mangadex_service_mangadexservice_getmangastatistics",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -16616,5 +16720,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c3eefe09e41682514a6a5bfbabd4d0dea903e6d0"
+  "built_at_commit": "8f3052107f8fd7961554485ca80baeb784c9fdaf"
 }

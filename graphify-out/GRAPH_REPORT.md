@@ -1,16 +1,16 @@
 # Graph Report - kiroku  (2026-07-03)
 
 ## Corpus Check
-- 58 files · ~38,765 words
+- 58 files · ~38,948 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 715 nodes · 984 edges · 65 communities (59 shown, 6 thin omitted)
+- 717 nodes · 992 edges · 64 communities (58 shown, 6 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c3eefe09`
+- Built from commit: `8f305210`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -79,7 +79,6 @@
 - [[_COMMUNITY_Community 61|Community 61]]
 - [[_COMMUNITY_Community 62|Community 62]]
 - [[_COMMUNITY_Community 63|Community 63]]
-- [[_COMMUNITY_Community 65|Community 65]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Product Requirement Document (PRD)` - 22 edges
@@ -88,7 +87,7 @@
 4. `What You Must Do When Invoked` - 16 edges
 5. `/graphify` - 15 edges
 6. `getMangaDetails()` - 14 edges
-7. `MangaDexService` - 13 edges
+7. `MangaDexService` - 14 edges
 8. `parseUserId()` - 13 edges
 9. `11.2 Protected API Endpoints (Required Token: JWT)` - 13 edges
 10. `refresh()` - 10 edges
@@ -105,7 +104,7 @@
 - `upsertLibraryItem()` --calls--> `parseUserId()`  [EXTRACTED]
   backend/src/modules/library/controllers/upsert.ts → backend/src/utils/auth.helpers.ts
 
-## Communities (65 total, 6 thin omitted)
+## Communities (64 total, 6 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.15
@@ -128,8 +127,8 @@ Cohesion: 0.10
 Nodes (20): 13.1 Staggered & Conditional Polling, 13.2 Queue Prioritization & Batching, 13.3 Notification Deduplication Keys, 13. Scalability Plan, 14.1 Authentication & Token Safety, 14.2 API Security Controls, 14.3 Input Validation, 14. Security Considerations (+12 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.20
-Nodes (12): 7.5.1 Multi-Platform Sync Flow, 7.5.2 Spoiler-Free Comments Flow, 7.5.3 Scan-to-Track Flow, 7.5 Phase 2 Feature Flows, 8.1 Manga Follow Flow, 8.2 Chapter Detection & Aggregation Flow (Cron-Scheduled), 8.3 Notification Dispatch Queue Flow, 8. System Workflows (+4 more)
+Cohesion: 0.12
+Nodes (18): 7.5.1 Multi-Platform Sync Flow, 7.5.2 Spoiler-Free Comments Flow, 7.5.3 Scan-to-Track Flow, 7.5.4 Social "Read-Along" Room Flow, 7.5 Phase 2 Feature Flows, 8.1 Manga Follow Flow, 8.2 Chapter Detection & Aggregation Flow (Cron-Scheduled), 8.3 Notification Dispatch Queue Flow (+10 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.22
@@ -148,8 +147,8 @@ Cohesion: 0.17
 Nodes (11): 1. Identity & Mindset, 2.1 The Sandbox Rule (Test in Isolation), 2.2 Strict Boundary Safety, 2.3 Project Memory & Context Bootstrap, 2. Engineering Philosophy, 3.1 Response Structure, 3. Communication & Response Protocols, 4. Forbidden Actions (+3 more)
 
 ### Community 11 - "Community 11"
-Cohesion: 0.15
-Nodes (17): 10.1 Prisma Schema (`schema.prisma`), 10.2 Database Indexes & Constraints (SQL DDL), 10.3 Prisma Schema Extensions for Phase 2, 10.4 SQL DDL Extensions for Phase 2, 10. Database Design, 11.2 Protected API Endpoints (Required Token: JWT), 11.4 Admin/System Control Endpoints (Requires API Key Header: `x-admin-key`), code:mermaid (sequenceDiagram) (+9 more)
+Cohesion: 0.16
+Nodes (16): 10.1 Prisma Schema (`schema.prisma`), 10.2 Database Indexes & Constraints (SQL DDL), 10.3 Prisma Schema Extensions for Phase 2, 10.4 SQL DDL Extensions for Phase 2, 10. Database Design, 11.2 Protected API Endpoints (Required Token: JWT), 11.4 Admin/System Control Endpoints (Requires API Key Header: `x-admin-key`), code:prisma (datasource db {) (+8 more)
 
 ### Community 12 - "Community 12"
 Cohesion: 0.20
@@ -288,7 +287,7 @@ Cohesion: 0.19
 Nodes (13): 11.1 Public API Endpoints, 11.3 Protected Push Token Endpoints, 11. API Design, 8.4.1 Multi-Platform Aggregation Flow (Cron-Scheduled), 8.4.2 Scan-to-Track Image Reconciliation Flow, 8.4.3 Social Read-Along Room Progress Sync, 8.4 Phase 2 System Workflows, code:mermaid (sequenceDiagram) (+5 more)
 
 ### Community 49 - "Community 49"
-Cohesion: 0.17
+Cohesion: 0.16
 Nodes (12): globalForMangaDex, MangaDexService, LocalizedString, MangaDexChapterAttributes, MangaDexChapterEntity, MangaDexCollectionResponse, MangaDexEntityResponse, MangaDexErrorResponse (+4 more)
 
 ### Community 50 - "Community 50"
@@ -309,7 +308,7 @@ Nodes (7): GlassCard(), GlassCardProps, HERO_THEMES, HeroSection(), HeroSectionP
 
 ### Community 55 - "Community 55"
 Cohesion: 0.14
-Nodes (32): ensureLocalManga(), resolveEndDate(), resolveStartDate(), upsertLibraryItem(), extractArtist(), extractAuthor(), extractCoverUrl(), fetchUserTracking() (+24 more)
+Nodes (33): ensureLocalManga(), resolveEndDate(), resolveStartDate(), upsertLibraryItem(), extractArtist(), extractAuthor(), extractCoverUrl(), fetchUserTracking() (+25 more)
 
 ### Community 56 - "Community 56"
 Cohesion: 0.20
@@ -339,10 +338,6 @@ Nodes (7): FieldErrors, LoginForm(), AuthResponse, RefreshResponse, apiFetch(), 
 Cohesion: 0.27
 Nodes (8): MangaCard(), MangaCardProps, MangaData, RightContentPane(), RightContentPaneProps, TOP_20_HIGHLY_RATED, TOP_5_ALL_TIME, TRENDING_BY_TIME
 
-### Community 65 - "Community 65"
-Cohesion: 0.40
-Nodes (5): 7.5.4 Social "Read-Along" Room Flow, 9. Technical Architecture, code:block15 (+-------------------+), code:block8 ([Social Hub] ➔ [Create Room] ➔ [Select Manga & Set Target Ch), Infrastructure Specs:
-
 ## Knowledge Gaps
 - **300 isolated node(s):** `adapter`, `prisma`, `preHashHex`, `HASHED_PASSWORD`, `usersData` (+295 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -351,7 +346,7 @@ Nodes (5): 7.5.4 Social "Read-Along" Room Flow, 9. Technical Architecture, code:
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Product Requirement Document (PRD)` connect `Community 4` to `Community 65`, `Community 5`, `Community 6`, `Community 7`, `Community 11`, `Community 48`, `Community 52`, `Community 53`, `Community 58`, `Community 60`?**
+- **Why does `Product Requirement Document (PRD)` connect `Community 4` to `Community 5`, `Community 6`, `Community 7`, `Community 11`, `Community 48`, `Community 52`, `Community 53`, `Community 58`, `Community 60`?**
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `What You Must Do When Invoked` connect `Community 3` to `Community 2`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
