@@ -1,16 +1,16 @@
 # Graph Report - kiroku  (2026-07-03)
 
 ## Corpus Check
-- 56 files · ~37,128 words
+- 56 files · ~37,883 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 704 nodes · 952 edges · 65 communities (59 shown, 6 thin omitted)
+- 704 nodes · 952 edges · 66 communities (60 shown, 6 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `56ef807f`
+- Built from commit: `2272a815`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -80,6 +80,7 @@
 - [[_COMMUNITY_Community 62|Community 62]]
 - [[_COMMUNITY_Community 63|Community 63]]
 - [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Product Requirement Document (PRD)` - 22 edges
@@ -105,7 +106,7 @@
 - `getMangaDetails()` --calls--> `parseUserId()`  [EXTRACTED]
   backend/src/modules/manga/manga.controller.ts → backend/src/utils/auth.helpers.ts
 
-## Communities (65 total, 6 thin omitted)
+## Communities (66 total, 6 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -128,8 +129,8 @@ Cohesion: 0.20
 Nodes (9): 19. Risks & Constraints, 1. Executive Summary, 20. Success Metrics, 2. Product Vision, 3. Problem Statement, 4. Goals & Objectives, 5. Target Audience, Product Requirement Document (PRD) (+1 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.12
-Nodes (18): 7.5.1 Multi-Platform Sync Flow, 7.5.2 Spoiler-Free Comments Flow, 7.5.3 Scan-to-Track Flow, 7.5.4 Social "Read-Along" Room Flow, 7.5 Phase 2 Feature Flows, 8.1 Manga Follow Flow, 8.2 Chapter Detection & Aggregation Flow (Cron-Scheduled), 8.3 Notification Dispatch Queue Flow (+10 more)
+Cohesion: 0.18
+Nodes (13): 7.5.1 Multi-Platform Sync Flow, 7.5.2 Spoiler-Free Comments Flow, 7.5.3 Scan-to-Track Flow, 7.5 Phase 2 Feature Flows, 8.1 Manga Follow Flow, 8.2 Chapter Detection & Aggregation Flow (Cron-Scheduled), 8.3 Notification Dispatch Queue Flow, 8. System Workflows (+5 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.22
@@ -149,7 +150,7 @@ Nodes (11): 1. Identity & Mindset, 2.1 The Sandbox Rule (Test in Isolation), 2.2
 
 ### Community 11 - "Community 11"
 Cohesion: 0.16
-Nodes (16): 10.1 Prisma Schema (`schema.prisma`), 10.2 Database Indexes & Constraints (SQL DDL), 10.3 Prisma Schema Extensions for Phase 2, 10.4 SQL DDL Extensions for Phase 2, 10. Database Design, 11.2 Protected API Endpoints (Required Token: JWT), 11.4 Admin/System Control Endpoints (Requires API Key Header: `x-admin-key`), code:mermaid (sequenceDiagram) (+8 more)
+Nodes (16): 10.1 Prisma Schema (`schema.prisma`), 10.2 Database Indexes & Constraints (SQL DDL), 10.3 Prisma Schema Extensions for Phase 2, 10.4 SQL DDL Extensions for Phase 2, 10. Database Design, 11.2 Protected API Endpoints (Required Token: JWT), 11.4 Admin/System Control Endpoints (Requires API Key Header: `x-admin-key`), code:prisma (datasource db {) (+8 more)
 
 ### Community 12 - "Community 12"
 Cohesion: 0.20
@@ -343,6 +344,10 @@ Nodes (4): 14.1 Authentication & Token Safety, 14.2 API Security Controls, 14.3 
 Cohesion: 0.67
 Nodes (3): 18. Future Roadmap, code:json ({ "queueName": "notification-dispatcher", "jobId": "job-1094), code:block40 (+--------------------------------------------------------+)
 
+### Community 65 - "Community 65"
+Cohesion: 0.40
+Nodes (5): 7.5.4 Social "Read-Along" Room Flow, 9. Technical Architecture, code:block15 (+-------------------+), code:block8 ([Social Hub] ➔ [Create Room] ➔ [Select Manga & Set Target Ch), Infrastructure Specs:
+
 ## Knowledge Gaps
 - **297 isolated node(s):** `adapter`, `prisma`, `preHashHex`, `HASHED_PASSWORD`, `usersData` (+292 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -351,7 +356,7 @@ Nodes (3): 18. Future Roadmap, code:json ({ "queueName": "notification-dispatche
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Product Requirement Document (PRD)` connect `Community 4` to `Community 64`, `Community 5`, `Community 6`, `Community 7`, `Community 11`, `Community 52`, `Community 53`, `Community 54`, `Community 58`, `Community 60`, `Community 62`, `Community 63`?**
+- **Why does `Product Requirement Document (PRD)` connect `Community 4` to `Community 64`, `Community 65`, `Community 5`, `Community 6`, `Community 7`, `Community 11`, `Community 52`, `Community 53`, `Community 54`, `Community 58`, `Community 60`, `Community 62`, `Community 63`?**
   _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **Why does `What You Must Do When Invoked` connect `Community 3` to `Community 2`?**
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
@@ -363,5 +368,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
-- **Should `Community 5` be split into smaller, more focused modules?**
-  _Cohesion score 0.12418300653594772 - nodes in this community are weakly interconnected._
+- **Should `Community 9` be split into smaller, more focused modules?**
+  _Cohesion score 0.10461538461538461 - nodes in this community are weakly interconnected._
