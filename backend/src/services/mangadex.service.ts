@@ -437,6 +437,78 @@ class MangaDexService {
       return {};
     }
   }
+
+  /**
+   * Fetch aggregate chapter data and compute the total/max chapter count.
+   */
+  async getMangaChapterCount(mangaId: string): Promise<number> {
+    const url = `${MANGADEX_BASE_URL}/manga/${mangaId}/aggregate`;
+    const cacheKey = `${CACHE_PREFIX_SEARCH}aggregate:${mangaId}`;
+
+    interface AggregateResponse {
+      result: string;
+      volumes: Record<
+        string,
+        {
+          volume: string;
+          count: number;
+          chapters: Record<
+            string,
+            {
+              chapter: string;
+              count: number;
+            }
+          >;
+        }
+      >;
+    }
+
+    try {
+      // Cache aggregate responses for 24 hours (86400 seconds) since they don't change often
+      const res = await this.fetchWithCache<AggregateResponse>(
+        cacheKey,
+        url,
+        86400
+      );
+
+      let maxCh = 0;
+      if (res.volumes) {
+        Object.values(res.volumes).forEach((vol) => {
+          if (vol.chapters) {
+            Object.values(vol.chapters).forEach((ch) => {
+              const num = parseFloat(ch.chapter);
+              if (!isNaN(num) && num > maxCh) {
+                maxCh = num;
+              }
+            });
+          }
+        });
+      }
+      return maxCh > 0 ? Math.ceil(maxCh) : 120;
+    } catch (err) {
+      console.warn(`[MangaDexService] Failed to fetch aggregate for ${mangaId}:`, err);
+      return 120; // fallback default
+    }
+  }
+
+  /**
+   * Fetch aggregate chapter counts for multiple manga IDs in parallel (rate-limited).
+   */
+  async getMangaChapterCounts(
+    mangaIds: string[]
+  ): Promise<Record<string, number>> {
+    const results = await Promise.all(
+      mangaIds.map(async (id) => {
+        const count = await this.getMangaChapterCount(id);
+        return { id, count };
+      })
+    );
+    const map: Record<string, number> = {};
+    results.forEach((r) => {
+      map[r.id] = r.count;
+    });
+    return map;
+  }
 }
 
 // ─── Singleton Export ────────────────────────────────────────

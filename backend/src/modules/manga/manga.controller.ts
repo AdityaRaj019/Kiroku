@@ -207,11 +207,18 @@ async function mapMangaEntitiesWithStats(
   localRecords: any[]
 ): Promise<any[]> {
   const ids = entities.map((e) => e.id);
-  const statsMap = await mangaDexService.getMangaStatistics(ids);
+  
+  // Fetch statistics and chapter counts in parallel
+  const [statsMap, chapterCountsMap] = await Promise.all([
+    mangaDexService.getMangaStatistics(ids),
+    mangaDexService.getMangaChapterCounts(ids),
+  ]);
 
   return entities.map((entity) => {
     const localMatch = localRecords.find((r) => r.sourceId === entity.id);
     const stats = statsMap[entity.id];
+    const chapterCount = chapterCountsMap[entity.id] || 120;
+
     return {
       localId: localMatch?.id ?? null,
       sourceId: entity.id,
@@ -224,6 +231,7 @@ async function mapMangaEntitiesWithStats(
       contentRating: entity.attributes.contentRating,
       rating: stats ? stats.rating.toFixed(1) : "8.5",
       followsCount: stats ? stats.follows : 0,
+      chaptersCount: chapterCount,
       tags: entity.attributes.tags.map((t) => ({
         id: t.id,
         name: t.attributes.name.en ?? Object.values(t.attributes.name)[0] ?? "Unknown",
@@ -372,10 +380,11 @@ export async function getMangaDetails(
     });
 
     if (localManga) {
-      // Fetch tracking data and live statistics in parallel
-      const [tracking, statsMap] = await Promise.all([
+      // Fetch tracking data, live statistics, and chapter count in parallel
+      const [tracking, statsMap, chapterCount] = await Promise.all([
         userId ? fetchUserTracking(userId, localManga.id) : null,
         mangaDexService.getMangaStatistics([id]),
+        mangaDexService.getMangaChapterCount(id),
       ]);
       const stats = statsMap[id];
 
@@ -383,6 +392,7 @@ export async function getMangaDetails(
         ...localManga,
         rating: stats ? stats.rating.toFixed(1) : "8.5",
         followsCount: stats ? stats.follows : 0,
+        chaptersCount: chapterCount,
       };
 
       // Return the local copy immediately (with tracking for auth users)
@@ -436,10 +446,11 @@ export async function getMangaDetails(
     // 3. Persist locally
     const persisted = await upsertMangaBatch([entity]);
 
-    // 4. Fetch user tracking and live statistics in parallel
-    const [tracking, statsMap] = await Promise.all([
+    // 4. Fetch user tracking, live statistics, and chapter count in parallel
+    const [tracking, statsMap, chapterCount] = await Promise.all([
       userId && persisted[0] ? fetchUserTracking(userId, persisted[0].id) : null,
       mangaDexService.getMangaStatistics([id]),
+      mangaDexService.getMangaChapterCount(id),
     ]);
     const stats = statsMap[id];
 
@@ -459,6 +470,7 @@ export async function getMangaDetails(
       contentRating: entity.attributes.contentRating,
       rating: stats ? stats.rating.toFixed(1) : "8.5",
       followsCount: stats ? stats.follows : 0,
+      chaptersCount: chapterCount,
       demographicTag: entity.attributes.publicationDemographic,
       originalLanguage: entity.attributes.originalLanguage,
       lastVolume: entity.attributes.lastVolume,
