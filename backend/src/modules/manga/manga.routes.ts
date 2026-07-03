@@ -7,17 +7,23 @@ import {
   advancedSearchQuerySchema,
   chaptersQuerySchema,
   mangaIdParamSchema,
+  showcaseQuerySchema,
 } from "./manga.schema";
 import {
   searchManga,
   advancedSearchManga,
   getMangaDetails,
   getMangaChapters,
+  getMangaShowcase,
 } from "./manga.controller";
 
 export const mangaRouter = Router();
 
 // ─── Public routes ───────────────────────────────────────────
+
+// Get explore page showcase lists (no auth required)
+// GET /api/v1/manga/showcase?trendingPeriod=day
+mangaRouter.get("/showcase", validateQuery(showcaseQuerySchema), getMangaShowcase);
 
 // Search manga by title (no auth required)
 // GET /api/v1/manga?q=chainsaw&limit=10&offset=0

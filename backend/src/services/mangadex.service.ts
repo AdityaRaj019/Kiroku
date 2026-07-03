@@ -301,6 +301,90 @@ class MangaDexService {
       MangaDexCollectionResponse<MangaDexChapterEntity>
     >(cacheKey, url, CACHE_TTL_CHAPTERS);
   }
+
+  /**
+   * Fetch popular manga based on sorting options.
+   *
+   * @param limit - Max results per page (default 10).
+   * @param offset - Pagination offset (default 0).
+   * @param sort - Sort criteria: 'followedCount' | 'rating' | 'latestUploadedChapter' | 'relevance'.
+   */
+  async getPopularManga(
+    limit: number = 10,
+    offset: number = 0,
+    sort: string = "followedCount"
+  ): Promise<MangaDexCollectionResponse<MangaDexMangaEntity>> {
+    const params = new URLSearchParams({
+      limit: String(Math.min(Math.max(limit, 1), 100)),
+      offset: String(Math.max(offset, 0)),
+      "includes[]": "cover_art",
+    });
+    params.append("includes[]", "author");
+    params.append("contentRating[]", "safe");
+    params.append("contentRating[]", "suggestive");
+    params.append("contentRating[]", "erotica");
+    params.append("contentRating[]", "pornographic");
+
+    if (sort === "followedCount") {
+      params.append("order[followedCount]", "desc");
+    } else if (sort === "rating") {
+      params.append("order[rating]", "desc");
+    } else if (sort === "latestUploadedChapter") {
+      params.append("order[latestUploadedChapter]", "desc");
+    } else {
+      params.append("order[relevance]", "desc");
+    }
+
+    const url = `${MANGADEX_BASE_URL}/manga?${params.toString()}`;
+    const cacheKey = `${CACHE_PREFIX_SEARCH}popular:${sort}:${limit}:${offset}`;
+
+    return this.fetchWithCache<
+      MangaDexCollectionResponse<MangaDexMangaEntity>
+    >(cacheKey, url, CACHE_TTL_SEARCH);
+  }
+
+  /**
+   * Fetch details for multiple manga IDs in a single request.
+   *
+   * @param ids - Array of MangaDex UUIDs.
+   */
+  async getMangaListByIds(
+    ids: string[]
+  ): Promise<MangaDexCollectionResponse<MangaDexMangaEntity>> {
+    if (ids.length === 0) {
+      return {
+        result: "ok",
+        response: "collection",
+        data: [],
+        limit: 0,
+        offset: 0,
+        total: 0,
+      };
+    }
+
+    const params = new URLSearchParams({
+      limit: String(ids.length),
+      "includes[]": "cover_art",
+    });
+    params.append("includes[]", "author");
+    ids.forEach((id) => params.append("ids[]", id));
+
+    // Include all content ratings to avoid filtering out suggestive/mature series
+    params.append("contentRating[]", "safe");
+    params.append("contentRating[]", "suggestive");
+    params.append("contentRating[]", "erotica");
+    params.append("contentRating[]", "pornographic");
+
+    const url = `${MANGADEX_BASE_URL}/manga?${params.toString()}`;
+    
+    // Sort IDs to create a deterministic cache key
+    const sortedIds = [...ids].sort().join(",");
+    const cacheKey = `${CACHE_PREFIX_SEARCH}ids:${sortedIds}`;
+
+    return this.fetchWithCache<
+      MangaDexCollectionResponse<MangaDexMangaEntity>
+    >(cacheKey, url, CACHE_TTL_SEARCH);
+  }
 }
 
 // ─── Singleton Export ────────────────────────────────────────

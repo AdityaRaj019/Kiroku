@@ -1,10 +1,12 @@
 import type { Request, Response, NextFunction } from "express";
+import fs from "fs";
+import path from "path";
 import { Prisma } from "@prisma/client";
 import { prisma } from "../../utils/prisma";
 import { parseUserId } from "../../utils/auth.helpers";
 import { mangaDexService, MangaDexApiError } from "../../services/mangadex.service";
 import { AppError } from "../../middlewares/error.middleware";
-import type { SearchQueryInput, ChaptersQueryInput, AdvancedSearchQueryInput } from "./manga.schema";
+import type { SearchQueryInput, ChaptersQueryInput, ShowcaseQueryInput } from "./manga.schema";
 import type {
   MangaDexMangaEntity,
   MangaDexRelationship,
@@ -523,147 +525,91 @@ export async function getMangaChapters(
   }
 }
 
-// ─── Advanced Search (Task 03) ───────────────────────────────
-
 /**
- * GET /api/v1/manga/search?genres=Action,Fantasy&format=MANGA&...
+ * GET /api/v1/manga/showcase?trendingPeriod=day|month|year
  *
- * Performs a multi-attribute filtered search against the **local** database.
- * Unlike the MangaDex text-search endpoint (`GET /api/v1/manga?q=...`),
- * this queries only locally-persisted manga records.
- *
- * All filter parameters are optional and AND-combined:
- *  - q:             Case-insensitive text search in title/synopsis
- *  - genres:        Comma-separated genre names (manga must have ALL)
- *  - format:        MangaFormat enum (MANGA, MANHWA, MANHUA, etc.)
- *  - country:       ISO country code (JP, KR, CN, etc.)
- *  - year:          Release year (exact match)
- *  - sourceMaterial: Partial text match on source material
- *  - minChapters/maxChapters: Chapter count range
- *  - minEpisodes/maxEpisodes: Episode count range
- *  - readingOn:     Comma-separated reading source platforms (ANY match)
- *  - streamingOn:   Comma-separated streaming platforms (ANY match)
- *
- * The frontend should debounce filter changes (300-500ms) so that
- * multiple rapid filter clicks resolve into a **single** API call.
+ * Returns curated and popular lists of manga for the explore catalogue.
+ * Trending manga is pulled in real-time from MangaDex (cached for 15m),
+ * while Top 5 and Top 20 are queried in batch using static showcase IDs
+ * from a local JSON file (mapped and cached efficiently).
  */
-export async function advancedSearchManga(
+export async function getMangaShowcase(
   req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> {
   try {
-    const filters = req.query as unknown as AdvancedSearchQueryInput;
+    const { trendingPeriod } = req.query as unknown as ShowcaseQueryInput;
 
-    // Build dynamic Prisma where clause — all conditions are AND-combined
-    const where: Prisma.MangaWhereInput = {};
-
-    // Text search (title OR synopsis, case-insensitive)
-    if (filters.q) {
-      where.OR = [
-        { title: { contains: filters.q, mode: "insensitive" } },
-        { synopsis: { contains: filters.q, mode: "insensitive" } },
-      ];
+    // 1. Map trending period to sort criteria
+    let sortOption = "followedCount";
+    if (trendingPeriod === "day") {
+      sortOption = "latestUploadedChapter";
+    } else if (trendingPeriod === "month") {
+      sortOption = "followedCount";
+    } else if (trendingPeriod === "year") {
+      sortOption = "rating";
     }
 
-    // Genre filter — manga must contain ALL selected genres
-    if (filters.genres && filters.genres.length > 0) {
-      where.genres = { hasEvery: filters.genres };
-    }
+    // 2. Fetch trending list from MangaDex (12 items)
+    const trendingResponse = await mangaDexService.getPopularManga(12, 0, sortOption);
 
-    // Format enum filter
-    if (filters.format) {
-      where.format = filters.format;
-    }
+    // 3. Load top5 & top20 IDs from JSON file
+    const jsonPath = path.join(__dirname, "../../utils/showcase_ids.json");
+    const idsRaw = fs.readFileSync(jsonPath, "utf-8");
+    const ids = JSON.parse(idsRaw) as { top5: string[]; top20: string[] };
 
-    // Country filter (case-insensitive exact match)
-    if (filters.country) {
-      where.country = { equals: filters.country, mode: "insensitive" };
-    }
-
-    // Release year (exact match)
-    if (filters.year !== undefined) {
-      where.releaseYear = filters.year;
-    }
-
-    // Source material (partial text match)
-    if (filters.sourceMaterial) {
-      where.sourceMaterial = { contains: filters.sourceMaterial, mode: "insensitive" };
-    }
-
-    // Chapter count range
-    if (filters.minChapters !== undefined || filters.maxChapters !== undefined) {
-      const chapterFilter: { gte?: number; lte?: number } = {};
-      if (filters.minChapters !== undefined) chapterFilter.gte = filters.minChapters;
-      if (filters.maxChapters !== undefined) chapterFilter.lte = filters.maxChapters;
-      where.chapterCount = chapterFilter;
-    }
-
-    // Episode count range
-    if (filters.minEpisodes !== undefined || filters.maxEpisodes !== undefined) {
-      const episodeFilter: { gte?: number; lte?: number } = {};
-      if (filters.minEpisodes !== undefined) episodeFilter.gte = filters.minEpisodes;
-      if (filters.maxEpisodes !== undefined) episodeFilter.lte = filters.maxEpisodes;
-      where.episodeCount = episodeFilter;
-    }
-
-    // Reading sources — manga available on ANY of the selected platforms
-    if (filters.readingOn && filters.readingOn.length > 0) {
-      where.readingSources = { hasSome: filters.readingOn };
-    }
-
-    // Streaming sources — available on ANY of the selected platforms
-    if (filters.streamingOn && filters.streamingOn.length > 0) {
-      where.streamingSources = { hasSome: filters.streamingOn };
-    }
-
-    const { page, limit } = filters;
-
-    // Run count and fetch concurrently for optimal response time
-    const [data, total] = await Promise.all([
-      prisma.manga.findMany({
-        where,
-        skip: (page - 1) * limit,
-        take: limit,
-        orderBy: { updatedAt: "desc" },
-        select: {
-          id: true,
-          sourceId: true,
-          title: true,
-          slug: true,
-          coverUrl: true,
-          synopsis: true,
-          author: true,
-          status: true,
-          genres: true,
-          format: true,
-          country: true,
-          releaseYear: true,
-          chapterCount: true,
-          episodeCount: true,
-          readingSources: true,
-          streamingSources: true,
-          isRecommended: true,
-          sourceUrl: true,
-          createdAt: true,
-          updatedAt: true,
-        },
-      }),
-      prisma.manga.count({ where }),
+    // 4. Fetch details from MangaDex for top5 and top20 in parallel
+    const [top5Response, top20Response] = await Promise.all([
+      mangaDexService.getMangaListByIds(ids.top5),
+      mangaDexService.getMangaListByIds(ids.top20),
     ]);
 
-    const totalPages = Math.ceil(total / limit);
+    // 5. Sync all of them in local DB for consistency
+    const allEntities = [
+      ...trendingResponse.data,
+      ...top5Response.data,
+      ...top20Response.data,
+    ];
+    const localRecords = await upsertMangaBatch(allEntities);
+
+    // 6. Map results combining local IDs and attributes
+    const mapResult = (entity: MangaDexMangaEntity) => {
+      const localMatch = localRecords.find((r) => r.sourceId === entity.id);
+      return {
+        localId: localMatch?.id ?? null,
+        sourceId: entity.id,
+        title: resolveTitle(entity.attributes.title),
+        synopsis: resolveDescription(entity.attributes.description),
+        coverUrl: extractCoverUrl(entity.id, entity.relationships),
+        author: extractAuthor(entity.relationships),
+        status: entity.attributes.status,
+        year: entity.attributes.year,
+        contentRating: entity.attributes.contentRating,
+        tags: entity.attributes.tags.map((t) => ({
+          id: t.id,
+          name: t.attributes.name.en ?? Object.values(t.attributes.name)[0] ?? "Unknown",
+          group: t.attributes.group,
+        })),
+        lastChapter: entity.attributes.lastChapter,
+        demographicTag: entity.attributes.publicationDemographic,
+      };
+    };
 
     res.status(200).json({
-      data,
-      pagination: {
-        page,
-        limit,
-        total,
-        totalPages,
+      data: {
+        trending: trendingResponse.data.map(mapResult),
+        top5: top5Response.data.map(mapResult),
+        top20: top20Response.data.map(mapResult),
       },
     });
   } catch (err) {
+    if (err instanceof MangaDexApiError) {
+      const statusCode = err.isRateLimit ? 429 : err.statusCode >= 500 ? 502 : 500;
+      next(new AppError(statusCode, err.message));
+      return;
+    }
     next(err);
   }
 }
+
