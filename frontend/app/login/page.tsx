@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useAuthStore } from "@/hooks/useAuthStore";
 import { SakuraIcon } from "@/components/login/SakuraIcon";
 import { LoginForm } from "@/components/login/LoginForm";
 import { HeroSection } from "@/components/login/HeroSection";
@@ -19,6 +21,16 @@ interface Petal {
 }
 
 export default function LoginPage() {
+  const { isAuthenticated } = useAuthStore();
+  const router = useRouter();
+
+  // Redirect if already authenticated
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push("/manga");
+    }
+  }, [isAuthenticated, router]);
+
   // Tab & Live Activity states
   const [isTabActive, setIsTabActive] = useState(true);
   const [greeting, setGreeting] = useState({ part1: "", highlight: "", part2: "", emoji: "" });

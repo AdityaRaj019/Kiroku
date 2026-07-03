@@ -441,7 +441,7 @@
       "source_file": "backend/src/modules/auth/auth.routes.ts",
       "source_location": "L7",
       "id": "auth_auth_routes_authrouter",
-      "community": 31,
+      "community": 0,
       "norm_label": "authrouter"
     },
     {
@@ -504,7 +504,7 @@
       "source_file": "backend/src/modules/library/library.routes.ts",
       "source_location": "L16",
       "id": "library_library_routes_libraryrouter",
-      "community": 31,
+      "community": 49,
       "norm_label": "libraryrouter"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L154",
       "id": "library_library_schema_libraryqueryinput",
-      "community": 50,
+      "community": 49,
       "norm_label": "libraryqueryinput"
     },
     {
@@ -666,7 +666,7 @@
       "source_file": "backend/src/modules/library/controllers/list.ts",
       "source_location": "L112",
       "id": "controllers_list_getpublicuserlibrary",
-      "community": 50,
+      "community": 49,
       "norm_label": "getpublicuserlibrary()"
     },
     {
@@ -1269,7 +1269,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L1",
       "id": "backend_src_utils_prisma_ts",
-      "community": 61,
+      "community": 50,
       "norm_label": "prisma.ts"
     },
     {
@@ -1278,7 +1278,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L14",
       "id": "utils_prisma_createprismaclient",
-      "community": 61,
+      "community": 50,
       "norm_label": "createprismaclient()"
     },
     {
@@ -1287,7 +1287,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L26",
       "id": "utils_prisma_prismaclientinstance",
-      "community": 61,
+      "community": 50,
       "norm_label": "prismaclientinstance"
     },
     {
@@ -1296,7 +1296,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L28",
       "id": "utils_prisma_globalforprisma",
-      "community": 61,
+      "community": 50,
       "norm_label": "globalforprisma"
     },
     {
@@ -1357,7 +1357,7 @@
       "label": "geistSans",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "id": "app_layout_geistsans",
       "community": 29,
       "norm_label": "geistsans"
@@ -1366,7 +1366,7 @@
       "label": "geistMono",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "id": "app_layout_geistmono",
       "community": 29,
       "norm_label": "geistmono"
@@ -1375,7 +1375,7 @@
       "label": "bebasNeue",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L16",
+      "source_location": "L17",
       "id": "app_layout_bebasneue",
       "community": 29,
       "norm_label": "bebasneue"
@@ -1384,7 +1384,7 @@
       "label": "notoSansJP",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "id": "app_layout_notosansjp",
       "community": 29,
       "norm_label": "notosansjp"
@@ -1393,7 +1393,7 @@
       "label": "plusJakartaSans",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "id": "app_layout_plusjakartasans",
       "community": 29,
       "norm_label": "plusjakartasans"
@@ -1402,7 +1402,7 @@
       "label": "metadata",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L32",
+      "source_location": "L33",
       "id": "app_layout_metadata",
       "community": 29,
       "norm_label": "metadata"
@@ -1411,7 +1411,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L38",
+      "source_location": "L39",
       "id": "app_layout_rootlayout",
       "community": 29,
       "norm_label": "rootlayout()"
@@ -1465,7 +1465,7 @@
       "label": "Petal",
       "file_type": "code",
       "source_file": "frontend/app/login/page.tsx",
-      "source_location": "L10",
+      "source_location": "L12",
       "id": "login_page_petal",
       "community": 59,
       "norm_label": "petal"
@@ -1474,7 +1474,7 @@
       "label": "LoginPage()",
       "file_type": "code",
       "source_file": "frontend/app/login/page.tsx",
-      "source_location": "L21",
+      "source_location": "L23",
       "id": "login_page_loginpage",
       "community": 59,
       "norm_label": "loginpage()"
@@ -2142,7 +2142,7 @@
       "source_file": "frontend/components/login/GlassCard.tsx",
       "source_location": "L1",
       "id": "frontend_components_login_glasscard_tsx",
-      "community": 59,
+      "community": 54,
       "norm_label": "glasscard.tsx"
     },
     {
@@ -2151,7 +2151,7 @@
       "source_file": "frontend/components/login/GlassCard.tsx",
       "source_location": "L3",
       "id": "login_glasscard_glasscardprops",
-      "community": 59,
+      "community": 54,
       "norm_label": "glasscardprops"
     },
     {
@@ -2160,7 +2160,7 @@
       "source_file": "frontend/components/login/GlassCard.tsx",
       "source_location": "L8",
       "id": "login_glasscard_glasscard",
-      "community": 59,
+      "community": 54,
       "norm_label": "glasscard()"
     },
     {
@@ -2169,7 +2169,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L1",
       "id": "frontend_components_login_herosection_tsx",
-      "community": 59,
+      "community": 54,
       "norm_label": "herosection.tsx"
     },
     {
@@ -2178,7 +2178,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L7",
       "id": "login_herosection_herosectionprops",
-      "community": 59,
+      "community": 54,
       "norm_label": "herosectionprops"
     },
     {
@@ -2187,7 +2187,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L11",
       "id": "login_herosection_herotheme",
-      "community": 59,
+      "community": 54,
       "norm_label": "herotheme"
     },
     {
@@ -2196,7 +2196,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L23",
       "id": "login_herosection_hero_themes",
-      "community": 59,
+      "community": 54,
       "norm_label": "hero_themes"
     },
     {
@@ -2205,7 +2205,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L70",
       "id": "login_herosection_petal",
-      "community": 59,
+      "community": 54,
       "norm_label": "petal"
     },
     {
@@ -2214,7 +2214,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L82",
       "id": "login_herosection_herosection",
-      "community": 59,
+      "community": 54,
       "norm_label": "herosection()"
     },
     {
@@ -2297,6 +2297,33 @@
       "id": "providers_queryprovider_queryprovider",
       "community": 29,
       "norm_label": "queryprovider()"
+    },
+    {
+      "label": "SessionProvider.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/providers/SessionProvider.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_providers_sessionprovider_tsx",
+      "community": 59,
+      "norm_label": "sessionprovider.tsx"
+    },
+    {
+      "label": "SessionProviderProps",
+      "file_type": "code",
+      "source_file": "frontend/components/providers/SessionProvider.tsx",
+      "source_location": "L7",
+      "id": "providers_sessionprovider_sessionproviderprops",
+      "community": 59,
+      "norm_label": "sessionproviderprops"
+    },
+    {
+      "label": "SessionProvider()",
+      "file_type": "code",
+      "source_file": "frontend/components/providers/SessionProvider.tsx",
+      "source_location": "L11",
+      "id": "providers_sessionprovider_sessionprovider",
+      "community": 59,
+      "norm_label": "sessionprovider()"
     },
     {
       "label": "useAuthStore.ts",
@@ -10284,6 +10311,17 @@
       "target": "frontend_components_providers_queryprovider_tsx"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_app_layout_tsx",
+      "target": "frontend_components_providers_sessionprovider_tsx",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -10304,6 +10342,17 @@
       "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
       "target": "providers_queryprovider_queryprovider"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_app_layout_tsx",
+      "target": "providers_sessionprovider_sessionprovider",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11332,9 +11381,9 @@
       "source_file": "frontend/components/landing/Header.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_header_tsx",
-      "target": "frontend_hooks_useauthstore_ts",
-      "confidence_score": 1.0
+      "target": "frontend_hooks_useauthstore_ts"
     },
     {
       "relation": "imports_from",
@@ -11343,9 +11392,9 @@
       "source_file": "frontend/components/landing/Header.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_header_tsx",
-      "target": "frontend_utils_api_ts",
-      "confidence_score": 1.0
+      "target": "frontend_utils_api_ts"
     },
     {
       "relation": "imports",
@@ -11354,9 +11403,9 @@
       "source_file": "frontend/components/landing/Header.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_header_tsx",
-      "target": "hooks_useauthstore_useauthstore",
-      "confidence_score": 1.0
+      "target": "hooks_useauthstore_useauthstore"
     },
     {
       "relation": "contains",
@@ -11395,9 +11444,9 @@
       "source_file": "frontend/components/landing/Header.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_landing_header_tsx",
-      "target": "utils_api_apifetch",
-      "confidence_score": 1.0
+      "target": "utils_api_apifetch"
     },
     {
       "relation": "calls",
@@ -11873,6 +11922,70 @@
       "confidence_score": 1.0,
       "source": "frontend_components_providers_queryprovider_tsx",
       "target": "providers_queryprovider_queryprovider"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/providers/SessionProvider.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_components_providers_sessionprovider_tsx",
+      "target": "frontend_hooks_useauthstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/providers/SessionProvider.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_providers_sessionprovider_tsx",
+      "target": "frontend_utils_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/providers/SessionProvider.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_components_providers_sessionprovider_tsx",
+      "target": "hooks_useauthstore_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/providers/SessionProvider.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_components_providers_sessionprovider_tsx",
+      "target": "providers_sessionprovider_sessionprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/providers/SessionProvider.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_components_providers_sessionprovider_tsx",
+      "target": "providers_sessionprovider_sessionproviderprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/components/providers/SessionProvider.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "providers_sessionprovider_sessionprovider",
+      "target": "hooks_useauthstore_useauthstore"
     },
     {
       "relation": "imports_from",
@@ -16229,5 +16342,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e39992661598aaa6679dda35170a7f543a839f9c"
+  "built_at_commit": "436dadae9b740c57705e125886963fd6205eafc5"
 }
