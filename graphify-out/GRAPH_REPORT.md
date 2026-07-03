@@ -1,16 +1,16 @@
 # Graph Report - kiroku  (2026-07-03)
 
 ## Corpus Check
-- 56 files · ~38,232 words
+- 57 files · ~38,543 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 704 nodes · 957 edges · 62 communities (56 shown, 6 thin omitted)
+- 707 nodes · 965 edges · 62 communities (57 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e3999266`
+- Built from commit: `436dadae`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -69,22 +69,22 @@
 - [[_COMMUNITY_Community 51|Community 51]]
 - [[_COMMUNITY_Community 52|Community 52]]
 - [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
 - [[_COMMUNITY_Community 55|Community 55]]
 - [[_COMMUNITY_Community 56|Community 56]]
 - [[_COMMUNITY_Community 57|Community 57]]
 - [[_COMMUNITY_Community 58|Community 58]]
 - [[_COMMUNITY_Community 59|Community 59]]
 - [[_COMMUNITY_Community 60|Community 60]]
-- [[_COMMUNITY_Community 61|Community 61]]
 - [[_COMMUNITY_Community 65|Community 65]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Product Requirement Document (PRD)` - 22 edges
-2. `What You Must Do When Invoked` - 16 edges
-3. `upsertMangaBatch()` - 15 edges
-4. `/graphify` - 15 edges
-5. `getMangaDetails()` - 14 edges
-6. `useAuthStore` - 14 edges
+2. `useAuthStore` - 16 edges
+3. `What You Must Do When Invoked` - 16 edges
+4. `upsertMangaBatch()` - 15 edges
+5. `/graphify` - 15 edges
+6. `getMangaDetails()` - 14 edges
 7. `parseUserId()` - 13 edges
 8. `11.2 Protected API Endpoints (Required Token: JWT)` - 13 edges
 9. `MangaDexService` - 11 edges
@@ -102,11 +102,11 @@
 - `getMangaDetails()` --calls--> `parseUserId()`  [EXTRACTED]
   backend/src/modules/manga/manga.controller.ts → backend/src/utils/auth.helpers.ts
 
-## Communities (62 total, 6 thin omitted)
+## Communities (62 total, 5 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.17
-Nodes (25): clearRefreshCookie(), login(), logout(), profile(), refresh(), register(), setRefreshCookie(), LoginInput (+17 more)
+Cohesion: 0.16
+Nodes (26): clearRefreshCookie(), login(), logout(), profile(), refresh(), register(), setRefreshCookie(), authRouter (+18 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.29
@@ -225,8 +225,8 @@ Cohesion: 0.08
 Nodes (26): 1. Database & Cache Infrastructure, 2. Backend Setup, 3. Frontend Setup, 📡 API Routing Overview, Authentication (`/api/v1/auth`), code:text (=======================================================), code:text (kiroku/), code:bash (docker start kiroku-redis) (+18 more)
 
 ### Community 31 - "Community 31"
-Cohesion: 0.10
-Nodes (19): authRouter, libraryRouter, errorMiddleware(), app, authLimiter, bootstrap(), corsOrigins, globalLimiter (+11 more)
+Cohesion: 0.11
+Nodes (17): errorMiddleware(), app, authLimiter, bootstrap(), corsOrigins, globalLimiter, io, libraryLimiter (+9 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.50
@@ -285,12 +285,12 @@ Cohesion: 0.19
 Nodes (13): 11.1 Public API Endpoints, 11.3 Protected Push Token Endpoints, 11. API Design, 8.4.1 Multi-Platform Aggregation Flow (Cron-Scheduled), 8.4.2 Scan-to-Track Image Reconciliation Flow, 8.4.3 Social Read-Along Room Progress Sync, 8.4 Phase 2 System Workflows, code:mermaid (sequenceDiagram) (+5 more)
 
 ### Community 49 - "Community 49"
-Cohesion: 0.18
-Nodes (12): LibraryItemIdParam, libraryItemIdParamSchema, libraryQuerySchema, LibraryStatus, LibraryUserIdParam, libraryUserIdParamSchema, MediaType, SortField (+4 more)
+Cohesion: 0.14
+Nodes (15): getPublicUserLibrary(), libraryRouter, LibraryItemIdParam, libraryItemIdParamSchema, LibraryQueryInput, libraryQuerySchema, LibraryStatus, LibraryUserIdParam (+7 more)
 
 ### Community 50 - "Community 50"
-Cohesion: 0.35
-Nodes (6): removeLibraryItem(), getPublicUserLibrary(), getUserLibrary(), LibraryQueryInput, AppError, parseUserId()
+Cohesion: 0.28
+Nodes (6): removeLibraryItem(), getUserLibrary(), AppError, parseUserId(), globalForPrisma, PrismaClientInstance
 
 ### Community 52 - "Community 52"
 Cohesion: 0.22
@@ -299,6 +299,10 @@ Nodes (9): 6.1 User Authentication (MVP), 6.2 Manga Search & Discovery (MVP), 6.
 ### Community 53 - "Community 53"
 Cohesion: 0.33
 Nodes (6): 15.1 GitHub Actions Workflow: `.github/workflows/ci.yml`, 15. CI/CD Strategy, code:json ({), code:json ({), code:block35 (+----------------------------------+), code:yaml (name: Continuous Integration & Deployment)
+
+### Community 54 - "Community 54"
+Cohesion: 0.25
+Nodes (7): GlassCard(), GlassCardProps, HERO_THEMES, HeroSection(), HeroSectionProps, HeroTheme, Petal
 
 ### Community 55 - "Community 55"
 Cohesion: 0.11
@@ -317,8 +321,8 @@ Cohesion: 0.33
 Nodes (6): 12.1 Jobs Structure & Payload, 12.2 Channels Implementation, 12.3 Retry and Backoff Logic, 12. Notification System Logic, code:json ({ "message": "Successfully unfollowed manga." }), code:json ({)
 
 ### Community 59 - "Community 59"
-Cohesion: 0.06
-Nodes (37): AuthActions, AuthState, initialState, useAuthStore, useRouteGuard(), Header(), Navbar(), GlassCard() (+29 more)
+Cohesion: 0.07
+Nodes (32): AuthActions, AuthState, initialState, useAuthStore, useRouteGuard(), Header(), Navbar(), FieldErrors (+24 more)
 
 ### Community 60 - "Community 60"
 Cohesion: 0.33
@@ -329,9 +333,9 @@ Cohesion: 0.40
 Nodes (5): 7.5.4 Social "Read-Along" Room Flow, 9. Technical Architecture, code:block15 (+-------------------+), code:block8 ([Social Hub] ➔ [Create Room] ➔ [Select Manga & Set Target Ch), Infrastructure Specs:
 
 ## Knowledge Gaps
-- **297 isolated node(s):** `adapter`, `prisma`, `preHashHex`, `HASHED_PASSWORD`, `usersData` (+292 more)
+- **298 isolated node(s):** `adapter`, `prisma`, `preHashHex`, `HASHED_PASSWORD`, `usersData` (+293 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -343,7 +347,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `/graphify` connect `Community 2` to `Community 3`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **What connects `adapter`, `prisma`, `preHashHex` to the rest of the system?**
-  _297 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _298 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**

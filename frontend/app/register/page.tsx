@@ -165,6 +165,14 @@ function PasswordStrength({ password, accentColor }: { password: string; accentC
 export default function RegisterPage() {
   const router = useRouter();
   const setSession = useAuthStore((state) => state.setSession);
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+
+  // Redirect if already authenticated
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push("/manga");
+    }
+  }, [isAuthenticated, router]);
 
   // Form states
   const [email, setEmail] = useState("");
