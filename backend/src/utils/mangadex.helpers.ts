@@ -1,4 +1,4 @@
-import type { LocalizedString, MangaDexRelationship } from "../types/mangadex.types";
+import type { LocalizedString, MangaDexRelationship, MangaDexTag } from "../types/mangadex.types";
 
 /**
  * Maps MangaDex status strings to our Prisma MangaStatus enum.
@@ -68,4 +68,70 @@ export function slugify(title: string): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 200);
+}
+
+// ─── Advanced Catalog Helpers (Task 03) ──────────────────────
+
+/**
+ * Extracts genre names from MangaDex tags where `group` is "genre".
+ * Returns a deduplicated, non-empty string array.
+ */
+export function extractGenres(tags: MangaDexTag[]): string[] {
+  return tags
+    .filter((t) => t.attributes.group === "genre")
+    .map((t) => t.attributes.name.en ?? Object.values(t.attributes.name)[0] ?? "")
+    .filter(Boolean);
+}
+
+/**
+ * Infers the manga format from the MangaDex `originalLanguage` field.
+ *  - ja  → MANGA
+ *  - ko  → MANHWA
+ *  - zh  → MANHUA
+ *
+ * Returns null for unrecognised languages.
+ */
+export function inferFormat(
+  originalLanguage: string
+): "MANGA" | "MANHWA" | "MANHUA" | null {
+  const formatMap: Record<string, "MANGA" | "MANHWA" | "MANHUA"> = {
+    ja: "MANGA",
+    ko: "MANHWA",
+    zh: "MANHUA",
+    "zh-hk": "MANHUA",
+  };
+  return formatMap[originalLanguage] ?? null;
+}
+
+/**
+ * Maps a MangaDex `originalLanguage` code to an ISO-style country code.
+ * Falls back to the raw language code when no mapping exists.
+ */
+export function inferCountry(originalLanguage: string): string {
+  const countryMap: Record<string, string> = {
+    ja: "JP",
+    ko: "KR",
+    zh: "CN",
+    "zh-hk": "HK",
+    en: "US",
+    fr: "FR",
+    de: "DE",
+    es: "ES",
+    it: "IT",
+    pt: "PT",
+    "pt-br": "BR",
+  };
+  return countryMap[originalLanguage] ?? originalLanguage;
+}
+
+/**
+ * Parses MangaDex `lastChapter` (a string like "142") into a numeric
+ * chapter count. Returns null for non-numeric or missing values.
+ */
+export function parseChapterCount(
+  lastChapter: string | null | undefined
+): number | null {
+  if (!lastChapter) return null;
+  const parsed = parseInt(lastChapter, 10);
+  return isNaN(parsed) ? null : parsed;
 }

@@ -37,6 +37,15 @@ enum MangaStatus {
   CANCELLED
 }
 
+enum MangaFormat {
+  MANGA
+  MANHWA
+  MANHUA
+  COMIC
+  ONE_SHOT
+  DOUJINSHI
+}
+
 // ─── Models ──────────────────────────────────────────────────
 
 model User {
@@ -68,17 +77,30 @@ model PushToken {
 }
 
 model Manga {
-  id          Int         @id @default(autoincrement())
-  sourceId    String?     @unique @map("source_id")
-  title       String
-  slug        String      @unique
-  coverUrl    String?     @map("cover_url")
-  synopsis    String?
-  author      String?
-  status      MangaStatus @default(ONGOING)
-  sourceUrl   String?     @map("source_url")
-  createdAt   DateTime    @default(now()) @map("created_at")
-  updatedAt   DateTime    @updatedAt @map("updated_at")
+  id               Int          @id @default(autoincrement())
+  sourceId         String?      @unique @map("source_id")
+  title            String
+  slug             String       @unique
+  coverUrl         String?      @map("cover_url")
+  synopsis         String?
+  author           String?
+  status           MangaStatus  @default(ONGOING)
+  sourceUrl        String?      @map("source_url")
+
+  // ── Advanced catalog fields (Task 03) ──
+  genres           String[]     @default([])
+  format           MangaFormat?
+  country          String?
+  releaseYear      Int?         @map("release_year")
+  sourceMaterial   String?      @map("source_material")
+  chapterCount     Int?         @map("chapter_count")
+  episodeCount     Int?         @map("episode_count")
+  readingSources   String[]     @default([]) @map("reading_sources")
+  streamingSources String[]     @default([]) @map("streaming_sources")
+  isRecommended    Boolean      @default(false) @map("is_recommended")
+
+  createdAt        DateTime     @default(now()) @map("created_at")
+  updatedAt        DateTime     @updatedAt @map("updated_at")
 
   chapters     Chapter[]
   libraryItems LibraryItem[]
