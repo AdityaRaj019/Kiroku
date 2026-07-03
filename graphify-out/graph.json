@@ -763,7 +763,7 @@
       "label": "fetchUserTracking()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L245",
+      "source_location": "L253",
       "id": "manga_manga_controller_fetchusertracking",
       "community": 55,
       "norm_label": "fetchusertracking()"
@@ -772,7 +772,7 @@
       "label": "searchManga()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L291",
+      "source_location": "L299",
       "id": "manga_manga_controller_searchmanga",
       "community": 55,
       "norm_label": "searchmanga()"
@@ -781,7 +781,7 @@
       "label": "getMangaDetails()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L344",
+      "source_location": "L352",
       "id": "manga_manga_controller_getmangadetails",
       "community": 55,
       "norm_label": "getmangadetails()"
@@ -790,7 +790,7 @@
       "label": "getMangaChapters()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L499",
+      "source_location": "L511",
       "id": "manga_manga_controller_getmangachapters",
       "community": 55,
       "norm_label": "getmangachapters()"
@@ -799,7 +799,7 @@
       "label": "getMangaShowcase()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L560",
+      "source_location": "L572",
       "id": "manga_manga_controller_getmangashowcase",
       "community": 55,
       "norm_label": "getmangashowcase()"
@@ -808,7 +808,7 @@
       "label": "advancedSearchManga()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L648",
+      "source_location": "L660",
       "id": "manga_manga_controller_advancedsearchmanga",
       "community": 55,
       "norm_label": "advancedsearchmanga()"
@@ -1084,10 +1084,28 @@
       "norm_label": ".getmangastatistics()"
     },
     {
-      "label": "globalForMangaDex",
+      "label": ".getMangaChapterCount()",
       "file_type": "code",
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L444",
+      "id": "services_mangadex_service_mangadexservice_getmangachaptercount",
+      "community": 49,
+      "norm_label": ".getmangachaptercount()"
+    },
+    {
+      "label": ".getMangaChapterCounts()",
+      "file_type": "code",
+      "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L497",
+      "id": "services_mangadex_service_mangadexservice_getmangachaptercounts",
+      "community": 49,
+      "norm_label": ".getmangachaptercounts()"
+    },
+    {
+      "label": "globalForMangaDex",
+      "file_type": "code",
+      "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L516",
       "id": "services_mangadex_service_globalformangadex",
       "community": 49,
       "norm_label": "globalformangadex"
@@ -8337,9 +8355,9 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_library_library_schema_ts",
-      "target": "library_library_schema_mangaformatfilter",
-      "confidence_score": 1.0
+      "target": "library_library_schema_mangaformatfilter"
     },
     {
       "relation": "contains",
@@ -8677,9 +8695,9 @@
       "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_library_controllers_upsert_ts",
-      "target": "utils_mangadex_helpers_extractgenres",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractgenres"
     },
     {
       "relation": "imports",
@@ -8688,9 +8706,9 @@
       "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_library_controllers_upsert_ts",
-      "target": "utils_mangadex_helpers_infercountry",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_infercountry"
     },
     {
       "relation": "imports",
@@ -8699,9 +8717,9 @@
       "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_library_controllers_upsert_ts",
-      "target": "utils_mangadex_helpers_inferformat",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_inferformat"
     },
     {
       "relation": "imports",
@@ -8721,9 +8739,9 @@
       "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_library_controllers_upsert_ts",
-      "target": "utils_mangadex_helpers_parsechaptercount",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_parsechaptercount"
     },
     {
       "relation": "imports",
@@ -8787,9 +8805,9 @@
       "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_upsert_ensurelocalmanga",
-      "target": "utils_mangadex_helpers_extractgenres",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractgenres"
     },
     {
       "relation": "calls",
@@ -8798,9 +8816,9 @@
       "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_upsert_ensurelocalmanga",
-      "target": "utils_mangadex_helpers_infercountry",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_infercountry"
     },
     {
       "relation": "calls",
@@ -8809,9 +8827,9 @@
       "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_upsert_ensurelocalmanga",
-      "target": "utils_mangadex_helpers_inferformat",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_inferformat"
     },
     {
       "relation": "calls",
@@ -8831,9 +8849,9 @@
       "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controllers_upsert_ensurelocalmanga",
-      "target": "utils_mangadex_helpers_parsechaptercount",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_parsechaptercount"
     },
     {
       "relation": "calls",
@@ -8984,9 +9002,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L648",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "manga_manga_controller_advancedsearchmanga",
-      "confidence_score": 1.0
+      "target": "manga_manga_controller_advancedsearchmanga"
     },
     {
       "relation": "contains",
@@ -9135,9 +9153,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "manga_manga_schema_advancedsearchqueryinput",
-      "confidence_score": 1.0
+      "target": "manga_manga_schema_advancedsearchqueryinput"
     },
     {
       "relation": "imports",
@@ -9267,9 +9285,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_mangadex_helpers_extractgenres",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractgenres"
     },
     {
       "relation": "imports",
@@ -9278,9 +9296,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_mangadex_helpers_infercountry",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_infercountry"
     },
     {
       "relation": "imports",
@@ -9289,9 +9307,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_mangadex_helpers_inferformat",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_inferformat"
     },
     {
       "relation": "imports",
@@ -9311,9 +9329,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_mangadex_helpers_parsechaptercount",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_parsechaptercount"
     },
     {
       "relation": "imports",
@@ -9498,9 +9516,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
-      "target": "utils_mangadex_helpers_extractgenres",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractgenres"
     },
     {
       "relation": "calls",
@@ -9509,9 +9527,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
-      "target": "utils_mangadex_helpers_infercountry",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_infercountry"
     },
     {
       "relation": "calls",
@@ -9520,9 +9538,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
-      "target": "utils_mangadex_helpers_inferformat",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_inferformat"
     },
     {
       "relation": "calls",
@@ -9542,9 +9560,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
-      "target": "utils_mangadex_helpers_parsechaptercount",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_parsechaptercount"
     },
     {
       "relation": "calls",
@@ -9806,9 +9824,9 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_routes_ts",
-      "target": "manga_manga_controller_advancedsearchmanga",
-      "confidence_score": 1.0
+      "target": "manga_manga_controller_advancedsearchmanga"
     },
     {
       "relation": "imports_from",
@@ -9838,9 +9856,9 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_routes_ts",
-      "target": "manga_manga_schema_advancedsearchqueryschema",
-      "confidence_score": 1.0
+      "target": "manga_manga_schema_advancedsearchqueryschema"
     },
     {
       "relation": "imports",
@@ -9892,9 +9910,9 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L227",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_schema_ts",
-      "target": "manga_manga_schema_advancedsearchqueryinput",
-      "confidence_score": 1.0
+      "target": "manga_manga_schema_advancedsearchqueryinput"
     },
     {
       "relation": "contains",
@@ -9902,9 +9920,9 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L132",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_schema_ts",
-      "target": "manga_manga_schema_advancedsearchqueryschema",
-      "confidence_score": 1.0
+      "target": "manga_manga_schema_advancedsearchqueryschema"
     },
     {
       "relation": "contains",
@@ -9932,9 +9950,9 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_schema_ts",
-      "target": "manga_manga_schema_mangaformatenum",
-      "confidence_score": 1.0
+      "target": "manga_manga_schema_mangaformatenum"
     },
     {
       "relation": "contains",
@@ -10002,9 +10020,9 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_schema_ts",
-      "target": "manga_manga_schema_splitcommaseparated",
-      "confidence_score": 1.0
+      "target": "manga_manga_schema_splitcommaseparated"
     },
     {
       "relation": "re_exports",
@@ -10216,6 +10234,26 @@
       "confidence_score": 1.0,
       "source": "services_mangadex_service_mangadexservice",
       "target": "services_mangadex_service_mangadexservice_fetchwithcache"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L444",
+      "weight": 1.0,
+      "source": "services_mangadex_service_mangadexservice",
+      "target": "services_mangadex_service_mangadexservice_getmangachaptercount",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L497",
+      "weight": 1.0,
+      "source": "services_mangadex_service_mangadexservice",
+      "target": "services_mangadex_service_mangadexservice_getmangachaptercounts",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -10582,9 +10620,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "types_mangadex_types_mangadextag",
-      "confidence_score": 1.0
+      "target": "types_mangadex_types_mangadextag"
     },
     {
       "relation": "imports",
@@ -10820,9 +10858,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "utils_mangadex_helpers_extractgenres",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractgenres"
     },
     {
       "relation": "contains",
@@ -10830,9 +10868,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L110",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "utils_mangadex_helpers_infercountry",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_infercountry"
     },
     {
       "relation": "contains",
@@ -10840,9 +10878,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "utils_mangadex_helpers_inferformat",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_inferformat"
     },
     {
       "relation": "contains",
@@ -10860,9 +10898,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L131",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "utils_mangadex_helpers_parsechaptercount",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_parsechaptercount"
     },
     {
       "relation": "contains",
@@ -17130,5 +17168,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1726d21340836e98bcc574c19f8d461cf22df1fb"
+  "built_at_commit": "8cdac1d7938b1e6a7adb8fa2fd8be9072a0f9569"
 }

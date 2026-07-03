@@ -1,16 +1,16 @@
 # Graph Report - kiroku  (2026-07-03)
 
 ## Corpus Check
-- 58 files · ~40,563 words
+- 58 files · ~40,793 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 727 nodes · 1022 edges · 65 communities (59 shown, 6 thin omitted)
+- 729 nodes · 1024 edges · 65 communities (59 shown, 6 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1726d213`
+- Built from commit: `8cdac1d7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -84,11 +84,11 @@
 ## God Nodes (most connected - your core abstractions)
 1. `Product Requirement Document (PRD)` - 22 edges
 2. `upsertMangaBatch()` - 20 edges
-3. `useAuthStore` - 16 edges
-4. `What You Must Do When Invoked` - 16 edges
-5. `/graphify` - 15 edges
-6. `getMangaDetails()` - 14 edges
-7. `MangaDexService` - 14 edges
+3. `MangaDexService` - 16 edges
+4. `useAuthStore` - 16 edges
+5. `What You Must Do When Invoked` - 16 edges
+6. `/graphify` - 15 edges
+7. `getMangaDetails()` - 14 edges
 8. `parseUserId()` - 13 edges
 9. `11.2 Protected API Endpoints (Required Token: JWT)` - 13 edges
 10. `ensureLocalManga()` - 12 edges
@@ -288,7 +288,7 @@ Cohesion: 0.19
 Nodes (13): 11.1 Public API Endpoints, 11.3 Protected Push Token Endpoints, 11. API Design, 8.4.1 Multi-Platform Aggregation Flow (Cron-Scheduled), 8.4.2 Scan-to-Track Image Reconciliation Flow, 8.4.3 Social Read-Along Room Progress Sync, 8.4 Phase 2 System Workflows, code:mermaid (sequenceDiagram) (+5 more)
 
 ### Community 49 - "Community 49"
-Cohesion: 0.16
+Cohesion: 0.15
 Nodes (12): globalForMangaDex, MangaDexService, LocalizedString, MangaDexChapterAttributes, MangaDexChapterEntity, MangaDexCollectionResponse, MangaDexEntityResponse, MangaDexErrorResponse (+4 more)
 
 ### Community 50 - "Community 50"
@@ -356,7 +356,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `What You Must Do When Invoked` connect `Community 3` to `Community 2`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Why does `/graphify` connect `Community 2` to `Community 3`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `adapter`, `prisma`, `preHashHex` to the rest of the system?**
   _301 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 2` be split into smaller, more focused modules?**
