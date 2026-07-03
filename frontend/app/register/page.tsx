@@ -220,7 +220,7 @@ export default function RegisterPage() {
 
       const authData = data as AuthResponse;
       setSession(authData.user, authData.accessToken);
-      router.push("/dashboard");
+      router.push("/manga");
     } catch {
       setServerError("Unable to connect to the server. Please try again.");
     } finally {

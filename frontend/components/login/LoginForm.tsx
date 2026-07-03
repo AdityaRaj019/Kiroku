@@ -70,7 +70,7 @@ export const LoginForm: React.FC = () => {
 
       const authData = data as AuthResponse;
       setSession(authData.user, authData.accessToken);
-      router.push("/dashboard");
+      router.push("/manga");
     } catch {
       setServerError("Unable to connect to the server. Please try again.");
     } finally {
