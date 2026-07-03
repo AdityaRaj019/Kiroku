@@ -31,10 +31,19 @@
       "norm_label": "prisma"
     },
     {
+      "label": "preHashHex",
+      "file_type": "code",
+      "source_file": "backend/prisma/seed.ts",
+      "source_location": "L39",
+      "id": "prisma_seed_prehashhex",
+      "community": 57,
+      "norm_label": "prehashhex"
+    },
+    {
       "label": "HASHED_PASSWORD",
       "file_type": "code",
       "source_file": "backend/prisma/seed.ts",
-      "source_location": "L37",
+      "source_location": "L40",
       "id": "prisma_seed_hashed_password",
       "community": 57,
       "norm_label": "hashed_password"
@@ -43,7 +52,7 @@
       "label": "usersData",
       "file_type": "code",
       "source_file": "backend/prisma/seed.ts",
-      "source_location": "L39",
+      "source_location": "L42",
       "id": "prisma_seed_usersdata",
       "community": 57,
       "norm_label": "usersdata"
@@ -52,7 +61,7 @@
       "label": "mangaData",
       "file_type": "code",
       "source_file": "backend/prisma/seed.ts",
-      "source_location": "L45",
+      "source_location": "L48",
       "id": "prisma_seed_mangadata",
       "community": 57,
       "norm_label": "mangadata"
@@ -61,7 +70,7 @@
       "label": "generateChapters()",
       "file_type": "code",
       "source_file": "backend/prisma/seed.ts",
-      "source_location": "L97",
+      "source_location": "L105",
       "id": "prisma_seed_generatechapters",
       "community": 57,
       "norm_label": "generatechapters()"
@@ -70,25 +79,25 @@
       "label": "chapterCounts",
       "file_type": "code",
       "source_file": "backend/prisma/seed.ts",
-      "source_location": "L116",
+      "source_location": "L124",
       "id": "prisma_seed_chaptercounts",
       "community": 57,
       "norm_label": "chaptercounts"
     },
     {
-      "label": "followMap",
+      "label": "libraryItemMap",
       "file_type": "code",
       "source_file": "backend/prisma/seed.ts",
-      "source_location": "L119",
-      "id": "prisma_seed_followmap",
+      "source_location": "L127",
+      "id": "prisma_seed_libraryitemmap",
       "community": 57,
-      "norm_label": "followmap"
+      "norm_label": "libraryitemmap"
     },
     {
       "label": "main()",
       "file_type": "code",
       "source_file": "backend/prisma/seed.ts",
-      "source_location": "L133",
+      "source_location": "L151",
       "id": "prisma_seed_main",
       "community": 57,
       "norm_label": "main()"
@@ -166,10 +175,19 @@
       "norm_label": "searchlimiter"
     },
     {
+      "label": "libraryLimiter",
+      "file_type": "code",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L95",
+      "id": "src_index_librarylimiter",
+      "community": 31,
+      "norm_label": "librarylimiter"
+    },
+    {
       "label": "io",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L148",
+      "source_location": "L157",
       "id": "src_index_io",
       "community": 31,
       "norm_label": "io"
@@ -178,7 +196,7 @@
       "label": "token",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L170",
+      "source_location": "L179",
       "id": "src_index_token",
       "community": 31,
       "norm_label": "token"
@@ -187,7 +205,7 @@
       "label": "userId",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L191",
+      "source_location": "L200",
       "id": "src_index_userid",
       "community": 31,
       "norm_label": "userid"
@@ -196,7 +214,7 @@
       "label": "shutdown()",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L214",
+      "source_location": "L223",
       "id": "src_index_shutdown",
       "community": 31,
       "norm_label": "shutdown()"
@@ -205,7 +223,7 @@
       "label": "bootstrap()",
       "file_type": "code",
       "source_file": "backend/src/index.ts",
-      "source_location": "L272",
+      "source_location": "L281",
       "id": "src_index_bootstrap",
       "community": 31,
       "norm_label": "bootstrap()"
@@ -252,7 +270,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_error_middleware_ts",
-      "community": 55,
+      "community": 50,
       "norm_label": "error.middleware.ts"
     },
     {
@@ -261,7 +279,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L7",
       "id": "middlewares_error_middleware_apperror",
-      "community": 55,
+      "community": 50,
       "norm_label": "apperror"
     },
     {
@@ -270,7 +288,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L8",
       "id": "middlewares_error_middleware_apperror_constructor",
-      "community": 55,
+      "community": 50,
       "norm_label": ".constructor()"
     },
     {
@@ -279,7 +297,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L25",
       "id": "middlewares_error_middleware_errormiddleware",
-      "community": 55,
+      "community": 31,
       "norm_label": "errormiddleware()"
     },
     {
@@ -324,7 +342,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validation_middleware_ts",
-      "community": 0,
+      "community": 49,
       "norm_label": "validation.middleware.ts"
     },
     {
@@ -333,7 +351,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L11",
       "id": "middlewares_validation_middleware_validate",
-      "community": 0,
+      "community": 49,
       "norm_label": "validate()"
     },
     {
@@ -472,130 +490,229 @@
       "norm_label": "logininput"
     },
     {
-      "label": "follow.controller.ts",
+      "label": "library.routes.ts",
       "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_file": "backend/src/modules/library/library.routes.ts",
       "source_location": "L1",
-      "id": "backend_src_modules_follow_follow_controller_ts",
+      "id": "backend_src_modules_library_library_routes_ts",
+      "community": 49,
+      "norm_label": "library.routes.ts"
+    },
+    {
+      "label": "libraryRouter",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L16",
+      "id": "library_library_routes_libraryrouter",
+      "community": 31,
+      "norm_label": "libraryrouter"
+    },
+    {
+      "label": "library.schema.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_library_library_schema_ts",
+      "community": 49,
+      "norm_label": "library.schema.ts"
+    },
+    {
+      "label": "MediaType",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L5",
+      "id": "library_library_schema_mediatype",
+      "community": 49,
+      "norm_label": "mediatype"
+    },
+    {
+      "label": "LibraryStatus",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L6",
+      "id": "library_library_schema_librarystatus",
+      "community": 49,
+      "norm_label": "librarystatus"
+    },
+    {
+      "label": "upsertLibraryItemSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L21",
+      "id": "library_library_schema_upsertlibraryitemschema",
+      "community": 49,
+      "norm_label": "upsertlibraryitemschema"
+    },
+    {
+      "label": "UpsertLibraryItemInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L89",
+      "id": "library_library_schema_upsertlibraryiteminput",
+      "community": 49,
+      "norm_label": "upsertlibraryiteminput"
+    },
+    {
+      "label": "SortField",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L103",
+      "id": "library_library_schema_sortfield",
+      "community": 49,
+      "norm_label": "sortfield"
+    },
+    {
+      "label": "SortOrder",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L104",
+      "id": "library_library_schema_sortorder",
+      "community": 49,
+      "norm_label": "sortorder"
+    },
+    {
+      "label": "libraryQuerySchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L106",
+      "id": "library_library_schema_libraryqueryschema",
+      "community": 49,
+      "norm_label": "libraryqueryschema"
+    },
+    {
+      "label": "LibraryQueryInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L154",
+      "id": "library_library_schema_libraryqueryinput",
+      "community": 50,
+      "norm_label": "libraryqueryinput"
+    },
+    {
+      "label": "libraryItemIdParamSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L162",
+      "id": "library_library_schema_libraryitemidparamschema",
+      "community": 49,
+      "norm_label": "libraryitemidparamschema"
+    },
+    {
+      "label": "LibraryItemIdParam",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L170",
+      "id": "library_library_schema_libraryitemidparam",
+      "community": 49,
+      "norm_label": "libraryitemidparam"
+    },
+    {
+      "label": "libraryUserIdParamSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L177",
+      "id": "library_library_schema_libraryuseridparamschema",
+      "community": 49,
+      "norm_label": "libraryuseridparamschema"
+    },
+    {
+      "label": "LibraryUserIdParam",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L185",
+      "id": "library_library_schema_libraryuseridparam",
+      "community": 49,
+      "norm_label": "libraryuseridparam"
+    },
+    {
+      "label": "delete.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/controllers/delete.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_library_controllers_delete_ts",
+      "community": 50,
+      "norm_label": "delete.ts"
+    },
+    {
+      "label": "removeLibraryItem()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/controllers/delete.ts",
+      "source_location": "L14",
+      "id": "controllers_delete_removelibraryitem",
+      "community": 50,
+      "norm_label": "removelibraryitem()"
+    },
+    {
+      "label": "list.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_library_controllers_list_ts",
+      "community": 50,
+      "norm_label": "list.ts"
+    },
+    {
+      "label": "getUserLibrary()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L15",
+      "id": "controllers_list_getuserlibrary",
+      "community": 50,
+      "norm_label": "getuserlibrary()"
+    },
+    {
+      "label": "getPublicUserLibrary()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L112",
+      "id": "controllers_list_getpublicuserlibrary",
+      "community": 50,
+      "norm_label": "getpublicuserlibrary()"
+    },
+    {
+      "label": "upsert.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_library_controllers_upsert_ts",
       "community": 55,
-      "norm_label": "follow.controller.ts"
+      "norm_label": "upsert.ts"
     },
     {
       "label": "ensureLocalManga()",
       "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L34",
-      "id": "follow_follow_controller_ensurelocalmanga",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L29",
+      "id": "controllers_upsert_ensurelocalmanga",
       "community": 55,
       "norm_label": "ensurelocalmanga()"
     },
     {
-      "label": "followManga()",
+      "label": "upsertLibraryItem()",
       "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L135",
-      "id": "follow_follow_controller_followmanga",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L121",
+      "id": "controllers_upsert_upsertlibraryitem",
       "community": 55,
-      "norm_label": "followmanga()"
+      "norm_label": "upsertlibraryitem()"
     },
     {
-      "label": "unfollowManga()",
+      "label": "resolveStartDate()",
       "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L200",
-      "id": "follow_follow_controller_unfollowmanga",
-      "community": 0,
-      "norm_label": "unfollowmanga()"
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L237",
+      "id": "controllers_upsert_resolvestartdate",
+      "community": 55,
+      "norm_label": "resolvestartdate()"
     },
     {
-      "label": "updateProgress()",
+      "label": "resolveEndDate()",
       "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L251",
-      "id": "follow_follow_controller_updateprogress",
-      "community": 0,
-      "norm_label": "updateprogress()"
-    },
-    {
-      "label": "follow.routes.ts",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L1",
-      "id": "backend_src_modules_follow_follow_routes_ts",
-      "community": 0,
-      "norm_label": "follow.routes.ts"
-    },
-    {
-      "label": "followRouter",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L8",
-      "id": "follow_follow_routes_followrouter",
-      "community": 31,
-      "norm_label": "followrouter"
-    },
-    {
-      "label": "follow.schema.ts",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L1",
-      "id": "backend_src_modules_follow_follow_schema_ts",
-      "community": 0,
-      "norm_label": "follow.schema.ts"
-    },
-    {
-      "label": "followInputSchema",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L12",
-      "id": "follow_follow_schema_followinputschema",
-      "community": 0,
-      "norm_label": "followinputschema"
-    },
-    {
-      "label": "FollowInput",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L18",
-      "id": "follow_follow_schema_followinput",
-      "community": 0,
-      "norm_label": "followinput"
-    },
-    {
-      "label": "progressInputSchema",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L28",
-      "id": "follow_follow_schema_progressinputschema",
-      "community": 0,
-      "norm_label": "progressinputschema"
-    },
-    {
-      "label": "ProgressInput",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L36",
-      "id": "follow_follow_schema_progressinput",
-      "community": 0,
-      "norm_label": "progressinput"
-    },
-    {
-      "label": "followMangaIdParamSchema",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L44",
-      "id": "follow_follow_schema_followmangaidparamschema",
-      "community": 0,
-      "norm_label": "followmangaidparamschema"
-    },
-    {
-      "label": "FollowMangaIdParam",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L50",
-      "id": "follow_follow_schema_followmangaidparam",
-      "community": 0,
-      "norm_label": "followmangaidparam"
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L258",
+      "id": "controllers_upsert_resolveenddate",
+      "community": 55,
+      "norm_label": "resolveenddate()"
     },
     {
       "label": "manga.controller.ts",
@@ -963,7 +1080,7 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L1",
       "id": "backend_src_utils_auth_helpers_ts",
-      "community": 55,
+      "community": 50,
       "norm_label": "auth.helpers.ts"
     },
     {
@@ -972,7 +1089,7 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L15",
       "id": "utils_auth_helpers_parseuserid",
-      "community": 0,
+      "community": 50,
       "norm_label": "parseuserid()"
     },
     {
@@ -1152,7 +1269,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L1",
       "id": "backend_src_utils_prisma_ts",
-      "community": 31,
+      "community": 61,
       "norm_label": "prisma.ts"
     },
     {
@@ -1161,7 +1278,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L14",
       "id": "utils_prisma_createprismaclient",
-      "community": 31,
+      "community": 61,
       "norm_label": "createprismaclient()"
     },
     {
@@ -1170,7 +1287,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L26",
       "id": "utils_prisma_prismaclientinstance",
-      "community": 31,
+      "community": 61,
       "norm_label": "prismaclientinstance"
     },
     {
@@ -1179,7 +1296,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L28",
       "id": "utils_prisma_globalforprisma",
-      "community": 31,
+      "community": 61,
       "norm_label": "globalforprisma"
     },
     {
@@ -1320,6 +1437,24 @@
     {
       "label": "page.tsx",
       "file_type": "code",
+      "source_file": "frontend/app/explore/page.tsx",
+      "source_location": "L1",
+      "id": "frontend_app_explore_page_tsx",
+      "community": 9,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "ExplorePage()",
+      "file_type": "code",
+      "source_file": "frontend/app/explore/page.tsx",
+      "source_location": "L3",
+      "id": "explore_page_explorepage",
+      "community": 9,
+      "norm_label": "explorepage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
       "source_file": "frontend/app/login/page.tsx",
       "source_location": "L1",
       "id": "frontend_app_login_page_tsx",
@@ -1343,6 +1478,24 @@
       "id": "login_page_loginpage",
       "community": 59,
       "norm_label": "loginpage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L1",
+      "id": "frontend_app_manga_page_tsx",
+      "community": 9,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "MangaCatalogPage()",
+      "file_type": "code",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L12",
+      "id": "manga_page_mangacatalogpage",
+      "community": 9,
+      "norm_label": "mangacatalogpage()"
     },
     {
       "label": "page.tsx",
@@ -1406,6 +1559,159 @@
       "id": "register_page_registerpage",
       "community": 59,
       "norm_label": "registerpage()"
+    },
+    {
+      "label": "LeftFilterPanel.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_explore_leftfilterpanel_tsx",
+      "community": 9,
+      "norm_label": "leftfilterpanel.tsx"
+    },
+    {
+      "label": "FilterState",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L6",
+      "id": "explore_leftfilterpanel_filterstate",
+      "community": 9,
+      "norm_label": "filterstate"
+    },
+    {
+      "label": "LeftFilterPanelProps",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L15",
+      "id": "explore_leftfilterpanel_leftfilterpanelprops",
+      "community": 9,
+      "norm_label": "leftfilterpanelprops"
+    },
+    {
+      "label": "POPULAR_GENRES",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L20",
+      "id": "explore_leftfilterpanel_popular_genres",
+      "community": 9,
+      "norm_label": "popular_genres"
+    },
+    {
+      "label": "LANGUAGES",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L34",
+      "id": "explore_leftfilterpanel_languages",
+      "community": 9,
+      "norm_label": "languages"
+    },
+    {
+      "label": "STATUS_OPTIONS",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L42",
+      "id": "explore_leftfilterpanel_status_options",
+      "community": 9,
+      "norm_label": "status_options"
+    },
+    {
+      "label": "LeftFilterPanel()",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L50",
+      "id": "explore_leftfilterpanel_leftfilterpanel",
+      "community": 9,
+      "norm_label": "leftfilterpanel()"
+    },
+    {
+      "label": "MangaCard.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/MangaCard.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_explore_mangacard_tsx",
+      "community": 9,
+      "norm_label": "mangacard.tsx"
+    },
+    {
+      "label": "MangaData",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/MangaCard.tsx",
+      "source_location": "L8",
+      "id": "explore_mangacard_mangadata",
+      "community": 9,
+      "norm_label": "mangadata"
+    },
+    {
+      "label": "MangaCardProps",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/MangaCard.tsx",
+      "source_location": "L24",
+      "id": "explore_mangacard_mangacardprops",
+      "community": 9,
+      "norm_label": "mangacardprops"
+    },
+    {
+      "label": "MangaCard()",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/MangaCard.tsx",
+      "source_location": "L28",
+      "id": "explore_mangacard_mangacard",
+      "community": 9,
+      "norm_label": "mangacard()"
+    },
+    {
+      "label": "RightContentPane.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_explore_rightcontentpane_tsx",
+      "community": 9,
+      "norm_label": "rightcontentpane.tsx"
+    },
+    {
+      "label": "TRENDING_BY_TIME",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L9",
+      "id": "explore_rightcontentpane_trending_by_time",
+      "community": 9,
+      "norm_label": "trending_by_time"
+    },
+    {
+      "label": "TOP_5_ALL_TIME",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L139",
+      "id": "explore_rightcontentpane_top_5_all_time",
+      "community": 9,
+      "norm_label": "top_5_all_time"
+    },
+    {
+      "label": "TOP_20_HIGHLY_RATED",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L193",
+      "id": "explore_rightcontentpane_top_20_highly_rated",
+      "community": 9,
+      "norm_label": "top_20_highly_rated"
+    },
+    {
+      "label": "RightContentPaneProps",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L356",
+      "id": "explore_rightcontentpane_rightcontentpaneprops",
+      "community": 9,
+      "norm_label": "rightcontentpaneprops"
+    },
+    {
+      "label": "RightContentPane()",
+      "file_type": "code",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L364",
+      "id": "explore_rightcontentpane_rightcontentpane",
+      "community": 9,
+      "norm_label": "rightcontentpane()"
     },
     {
       "label": "HydrationGuard.tsx",
@@ -1766,6 +2072,69 @@
       "id": "landing_topmanga_topmanga",
       "community": 8,
       "norm_label": "topmanga()"
+    },
+    {
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/layout/Footer.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_layout_footer_tsx",
+      "community": 9,
+      "norm_label": "footer.tsx"
+    },
+    {
+      "label": "GithubIcon()",
+      "file_type": "code",
+      "source_file": "frontend/components/layout/Footer.tsx",
+      "source_location": "L6",
+      "id": "layout_footer_githubicon",
+      "community": 9,
+      "norm_label": "githubicon()"
+    },
+    {
+      "label": "DiscordIcon()",
+      "file_type": "code",
+      "source_file": "frontend/components/layout/Footer.tsx",
+      "source_location": "L13",
+      "id": "layout_footer_discordicon",
+      "community": 9,
+      "norm_label": "discordicon()"
+    },
+    {
+      "label": "RedditIcon()",
+      "file_type": "code",
+      "source_file": "frontend/components/layout/Footer.tsx",
+      "source_location": "L19",
+      "id": "layout_footer_redditicon",
+      "community": 9,
+      "norm_label": "redditicon()"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "frontend/components/layout/Footer.tsx",
+      "source_location": "L25",
+      "id": "layout_footer_footer",
+      "community": 9,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "Navbar.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/layout/Navbar.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_layout_navbar_tsx",
+      "community": 59,
+      "norm_label": "navbar.tsx"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "frontend/components/layout/Navbar.tsx",
+      "source_location": "L19",
+      "id": "layout_navbar_navbar",
+      "community": 59,
+      "norm_label": "navbar()"
     },
     {
       "label": "GlassCard.tsx",
@@ -2187,7 +2556,7 @@
       "source_file": "PRD.md",
       "source_location": "L57",
       "id": "kiroku_prd_6_feature_requirements",
-      "community": 4,
+      "community": 52,
       "norm_label": "6. feature requirements"
     },
     {
@@ -2196,7 +2565,7 @@
       "source_file": "PRD.md",
       "source_location": "L59",
       "id": "kiroku_prd_6_1_user_authentication_mvp",
-      "community": 4,
+      "community": 52,
       "norm_label": "6.1 user authentication (mvp)"
     },
     {
@@ -2205,7 +2574,7 @@
       "source_file": "PRD.md",
       "source_location": "L64",
       "id": "kiroku_prd_6_2_manga_search_discovery_mvp",
-      "community": 4,
+      "community": 52,
       "norm_label": "6.2 manga search & discovery (mvp)"
     },
     {
@@ -2214,7 +2583,7 @@
       "source_file": "PRD.md",
       "source_location": "L69",
       "id": "kiroku_prd_6_3_manga_tracking_progress_mvp",
-      "community": 4,
+      "community": 52,
       "norm_label": "6.3 manga tracking & progress (mvp)"
     },
     {
@@ -2223,7 +2592,7 @@
       "source_file": "PRD.md",
       "source_location": "L74",
       "id": "kiroku_prd_6_4_chapter_monitoring_system_mvp_backend_worker",
-      "community": 4,
+      "community": 52,
       "norm_label": "6.4 chapter monitoring system (mvp backend worker)"
     },
     {
@@ -2232,7 +2601,7 @@
       "source_file": "PRD.md",
       "source_location": "L79",
       "id": "kiroku_prd_6_5_notification_dispatch_system_mvp",
-      "community": 4,
+      "community": 52,
       "norm_label": "6.5 notification dispatch system (mvp)"
     },
     {
@@ -2241,7 +2610,7 @@
       "source_file": "PRD.md",
       "source_location": "L84",
       "id": "kiroku_prd_6_6_notification_preferences_mvp",
-      "community": 4,
+      "community": 52,
       "norm_label": "6.6 notification preferences (mvp)"
     },
     {
@@ -2250,7 +2619,7 @@
       "source_file": "PRD.md",
       "source_location": "L89",
       "id": "kiroku_prd_6_7_advanced_features_post_mvp",
-      "community": 4,
+      "community": 52,
       "norm_label": "6.7 advanced features (post-mvp)"
     },
     {
@@ -2259,7 +2628,7 @@
       "source_file": "PRD.md",
       "source_location": "L95",
       "id": "kiroku_prd_6_8_phase_2_advanced_core_features",
-      "community": 4,
+      "community": 52,
       "norm_label": "6.8 phase 2 advanced core features"
     },
     {
@@ -2412,7 +2781,7 @@
       "source_file": "PRD.md",
       "source_location": "L172",
       "id": "kiroku_prd_7_5_4_social_read_along_room_flow",
-      "community": 49,
+      "community": 5,
       "norm_label": "7.5.4 social \"read-along\" room flow"
     },
     {
@@ -2421,7 +2790,7 @@
       "source_file": "PRD.md",
       "source_location": "L173",
       "id": "kiroku_prd_codeblock_8",
-      "community": 49,
+      "community": 5,
       "norm_label": "code:block8 ([social hub] \u2794 [create room] \u2794 [select manga & set target ch)"
     },
     {
@@ -2448,7 +2817,7 @@
       "source_file": "PRD.md",
       "source_location": "L188",
       "id": "kiroku_prd_codeblock_9",
-      "community": 11,
+      "community": 5,
       "norm_label": "code:mermaid (sequencediagram)"
     },
     {
@@ -2556,7 +2925,7 @@
       "source_file": "PRD.md",
       "source_location": "L315",
       "id": "kiroku_prd_9_technical_architecture",
-      "community": 49,
+      "community": 5,
       "norm_label": "9. technical architecture"
     },
     {
@@ -2565,7 +2934,7 @@
       "source_file": "PRD.md",
       "source_location": "L319",
       "id": "kiroku_prd_codeblock_15",
-      "community": 49,
+      "community": 5,
       "norm_label": "code:block15 (+-------------------+)"
     },
     {
@@ -2574,7 +2943,7 @@
       "source_file": "PRD.md",
       "source_location": "L349",
       "id": "kiroku_prd_infrastructure_specs",
-      "community": 49,
+      "community": 5,
       "norm_label": "infrastructure specs:"
     },
     {
@@ -2664,7 +3033,7 @@
       "source_file": "PRD.md",
       "source_location": "L744",
       "id": "kiroku_prd_11_api_design",
-      "community": 48,
+      "community": 54,
       "norm_label": "11. api design"
     },
     {
@@ -2673,7 +3042,7 @@
       "source_file": "PRD.md",
       "source_location": "L748",
       "id": "kiroku_prd_11_1_public_api_endpoints",
-      "community": 48,
+      "community": 54,
       "norm_label": "11.1 public api endpoints"
     },
     {
@@ -2682,7 +3051,7 @@
       "source_file": "PRD.md",
       "source_location": "L755",
       "id": "kiroku_prd_codeblock_20",
-      "community": 48,
+      "community": 54,
       "norm_label": "code:json ({)"
     },
     {
@@ -2691,7 +3060,7 @@
       "source_file": "PRD.md",
       "source_location": "L773",
       "id": "kiroku_prd_codeblock_21",
-      "community": 48,
+      "community": 54,
       "norm_label": "code:json ({)"
     },
     {
@@ -2700,7 +3069,7 @@
       "source_file": "PRD.md",
       "source_location": "L791",
       "id": "kiroku_prd_codeblock_22",
-      "community": 48,
+      "community": 54,
       "norm_label": "code:json ({)"
     },
     {
@@ -2736,7 +3105,7 @@
       "source_file": "PRD.md",
       "source_location": "L829",
       "id": "kiroku_prd_codeblock_25",
-      "community": 4,
+      "community": 58,
       "norm_label": "code:json ({ \"message\": \"successfully unfollowed manga.\" })"
     },
     {
@@ -2772,7 +3141,7 @@
       "source_file": "PRD.md",
       "source_location": "L863",
       "id": "kiroku_prd_11_3_protected_push_token_endpoints",
-      "community": 48,
+      "community": 54,
       "norm_label": "11.3 protected push token endpoints"
     },
     {
@@ -2790,7 +3159,7 @@
       "source_file": "PRD.md",
       "source_location": "L873",
       "id": "kiroku_prd_codeblock_30",
-      "community": 4,
+      "community": 60,
       "norm_label": "code:json ({ \"message\": \"push token registered successfully.\" })"
     },
     {
@@ -2808,7 +3177,7 @@
       "source_file": "PRD.md",
       "source_location": "L880",
       "id": "kiroku_prd_codeblock_31",
-      "community": 11,
+      "community": 64,
       "norm_label": "code:json ({ \"queuename\": \"notification-dispatcher\", \"jobid\": \"job-1094)"
     },
     {
@@ -2898,7 +3267,7 @@
       "source_file": "PRD.md",
       "source_location": "L939",
       "id": "kiroku_prd_12_notification_system_logic",
-      "community": 4,
+      "community": 58,
       "norm_label": "12. notification system logic"
     },
     {
@@ -2907,7 +3276,7 @@
       "source_file": "PRD.md",
       "source_location": "L943",
       "id": "kiroku_prd_12_1_jobs_structure_payload",
-      "community": 4,
+      "community": 58,
       "norm_label": "12.1 jobs structure & payload"
     },
     {
@@ -2916,7 +3285,7 @@
       "source_file": "PRD.md",
       "source_location": "L946",
       "id": "kiroku_prd_codeblock_34",
-      "community": 4,
+      "community": 58,
       "norm_label": "code:json ({)"
     },
     {
@@ -2925,7 +3294,7 @@
       "source_file": "PRD.md",
       "source_location": "L956",
       "id": "kiroku_prd_12_2_channels_implementation",
-      "community": 4,
+      "community": 58,
       "norm_label": "12.2 channels implementation"
     },
     {
@@ -2934,7 +3303,7 @@
       "source_file": "PRD.md",
       "source_location": "L963",
       "id": "kiroku_prd_12_3_retry_and_backoff_logic",
-      "community": 4,
+      "community": 58,
       "norm_label": "12.3 retry and backoff logic"
     },
     {
@@ -2943,7 +3312,7 @@
       "source_file": "PRD.md",
       "source_location": "L972",
       "id": "kiroku_prd_13_scalability_plan",
-      "community": 4,
+      "community": 62,
       "norm_label": "13. scalability plan"
     },
     {
@@ -2952,7 +3321,7 @@
       "source_file": "PRD.md",
       "source_location": "L976",
       "id": "kiroku_prd_13_1_staggered_conditional_polling",
-      "community": 4,
+      "community": 62,
       "norm_label": "13.1 staggered & conditional polling"
     },
     {
@@ -2961,7 +3330,7 @@
       "source_file": "PRD.md",
       "source_location": "L984",
       "id": "kiroku_prd_13_2_queue_prioritization_batching",
-      "community": 4,
+      "community": 62,
       "norm_label": "13.2 queue prioritization & batching"
     },
     {
@@ -2970,7 +3339,7 @@
       "source_file": "PRD.md",
       "source_location": "L988",
       "id": "kiroku_prd_13_3_notification_deduplication_keys",
-      "community": 4,
+      "community": 62,
       "norm_label": "13.3 notification deduplication keys"
     },
     {
@@ -2979,7 +3348,7 @@
       "source_file": "PRD.md",
       "source_location": "L996",
       "id": "kiroku_prd_14_security_considerations",
-      "community": 4,
+      "community": 63,
       "norm_label": "14. security considerations"
     },
     {
@@ -2988,7 +3357,7 @@
       "source_file": "PRD.md",
       "source_location": "L998",
       "id": "kiroku_prd_14_1_authentication_token_safety",
-      "community": 4,
+      "community": 63,
       "norm_label": "14.1 authentication & token safety"
     },
     {
@@ -2997,7 +3366,7 @@
       "source_file": "PRD.md",
       "source_location": "L1003",
       "id": "kiroku_prd_14_2_api_security_controls",
-      "community": 4,
+      "community": 63,
       "norm_label": "14.2 api security controls"
     },
     {
@@ -3006,7 +3375,7 @@
       "source_file": "PRD.md",
       "source_location": "L1012",
       "id": "kiroku_prd_14_3_input_validation",
-      "community": 4,
+      "community": 63,
       "norm_label": "14.3 input validation"
     },
     {
@@ -3114,7 +3483,7 @@
       "source_file": "PRD.md",
       "source_location": "L1183",
       "id": "kiroku_prd_17_monitoring_strategy",
-      "community": 4,
+      "community": 60,
       "norm_label": "17. monitoring strategy"
     },
     {
@@ -3123,7 +3492,7 @@
       "source_file": "PRD.md",
       "source_location": "L1187",
       "id": "kiroku_prd_17_1_structured_log_specifications",
-      "community": 4,
+      "community": 60,
       "norm_label": "17.1 structured log specifications"
     },
     {
@@ -3132,7 +3501,7 @@
       "source_file": "PRD.md",
       "source_location": "L1189",
       "id": "kiroku_prd_codeblock_39",
-      "community": 4,
+      "community": 60,
       "norm_label": "code:json ({)"
     },
     {
@@ -3141,7 +3510,7 @@
       "source_file": "PRD.md",
       "source_location": "L1204",
       "id": "kiroku_prd_17_2_metrics_tracker_dashboard_prometheus_grafana",
-      "community": 4,
+      "community": 60,
       "norm_label": "17.2 metrics tracker dashboard (prometheus/grafana)"
     },
     {
@@ -3150,7 +3519,7 @@
       "source_file": "PRD.md",
       "source_location": "L1210",
       "id": "kiroku_prd_17_3_sentry_integration",
-      "community": 4,
+      "community": 60,
       "norm_label": "17.3 sentry integration"
     },
     {
@@ -3159,7 +3528,7 @@
       "source_file": "PRD.md",
       "source_location": "L1215",
       "id": "kiroku_prd_18_future_roadmap",
-      "community": 11,
+      "community": 64,
       "norm_label": "18. future roadmap"
     },
     {
@@ -3168,7 +3537,7 @@
       "source_file": "PRD.md",
       "source_location": "L1217",
       "id": "kiroku_prd_codeblock_40",
-      "community": 11,
+      "community": 64,
       "norm_label": "code:block40 (+--------------------------------------------------------+)"
     },
     {
@@ -3199,94 +3568,247 @@
       "norm_label": "readme.md"
     },
     {
+      "label": "\u26a1 Kiroku",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "kiroku_readme_kiroku",
+      "community": 30,
+      "norm_label": "\u26a1 kiroku"
+    },
+    {
+      "label": "\ud83c\udf1f The Vision",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "id": "kiroku_readme_the_vision",
+      "community": 30,
+      "norm_label": "\ud83c\udf1f the vision"
+    },
+    {
+      "label": "\ud83d\udcca System Stats (RPG Character Sheet)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "id": "kiroku_readme_system_stats_rpg_character_sheet",
+      "community": 30,
+      "norm_label": "\ud83d\udcca system stats (rpg character sheet)"
+    },
+    {
+      "label": "code:text (=======================================================)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "id": "kiroku_readme_codeblock_1",
+      "community": 30,
+      "norm_label": "code:text (=======================================================)"
+    },
+    {
+      "label": "\ud83d\udee0\ufe0f The Tech Stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "id": "kiroku_readme_the_tech_stack",
+      "community": 30,
+      "norm_label": "\ud83d\udee0\ufe0f the tech stack"
+    },
+    {
+      "label": "\ud83d\ude80 Key Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "id": "kiroku_readme_key_features",
+      "community": 30,
+      "norm_label": "\ud83d\ude80 key features"
+    },
+    {
+      "label": "\ud83d\udcc1 Repository Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "id": "kiroku_readme_repository_structure",
+      "community": 30,
+      "norm_label": "\ud83d\udcc1 repository structure"
+    },
+    {
+      "label": "code:text (kiroku/)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "id": "kiroku_readme_codeblock_2",
+      "community": 30,
+      "norm_label": "code:text (kiroku/)"
+    },
+    {
+      "label": "\u2699\ufe0f Setup & Installation",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L95",
+      "id": "kiroku_readme_setup_installation",
+      "community": 30,
+      "norm_label": "\u2699\ufe0f setup & installation"
+    },
+    {
+      "label": "Prerequisites",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "id": "kiroku_readme_prerequisites",
+      "community": 30,
+      "norm_label": "prerequisites"
+    },
+    {
+      "label": "1. Database & Cache Infrastructure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L102",
+      "id": "kiroku_readme_1_database_cache_infrastructure",
+      "community": 30,
+      "norm_label": "1. database & cache infrastructure"
+    },
+    {
+      "label": "code:bash (docker start kiroku-redis)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "id": "kiroku_readme_codeblock_3",
+      "community": 30,
+      "norm_label": "code:bash (docker start kiroku-redis)"
+    },
+    {
+      "label": "2. Backend Setup",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L108",
+      "id": "kiroku_readme_2_backend_setup",
+      "community": 30,
+      "norm_label": "2. backend setup"
+    },
+    {
+      "label": "code:bash (cd backend)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L110",
+      "id": "kiroku_readme_codeblock_4",
+      "community": 30,
+      "norm_label": "code:bash (cd backend)"
+    },
+    {
+      "label": "code:env (DATABASE_URL=\"postgresql://username:password@localhost:5432/)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "id": "kiroku_readme_codeblock_5",
+      "community": 30,
+      "norm_label": "code:env (database_url=\"postgresql://username:password@localhost:5432/)"
+    },
+    {
+      "label": "code:bash (# Run database migrations)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L125",
+      "id": "kiroku_readme_codeblock_6",
+      "community": 30,
+      "norm_label": "code:bash (# run database migrations)"
+    },
+    {
+      "label": "code:bash (npm run dev:backend)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L137",
+      "id": "kiroku_readme_codeblock_7",
+      "community": 30,
+      "norm_label": "code:bash (npm run dev:backend)"
+    },
+    {
+      "label": "3. Frontend Setup",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L142",
+      "id": "kiroku_readme_3_frontend_setup",
+      "community": 30,
+      "norm_label": "3. frontend setup"
+    },
+    {
+      "label": "code:bash (cd ../frontend)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L144",
+      "id": "kiroku_readme_codeblock_8",
+      "community": 30,
+      "norm_label": "code:bash (cd ../frontend)"
+    },
+    {
+      "label": "\ud83d\udce1 API Routing Overview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L153",
+      "id": "kiroku_readme_api_routing_overview",
+      "community": 30,
+      "norm_label": "\ud83d\udce1 api routing overview"
+    },
+    {
+      "label": "Authentication (`/api/v1/auth`)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L157",
+      "id": "kiroku_readme_authentication_api_v1_auth",
+      "community": 30,
+      "norm_label": "authentication (`/api/v1/auth`)"
+    },
+    {
+      "label": "Manga Discovery (`/api/v1/manga`)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L162",
+      "id": "kiroku_readme_manga_discovery_api_v1_manga",
+      "community": 30,
+      "norm_label": "manga discovery (`/api/v1/manga`)"
+    },
+    {
+      "label": "User Library (`/api/v1/library`)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L167",
+      "id": "kiroku_readme_user_library_api_v1_library",
+      "community": 30,
+      "norm_label": "user library (`/api/v1/library`)"
+    },
+    {
+      "label": "followMap",
+      "file_type": "code",
+      "source_file": "backend/prisma/seed.ts",
+      "source_location": "L119",
+      "community": 57,
+      "norm_label": "followmap",
+      "id": "prisma_seed_followmap"
+    },
+    {
       "label": "Getting Started",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L3",
-      "id": "kiroku_readme_getting_started",
       "community": 30,
-      "norm_label": "getting started"
-    },
-    {
-      "label": "code:bash (npm run dev)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L7",
-      "id": "kiroku_readme_codeblock_1",
-      "community": 30,
-      "norm_label": "code:bash (npm run dev)"
+      "norm_label": "getting started",
+      "id": "kiroku_readme_getting_started"
     },
     {
       "label": "Learn More",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L23",
-      "id": "kiroku_readme_learn_more",
       "community": 30,
-      "norm_label": "learn more"
+      "norm_label": "learn more",
+      "id": "kiroku_readme_learn_more"
     },
     {
       "label": "Deploy on Vercel",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L32",
-      "id": "kiroku_readme_deploy_on_vercel",
       "community": 30,
-      "norm_label": "deploy on vercel"
-    },
-    {
-      "label": "mapMangaDexStatus()",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L19",
-      "community": 55,
-      "norm_label": "mapmangadexstatus()",
-      "id": "follow_follow_controller_mapmangadexstatus"
-    },
-    {
-      "label": "resolveTitle()",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L35",
-      "community": 55,
-      "norm_label": "resolvetitle()",
-      "id": "follow_follow_controller_resolvetitle"
-    },
-    {
-      "label": "resolveDescription()",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L42",
-      "community": 55,
-      "norm_label": "resolvedescription()",
-      "id": "follow_follow_controller_resolvedescription"
-    },
-    {
-      "label": "extractCoverUrl()",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L50",
-      "community": 55,
-      "norm_label": "extractcoverurl()",
-      "id": "follow_follow_controller_extractcoverurl"
-    },
-    {
-      "label": "extractAuthor()",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L66",
-      "community": 55,
-      "norm_label": "extractauthor()",
-      "id": "follow_follow_controller_extractauthor"
-    },
-    {
-      "label": "slugify()",
-      "file_type": "code",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L76",
-      "community": 55,
-      "norm_label": "slugify()",
-      "id": "follow_follow_controller_slugify"
+      "norm_label": "deploy on vercel",
+      "id": "kiroku_readme_deploy_on_vercel"
     },
     {
       "label": "mapMangaDexStatus()",
@@ -4616,7 +5138,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L227",
-      "community": 9,
+      "community": 3,
       "norm_label": "step 3 - extract entities and relationships",
       "id": "graphify_skill_step_3_extract_entities_and_relationships"
     },
@@ -4625,7 +5147,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L244",
-      "community": 9,
+      "community": 3,
       "norm_label": "part a - structural extraction for code files",
       "id": "graphify_skill_part_a_structural_extraction_for_code_files"
     },
@@ -4634,7 +5156,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L248",
-      "community": 9,
+      "community": 3,
       "norm_label": "code:bash ($(cat graphify-out/.graphify_python) -c \")",
       "id": "graphify_skill_codeblock_9"
     },
@@ -4643,7 +5165,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L270",
-      "community": 9,
+      "community": 3,
       "norm_label": "part b - semantic extraction (parallel subagents)",
       "id": "graphify_skill_part_b_semantic_extraction_parallel_subagents"
     },
@@ -4652,7 +5174,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L286",
-      "community": 9,
+      "community": 3,
       "norm_label": "code:bash ($(cat graphify-out/.graphify_python) -c \")",
       "id": "graphify_skill_codeblock_10"
     },
@@ -4661,7 +5183,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L317",
-      "community": 9,
+      "community": 3,
       "norm_label": "code:block11 ([agent tool call 1: files 1-15, subagent_type=\"general-purpo)",
       "id": "graphify_skill_codeblock_11"
     },
@@ -4670,7 +5192,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L327",
-      "community": 9,
+      "community": 3,
       "norm_label": "code:bash (project_root=$(cat graphify-out/.graphify_root))",
       "id": "graphify_skill_codeblock_12"
     },
@@ -4679,7 +5201,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L334",
-      "community": 9,
+      "community": 3,
       "norm_label": "code:block13 (you are a graphify extraction subagent. read the files liste)",
       "id": "graphify_skill_codeblock_13"
     },
@@ -4688,7 +5210,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L410",
-      "community": 9,
+      "community": 3,
       "norm_label": "code:bash ($(cat graphify-out/.graphify_python) -c \")",
       "id": "graphify_skill_codeblock_14"
     },
@@ -4697,7 +5219,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L434",
-      "community": 9,
+      "community": 3,
       "norm_label": "code:bash ($(cat graphify-out/.graphify_python) -c \")",
       "id": "graphify_skill_codeblock_15"
     },
@@ -4706,7 +5228,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L447",
-      "community": 9,
+      "community": 3,
       "norm_label": "code:bash ($(cat graphify-out/.graphify_python) -c \")",
       "id": "graphify_skill_codeblock_16"
     },
@@ -4715,7 +5237,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L478",
-      "community": 9,
+      "community": 3,
       "norm_label": "part c - merge ast + semantic into final extraction",
       "id": "graphify_skill_part_c_merge_ast_semantic_into_final_extraction"
     },
@@ -4724,7 +5246,7 @@
       "file_type": "document",
       "source_file": ".agents/skills/graphify/SKILL.md",
       "source_location": "L480",
-      "community": 9,
+      "community": 3,
       "norm_label": "code:bash ($(cat graphify-out/.graphify_python) -c \")",
       "id": "graphify_skill_codeblock_17"
     },
@@ -5873,6 +6395,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/prisma/seed.ts",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "backend_prisma_seed_ts",
+      "target": "prisma_seed_libraryitemmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/prisma/seed.ts",
       "source_location": "L133",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5888,6 +6420,16 @@
       "confidence_score": 1.0,
       "source": "backend_prisma_seed_ts",
       "target": "prisma_seed_mangadata"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/prisma/seed.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "backend_prisma_seed_ts",
+      "target": "prisma_seed_prehashhex",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5960,9 +6502,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "backend_src_index_ts",
-      "target": "backend_src_modules_follow_follow_routes_ts"
+      "target": "backend_src_modules_library_library_routes_ts",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -6015,9 +6557,9 @@
       "source_file": "backend/src/index.ts",
       "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "backend_src_index_ts",
-      "target": "follow_follow_routes_followrouter"
+      "target": "library_library_routes_libraryrouter",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -6100,6 +6642,16 @@
       "confidence_score": 1.0,
       "source": "backend_src_index_ts",
       "target": "src_index_io"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/index.ts",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "backend_src_index_ts",
+      "target": "src_index_librarylimiter",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6304,12 +6856,12 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L4",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "backend_src_middlewares_auth_middleware_ts"
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "backend_src_middlewares_auth_middleware_ts",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -6348,12 +6900,12 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L4",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "middlewares_auth_middleware_authmiddleware"
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "middlewares_auth_middleware_authmiddleware",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -6434,12 +6986,34 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L5",
+      "source_file": "backend/src/modules/library/controllers/delete.ts",
+      "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "backend_src_middlewares_error_middleware_ts"
+      "source": "backend_src_modules_library_controllers_delete_ts",
+      "target": "backend_src_middlewares_error_middleware_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_list_ts",
+      "target": "backend_src_middlewares_error_middleware_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "backend_src_middlewares_error_middleware_ts",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -6478,12 +7052,34 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L5",
+      "source_file": "backend/src/modules/library/controllers/delete.ts",
+      "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "middlewares_error_middleware_apperror"
+      "source": "backend_src_modules_library_controllers_delete_ts",
+      "target": "middlewares_error_middleware_apperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_list_ts",
+      "target": "middlewares_error_middleware_apperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "middlewares_error_middleware_apperror",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -6531,12 +7127,12 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L3",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "backend_src_middlewares_validateparams_middleware_ts"
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "backend_src_middlewares_validateparams_middleware_ts",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -6553,12 +7149,12 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L3",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "middlewares_validateparams_middleware_validateparams"
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "middlewares_validateparams_middleware_validateparams",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -6585,12 +7181,34 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "backend_src_middlewares_validatequery_middleware_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_routes_ts",
       "target": "backend_src_middlewares_validatequery_middleware_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "middlewares_validatequery_middleware_validatequery",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -6628,12 +7246,12 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_file": "backend/src/modules/library/library.routes.ts",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "backend_src_middlewares_validation_middleware_ts"
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "backend_src_middlewares_validation_middleware_ts",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -6650,12 +7268,12 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_file": "backend/src/modules/library/library.routes.ts",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "middlewares_validation_middleware_validate"
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "middlewares_validation_middleware_validate",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -7276,54 +7894,456 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L6",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L14",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "backend_src_modules_follow_follow_schema_ts"
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "backend_src_modules_library_controllers_delete_ts",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "backend_src_services_mangadex_service_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "backend_src_types_mangadex_types_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "backend_src_utils_auth_helpers_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_file": "backend/src/modules/library/library.routes.ts",
       "source_location": "L13",
       "weight": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "backend_src_modules_library_controllers_list_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "backend_src_modules_library_controllers_upsert_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "backend_src_modules_library_library_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "controllers_delete_removelibraryitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "controllers_list_getpublicuserlibrary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "controllers_list_getuserlibrary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "controllers_upsert_upsertlibraryitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "library_library_routes_libraryrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "library_library_schema_libraryitemidparamschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "library_library_schema_libraryqueryschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "library_library_schema_libraryuseridparamschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.routes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_routes_ts",
+      "target": "library_library_schema_upsertlibraryitemschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_list_ts",
+      "target": "backend_src_modules_library_library_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "backend_src_modules_library_library_schema_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_libraryitemidparam",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_libraryitemidparamschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_libraryqueryinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_libraryqueryschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_librarystatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_libraryuseridparam",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_libraryuseridparamschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_mediatype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_sortfield",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_sortorder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_upsertlibraryiteminput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/library.schema.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_library_schema_ts",
+      "target": "library_library_schema_upsertlibraryitemschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "library_library_schema_upsertlibraryiteminput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_list_ts",
+      "target": "library_library_schema_libraryqueryinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/delete.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_delete_ts",
+      "target": "backend_src_utils_auth_helpers_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/delete.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_delete_ts",
+      "target": "backend_src_utils_prisma_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/delete.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_delete_ts",
+      "target": "controllers_delete_removelibraryitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/delete.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_delete_ts",
+      "target": "utils_auth_helpers_parseuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/library/controllers/delete.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "controllers_delete_removelibraryitem",
+      "target": "utils_auth_helpers_parseuserid"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_list_ts",
+      "target": "backend_src_utils_auth_helpers_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_list_ts",
+      "target": "backend_src_utils_prisma_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_list_ts",
+      "target": "controllers_list_getpublicuserlibrary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_list_ts",
+      "target": "controllers_list_getuserlibrary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_list_ts",
+      "target": "utils_auth_helpers_parseuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/modules/library/controllers/list.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "controllers_list_getuserlibrary",
+      "target": "utils_auth_helpers_parseuserid"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "backend_src_services_mangadex_service_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "backend_src_utils_auth_helpers_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
       "target": "backend_src_utils_mangadex_helpers_ts",
       "confidence_score": 1.0
     },
@@ -7331,600 +8351,261 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "backend_src_utils_prisma_ts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L94",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_controller_ensurelocalmanga"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_controller_extractauthor"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L50",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_controller_extractcoverurl"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L192",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_controller_followmanga"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_controller_mapmangadexstatus"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L42",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_controller_resolvedescription"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_controller_resolvetitle"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L76",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_controller_slugify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L257",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_controller_unfollowmanga"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L308",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_controller_updateprogress"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_schema_followinput"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "follow_follow_schema_progressinput"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "services_mangadex_service_mangadexapierror"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "services_mangadex_service_mangadexservice"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "types_mangadex_types_localizedstring"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "types_mangadex_types_mangadexmangaentity"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "types_mangadex_types_mangadexrelationship"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "utils_auth_helpers_parseuserid"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "utils_mangadex_helpers_extractauthor",
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "backend_src_utils_prisma_ts",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "utils_mangadex_helpers_extractcoverurl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "utils_mangadex_helpers_mapmangadexstatus",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "utils_mangadex_helpers_resolvedescription",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "utils_mangadex_helpers_resolvetitle",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "backend_src_modules_follow_follow_controller_ts",
-      "target": "utils_mangadex_helpers_slugify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "backend_src_modules_follow_follow_controller_ts"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L127",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "follow_follow_controller_extractauthor"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L125",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "follow_follow_controller_extractcoverurl"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L128",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "follow_follow_controller_mapmangadexstatus"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L126",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "follow_follow_controller_resolvedescription"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L115",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "follow_follow_controller_resolvetitle"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L116",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "follow_follow_controller_slugify"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L67",
-      "weight": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "utils_mangadex_helpers_extractauthor",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L65",
-      "weight": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "utils_mangadex_helpers_extractcoverurl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L68",
-      "weight": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "utils_mangadex_helpers_mapmangadexstatus",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L66",
-      "weight": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "utils_mangadex_helpers_resolvedescription",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L55",
-      "weight": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "utils_mangadex_helpers_resolvetitle",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L56",
-      "weight": 1.0,
-      "source": "follow_follow_controller_ensurelocalmanga",
-      "target": "utils_mangadex_helpers_slugify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L202",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "follow_follow_controller_followmanga",
-      "target": "follow_follow_controller_ensurelocalmanga"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "follow_follow_controller_followmanga"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L198",
-      "weight": 1.0,
-      "source": "follow_follow_controller_followmanga",
-      "target": "utils_auth_helpers_parseuserid"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "follow_follow_controller_unfollowmanga"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L263",
-      "weight": 1.0,
-      "source": "follow_follow_controller_unfollowmanga",
-      "target": "utils_auth_helpers_parseuserid"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "follow_follow_controller_updateprogress"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/src/modules/follow/follow.controller.ts",
-      "source_location": "L314",
-      "weight": 1.0,
-      "source": "follow_follow_controller_updateprogress",
-      "target": "utils_auth_helpers_parseuserid"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "backend_src_modules_follow_follow_schema_ts"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "controllers_upsert_ensurelocalmanga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "controllers_upsert_resolveenddate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L237",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "controllers_upsert_resolvestartdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "controllers_upsert_upsertlibraryitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "services_mangadex_service_mangadexapierror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "services_mangadex_service_mangadexservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "utils_auth_helpers_parseuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "follow_follow_routes_followrouter"
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "utils_mangadex_helpers_extractauthor",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L5",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "follow_follow_schema_followinputschema"
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "utils_mangadex_helpers_extractcoverurl",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L5",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "follow_follow_schema_followmangaidparamschema"
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "utils_mangadex_helpers_mapmangadexstatus",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.routes.ts",
-      "source_location": "L5",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_routes_ts",
-      "target": "follow_follow_schema_progressinputschema"
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "utils_mangadex_helpers_resolvedescription",
+      "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L18",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_schema_ts",
-      "target": "follow_follow_schema_followinput"
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "utils_mangadex_helpers_resolvetitle",
+      "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L12",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_schema_ts",
-      "target": "follow_follow_schema_followinputschema"
+      "source": "backend_src_modules_library_controllers_upsert_ts",
+      "target": "utils_mangadex_helpers_slugify",
+      "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "controllers_upsert_ensurelocalmanga",
+      "target": "utils_mangadex_helpers_extractauthor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
       "source_location": "L50",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_schema_ts",
-      "target": "follow_follow_schema_followmangaidparam"
+      "source": "controllers_upsert_ensurelocalmanga",
+      "target": "utils_mangadex_helpers_extractcoverurl",
+      "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L44",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L53",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_schema_ts",
-      "target": "follow_follow_schema_followmangaidparamschema"
+      "source": "controllers_upsert_ensurelocalmanga",
+      "target": "utils_mangadex_helpers_mapmangadexstatus",
+      "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L36",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L51",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_schema_ts",
-      "target": "follow_follow_schema_progressinput"
+      "source": "controllers_upsert_ensurelocalmanga",
+      "target": "utils_mangadex_helpers_resolvedescription",
+      "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "backend/src/modules/follow/follow.schema.ts",
-      "source_location": "L28",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L40",
       "weight": 1.0,
+      "source": "controllers_upsert_ensurelocalmanga",
+      "target": "utils_mangadex_helpers_resolvetitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "controllers_upsert_ensurelocalmanga",
+      "target": "utils_mangadex_helpers_slugify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "controllers_upsert_upsertlibraryitem",
+      "target": "controllers_upsert_ensurelocalmanga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "controllers_upsert_upsertlibraryitem",
+      "target": "controllers_upsert_resolveenddate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "controllers_upsert_upsertlibraryitem",
+      "target": "controllers_upsert_resolvestartdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source": "backend_src_modules_follow_follow_schema_ts",
-      "target": "follow_follow_schema_progressinputschema"
+      "source_file": "backend/src/modules/library/controllers/upsert.ts",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "controllers_upsert_upsertlibraryitem",
+      "target": "utils_auth_helpers_parseuserid"
     },
     {
       "relation": "imports_from",
@@ -7977,9 +8658,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "backend_src_utils_mangadex_helpers_ts",
-      "confidence_score": 1.0
+      "target": "backend_src_utils_mangadex_helpers_ts"
     },
     {
       "relation": "imports_from",
@@ -8207,9 +8888,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_mangadex_helpers_extractauthor",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractauthor"
     },
     {
       "relation": "imports",
@@ -8218,9 +8899,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_mangadex_helpers_extractcoverurl",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractcoverurl"
     },
     {
       "relation": "imports",
@@ -8229,9 +8910,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_mangadex_helpers_mapmangadexstatus",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_mapmangadexstatus"
     },
     {
       "relation": "imports",
@@ -8240,9 +8921,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_mangadex_helpers_resolvedescription",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_resolvedescription"
     },
     {
       "relation": "imports",
@@ -8251,9 +8932,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_mangadex_helpers_resolvetitle",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_resolvetitle"
     },
     {
       "relation": "imports",
@@ -8262,9 +8943,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_manga_manga_controller_ts",
-      "target": "utils_mangadex_helpers_slugify",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_slugify"
     },
     {
       "relation": "imports_from",
@@ -8383,9 +9064,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
-      "target": "utils_mangadex_helpers_extractauthor",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractauthor"
     },
     {
       "relation": "calls",
@@ -8394,9 +9075,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
-      "target": "utils_mangadex_helpers_extractcoverurl",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractcoverurl"
     },
     {
       "relation": "calls",
@@ -8405,9 +9086,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
-      "target": "utils_mangadex_helpers_mapmangadexstatus",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_mapmangadexstatus"
     },
     {
       "relation": "calls",
@@ -8416,9 +9097,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
-      "target": "utils_mangadex_helpers_resolvedescription",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_resolvedescription"
     },
     {
       "relation": "calls",
@@ -8427,9 +9108,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
-      "target": "utils_mangadex_helpers_resolvetitle",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_resolvetitle"
     },
     {
       "relation": "calls",
@@ -8438,9 +9119,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
-      "target": "utils_mangadex_helpers_slugify",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_slugify"
     },
     {
       "relation": "calls",
@@ -9157,9 +9838,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "backend_src_types_mangadex_types_ts",
-      "confidence_score": 1.0
+      "target": "backend_src_types_mangadex_types_ts"
     },
     {
       "relation": "imports",
@@ -9168,9 +9849,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "types_mangadex_types_localizedstring",
-      "confidence_score": 1.0
+      "target": "types_mangadex_types_localizedstring"
     },
     {
       "relation": "imports",
@@ -9179,9 +9860,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "types_mangadex_types_mangadexrelationship",
-      "confidence_score": 1.0
+      "target": "types_mangadex_types_mangadexrelationship"
     },
     {
       "relation": "contains",
@@ -9386,9 +10067,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "utils_mangadex_helpers_extractauthor",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractauthor"
     },
     {
       "relation": "contains",
@@ -9396,9 +10077,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "utils_mangadex_helpers_extractcoverurl",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_extractcoverurl"
     },
     {
       "relation": "contains",
@@ -9406,9 +10087,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "utils_mangadex_helpers_mapmangadexstatus",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_mapmangadexstatus"
     },
     {
       "relation": "contains",
@@ -9416,9 +10097,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "utils_mangadex_helpers_resolvedescription",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_resolvedescription"
     },
     {
       "relation": "contains",
@@ -9426,9 +10107,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "utils_mangadex_helpers_resolvetitle",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_resolvetitle"
     },
     {
       "relation": "contains",
@@ -9436,9 +10117,9 @@
       "source_file": "backend/src/utils/mangadex.helpers.ts",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_utils_mangadex_helpers_ts",
-      "target": "utils_mangadex_helpers_slugify",
-      "confidence_score": 1.0
+      "target": "utils_mangadex_helpers_slugify"
     },
     {
       "relation": "contains",
@@ -9745,6 +10426,27 @@
       "target": "landing_hero_hero"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/explore/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_app_explore_page_tsx",
+      "target": "explore_page_explorepage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/explore/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_app_explore_page_tsx",
+      "target": "frontend_app_manga_page_tsx",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -9958,6 +10660,159 @@
       "target": "hooks_useauthstore_useauthstore"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "explore_leftfilterpanel_filterstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "explore_leftfilterpanel_leftfilterpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "explore_mangacard_mangadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "explore_rightcontentpane_rightcontentpane",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "frontend_components_explore_leftfilterpanel_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "frontend_components_explore_mangacard_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "frontend_components_explore_rightcontentpane_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "frontend_components_layout_footer_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "frontend_components_layout_navbar_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "frontend_utils_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "layout_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "layout_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "manga_page_mangacatalogpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "utils_api_apifetch",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -10115,6 +10970,190 @@
       "weight": 1.0,
       "source": "register_page_registerpage",
       "target": "hooks_useauthstore_useauthstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_explore_leftfilterpanel_tsx",
+      "target": "explore_leftfilterpanel_filterstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "frontend_components_explore_leftfilterpanel_tsx",
+      "target": "explore_leftfilterpanel_languages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "frontend_components_explore_leftfilterpanel_tsx",
+      "target": "explore_leftfilterpanel_leftfilterpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "frontend_components_explore_leftfilterpanel_tsx",
+      "target": "explore_leftfilterpanel_leftfilterpanelprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "frontend_components_explore_leftfilterpanel_tsx",
+      "target": "explore_leftfilterpanel_popular_genres",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "frontend_components_explore_leftfilterpanel_tsx",
+      "target": "explore_leftfilterpanel_status_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/MangaCard.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "frontend_components_explore_mangacard_tsx",
+      "target": "explore_mangacard_mangacard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/MangaCard.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "frontend_components_explore_mangacard_tsx",
+      "target": "explore_mangacard_mangacardprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/MangaCard.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_components_explore_mangacard_tsx",
+      "target": "explore_mangacard_mangadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_explore_rightcontentpane_tsx",
+      "target": "frontend_components_explore_mangacard_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L359",
+      "weight": 1.0,
+      "source": "explore_rightcontentpane_rightcontentpaneprops",
+      "target": "explore_mangacard_mangadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_explore_rightcontentpane_tsx",
+      "target": "explore_mangacard_mangadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_explore_rightcontentpane_tsx",
+      "target": "explore_mangacard_mangacard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L364",
+      "weight": 1.0,
+      "source": "frontend_components_explore_rightcontentpane_tsx",
+      "target": "explore_rightcontentpane_rightcontentpane",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L356",
+      "weight": 1.0,
+      "source": "frontend_components_explore_rightcontentpane_tsx",
+      "target": "explore_rightcontentpane_rightcontentpaneprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "frontend_components_explore_rightcontentpane_tsx",
+      "target": "explore_rightcontentpane_top_20_highly_rated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "frontend_components_explore_rightcontentpane_tsx",
+      "target": "explore_rightcontentpane_top_5_all_time",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/RightContentPane.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_components_explore_rightcontentpane_tsx",
+      "target": "explore_rightcontentpane_trending_by_time",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10445,6 +11484,111 @@
       "confidence_score": 1.0,
       "source": "frontend_components_landing_topmanga_tsx",
       "target": "landing_topmanga_topmanga"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/layout/Footer.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "frontend_components_layout_footer_tsx",
+      "target": "layout_footer_discordicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/layout/Footer.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "frontend_components_layout_footer_tsx",
+      "target": "layout_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/layout/Footer.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_layout_footer_tsx",
+      "target": "layout_footer_githubicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/layout/Footer.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "frontend_components_layout_footer_tsx",
+      "target": "layout_footer_redditicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/layout/Navbar.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_layout_navbar_tsx",
+      "target": "frontend_hooks_useauthstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/layout/Navbar.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_components_layout_navbar_tsx",
+      "target": "frontend_utils_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/layout/Navbar.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_layout_navbar_tsx",
+      "target": "hooks_useauthstore_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/layout/Navbar.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "frontend_components_layout_navbar_tsx",
+      "target": "layout_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/layout/Navbar.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_components_layout_navbar_tsx",
+      "target": "utils_api_apifetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/components/layout/Navbar.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "layout_navbar_navbar",
+      "target": "hooks_useauthstore_useauthstore"
     },
     {
       "relation": "contains",
@@ -12452,6 +13596,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "kiroku_readme_kiroku",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L23",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -12462,11 +13616,231 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "kiroku_readme_kiroku",
+      "target": "kiroku_readme_api_routing_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "kiroku_readme_kiroku",
+      "target": "kiroku_readme_key_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "kiroku_readme_kiroku",
+      "target": "kiroku_readme_repository_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "kiroku_readme_kiroku",
+      "target": "kiroku_readme_setup_installation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "kiroku_readme_kiroku",
+      "target": "kiroku_readme_system_stats_rpg_character_sheet",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "kiroku_readme_kiroku",
+      "target": "kiroku_readme_the_tech_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "kiroku_readme_kiroku",
+      "target": "kiroku_readme_the_vision",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "kiroku_readme_system_stats_rpg_character_sheet",
+      "target": "kiroku_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "kiroku_readme_getting_started",
       "target": "kiroku_readme_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "kiroku_readme_repository_structure",
+      "target": "kiroku_readme_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "kiroku_readme_setup_installation",
+      "target": "kiroku_readme_1_database_cache_infrastructure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "kiroku_readme_setup_installation",
+      "target": "kiroku_readme_2_backend_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "kiroku_readme_setup_installation",
+      "target": "kiroku_readme_3_frontend_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "kiroku_readme_setup_installation",
+      "target": "kiroku_readme_prerequisites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "kiroku_readme_1_database_cache_infrastructure",
+      "target": "kiroku_readme_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "kiroku_readme_2_backend_setup",
+      "target": "kiroku_readme_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "kiroku_readme_2_backend_setup",
+      "target": "kiroku_readme_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "kiroku_readme_2_backend_setup",
+      "target": "kiroku_readme_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "kiroku_readme_2_backend_setup",
+      "target": "kiroku_readme_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "kiroku_readme_3_frontend_setup",
+      "target": "kiroku_readme_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "kiroku_readme_api_routing_overview",
+      "target": "kiroku_readme_authentication_api_v1_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "kiroku_readme_api_routing_overview",
+      "target": "kiroku_readme_manga_discovery_api_v1_manga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "kiroku_readme_api_routing_overview",
+      "target": "kiroku_readme_user_library_api_v1_library",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -14800,5 +16174,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b0170ef123fdea0e9add51ab308d49111c0a2fe7"
+  "built_at_commit": "56ef807f280f84cf5cbdc792fa401a7427b2694e"
 }
