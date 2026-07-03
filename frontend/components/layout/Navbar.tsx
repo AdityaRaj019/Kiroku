@@ -181,7 +181,7 @@ export const Navbar: React.FC = () => {
                   
                   {/* Dashboard Route */}
                   <Link
-                    href="/dashboard"
+                    href="/manga"
                     onClick={() => setIsDropdownOpen(false)}
                     className="flex items-center gap-2 px-4 py-2 hover:bg-[#CC0000] hover:text-white border-b-2 border-zinc-950 transition-colors"
                   >
@@ -399,7 +399,7 @@ export const Navbar: React.FC = () => {
               </div>
 
               <Link
-                href="/dashboard"
+                href="/manga"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center gap-2 w-full font-bebas text-lg font-bold text-zinc-800 py-1.5 hover:text-[#CC0000] transition-colors"
               >

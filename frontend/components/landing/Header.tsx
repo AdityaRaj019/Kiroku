@@ -1,7 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useAuthStore } from "@/hooks/useAuthStore";
+import { apiFetch } from "@/utils/api";
+import { User, LogOut, ChevronDown, LayoutDashboard } from "lucide-react";
 
 const LeafSwirl = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg 
@@ -39,6 +43,43 @@ const JollyRoger = () => (
 );
 
 export const Header: React.FC = () => {
+  const router = useRouter();
+  const { user, isAuthenticated, clearSession } = useAuthStore();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await apiFetch("/auth/logout", { method: "POST" });
+    } catch (err) {
+      console.error("Logout failed", err);
+    } finally {
+      clearSession();
+      setIsDropdownOpen(false);
+      router.push("/");
+    }
+  };
+
+  const getInitials = (name: string | null, email: string) => {
+    if (name) {
+      return name.slice(0, 2).toUpperCase();
+    }
+    return email.slice(0, 2).toUpperCase();
+  };
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -70,23 +111,81 @@ export const Header: React.FC = () => {
           <button
             key={item.label}
             onClick={() => scrollToSection(item.id)}
-            className="text-xs font-semibold tracking-widest text-white/80 hover:text-shonen-orange transition-colors cursor-pointer"
+            className="text-xs font-semibold tracking-widest text-white/80 hover:text-[#FF6B00] transition-colors cursor-pointer"
           >
             {item.label}
           </button>
         ))}
       </nav>
 
-      {/* CTA Button */}
-      <Link 
-        href="/manga"
-        className="relative group overflow-hidden bg-gradient-to-r from-[#FF9F00] to-[#FF6B00] text-black font-bebas text-sm font-bold tracking-wider px-5 py-2 rounded-full border border-black/20 shadow-[0_4px_0_#000] hover:shadow-[0_2px_0_#000] hover:translate-y-[2px] transition-all flex items-center"
-      >
-        <span>GET STARTED</span>
-        <div className="ml-2 w-5 h-5 rounded-full bg-white/90 flex items-center justify-center text-black shadow-inner">
-          <LeafSwirl className="w-3.5 h-3.5" />
-        </div>
-      </Link>
+      {/* Auth Conditional CTA Button */}
+      <div className="flex items-center space-x-4">
+        {isAuthenticated ? (
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center gap-2 px-4 py-2 bg-[#0D0D10]/95 border border-white/10 hover:border-[#FF6B00]/40 rounded-full transition-all text-white shadow-lg cursor-pointer"
+            >
+              <div className="w-6 h-6 rounded-full bg-[#FF6B00] flex items-center justify-center text-black font-bebas text-xs font-bold">
+                {getInitials(user?.name ?? null, user?.email ?? "")}
+              </div>
+              <span className="font-bebas text-sm font-bold tracking-wider text-white max-w-[100px] truncate">
+                {user?.name || user?.email.split("@")[0]}
+              </span>
+              <ChevronDown className={`w-3.5 h-3.5 text-white/60 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            {/* Dropdown Menu (Shonen Dark Theme styled to match landing page) */}
+            {isDropdownOpen && (
+              <div className="absolute right-0 mt-2 w-56 bg-[#0D0D10]/95 border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.85)] backdrop-blur-md rounded-xl py-1.5 z-50">
+                <div className="px-4 py-2 border-b border-white/5">
+                  <p className="text-[10px] text-white/40 font-sans uppercase font-bold">Signed in as</p>
+                  <p className="font-bebas text-base font-bold tracking-wide text-white truncate">
+                    {user?.name || "Reader"}
+                  </p>
+                  <p className="text-[10px] text-white/50 font-mono truncate">{user?.email}</p>
+                </div>
+                
+                <Link
+                  href="/manga"
+                  onClick={() => setIsDropdownOpen(false)}
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-white/80 font-bebas text-base tracking-wider hover:bg-[#FF6B00] hover:text-black transition-colors"
+                >
+                  <LayoutDashboard className="w-4 h-4" />
+                  <span>CATALOG DISCOVER</span>
+                </Link>
+
+                <button
+                  onClick={handleLogout}
+                  className="w-full flex items-center gap-2 px-4 py-2 text-sm text-red-400 font-bebas text-base tracking-wider hover:bg-[#FF6B00] hover:text-black transition-colors text-left cursor-pointer"
+                >
+                  <LogOut className="w-4 h-4" />
+                  <span>LOGOUT</span>
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="flex items-center space-x-4">
+            <Link
+              href="/login"
+              className="text-xs font-semibold tracking-widest text-white/80 hover:text-[#FF6B00] transition-colors"
+            >
+              LOGIN
+            </Link>
+            
+            <Link 
+              href="/manga"
+              className="relative group overflow-hidden bg-gradient-to-r from-[#FF9F00] to-[#FF6B00] text-black font-bebas text-sm font-bold tracking-wider px-5 py-2 rounded-full border border-black/20 shadow-[0_4px_0_#000] hover:shadow-[0_2px_0_#000] hover:translate-y-[2px] transition-all flex items-center"
+            >
+              <span>GET STARTED</span>
+              <div className="ml-2 w-5 h-5 rounded-full bg-white/90 flex items-center justify-center text-black shadow-inner">
+                <LeafSwirl className="w-3.5 h-3.5" />
+              </div>
+            </Link>
+          </div>
+        )}
+      </div>
     </header>
   );
 };
