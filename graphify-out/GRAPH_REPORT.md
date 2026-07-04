@@ -1,16 +1,16 @@
 # Graph Report - kiroku  (2026-07-04)
 
 ## Corpus Check
-- 58 files · ~41,518 words
+- 68 files · ~42,748 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 730 nodes · 1034 edges · 65 communities (58 shown, 7 thin omitted)
+- 751 nodes · 1079 edges · 66 communities (59 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b54c257c`
+- Built from commit: `8a88d14b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -80,6 +80,7 @@
 - [[_COMMUNITY_Community 62|Community 62]]
 - [[_COMMUNITY_Community 63|Community 63]]
 - [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Product Requirement Document (PRD)` - 22 edges
@@ -98,18 +99,18 @@
   frontend/app/login/page.tsx → frontend/hooks/useAuthStore.ts
 - `RegisterPage()` --calls--> `useAuthStore`  [EXTRACTED]
   frontend/app/register/page.tsx → frontend/hooks/useAuthStore.ts
-- `refresh()` --calls--> `parseUserId()`  [EXTRACTED]
-  backend/src/modules/auth/auth.controller.ts → backend/src/utils/auth.helpers.ts
-- `logout()` --calls--> `parseUserId()`  [EXTRACTED]
-  backend/src/modules/auth/auth.controller.ts → backend/src/utils/auth.helpers.ts
-- `profile()` --calls--> `parseUserId()`  [EXTRACTED]
-  backend/src/modules/auth/auth.controller.ts → backend/src/utils/auth.helpers.ts
+- `removeLibraryItem()` --calls--> `parseUserId()`  [EXTRACTED]
+  backend/src/modules/library/controllers/delete.ts → backend/src/utils/auth.helpers.ts
+- `getUserLibrary()` --calls--> `parseUserId()`  [EXTRACTED]
+  backend/src/modules/library/controllers/list.ts → backend/src/utils/auth.helpers.ts
+- `upsertLibraryItem()` --calls--> `parseUserId()`  [EXTRACTED]
+  backend/src/modules/library/controllers/upsert.ts → backend/src/utils/auth.helpers.ts
 
-## Communities (65 total, 7 thin omitted)
+## Communities (66 total, 7 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.15
-Nodes (27): clearRefreshCookie(), login(), logout(), profile(), refresh(), register(), setRefreshCookie(), authRouter (+19 more)
+Cohesion: 0.17
+Nodes (26): clearRefreshCookie(), login(), logout(), profile(), refresh(), register(), setRefreshCookie(), LoginInput (+18 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.29
@@ -124,12 +125,12 @@ Cohesion: 0.04
 Nodes (49): code:bash ($(cat graphify-out/.graphify_python) -c "), code:block11 ([Agent tool call 1: files 1-15, subagent_type="general-purpo), code:bash (PROJECT_ROOT=$(cat graphify-out/.graphify_root)), code:block13 (You are a graphify extraction subagent. Read the files liste), code:bash ($(cat graphify-out/.graphify_python) -c "), code:bash ($(cat graphify-out/.graphify_python) -c "), code:bash ($(cat graphify-out/.graphify_python) -c "), code:bash ($(cat graphify-out/.graphify_python) -c ") (+41 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.11
-Nodes (17): 13.1 Staggered & Conditional Polling, 13.2 Queue Prioritization & Batching, 13.3 Notification Deduplication Keys, 13. Scalability Plan, 14.1 Authentication & Token Safety, 14.2 API Security Controls, 14.3 Input Validation, 14. Security Considerations (+9 more)
+Cohesion: 0.12
+Nodes (16): 14.1 Authentication & Token Safety, 14.2 API Security Controls, 14.3 Input Validation, 14. Security Considerations, 18. Future Roadmap, 19. Risks & Constraints, 1. Executive Summary, 20. Success Metrics (+8 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.20
-Nodes (12): 7.5.1 Multi-Platform Sync Flow, 7.5.2 Spoiler-Free Comments Flow, 7.5.3 Scan-to-Track Flow, 7.5 Phase 2 Feature Flows, 8.1 Manga Follow Flow, 8.2 Chapter Detection & Aggregation Flow (Cron-Scheduled), 8.3 Notification Dispatch Queue Flow, 8. System Workflows (+4 more)
+Cohesion: 0.13
+Nodes (17): 7.5.1 Multi-Platform Sync Flow, 7.5.2 Spoiler-Free Comments Flow, 7.5.3 Scan-to-Track Flow, 7.5.4 Social "Read-Along" Room Flow, 7.5 Phase 2 Feature Flows, 8.1 Manga Follow Flow, 8.2 Chapter Detection & Aggregation Flow (Cron-Scheduled), 8.3 Notification Dispatch Queue Flow (+9 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.22
@@ -148,8 +149,8 @@ Cohesion: 0.17
 Nodes (11): 1. Identity & Mindset, 2.1 The Sandbox Rule (Test in Isolation), 2.2 Strict Boundary Safety, 2.3 Project Memory & Context Bootstrap, 2. Engineering Philosophy, 3.1 Response Structure, 3. Communication & Response Protocols, 4. Forbidden Actions (+3 more)
 
 ### Community 11 - "Community 11"
-Cohesion: 0.13
-Nodes (19): 10.1 Prisma Schema (`schema.prisma`), 10.2 Database Indexes & Constraints (SQL DDL), 10.3 Prisma Schema Extensions for Phase 2, 10.4 SQL DDL Extensions for Phase 2, 10. Database Design, 11.2 Protected API Endpoints (Required Token: JWT), 15.1 GitHub Actions Workflow: `.github/workflows/ci.yml`, 15. CI/CD Strategy (+11 more)
+Cohesion: 0.15
+Nodes (17): 10.1 Prisma Schema (`schema.prisma`), 10.2 Database Indexes & Constraints (SQL DDL), 10.3 Prisma Schema Extensions for Phase 2, 10.4 SQL DDL Extensions for Phase 2, 10. Database Design, 11.2 Protected API Endpoints (Required Token: JWT), 11.4 Admin/System Control Endpoints (Requires API Key Header: `x-admin-key`), code:mermaid (sequenceDiagram) (+9 more)
 
 ### Community 12 - "Community 12"
 Cohesion: 0.20
@@ -228,8 +229,8 @@ Cohesion: 0.08
 Nodes (26): 1. Database & Cache Infrastructure, 2. Backend Setup, 3. Frontend Setup, 📡 API Routing Overview, Authentication (`/api/v1/auth`), code:text (=======================================================), code:text (kiroku/), code:bash (docker start kiroku-redis) (+18 more)
 
 ### Community 31 - "Community 31"
-Cohesion: 0.06
-Nodes (41): removeLibraryItem(), getPublicUserLibrary(), getUserLibrary(), libraryRouter, LibraryItemIdParam, libraryItemIdParamSchema, LibraryQueryInput, libraryQuerySchema (+33 more)
+Cohesion: 0.05
+Nodes (42): authRouter, removeLibraryItem(), getPublicUserLibrary(), getUserLibrary(), libraryRouter, LibraryItemIdParam, libraryItemIdParamSchema, LibraryQueryInput (+34 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.50
@@ -284,8 +285,8 @@ Cohesion: 0.12
 Nodes (5): AIAssistant(), FeatureCardProps, Features(), Footer(), Hero()
 
 ### Community 48 - "Community 48"
-Cohesion: 0.21
-Nodes (12): 11.1 Public API Endpoints, 11.3 Protected Push Token Endpoints, 11. API Design, 8.4.1 Multi-Platform Aggregation Flow (Cron-Scheduled), 8.4.2 Scan-to-Track Image Reconciliation Flow, 8.4.3 Social Read-Along Room Progress Sync, 8.4 Phase 2 System Workflows, code:mermaid (sequenceDiagram) (+4 more)
+Cohesion: 0.19
+Nodes (13): 11.1 Public API Endpoints, 11.3 Protected Push Token Endpoints, 11. API Design, 8.4.1 Multi-Platform Aggregation Flow (Cron-Scheduled), 8.4.2 Scan-to-Track Image Reconciliation Flow, 8.4.3 Social Read-Along Room Progress Sync, 8.4 Phase 2 System Workflows, code:mermaid (sequenceDiagram) (+5 more)
 
 ### Community 49 - "Community 49"
 Cohesion: 0.15
@@ -300,8 +301,8 @@ Cohesion: 0.22
 Nodes (9): 6.1 User Authentication (MVP), 6.2 Manga Search & Discovery (MVP), 6.3 Manga Tracking & Progress (MVP), 6.4 Chapter Monitoring System (MVP Backend Worker), 6.5 Notification Dispatch System (MVP), 6.6 Notification Preferences (MVP), 6.7 Advanced Features (Post-MVP), 6.8 Phase 2 Advanced Core Features (+1 more)
 
 ### Community 53 - "Community 53"
-Cohesion: 0.25
-Nodes (8): 11.4 Admin/System Control Endpoints (Requires API Key Header: `x-admin-key`), 18. Future Roadmap, code:json ({), code:json ({), code:json ({ "queueName": "notification-dispatcher", "jobId": "job-1094), code:json ({ "status": "retried", "jobId": "job-1094" }), code:json ({), code:block40 (+--------------------------------------------------------+)
+Cohesion: 0.20
+Nodes (11): aotTheme, dbzTheme, defaultTheme, demonslayerTheme, MANGA_THEMES, jujutsukaisenTheme, narutoTheme, onepieceTheme (+3 more)
 
 ### Community 54 - "Community 54"
 Cohesion: 0.25
@@ -336,28 +337,32 @@ Cohesion: 0.24
 Nodes (8): AuthActions, AuthState, initialState, FieldErrors, LoginForm(), AuthResponse, RefreshResponse, UserPayload
 
 ### Community 64 - "Community 64"
-Cohesion: 0.40
-Nodes (5): 7.5.4 Social "Read-Along" Room Flow, 9. Technical Architecture, code:block15 (+-------------------+), code:block8 ([Social Hub] ➔ [Create Room] ➔ [Select Manga & Set Target Ch), Infrastructure Specs:
+Cohesion: 0.33
+Nodes (6): 15.1 GitHub Actions Workflow: `.github/workflows/ci.yml`, 15. CI/CD Strategy, code:json ({), code:json ({), code:block35 (+----------------------------------+), code:yaml (name: Continuous Integration & Deployment)
+
+### Community 65 - "Community 65"
+Cohesion: 0.50
+Nodes (4): 13.1 Staggered & Conditional Polling, 13.2 Queue Prioritization & Batching, 13.3 Notification Deduplication Keys, 13. Scalability Plan
 
 ## Knowledge Gaps
-- **301 isolated node(s):** `adapter`, `prisma`, `preHashHex`, `HASHED_PASSWORD`, `usersData` (+296 more)
+- **302 isolated node(s):** `adapter`, `prisma`, `preHashHex`, `HASHED_PASSWORD`, `usersData` (+297 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Product Requirement Document (PRD)` connect `Community 4` to `Community 64`, `Community 5`, `Community 6`, `Community 7`, `Community 11`, `Community 48`, `Community 52`, `Community 53`, `Community 58`, `Community 60`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Product Requirement Document (PRD)` connect `Community 4` to `Community 64`, `Community 65`, `Community 5`, `Community 6`, `Community 7`, `Community 11`, `Community 48`, `Community 52`, `Community 58`, `Community 60`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `What You Must Do When Invoked` connect `Community 3` to `Community 2`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Why does `/graphify` connect `Community 2` to `Community 3`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `adapter`, `prisma`, `preHashHex` to the rest of the system?**
-  _301 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.14795008912655971 - nodes in this community are weakly interconnected._
+  _302 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
+- **Should `Community 4` be split into smaller, more focused modules?**
+  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._

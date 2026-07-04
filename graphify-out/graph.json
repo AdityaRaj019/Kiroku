@@ -342,7 +342,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validation_middleware_ts",
-      "community": 0,
+      "community": 31,
       "norm_label": "validation.middleware.ts"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L11",
       "id": "middlewares_validation_middleware_validate",
-      "community": 0,
+      "community": 31,
       "norm_label": "validate()"
     },
     {
@@ -441,7 +441,7 @@
       "source_file": "backend/src/modules/auth/auth.routes.ts",
       "source_location": "L7",
       "id": "auth_auth_routes_authrouter",
-      "community": 0,
+      "community": 31,
       "norm_label": "authrouter"
     },
     {
@@ -1233,7 +1233,7 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L15",
       "id": "utils_auth_helpers_parseuserid",
-      "community": 31,
+      "community": 0,
       "norm_label": "parseuserid()"
     },
     {
@@ -1699,7 +1699,7 @@
       "label": "MangaCatalogPage()",
       "file_type": "code",
       "source_file": "frontend/app/manga/page.tsx",
-      "source_location": "L12",
+      "source_location": "L13",
       "id": "manga_page_mangacatalogpage",
       "community": 9,
       "norm_label": "mangacatalogpage()"
@@ -2506,6 +2506,195 @@
       "norm_label": "sessionprovider()"
     },
     {
+      "label": "aot.ts",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/aot.ts",
+      "source_location": "L1",
+      "id": "frontend_components_theme_aot_ts",
+      "community": 53,
+      "norm_label": "aot.ts"
+    },
+    {
+      "label": "aotTheme",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/aot.ts",
+      "source_location": "L3",
+      "id": "theme_aot_aottheme",
+      "community": 53,
+      "norm_label": "aottheme"
+    },
+    {
+      "label": "dbz.ts",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/dbz.ts",
+      "source_location": "L1",
+      "id": "frontend_components_theme_dbz_ts",
+      "community": 53,
+      "norm_label": "dbz.ts"
+    },
+    {
+      "label": "dbzTheme",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/dbz.ts",
+      "source_location": "L3",
+      "id": "theme_dbz_dbztheme",
+      "community": 53,
+      "norm_label": "dbztheme"
+    },
+    {
+      "label": "default.ts",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/default.ts",
+      "source_location": "L1",
+      "id": "frontend_components_theme_default_ts",
+      "community": 53,
+      "norm_label": "default.ts"
+    },
+    {
+      "label": "defaultTheme",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/default.ts",
+      "source_location": "L3",
+      "id": "theme_default_defaulttheme",
+      "community": 53,
+      "norm_label": "defaulttheme"
+    },
+    {
+      "label": "demonslayer.ts",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/demonslayer.ts",
+      "source_location": "L1",
+      "id": "frontend_components_theme_demonslayer_ts",
+      "community": 53,
+      "norm_label": "demonslayer.ts"
+    },
+    {
+      "label": "demonslayerTheme",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/demonslayer.ts",
+      "source_location": "L3",
+      "id": "theme_demonslayer_demonslayertheme",
+      "community": 53,
+      "norm_label": "demonslayertheme"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L1",
+      "id": "frontend_components_theme_index_ts",
+      "community": 53,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "MANGA_THEMES",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L19",
+      "id": "theme_index_manga_themes",
+      "community": 53,
+      "norm_label": "manga_themes"
+    },
+    {
+      "label": "jujutsukaisen.ts",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/jujutsukaisen.ts",
+      "source_location": "L1",
+      "id": "frontend_components_theme_jujutsukaisen_ts",
+      "community": 53,
+      "norm_label": "jujutsukaisen.ts"
+    },
+    {
+      "label": "jujutsukaisenTheme",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/jujutsukaisen.ts",
+      "source_location": "L3",
+      "id": "theme_jujutsukaisen_jujutsukaisentheme",
+      "community": 53,
+      "norm_label": "jujutsukaisentheme"
+    },
+    {
+      "label": "naruto.ts",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/naruto.ts",
+      "source_location": "L1",
+      "id": "frontend_components_theme_naruto_ts",
+      "community": 53,
+      "norm_label": "naruto.ts"
+    },
+    {
+      "label": "narutoTheme",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/naruto.ts",
+      "source_location": "L3",
+      "id": "theme_naruto_narutotheme",
+      "community": 53,
+      "norm_label": "narutotheme"
+    },
+    {
+      "label": "onepiece.ts",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/onepiece.ts",
+      "source_location": "L1",
+      "id": "frontend_components_theme_onepiece_ts",
+      "community": 53,
+      "norm_label": "onepiece.ts"
+    },
+    {
+      "label": "onepieceTheme",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/onepiece.ts",
+      "source_location": "L3",
+      "id": "theme_onepiece_onepiecetheme",
+      "community": 53,
+      "norm_label": "onepiecetheme"
+    },
+    {
+      "label": "ThemeSelector.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/ThemeSelector.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_theme_themeselector_tsx",
+      "community": 53,
+      "norm_label": "themeselector.tsx"
+    },
+    {
+      "label": "ThemeSelectorProps",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/ThemeSelector.tsx",
+      "source_location": "L7",
+      "id": "theme_themeselector_themeselectorprops",
+      "community": 53,
+      "norm_label": "themeselectorprops"
+    },
+    {
+      "label": "ThemeSelector()",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/ThemeSelector.tsx",
+      "source_location": "L11",
+      "id": "theme_themeselector_themeselector",
+      "community": 53,
+      "norm_label": "themeselector()"
+    },
+    {
+      "label": "types.ts",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/types.ts",
+      "source_location": "L1",
+      "id": "frontend_components_theme_types_ts",
+      "community": 53,
+      "norm_label": "types.ts"
+    },
+    {
+      "label": "MangaTheme",
+      "file_type": "code",
+      "source_file": "frontend/components/theme/types.ts",
+      "source_location": "L1",
+      "id": "theme_types_mangatheme",
+      "community": 53,
+      "norm_label": "mangatheme"
+    },
+    {
       "label": "useAuthStore.ts",
       "file_type": "code",
       "source_file": "frontend/hooks/useAuthStore.ts",
@@ -2988,7 +3177,7 @@
       "source_file": "PRD.md",
       "source_location": "L172",
       "id": "kiroku_prd_7_5_4_social_read_along_room_flow",
-      "community": 64,
+      "community": 5,
       "norm_label": "7.5.4 social \"read-along\" room flow"
     },
     {
@@ -2997,7 +3186,7 @@
       "source_file": "PRD.md",
       "source_location": "L173",
       "id": "kiroku_prd_codeblock_8",
-      "community": 64,
+      "community": 5,
       "norm_label": "code:block8 ([social hub] \u2794 [create room] \u2794 [select manga & set target ch)"
     },
     {
@@ -3132,7 +3321,7 @@
       "source_file": "PRD.md",
       "source_location": "L315",
       "id": "kiroku_prd_9_technical_architecture",
-      "community": 64,
+      "community": 5,
       "norm_label": "9. technical architecture"
     },
     {
@@ -3141,7 +3330,7 @@
       "source_file": "PRD.md",
       "source_location": "L319",
       "id": "kiroku_prd_codeblock_15",
-      "community": 64,
+      "community": 5,
       "norm_label": "code:block15 (+-------------------+)"
     },
     {
@@ -3150,7 +3339,7 @@
       "source_file": "PRD.md",
       "source_location": "L349",
       "id": "kiroku_prd_infrastructure_specs",
-      "community": 64,
+      "community": 5,
       "norm_label": "infrastructure specs:"
     },
     {
@@ -3276,7 +3465,7 @@
       "source_file": "PRD.md",
       "source_location": "L791",
       "id": "kiroku_prd_codeblock_22",
-      "community": 53,
+      "community": 48,
       "norm_label": "code:json ({)"
     },
     {
@@ -3294,7 +3483,7 @@
       "source_file": "PRD.md",
       "source_location": "L808",
       "id": "kiroku_prd_codeblock_23",
-      "community": 53,
+      "community": 11,
       "norm_label": "code:json ({)"
     },
     {
@@ -3321,7 +3510,7 @@
       "source_file": "PRD.md",
       "source_location": "L837",
       "id": "kiroku_prd_codeblock_26",
-      "community": 11,
+      "community": 64,
       "norm_label": "code:json ({)"
     },
     {
@@ -3330,7 +3519,7 @@
       "source_file": "PRD.md",
       "source_location": "L853",
       "id": "kiroku_prd_codeblock_27",
-      "community": 11,
+      "community": 64,
       "norm_label": "code:json ({)"
     },
     {
@@ -3375,7 +3564,7 @@
       "source_file": "PRD.md",
       "source_location": "L877",
       "id": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
-      "community": 53,
+      "community": 11,
       "norm_label": "11.4 admin/system control endpoints (requires api key header: `x-admin-key`)"
     },
     {
@@ -3384,7 +3573,7 @@
       "source_file": "PRD.md",
       "source_location": "L880",
       "id": "kiroku_prd_codeblock_31",
-      "community": 53,
+      "community": 4,
       "norm_label": "code:json ({ \"queuename\": \"notification-dispatcher\", \"jobid\": \"job-1094)"
     },
     {
@@ -3393,7 +3582,7 @@
       "source_file": "PRD.md",
       "source_location": "L884",
       "id": "kiroku_prd_codeblock_32",
-      "community": 53,
+      "community": 11,
       "norm_label": "code:json ({ \"status\": \"retried\", \"jobid\": \"job-1094\" })"
     },
     {
@@ -3402,7 +3591,7 @@
       "source_file": "PRD.md",
       "source_location": "L890",
       "id": "kiroku_prd_codeblock_33",
-      "community": 53,
+      "community": 11,
       "norm_label": "code:json ({)"
     },
     {
@@ -3519,7 +3708,7 @@
       "source_file": "PRD.md",
       "source_location": "L972",
       "id": "kiroku_prd_13_scalability_plan",
-      "community": 4,
+      "community": 65,
       "norm_label": "13. scalability plan"
     },
     {
@@ -3528,7 +3717,7 @@
       "source_file": "PRD.md",
       "source_location": "L976",
       "id": "kiroku_prd_13_1_staggered_conditional_polling",
-      "community": 4,
+      "community": 65,
       "norm_label": "13.1 staggered & conditional polling"
     },
     {
@@ -3537,7 +3726,7 @@
       "source_file": "PRD.md",
       "source_location": "L984",
       "id": "kiroku_prd_13_2_queue_prioritization_batching",
-      "community": 4,
+      "community": 65,
       "norm_label": "13.2 queue prioritization & batching"
     },
     {
@@ -3546,7 +3735,7 @@
       "source_file": "PRD.md",
       "source_location": "L988",
       "id": "kiroku_prd_13_3_notification_deduplication_keys",
-      "community": 4,
+      "community": 65,
       "norm_label": "13.3 notification deduplication keys"
     },
     {
@@ -3591,7 +3780,7 @@
       "source_file": "PRD.md",
       "source_location": "L1017",
       "id": "kiroku_prd_15_ci_cd_strategy",
-      "community": 11,
+      "community": 64,
       "norm_label": "15. ci/cd strategy"
     },
     {
@@ -3600,7 +3789,7 @@
       "source_file": "PRD.md",
       "source_location": "L1021",
       "id": "kiroku_prd_codeblock_35",
-      "community": 11,
+      "community": 64,
       "norm_label": "code:block35 (+----------------------------------+)"
     },
     {
@@ -3609,7 +3798,7 @@
       "source_file": "PRD.md",
       "source_location": "L1048",
       "id": "kiroku_prd_15_1_github_actions_workflow_github_workflows_ci_yml",
-      "community": 11,
+      "community": 64,
       "norm_label": "15.1 github actions workflow: `.github/workflows/ci.yml`"
     },
     {
@@ -3618,7 +3807,7 @@
       "source_file": "PRD.md",
       "source_location": "L1049",
       "id": "kiroku_prd_codeblock_36",
-      "community": 11,
+      "community": 64,
       "norm_label": "code:yaml (name: continuous integration & deployment)"
     },
     {
@@ -3735,7 +3924,7 @@
       "source_file": "PRD.md",
       "source_location": "L1215",
       "id": "kiroku_prd_18_future_roadmap",
-      "community": 53,
+      "community": 4,
       "norm_label": "18. future roadmap"
     },
     {
@@ -3744,7 +3933,7 @@
       "source_file": "PRD.md",
       "source_location": "L1217",
       "id": "kiroku_prd_codeblock_40",
-      "community": 53,
+      "community": 4,
       "norm_label": "code:block40 (+--------------------------------------------------------+)"
     },
     {
@@ -9404,9 +9593,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L686",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_advancedsearchmanga",
-      "target": "manga_manga_controller_upsertmangabatch",
-      "confidence_score": 1.0
+      "target": "manga_manga_controller_upsertmangabatch"
     },
     {
       "relation": "calls",
@@ -9624,9 +9813,9 @@
       "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L689",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "manga_manga_controller_advancedsearchmanga",
-      "target": "manga_manga_controller_mapmangaentitieswithstats",
-      "confidence_score": 1.0
+      "target": "manga_manga_controller_mapmangaentitieswithstats"
     },
     {
       "relation": "calls",
@@ -10222,9 +10411,9 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L281",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_mangadex_service_mangadexservice",
-      "target": "services_mangadex_service_mangadexservice_advancedsearchmanga",
-      "confidence_score": 1.0
+      "target": "services_mangadex_service_mangadexservice_advancedsearchmanga"
     },
     {
       "relation": "method",
@@ -10374,9 +10563,9 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L363",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_mangadex_service_mangadexservice_advancedsearchmanga",
-      "target": "services_mangadex_service_mangadexservice_fetchwithcache",
-      "confidence_score": 1.0
+      "target": "services_mangadex_service_mangadexservice_fetchwithcache"
     },
     {
       "relation": "calls",
@@ -10462,9 +10651,9 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L281",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_mangadex_service_mangadexservice_advancedsearchmanga",
-      "target": "types_mangadex_types_mangadexcollectionresponse",
-      "confidence_score": 1.0
+      "target": "types_mangadex_types_mangadexcollectionresponse"
     },
     {
       "relation": "references",
@@ -10473,9 +10662,9 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L281",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_mangadex_service_mangadexservice_advancedsearchmanga",
-      "target": "types_mangadex_types_mangadexmangaentity",
-      "confidence_score": 1.0
+      "target": "types_mangadex_types_mangadexmangaentity"
     },
     {
       "relation": "references",
@@ -11690,6 +11879,17 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "frontend_components_theme_themeselector_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -11727,6 +11927,17 @@
       "confidence_score": 1.0,
       "source": "frontend_app_manga_page_tsx",
       "target": "manga_page_mangacatalogpage"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_app_manga_page_tsx",
+      "target": "theme_themeselector_themeselector",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -11965,9 +12176,9 @@
       "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_explore_leftfilterpanel_tsx",
-      "target": "explore_mangacard_mangadata",
-      "confidence_score": 1.0
+      "target": "explore_mangacard_mangadata"
     },
     {
       "relation": "imports_from",
@@ -11976,9 +12187,9 @@
       "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_explore_leftfilterpanel_tsx",
-      "target": "frontend_components_explore_mangacard_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_components_explore_mangacard_tsx"
     },
     {
       "relation": "imports_from",
@@ -11987,9 +12198,9 @@
       "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_explore_leftfilterpanel_tsx",
-      "target": "frontend_utils_api_ts",
-      "confidence_score": 1.0
+      "target": "frontend_utils_api_ts"
     },
     {
       "relation": "imports",
@@ -11998,9 +12209,9 @@
       "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_explore_leftfilterpanel_tsx",
-      "target": "utils_api_apifetch",
-      "confidence_score": 1.0
+      "target": "utils_api_apifetch"
     },
     {
       "relation": "contains",
@@ -12930,6 +13141,468 @@
       "weight": 1.0,
       "source": "providers_sessionprovider_sessionprovider",
       "target": "hooks_useauthstore_useauthstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/aot.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_aot_ts",
+      "target": "frontend_components_theme_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/aot.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_components_theme_aot_ts",
+      "target": "theme_aot_aottheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/aot.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_aot_ts",
+      "target": "theme_types_mangatheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "frontend_components_theme_aot_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "theme_aot_aottheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/dbz.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_dbz_ts",
+      "target": "frontend_components_theme_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/dbz.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_components_theme_dbz_ts",
+      "target": "theme_dbz_dbztheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/dbz.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_dbz_ts",
+      "target": "theme_types_mangatheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "frontend_components_theme_dbz_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "theme_dbz_dbztheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/default.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_default_ts",
+      "target": "frontend_components_theme_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/default.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_components_theme_default_ts",
+      "target": "theme_default_defaulttheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/default.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_default_ts",
+      "target": "theme_types_mangatheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "frontend_components_theme_default_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "theme_default_defaulttheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/demonslayer.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_demonslayer_ts",
+      "target": "frontend_components_theme_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/demonslayer.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_components_theme_demonslayer_ts",
+      "target": "theme_demonslayer_demonslayertheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/demonslayer.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_demonslayer_ts",
+      "target": "theme_types_mangatheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "frontend_components_theme_demonslayer_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "theme_demonslayer_demonslayertheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "frontend_components_theme_jujutsukaisen_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "frontend_components_theme_naruto_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "frontend_components_theme_onepiece_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "frontend_components_theme_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "theme_index_manga_themes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "theme_jujutsukaisen_jujutsukaisentheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "theme_naruto_narutotheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "theme_onepiece_onepiecetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/index.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_components_theme_index_ts",
+      "target": "theme_types_mangatheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/ThemeSelector.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_theme_themeselector_tsx",
+      "target": "frontend_components_theme_index_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/ThemeSelector.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_theme_themeselector_tsx",
+      "target": "theme_index_manga_themes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/jujutsukaisen.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_jujutsukaisen_ts",
+      "target": "frontend_components_theme_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/jujutsukaisen.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_components_theme_jujutsukaisen_ts",
+      "target": "theme_jujutsukaisen_jujutsukaisentheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/jujutsukaisen.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_jujutsukaisen_ts",
+      "target": "theme_types_mangatheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/naruto.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_naruto_ts",
+      "target": "frontend_components_theme_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/naruto.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_components_theme_naruto_ts",
+      "target": "theme_naruto_narutotheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/naruto.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_naruto_ts",
+      "target": "theme_types_mangatheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/onepiece.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_onepiece_ts",
+      "target": "frontend_components_theme_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/onepiece.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_components_theme_onepiece_ts",
+      "target": "theme_onepiece_onepiecetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/onepiece.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_onepiece_ts",
+      "target": "theme_types_mangatheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/ThemeSelector.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_components_theme_themeselector_tsx",
+      "target": "theme_themeselector_themeselector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/ThemeSelector.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_components_theme_themeselector_tsx",
+      "target": "theme_themeselector_themeselectorprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/theme/types.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_components_theme_types_ts",
+      "target": "theme_types_mangatheme",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -17286,5 +17959,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b54c257cb7e42ac937d0c94252d40938a715127f"
+  "built_at_commit": "8a88d14b1fe81c703b908b9a95ae4778be841812"
 }
