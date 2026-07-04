@@ -18,6 +18,8 @@ export default function MangaCatalogPage() {
     language: "",
     minChapters: 0,
     maxChapters: 1000,
+    demographics: [],
+    contentRatings: [],
   });
 
   // We define isSearchActive as true when any search or filter parameter is set (aside from the defaults)
@@ -27,12 +29,14 @@ export default function MangaCatalogPage() {
       filters.genre ||
       filters.status ||
       filters.language ||
+      (filters.demographics && filters.demographics.length > 0) ||
+      (filters.contentRatings && filters.contentRatings.length > 0) ||
       filters.minChapters > 0 ||
       filters.maxChapters < 1000
     );
   }, [filters]);
 
-  // Query search/filter results when active
+  // Query search/filter results when active using the backend's /manga/search advanced search route
   const { data: searchResults = [], isLoading, isError } = useQuery<MangaData[]>({
     queryKey: [
       "mangaSearch",
@@ -40,18 +44,26 @@ export default function MangaCatalogPage() {
       filters.genre,
       filters.status,
       filters.language,
+      filters.demographics?.join(","),
+      filters.contentRatings?.join(","),
     ],
     queryFn: async () => {
       const params = new URLSearchParams();
       if (filters.search) params.append("q", filters.search);
-      if (filters.genre) params.append("genre", filters.genre);
+      if (filters.genre) params.append("genres", filters.genre); // Backend advanced search expects genres parameter
       if (filters.status) params.append("status", filters.status);
       if (filters.language) params.append("language", filters.language);
+      if (filters.demographics && filters.demographics.length > 0) {
+        params.append("demographics", filters.demographics.join(","));
+      }
+      if (filters.contentRatings && filters.contentRatings.length > 0) {
+        params.append("contentRatings", filters.contentRatings.join(","));
+      }
       
       // Fetch up to 100 results from MangaDex to allow local filtering on frontend
       params.append("limit", "100");
 
-      const res = await apiFetch(`/manga?${params.toString()}`);
+      const res = await apiFetch(`/manga/search?${params.toString()}`);
       if (!res.ok) {
         throw new Error("Failed to search/filter manga");
       }
@@ -112,7 +124,7 @@ export default function MangaCatalogPage() {
           {/* Right Column: Dynamic Content Feed Panel (col-span-9 or col-span-8 on desktop) */}
           <div className="lg:col-span-9">
             <RightContentPane
-              key={`${filters.search}-${filters.genre}-${filters.status}-${filters.language}`}
+              key={`${filters.search}-${filters.genre}-${filters.status}-${filters.language}-${filters.demographics?.join(",")}-${filters.contentRatings?.join(",")}`}
               isSearchActive={isSearchActive}
               searchQuery={filters.search}
               searchResults={finalFilteredResults}

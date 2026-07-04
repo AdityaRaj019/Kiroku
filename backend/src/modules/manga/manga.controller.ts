@@ -664,116 +664,44 @@ export async function advancedSearchManga(
 ): Promise<void> {
   try {
     const filters = req.query as unknown as AdvancedSearchQueryInput;
+    const { q, page = 1, limit = 20, genres, demographics, contentRatings, status, language, year } = filters;
 
-    // Build dynamic Prisma where clause — all conditions are AND-combined
-    const where: Prisma.MangaWhereInput = {};
+    // Calculate offset based on page and limit
+    const offset = (page - 1) * limit;
 
-    // Text search (title OR synopsis, case-insensitive)
-    if (filters.q) {
-      where.OR = [
-        { title: { contains: filters.q, mode: "insensitive" } },
-        { synopsis: { contains: filters.q, mode: "insensitive" } },
-      ];
-    }
+    // 1. Query MangaDex using our new service method
+    const mangaDexResponse = await mangaDexService.advancedSearchManga({
+      query: q,
+      limit,
+      offset,
+      genres,
+      demographics,
+      contentRatings,
+      status,
+      language,
+      year,
+    });
 
-    // Genre filter — manga must contain ALL selected genres
-    if (filters.genres && filters.genres.length > 0) {
-      where.genres = { hasEvery: filters.genres };
-    }
+    // 2. Upsert search results into local DB for future reference
+    const localRecords = await upsertMangaBatch(mangaDexResponse.data);
 
-    // Format enum filter
-    if (filters.format) {
-      where.format = filters.format as any;
-    }
-
-    // Country filter (case-insensitive exact match)
-    if (filters.country) {
-      where.country = { equals: filters.country, mode: "insensitive" };
-    }
-
-    // Release year (exact match)
-    if (filters.year !== undefined) {
-      where.releaseYear = filters.year;
-    }
-
-    // Source material (partial text match)
-    if (filters.sourceMaterial) {
-      where.sourceMaterial = { contains: filters.sourceMaterial, mode: "insensitive" };
-    }
-
-    // Chapter count range
-    if (filters.minChapters !== undefined || filters.maxChapters !== undefined) {
-      const chapterFilter: { gte?: number; lte?: number } = {};
-      if (filters.minChapters !== undefined) chapterFilter.gte = filters.minChapters;
-      if (filters.maxChapters !== undefined) chapterFilter.lte = filters.maxChapters;
-      where.chapterCount = chapterFilter;
-    }
-
-    // Episode count range
-    if (filters.minEpisodes !== undefined || filters.maxEpisodes !== undefined) {
-      const episodeFilter: { gte?: number; lte?: number } = {};
-      if (filters.minEpisodes !== undefined) episodeFilter.gte = filters.minEpisodes;
-      if (filters.maxEpisodes !== undefined) episodeFilter.lte = filters.maxEpisodes;
-      where.episodeCount = episodeFilter;
-    }
-
-    // Reading sources — manga available on ANY of the selected platforms
-    if (filters.readingOn && filters.readingOn.length > 0) {
-      where.readingSources = { hasSome: filters.readingOn };
-    }
-
-    // Streaming sources — available on ANY of the selected platforms
-    if (filters.streamingOn && filters.streamingOn.length > 0) {
-      where.streamingSources = { hasSome: filters.streamingOn };
-    }
-
-    const { page, limit } = filters;
-
-    // Run count and fetch concurrently for optimal response time
-    const [data, total] = await Promise.all([
-      prisma.manga.findMany({
-        where,
-        skip: (page - 1) * limit,
-        take: limit,
-        orderBy: { updatedAt: "desc" },
-        select: {
-          id: true,
-          sourceId: true,
-          title: true,
-          slug: true,
-          coverUrl: true,
-          synopsis: true,
-          author: true,
-          status: true,
-          genres: true,
-          format: true,
-          country: true,
-          releaseYear: true,
-          chapterCount: true,
-          episodeCount: true,
-          readingSources: true,
-          streamingSources: true,
-          isRecommended: true,
-          sourceUrl: true,
-          createdAt: true,
-          updatedAt: true,
-        },
-      }),
-      prisma.manga.count({ where }),
-    ]);
-
-    const totalPages = Math.ceil(total / limit);
+    // 3. Build enriched response combining local IDs with MangaDex data and stats
+    const results = await mapMangaEntitiesWithStats(mangaDexResponse.data, localRecords);
 
     res.status(200).json({
-      data,
+      data: results,
       pagination: {
-        page,
-        limit,
-        total,
-        totalPages,
+        limit: mangaDexResponse.limit,
+        offset: mangaDexResponse.offset,
+        total: mangaDexResponse.total,
       },
     });
   } catch (err) {
+    if (err instanceof MangaDexApiError) {
+      const statusCode = err.isRateLimit ? 429 : err.statusCode >= 500 ? 502 : 500;
+      next(new AppError(statusCode, err.message));
+      return;
+    }
     next(err);
   }
 }
