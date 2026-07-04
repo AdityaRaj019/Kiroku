@@ -4,15 +4,15 @@ export const demonslayerTheme: MangaTheme = {
   id: "demonslayer",
   name: "Demon Slayer",
   colors: {
-    background: "#F0FDF4",     // Calm water mint green
-    cardBackground: "#FFFFFF", // Clean card white
-    textPrimary: "#0F172A",    // Nichirin dark slate
+    background: "#CCFBF1",     // Calm mint water
+    cardBackground: "#F0FDFA", // Mist water-blue card
+    textPrimary: "#115E59",    // Deep Nichirin slate
     textSecondary: "#0D9488",  // Water breathing teal
     primary: "#0D9488",        // Water Breathing Teal
     primaryHover: "#0F766E",
     accent: "#E11D48",         // Sun breathing crimson
-    border: "#0F172A",
-    shadow: "#0F172A",
+    border: "#115E59",         // Deep slate-teal borders
+    shadow: "#115E59",
     badgeBg: "#E11D48",
     badgeText: "#FFFFFF",
   },
