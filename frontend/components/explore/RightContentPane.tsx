@@ -78,8 +78,8 @@ export const RightContentPane: React.FC<RightContentPaneProps> = ({
             </div>
           ) : (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-              {searchResults.map((manga) => (
-                <MangaCard key={manga.sourceId} manga={manga} />
+              {searchResults.map((manga, idx) => (
+                <MangaCard key={manga.sourceId} manga={manga} priority={idx < 4} />
               ))}
             </div>
           )}
@@ -166,9 +166,9 @@ export const RightContentPane: React.FC<RightContentPaneProps> = ({
               {trendingManga.length === 0 ? (
                 <p className="text-sm text-zinc-500 py-6">No trending manga found for this period.</p>
               ) : (
-                trendingManga.map((manga) => (
+                trendingManga.map((manga, idx) => (
                   <div key={manga.sourceId} className="w-60 shrink-0">
-                    <MangaCard manga={manga} />
+                    <MangaCard manga={manga} priority={idx < 4} />
                   </div>
                 ))
               )}
