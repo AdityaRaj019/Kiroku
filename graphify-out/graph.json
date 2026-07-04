@@ -342,7 +342,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validation_middleware_ts",
-      "community": 31,
+      "community": 0,
       "norm_label": "validation.middleware.ts"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L11",
       "id": "middlewares_validation_middleware_validate",
-      "community": 31,
+      "community": 0,
       "norm_label": "validate()"
     },
     {
@@ -441,7 +441,7 @@
       "source_file": "backend/src/modules/auth/auth.routes.ts",
       "source_location": "L7",
       "id": "auth_auth_routes_authrouter",
-      "community": 31,
+      "community": 0,
       "norm_label": "authrouter"
     },
     {
@@ -853,7 +853,7 @@
       "label": "SearchQueryInput",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L36",
+      "source_location": "L40",
       "id": "manga_manga_schema_searchqueryinput",
       "community": 55,
       "norm_label": "searchqueryinput"
@@ -862,7 +862,7 @@
       "label": "chaptersQuerySchema",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L48",
+      "source_location": "L52",
       "id": "manga_manga_schema_chaptersqueryschema",
       "community": 55,
       "norm_label": "chaptersqueryschema"
@@ -871,7 +871,7 @@
       "label": "ChaptersQueryInput",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L69",
+      "source_location": "L73",
       "id": "manga_manga_schema_chaptersqueryinput",
       "community": 55,
       "norm_label": "chaptersqueryinput"
@@ -880,7 +880,7 @@
       "label": "mangaIdParamSchema",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L77",
+      "source_location": "L81",
       "id": "manga_manga_schema_mangaidparamschema",
       "community": 55,
       "norm_label": "mangaidparamschema"
@@ -889,7 +889,7 @@
       "label": "MangaIdParam",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L81",
+      "source_location": "L85",
       "id": "manga_manga_schema_mangaidparam",
       "community": 55,
       "norm_label": "mangaidparam"
@@ -898,7 +898,7 @@
       "label": "showcaseQuerySchema",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L88",
+      "source_location": "L92",
       "id": "manga_manga_schema_showcasequeryschema",
       "community": 55,
       "norm_label": "showcasequeryschema"
@@ -907,7 +907,7 @@
       "label": "ShowcaseQueryInput",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L92",
+      "source_location": "L96",
       "id": "manga_manga_schema_showcasequeryinput",
       "community": 55,
       "norm_label": "showcasequeryinput"
@@ -916,7 +916,7 @@
       "label": "MangaFormatEnum",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L96",
+      "source_location": "L100",
       "id": "manga_manga_schema_mangaformatenum",
       "community": 55,
       "norm_label": "mangaformatenum"
@@ -925,7 +925,7 @@
       "label": "splitCommaSeparated()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L109",
+      "source_location": "L113",
       "id": "manga_manga_schema_splitcommaseparated",
       "community": 55,
       "norm_label": "splitcommaseparated()"
@@ -934,7 +934,7 @@
       "label": "advancedSearchQuerySchema",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L132",
+      "source_location": "L136",
       "id": "manga_manga_schema_advancedsearchqueryschema",
       "community": 55,
       "norm_label": "advancedsearchqueryschema"
@@ -943,7 +943,7 @@
       "label": "AdvancedSearchQueryInput",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.schema.ts",
-      "source_location": "L227",
+      "source_location": "L235",
       "id": "manga_manga_schema_advancedsearchqueryinput",
       "community": 55,
       "norm_label": "advancedsearchqueryinput"
@@ -1039,10 +1039,19 @@
       "norm_label": ".searchmanga()"
     },
     {
+      "label": ".advancedSearchManga()",
+      "file_type": "code",
+      "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L281",
+      "id": "services_mangadex_service_mangadexservice_advancedsearchmanga",
+      "community": 49,
+      "norm_label": ".advancedsearchmanga()"
+    },
+    {
       "label": ".getMangaDetails()",
       "file_type": "code",
       "source_file": "backend/src/services/mangadex.service.ts",
-      "source_location": "L254",
+      "source_location": "L376",
       "id": "services_mangadex_service_mangadexservice_getmangadetails",
       "community": 49,
       "norm_label": ".getmangadetails()"
@@ -1051,7 +1060,7 @@
       "label": ".getMangaChapters()",
       "file_type": "code",
       "source_file": "backend/src/services/mangadex.service.ts",
-      "source_location": "L284",
+      "source_location": "L406",
       "id": "services_mangadex_service_mangadexservice_getmangachapters",
       "community": 49,
       "norm_label": ".getmangachapters()"
@@ -1060,7 +1069,7 @@
       "label": ".getPopularManga()",
       "file_type": "code",
       "source_file": "backend/src/services/mangadex.service.ts",
-      "source_location": "L312",
+      "source_location": "L434",
       "id": "services_mangadex_service_mangadexservice_getpopularmanga",
       "community": 49,
       "norm_label": ".getpopularmanga()"
@@ -1069,7 +1078,7 @@
       "label": ".getMangaListByIds()",
       "file_type": "code",
       "source_file": "backend/src/services/mangadex.service.ts",
-      "source_location": "L351",
+      "source_location": "L473",
       "id": "services_mangadex_service_mangadexservice_getmangalistbyids",
       "community": 49,
       "norm_label": ".getmangalistbyids()"
@@ -1078,7 +1087,7 @@
       "label": ".getMangaStatistics()",
       "file_type": "code",
       "source_file": "backend/src/services/mangadex.service.ts",
-      "source_location": "L392",
+      "source_location": "L514",
       "id": "services_mangadex_service_mangadexservice_getmangastatistics",
       "community": 49,
       "norm_label": ".getmangastatistics()"
@@ -1087,7 +1096,7 @@
       "label": ".getMangaChapterCount()",
       "file_type": "code",
       "source_file": "backend/src/services/mangadex.service.ts",
-      "source_location": "L444",
+      "source_location": "L566",
       "id": "services_mangadex_service_mangadexservice_getmangachaptercount",
       "community": 49,
       "norm_label": ".getmangachaptercount()"
@@ -1096,7 +1105,7 @@
       "label": ".getMangaChapterCounts()",
       "file_type": "code",
       "source_file": "backend/src/services/mangadex.service.ts",
-      "source_location": "L497",
+      "source_location": "L619",
       "id": "services_mangadex_service_mangadexservice_getmangachaptercounts",
       "community": 49,
       "norm_label": ".getmangachaptercounts()"
@@ -1105,7 +1114,7 @@
       "label": "globalForMangaDex",
       "file_type": "code",
       "source_file": "backend/src/services/mangadex.service.ts",
-      "source_location": "L516",
+      "source_location": "L638",
       "id": "services_mangadex_service_globalformangadex",
       "community": 49,
       "norm_label": "globalformangadex"
@@ -1771,7 +1780,7 @@
       "label": "FilterState",
       "file_type": "code",
       "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
-      "source_location": "L6",
+      "source_location": "L10",
       "id": "explore_leftfilterpanel_filterstate",
       "community": 9,
       "norm_label": "filterstate"
@@ -1780,7 +1789,7 @@
       "label": "LeftFilterPanelProps",
       "file_type": "code",
       "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
-      "source_location": "L15",
+      "source_location": "L21",
       "id": "explore_leftfilterpanel_leftfilterpanelprops",
       "community": 9,
       "norm_label": "leftfilterpanelprops"
@@ -1789,7 +1798,7 @@
       "label": "POPULAR_GENRES",
       "file_type": "code",
       "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
-      "source_location": "L20",
+      "source_location": "L26",
       "id": "explore_leftfilterpanel_popular_genres",
       "community": 9,
       "norm_label": "popular_genres"
@@ -1798,7 +1807,7 @@
       "label": "LANGUAGES",
       "file_type": "code",
       "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
-      "source_location": "L34",
+      "source_location": "L40",
       "id": "explore_leftfilterpanel_languages",
       "community": 9,
       "norm_label": "languages"
@@ -1807,7 +1816,7 @@
       "label": "STATUS_OPTIONS",
       "file_type": "code",
       "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
-      "source_location": "L42",
+      "source_location": "L48",
       "id": "explore_leftfilterpanel_status_options",
       "community": 9,
       "norm_label": "status_options"
@@ -1816,7 +1825,7 @@
       "label": "LeftFilterPanel()",
       "file_type": "code",
       "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
-      "source_location": "L50",
+      "source_location": "L56",
       "id": "explore_leftfilterpanel_leftfilterpanel",
       "community": 9,
       "norm_label": "leftfilterpanel()"
@@ -1827,7 +1836,7 @@
       "source_file": "frontend/components/explore/MangaCard.tsx",
       "source_location": "L1",
       "id": "frontend_components_explore_mangacard_tsx",
-      "community": 62,
+      "community": 9,
       "norm_label": "mangacard.tsx"
     },
     {
@@ -1836,7 +1845,7 @@
       "source_file": "frontend/components/explore/MangaCard.tsx",
       "source_location": "L8",
       "id": "explore_mangacard_mangadata",
-      "community": 62,
+      "community": 9,
       "norm_label": "mangadata"
     },
     {
@@ -1845,16 +1854,16 @@
       "source_file": "frontend/components/explore/MangaCard.tsx",
       "source_location": "L24",
       "id": "explore_mangacard_mangacardprops",
-      "community": 62,
+      "community": 9,
       "norm_label": "mangacardprops"
     },
     {
       "label": "MangaCard()",
       "file_type": "code",
       "source_file": "frontend/components/explore/MangaCard.tsx",
-      "source_location": "L28",
+      "source_location": "L29",
       "id": "explore_mangacard_mangacard",
-      "community": 62,
+      "community": 9,
       "norm_label": "mangacard()"
     },
     {
@@ -1863,7 +1872,7 @@
       "source_file": "frontend/components/explore/RightContentPane.tsx",
       "source_location": "L1",
       "id": "frontend_components_explore_rightcontentpane_tsx",
-      "community": 62,
+      "community": 9,
       "norm_label": "rightcontentpane.tsx"
     },
     {
@@ -1872,7 +1881,7 @@
       "source_file": "frontend/components/explore/RightContentPane.tsx",
       "source_location": "L10",
       "id": "explore_rightcontentpane_rightcontentpaneprops",
-      "community": 62,
+      "community": 9,
       "norm_label": "rightcontentpaneprops"
     },
     {
@@ -1881,7 +1890,7 @@
       "source_file": "frontend/components/explore/RightContentPane.tsx",
       "source_location": "L18",
       "id": "explore_rightcontentpane_rightcontentpane",
-      "community": 62,
+      "community": 9,
       "norm_label": "rightcontentpane()"
     },
     {
@@ -2250,7 +2259,7 @@
       "source_file": "frontend/components/layout/Footer.tsx",
       "source_location": "L1",
       "id": "frontend_components_layout_footer_tsx",
-      "community": 9,
+      "community": 62,
       "norm_label": "footer.tsx"
     },
     {
@@ -2259,7 +2268,7 @@
       "source_file": "frontend/components/layout/Footer.tsx",
       "source_location": "L6",
       "id": "layout_footer_githubicon",
-      "community": 9,
+      "community": 62,
       "norm_label": "githubicon()"
     },
     {
@@ -2268,7 +2277,7 @@
       "source_file": "frontend/components/layout/Footer.tsx",
       "source_location": "L13",
       "id": "layout_footer_discordicon",
-      "community": 9,
+      "community": 62,
       "norm_label": "discordicon()"
     },
     {
@@ -2277,7 +2286,7 @@
       "source_file": "frontend/components/layout/Footer.tsx",
       "source_location": "L19",
       "id": "layout_footer_redditicon",
-      "community": 9,
+      "community": 62,
       "norm_label": "redditicon()"
     },
     {
@@ -2286,7 +2295,7 @@
       "source_file": "frontend/components/layout/Footer.tsx",
       "source_location": "L25",
       "id": "layout_footer_footer",
-      "community": 9,
+      "community": 62,
       "norm_label": "footer()"
     },
     {
@@ -2502,7 +2511,7 @@
       "source_file": "frontend/hooks/useAuthStore.ts",
       "source_location": "L1",
       "id": "frontend_hooks_useauthstore_ts",
-      "community": 59,
+      "community": 61,
       "norm_label": "useauthstore.ts"
     },
     {
@@ -2511,7 +2520,7 @@
       "source_file": "frontend/hooks/useAuthStore.ts",
       "source_location": "L6",
       "id": "hooks_useauthstore_authstate",
-      "community": 59,
+      "community": 61,
       "norm_label": "authstate"
     },
     {
@@ -2520,7 +2529,7 @@
       "source_file": "frontend/hooks/useAuthStore.ts",
       "source_location": "L20",
       "id": "hooks_useauthstore_authactions",
-      "community": 59,
+      "community": 61,
       "norm_label": "authactions"
     },
     {
@@ -2529,7 +2538,7 @@
       "source_file": "frontend/hooks/useAuthStore.ts",
       "source_location": "L33",
       "id": "hooks_useauthstore_initialstate",
-      "community": 59,
+      "community": 61,
       "norm_label": "initialstate"
     },
     {
@@ -2574,7 +2583,7 @@
       "source_file": "frontend/types/auth.ts",
       "source_location": "L9",
       "id": "types_auth_userpayload",
-      "community": 59,
+      "community": 61,
       "norm_label": "userpayload"
     },
     {
@@ -2646,7 +2655,7 @@
       "source_file": "frontend/utils/api.ts",
       "source_location": "L1",
       "id": "frontend_utils_api_ts",
-      "community": 61,
+      "community": 59,
       "norm_label": "api.ts"
     },
     {
@@ -2655,7 +2664,7 @@
       "source_file": "frontend/utils/api.ts",
       "source_location": "L24",
       "id": "utils_api_executerefresh",
-      "community": 61,
+      "community": 59,
       "norm_label": "executerefresh()"
     },
     {
@@ -2664,7 +2673,7 @@
       "source_file": "frontend/utils/api.ts",
       "source_location": "L53",
       "id": "utils_api_refreshaccesstoken",
-      "community": 61,
+      "community": 59,
       "norm_label": "refreshaccesstoken()"
     },
     {
@@ -2673,7 +2682,7 @@
       "source_file": "frontend/utils/api.ts",
       "source_location": "L91",
       "id": "utils_api_apifetch",
-      "community": 61,
+      "community": 59,
       "norm_label": "apifetch()"
     },
     {
@@ -2979,7 +2988,7 @@
       "source_file": "PRD.md",
       "source_location": "L172",
       "id": "kiroku_prd_7_5_4_social_read_along_room_flow",
-      "community": 5,
+      "community": 64,
       "norm_label": "7.5.4 social \"read-along\" room flow"
     },
     {
@@ -2988,7 +2997,7 @@
       "source_file": "PRD.md",
       "source_location": "L173",
       "id": "kiroku_prd_codeblock_8",
-      "community": 5,
+      "community": 64,
       "norm_label": "code:block8 ([social hub] \u2794 [create room] \u2794 [select manga & set target ch)"
     },
     {
@@ -3123,7 +3132,7 @@
       "source_file": "PRD.md",
       "source_location": "L315",
       "id": "kiroku_prd_9_technical_architecture",
-      "community": 5,
+      "community": 64,
       "norm_label": "9. technical architecture"
     },
     {
@@ -3132,7 +3141,7 @@
       "source_file": "PRD.md",
       "source_location": "L319",
       "id": "kiroku_prd_codeblock_15",
-      "community": 5,
+      "community": 64,
       "norm_label": "code:block15 (+-------------------+)"
     },
     {
@@ -3141,7 +3150,7 @@
       "source_file": "PRD.md",
       "source_location": "L349",
       "id": "kiroku_prd_infrastructure_specs",
-      "community": 5,
+      "community": 64,
       "norm_label": "infrastructure specs:"
     },
     {
@@ -3267,7 +3276,7 @@
       "source_file": "PRD.md",
       "source_location": "L791",
       "id": "kiroku_prd_codeblock_22",
-      "community": 48,
+      "community": 53,
       "norm_label": "code:json ({)"
     },
     {
@@ -3285,7 +3294,7 @@
       "source_file": "PRD.md",
       "source_location": "L808",
       "id": "kiroku_prd_codeblock_23",
-      "community": 11,
+      "community": 53,
       "norm_label": "code:json ({)"
     },
     {
@@ -3312,7 +3321,7 @@
       "source_file": "PRD.md",
       "source_location": "L837",
       "id": "kiroku_prd_codeblock_26",
-      "community": 53,
+      "community": 11,
       "norm_label": "code:json ({)"
     },
     {
@@ -3321,7 +3330,7 @@
       "source_file": "PRD.md",
       "source_location": "L853",
       "id": "kiroku_prd_codeblock_27",
-      "community": 53,
+      "community": 11,
       "norm_label": "code:json ({)"
     },
     {
@@ -3366,7 +3375,7 @@
       "source_file": "PRD.md",
       "source_location": "L877",
       "id": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
-      "community": 11,
+      "community": 53,
       "norm_label": "11.4 admin/system control endpoints (requires api key header: `x-admin-key`)"
     },
     {
@@ -3375,7 +3384,7 @@
       "source_file": "PRD.md",
       "source_location": "L880",
       "id": "kiroku_prd_codeblock_31",
-      "community": 4,
+      "community": 53,
       "norm_label": "code:json ({ \"queuename\": \"notification-dispatcher\", \"jobid\": \"job-1094)"
     },
     {
@@ -3384,7 +3393,7 @@
       "source_file": "PRD.md",
       "source_location": "L884",
       "id": "kiroku_prd_codeblock_32",
-      "community": 11,
+      "community": 53,
       "norm_label": "code:json ({ \"status\": \"retried\", \"jobid\": \"job-1094\" })"
     },
     {
@@ -3393,7 +3402,7 @@
       "source_file": "PRD.md",
       "source_location": "L890",
       "id": "kiroku_prd_codeblock_33",
-      "community": 11,
+      "community": 53,
       "norm_label": "code:json ({)"
     },
     {
@@ -3510,7 +3519,7 @@
       "source_file": "PRD.md",
       "source_location": "L972",
       "id": "kiroku_prd_13_scalability_plan",
-      "community": 64,
+      "community": 4,
       "norm_label": "13. scalability plan"
     },
     {
@@ -3519,7 +3528,7 @@
       "source_file": "PRD.md",
       "source_location": "L976",
       "id": "kiroku_prd_13_1_staggered_conditional_polling",
-      "community": 64,
+      "community": 4,
       "norm_label": "13.1 staggered & conditional polling"
     },
     {
@@ -3528,7 +3537,7 @@
       "source_file": "PRD.md",
       "source_location": "L984",
       "id": "kiroku_prd_13_2_queue_prioritization_batching",
-      "community": 64,
+      "community": 4,
       "norm_label": "13.2 queue prioritization & batching"
     },
     {
@@ -3537,7 +3546,7 @@
       "source_file": "PRD.md",
       "source_location": "L988",
       "id": "kiroku_prd_13_3_notification_deduplication_keys",
-      "community": 64,
+      "community": 4,
       "norm_label": "13.3 notification deduplication keys"
     },
     {
@@ -3582,7 +3591,7 @@
       "source_file": "PRD.md",
       "source_location": "L1017",
       "id": "kiroku_prd_15_ci_cd_strategy",
-      "community": 53,
+      "community": 11,
       "norm_label": "15. ci/cd strategy"
     },
     {
@@ -3591,7 +3600,7 @@
       "source_file": "PRD.md",
       "source_location": "L1021",
       "id": "kiroku_prd_codeblock_35",
-      "community": 53,
+      "community": 11,
       "norm_label": "code:block35 (+----------------------------------+)"
     },
     {
@@ -3600,7 +3609,7 @@
       "source_file": "PRD.md",
       "source_location": "L1048",
       "id": "kiroku_prd_15_1_github_actions_workflow_github_workflows_ci_yml",
-      "community": 53,
+      "community": 11,
       "norm_label": "15.1 github actions workflow: `.github/workflows/ci.yml`"
     },
     {
@@ -3609,7 +3618,7 @@
       "source_file": "PRD.md",
       "source_location": "L1049",
       "id": "kiroku_prd_codeblock_36",
-      "community": 53,
+      "community": 11,
       "norm_label": "code:yaml (name: continuous integration & deployment)"
     },
     {
@@ -3726,7 +3735,7 @@
       "source_file": "PRD.md",
       "source_location": "L1215",
       "id": "kiroku_prd_18_future_roadmap",
-      "community": 4,
+      "community": 53,
       "norm_label": "18. future roadmap"
     },
     {
@@ -3735,7 +3744,7 @@
       "source_file": "PRD.md",
       "source_location": "L1217",
       "id": "kiroku_prd_codeblock_40",
-      "community": 4,
+      "community": 53,
       "norm_label": "code:block40 (+--------------------------------------------------------+)"
     },
     {
@@ -3977,7 +3986,7 @@
       "file_type": "code",
       "source_file": "frontend/components/explore/RightContentPane.tsx",
       "source_location": "L9",
-      "community": 62,
+      "community": 9,
       "norm_label": "trending_by_time",
       "id": "explore_rightcontentpane_trending_by_time"
     },
@@ -3986,7 +3995,7 @@
       "file_type": "code",
       "source_file": "frontend/components/explore/RightContentPane.tsx",
       "source_location": "L139",
-      "community": 62,
+      "community": 9,
       "norm_label": "top_5_all_time",
       "id": "explore_rightcontentpane_top_5_all_time"
     },
@@ -3995,7 +4004,7 @@
       "file_type": "code",
       "source_file": "frontend/components/explore/RightContentPane.tsx",
       "source_location": "L193",
-      "community": 62,
+      "community": 9,
       "norm_label": "top_20_highly_rated",
       "id": "explore_rightcontentpane_top_20_highly_rated"
     },
@@ -9393,6 +9402,17 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
+      "source_location": "L686",
+      "weight": 1.0,
+      "source": "manga_manga_controller_advancedsearchmanga",
+      "target": "manga_manga_controller_upsertmangabatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/manga/manga.controller.ts",
       "source_location": "L386",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -9596,6 +9616,17 @@
       "confidence_score": 1.0,
       "source": "manga_manga_controller_upsertmangabatch",
       "target": "utils_mangadex_helpers_slugify"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/manga/manga.controller.ts",
+      "source_location": "L689",
+      "weight": 1.0,
+      "source": "manga_manga_controller_advancedsearchmanga",
+      "target": "manga_manga_controller_mapmangaentitieswithstats",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -10189,6 +10220,16 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L281",
+      "weight": 1.0,
+      "source": "services_mangadex_service_mangadexservice",
+      "target": "services_mangadex_service_mangadexservice_advancedsearchmanga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L131",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -10241,9 +10282,9 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L444",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_mangadex_service_mangadexservice",
-      "target": "services_mangadex_service_mangadexservice_getmangachaptercount",
-      "confidence_score": 1.0
+      "target": "services_mangadex_service_mangadexservice_getmangachaptercount"
     },
     {
       "relation": "method",
@@ -10251,9 +10292,9 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L497",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_mangadex_service_mangadexservice",
-      "target": "services_mangadex_service_mangadexservice_getmangachaptercounts",
-      "confidence_score": 1.0
+      "target": "services_mangadex_service_mangadexservice_getmangachaptercounts"
     },
     {
       "relation": "method",
@@ -10331,6 +10372,17 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L363",
+      "weight": 1.0,
+      "source": "services_mangadex_service_mangadexservice_advancedsearchmanga",
+      "target": "services_mangadex_service_mangadexservice_fetchwithcache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L296",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -10402,6 +10454,28 @@
       "confidence_score": 1.0,
       "source": "services_mangadex_service_mangadexservice_searchmanga",
       "target": "types_mangadex_types_mangadexmangaentity"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L281",
+      "weight": 1.0,
+      "source": "services_mangadex_service_mangadexservice_advancedsearchmanga",
+      "target": "types_mangadex_types_mangadexcollectionresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/mangadex.service.ts",
+      "source_location": "L281",
+      "weight": 1.0,
+      "source": "services_mangadex_service_mangadexservice_advancedsearchmanga",
+      "target": "types_mangadex_types_mangadexmangaentity",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -11883,6 +11957,50 @@
       "confidence_score": 1.0,
       "source": "frontend_components_explore_leftfilterpanel_tsx",
       "target": "explore_leftfilterpanel_status_options"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_components_explore_leftfilterpanel_tsx",
+      "target": "explore_mangacard_mangadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_components_explore_leftfilterpanel_tsx",
+      "target": "frontend_components_explore_mangacard_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_explore_leftfilterpanel_tsx",
+      "target": "frontend_utils_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/explore/LeftFilterPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_explore_leftfilterpanel_tsx",
+      "target": "utils_api_apifetch",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17168,5 +17286,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8cdac1d7938b1e6a7adb8fa2fd8be9072a0f9569"
+  "built_at_commit": "b54c257cb7e42ac937d0c94252d40938a715127f"
 }
