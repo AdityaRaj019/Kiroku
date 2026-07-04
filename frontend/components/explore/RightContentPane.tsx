@@ -281,7 +281,7 @@ export const RightContentPane: React.FC<RightContentPaneProps> = ({
                           by {manga.author || "Unknown"}
                         </p>
                         <div className="flex items-center justify-between text-[10px] font-mono font-bold text-zinc-700">
-                          <span className="bg-zinc-100 border border-zinc-300 px-1 py-0.2 shrink-0">
+                          <span className="bg-zinc-100 border border-zinc-300 px-1 py-0.2 shrink-0 text-zinc-950">
                             {chaptersCount} CH.
                           </span>
                           <span className="text-[#CC0000] shrink-0">★ {typeof manga.rating === 'number' ? manga.rating.toFixed(1) : (manga.rating || "8.5")}</span>
