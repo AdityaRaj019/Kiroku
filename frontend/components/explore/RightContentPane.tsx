@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import { apiFetch } from "@/utils/api";
 import { MangaCard, MangaData } from "./MangaCard";
-import { Flame, Award, Grid2X2, Loader2, BookOpen } from "lucide-react";
+import { Flame, Award, Grid2X2, Loader2 } from "lucide-react";
 
 interface RightContentPaneProps {
   isSearchActive: boolean;
@@ -128,8 +128,8 @@ export const RightContentPane: React.FC<RightContentPaneProps> = ({
       {/* Default Discovery Feed blocks */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        {/* Left Col (8/12 width): Trending & Time Filter Tabs */}
-        <div className="lg:col-span-8 space-y-10">
+        {/* Left Col (9/12 width): Trending & Time Filter Tabs */}
+        <div className="lg:col-span-9 space-y-10">
           
           {/* Block 1: Trending Row with Time-Filtered Tabs */}
           <div className="bg-white border-4 border-zinc-950 p-6 shadow-[6px_6px_0px_#000] relative overflow-hidden">
@@ -167,7 +167,7 @@ export const RightContentPane: React.FC<RightContentPaneProps> = ({
                 <p className="text-sm text-zinc-500 py-6">No trending manga found for this period.</p>
               ) : (
                 trendingManga.map((manga) => (
-                  <div key={manga.sourceId} className="w-56 shrink-0">
+                  <div key={manga.sourceId} className="w-60 shrink-0">
                     <MangaCard manga={manga} />
                   </div>
                 ))
@@ -197,8 +197,8 @@ export const RightContentPane: React.FC<RightContentPaneProps> = ({
 
         </div>
 
-        {/* Right Col (4/12 width): Top 5 All-Time List */}
-        <div className="lg:col-span-4">
+        {/* Right Col (3/12 width): Top 5 All-Time List */}
+        <div className="lg:col-span-3">
           <div className="bg-white border-4 border-zinc-950 p-6 shadow-[6px_6px_0px_#000] sticky top-24">
             <div className="flex items-center gap-2 pb-4 border-b-2 border-zinc-950 mb-6">
               <Award className="w-5 h-5 text-[#CC0000]" />

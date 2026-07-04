@@ -61,17 +61,17 @@ export const MangaCard: React.FC<MangaCardProps> = ({ manga }) => {
           {/* Halftone Screentone Overlay */}
           <div className="absolute inset-0 bg-[radial-gradient(rgba(204,0,0,0.12)_1.5px,transparent_0)] bg-[size:8px_8px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-          {/* Status Badge */}
-          <div className="absolute top-2 left-2 z-10 bg-white border-2 border-zinc-950 px-2 py-0.5 text-[10px] font-bold font-sans tracking-widest uppercase shadow-[1px_1px_0px_#000]">
-            {status}
+          {/* Badges Overlay */}
+          <div className="absolute top-2 left-2 right-2 z-10 flex flex-wrap gap-1.5 pointer-events-none">
+            <span className="bg-white border-2 border-zinc-950 px-1.5 py-0.5 text-[9px] font-bold font-sans tracking-wider uppercase shadow-[1px_1px_0px_#000] pointer-events-auto shrink-0">
+              {status}
+            </span>
+            {demographicTag && (
+              <span className="bg-[#CC0000] text-white border-2 border-zinc-950 px-1.5 py-0.5 text-[9px] font-bold font-sans tracking-wider uppercase shadow-[1px_1px_0px_#000] pointer-events-auto shrink-0">
+                {demographicTag}
+              </span>
+            )}
           </div>
-
-          {/* Demographic Tag */}
-          {demographicTag && (
-            <div className="absolute top-2 right-2 z-10 bg-[#CC0000] text-white border-2 border-zinc-950 px-2 py-0.5 text-[10px] font-bold font-sans tracking-widest uppercase shadow-[1px_1px_0px_#000]">
-              {demographicTag}
-            </div>
-          )}
 
           {/* Rating Badge */}
           <div className="absolute bottom-2 right-2 z-10 bg-white border-2 border-zinc-950 px-2 py-0.5 text-xs font-bold font-mono flex items-center gap-1 shadow-[2px_2px_0px_#000]">
