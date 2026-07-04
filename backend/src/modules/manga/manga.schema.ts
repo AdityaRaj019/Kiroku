@@ -142,6 +142,10 @@ export const advancedSearchQuerySchema = z
       .optional(),
 
     genres: z.string().optional().transform(splitCommaSeparated),
+    demographics: z.string().optional().transform(splitCommaSeparated),
+    contentRatings: z.string().optional().transform(splitCommaSeparated),
+    status: z.string().optional(),
+    language: z.string().optional(),
 
     format: z
       .string()

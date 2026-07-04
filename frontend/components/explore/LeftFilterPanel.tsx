@@ -14,6 +14,8 @@ export interface FilterState {
   language: string;
   minChapters: number;
   maxChapters: number;
+  demographics?: string[];
+  contentRatings?: string[];
 }
 
 interface LeftFilterPanelProps {
@@ -60,6 +62,9 @@ export const LeftFilterPanel: React.FC<LeftFilterPanelProps> = ({
   const [debouncedInput, setDebouncedInput] = useState(filters.search);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const [tempDemographics, setTempDemographics] = useState<string[]>(filters.demographics || []);
+  const [tempContentRatings, setTempContentRatings] = useState<string[]>(filters.contentRatings || []);
 
 
 
@@ -115,6 +120,8 @@ export const LeftFilterPanel: React.FC<LeftFilterPanelProps> = ({
       language: "",
       minChapters: 0,
       maxChapters: 1000,
+      demographics: [],
+      contentRatings: [],
     });
     setShowSuggestions(false);
   };
@@ -210,7 +217,11 @@ export const LeftFilterPanel: React.FC<LeftFilterPanelProps> = ({
           </div>
           <button
             type="button"
-            onClick={() => setIsAdvancedModalOpen(true)}
+            onClick={() => {
+              setTempDemographics(filters.demographics || []);
+              setTempContentRatings(filters.contentRatings || []);
+              setIsAdvancedModalOpen(true);
+            }}
             className="p-2.5 bg-white border-2 border-zinc-950 text-zinc-950 hover:bg-zinc-50 transition-colors shadow-[2px_2px_0px_#000] active:translate-y-[1px] active:shadow-[1px_1px_0px_#000]"
             title="Advanced Filters"
           >
@@ -343,13 +354,26 @@ export const LeftFilterPanel: React.FC<LeftFilterPanelProps> = ({
               </p>
               <div className="grid grid-cols-2 gap-2">
                 {["shonen", "shojo", "seinen", "josei"].map((demo) => {
-                  // Pretend demographic is selectable, we can show checked states
+                  const isChecked = tempDemographics.includes(demo);
                   return (
                     <label
                       key={demo}
-                      className="flex items-center gap-2 p-2 border-2 border-zinc-200 hover:border-zinc-950 cursor-pointer uppercase font-bebas tracking-wide"
+                      className={`flex items-center gap-2 p-2 border-2 cursor-pointer uppercase font-bebas tracking-wide transition-all ${
+                        isChecked ? "border-[#CC0000] bg-[#CC0000]/5 text-[#CC0000]" : "border-zinc-200 hover:border-zinc-950 text-zinc-700"
+                      }`}
                     >
-                      <input type="checkbox" className="accent-[#CC0000] w-4 h-4" />
+                      <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setTempDemographics([...tempDemographics, demo]);
+                          } else {
+                            setTempDemographics(tempDemographics.filter((d) => d !== demo));
+                          }
+                        }}
+                        className="accent-[#CC0000] w-4 h-4"
+                      />
                       <span>{demo}</span>
                     </label>
                   );
@@ -360,17 +384,29 @@ export const LeftFilterPanel: React.FC<LeftFilterPanelProps> = ({
                 Content Rating Filter
               </p>
               <div className="flex flex-col gap-2">
-                {["safe", "suggestive", "erotica"].map((rating) => (
-                  <label key={rating} className="flex items-center gap-2 cursor-pointer uppercase font-bebas text-base tracking-wide">
-                    <input
-                      type="radio"
-                      name="rating"
-                      defaultChecked={rating === "safe"}
-                      className="accent-[#CC0000] w-4 h-4"
-                    />
-                    <span>{rating}</span>
-                  </label>
-                ))}
+                {["safe", "suggestive", "erotica"].map((rating) => {
+                  const isChecked = tempContentRatings.includes(rating);
+                  return (
+                    <label
+                      key={rating}
+                      className="flex items-center gap-2 cursor-pointer uppercase font-bebas text-base tracking-wide select-none text-zinc-700 hover:text-zinc-950"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setTempContentRatings([...tempContentRatings, rating]);
+                          } else {
+                            setTempContentRatings(tempContentRatings.filter((r) => r !== rating));
+                          }
+                        }}
+                        className="accent-[#CC0000] w-4 h-4"
+                      />
+                      <span>{rating}</span>
+                    </label>
+                  );
+                })}
               </div>
 
               <div className="pt-4 border-t-2 border-zinc-950 mt-6 flex justify-end gap-3">
@@ -381,7 +417,14 @@ export const LeftFilterPanel: React.FC<LeftFilterPanelProps> = ({
                   CANCEL
                 </button>
                 <button
-                  onClick={() => setIsAdvancedModalOpen(false)}
+                  onClick={() => {
+                    onChange({
+                      ...filters,
+                      demographics: tempDemographics,
+                      contentRatings: tempContentRatings,
+                    });
+                    setIsAdvancedModalOpen(false);
+                  }}
                   className="px-4 py-2 bg-[#CC0000] text-white border-2 border-zinc-950 shadow-[3px_3px_0px_#000] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#000] font-bebas text-lg font-bold tracking-wider"
                 >
                   APPLY FILTERS

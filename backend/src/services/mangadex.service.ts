@@ -276,6 +276,96 @@ class MangaDexService {
   }
 
   /**
+   * Advanced multi-attribute search on MangaDex.
+   */
+  async advancedSearchManga(options: {
+    query?: string;
+    limit?: number;
+    offset?: number;
+    genres?: string[];
+    demographics?: string[];
+    contentRatings?: string[];
+    status?: string;
+    language?: string;
+    year?: number;
+  }): Promise<MangaDexCollectionResponse<MangaDexMangaEntity>> {
+    const limitVal = options.limit ?? 20;
+    const offsetVal = options.offset ?? 0;
+    const params = new URLSearchParams({
+      limit: String(Math.min(Math.max(limitVal, 1), 100)),
+      offset: String(Math.max(offsetVal, 0)),
+      "includes[]": "cover_art",
+    });
+    params.append("includes[]", "author");
+
+    if (options.query) {
+      params.append("title", options.query);
+      params.append("order[relevance]", "desc");
+    } else {
+      params.append("order[followedCount]", "desc");
+    }
+
+    const GENRE_MAP: Record<string, string> = {
+      "thriller": "07251805-a27e-4d59-b488-f0bfbec15168",
+      "sci-fi": "256c8bd9-4904-4360-bf4f-508a76d67183",
+      "action": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "romance": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "comedy": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "adventure": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "drama": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "fantasy": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "supernatural": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+      "slice-of-life": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+    };
+
+    if (options.genres && options.genres.length > 0) {
+      options.genres.forEach((genre) => {
+        const uuid = GENRE_MAP[genre.toLowerCase()];
+        if (uuid) {
+          params.append("includedTags[]", uuid);
+        }
+      });
+    }
+
+    if (options.demographics && options.demographics.length > 0) {
+      options.demographics.forEach((demo) => {
+        let mapped = demo.toLowerCase();
+        if (mapped === "shonen") mapped = "shounen";
+        if (mapped === "shojo") mapped = "shoujo";
+        params.append("publicationDemographic[]", mapped);
+      });
+    }
+
+    if (options.contentRatings && options.contentRatings.length > 0) {
+      options.contentRatings.forEach((rating) => {
+        params.append("contentRating[]", rating.toLowerCase());
+      });
+    }
+
+    if (options.status) {
+      params.append("status[]", options.status.toLowerCase());
+    }
+
+    if (options.language) {
+      params.append("originalLanguage[]", options.language.toLowerCase());
+    }
+
+    if (options.year) {
+      params.append("year", String(options.year));
+    }
+
+    const url = `${MANGADEX_BASE_URL}/manga?${params.toString()}`;
+
+    // Normalize for cache key
+    const normalizedQuery = (options.query || "").toLowerCase().trim().replace(/\s+/g, " ");
+    const cacheKey = `${CACHE_PREFIX_SEARCH}advanced:${normalizedQuery}:${limitVal}:${offsetVal}:${options.genres?.join(",") || ""}:${options.demographics?.join(",") || ""}:${options.contentRatings?.join(",") || ""}:${options.status || ""}:${options.language || ""}:${options.year || ""}`;
+
+    return this.fetchWithCache<
+      MangaDexCollectionResponse<MangaDexMangaEntity>
+    >(cacheKey, url, CACHE_TTL_SEARCH);
+  }
+
+  /**
    * Get full manga details by its MangaDex source ID.
    *
    * Includes `cover_art`, `author`, and `artist` relationships.
