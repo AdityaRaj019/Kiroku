@@ -23,9 +23,10 @@ export interface MangaData {
 
 interface MangaCardProps {
   manga: MangaData;
+  priority?: boolean;
 }
 
-export const MangaCard: React.FC<MangaCardProps> = ({ manga }) => {
+export const MangaCard: React.FC<MangaCardProps> = ({ manga, priority = false }) => {
   const {
     sourceId,
     title,
@@ -54,7 +55,7 @@ export const MangaCard: React.FC<MangaCardProps> = ({ manga }) => {
             fill
             sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
-            priority={false}
+            priority={priority}
             unoptimized={displayCover.startsWith("http")} // prevent next/image build errors for dynamic external hosts if domains are not in config
           />
 
