@@ -265,26 +265,26 @@ export const RightContentPane: React.FC<RightContentPaneProps> = ({
                     <Link
                       href={`/manga/${manga.sourceId}`}
                       key={manga.sourceId}
-                      className="group flex gap-3 p-3 border-2 border-zinc-950 hover:bg-[#CC0000]/5 transition-colors"
+                      className="group flex gap-2.5 p-2 border-2 border-zinc-950 hover:bg-[#CC0000]/5 transition-colors animate-fade-in"
                     >
                       {/* Rank indicator */}
-                      <div className="w-12 h-12 flex items-center justify-center border-4 border-zinc-950 bg-white font-bebas text-2xl font-black text-[#CC0000] shadow-[2px_2px_0px_#000] shrink-0 group-hover:scale-105 transition-transform">
+                      <div className="w-9 h-9 flex items-center justify-center border-2 border-zinc-950 bg-white font-bebas text-lg font-black text-[#CC0000] shadow-[1px_1px_0px_#000] shrink-0 group-hover:scale-105 transition-transform">
                         #{rank}
                       </div>
 
                       {/* Title, rating, artist */}
-                      <div className="flex-grow min-w-0">
-                        <h4 className="font-bebas text-lg font-bold tracking-wider text-zinc-950 truncate group-hover:text-[#CC0000] transition-colors leading-none mb-1">
+                      <div className="flex-grow min-w-0 flex flex-col justify-center">
+                        <h4 className="font-bebas text-base font-bold tracking-wider text-zinc-950 truncate group-hover:text-[#CC0000] transition-colors leading-none mb-1">
                           {manga.title.toUpperCase()}
                         </h4>
-                        <p className="text-[11px] text-zinc-500 font-sans truncate mb-1">
+                        <p className="text-[10px] text-zinc-500 font-sans truncate mb-1">
                           by {manga.author || "Unknown"}
                         </p>
-                        <div className="flex items-center justify-between text-[11px] font-mono font-bold text-zinc-700">
+                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-zinc-700">
                           <span className="bg-zinc-100 border border-zinc-300 px-1 py-0.2 shrink-0">
                             {chaptersCount} CH.
                           </span>
-                          <span className="text-[#CC0000]">★ {typeof manga.rating === 'number' ? manga.rating.toFixed(1) : (manga.rating || "8.5")}</span>
+                          <span className="text-[#CC0000] shrink-0">★ {typeof manga.rating === 'number' ? manga.rating.toFixed(1) : (manga.rating || "8.5")}</span>
                         </div>
                       </div>
                     </Link>
