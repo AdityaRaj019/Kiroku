@@ -4,16 +4,16 @@ export const onepieceTheme: MangaTheme = {
   id: "onepiece",
   name: "Straw Hat (One Piece)",
   colors: {
-    background: "#F0F9FF",
-    cardBackground: "#FEF9C3", // Warm straw yellow
-    textPrimary: "#0F172A",
-    textSecondary: "#0369A1",
-    primary: "#DC2626", // Luffy vest red
-    primaryHover: "#B91C1C",
-    accent: "#EAB308", // Pirate gold
+    background: "#F0F9FF",     // Soft sky/ocean blue
+    cardBackground: "#FFFFFF", // Clean card white
+    textPrimary: "#0F172A",    // Deep navy
+    textSecondary: "#0284C7",  // Vibrant blue
+    primary: "#EF4444",        // Luffy red
+    primaryHover: "#DC2626",
+    accent: "#F59E0B",         // Pirate gold
     border: "#0F172A",
     shadow: "#0F172A",
-    badgeBg: "#EAB308",
+    badgeBg: "#F59E0B",
     badgeText: "#0F172A",
   },
 };
