@@ -179,6 +179,7 @@ export default function MangaCatalogPage() {
 
         .manga-theme-scope .text-zinc-950,
         .manga-theme-scope .text-zinc-900,
+        .manga-theme-scope .text-zinc-700,
         .manga-theme-scope .text-black,
         .manga-theme-scope h1,
         .manga-theme-scope h2,
@@ -188,8 +189,7 @@ export default function MangaCatalogPage() {
         }
 
         .manga-theme-scope .text-zinc-600,
-        .manga-theme-scope .text-zinc-500,
-        .manga-theme-scope .text-zinc-700 {
+        .manga-theme-scope .text-zinc-500 {
           color: var(--theme-text-secondary) !important;
         }
 
