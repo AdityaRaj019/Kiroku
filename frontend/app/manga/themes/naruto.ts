@@ -9,12 +9,12 @@ export const narutoTheme: MangaTheme = {
     cardBackground: "#1E293B", // Charcoal slate
     textPrimary: "#F1F5F9",    // Soft off-white
     textSecondary: "#94A3B8",  // Slate gray
-    primary: "#EA580C",        // Burnt terracotta orange (softer on the eyes)
-    primaryHover: "#C2410C",
+    primary: "#7C2D12",        // Deep warm rust-orange (subtle essence)
+    primaryHover: "#9A3412",   // Slightly brighter on hover
     accent: "#10B981",         // Soft Leaf Green
-    border: "#334155",         // Soft slate border
+    border: "#7C2D12",         // Rust orange borders
     shadow: "#020617",
-    badgeBg: "#EA580C",
+    badgeBg: "#9A3412",
     badgeText: "#FFFFFF",
   },
 };
