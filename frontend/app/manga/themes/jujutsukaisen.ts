@@ -5,16 +5,16 @@ export const jujutsukaisenTheme: MangaTheme = {
   name: "Cursed Energy (JJK)",
   isDark: true,
   colors: {
-    background: "#0B0F19",
-    cardBackground: "#131C2E", // Uniform Navy
-    textPrimary: "#F9FAFB",
-    textSecondary: "#9CA3AF",
-    primary: "#8B5CF6", // Gojo Purple
-    primaryHover: "#7C3AED",
-    accent: "#06B6D4", // Cursed Energy Teal
-    border: "#F9FAFB",  // Light border for dark mode
-    shadow: "#020617",
-    badgeBg: "#8B5CF6",
-    badgeText: "#FFFFFF",
+    background: "#030712",     // Deep dark void black
+    cardBackground: "#0B0F19", // Uniform dark navy
+    textPrimary: "#F9FAFB",    // Pure white energy
+    textSecondary: "#9CA3AF",  // Slate gray
+    primary: "#C084FC",        // Neon Hollow Purple
+    primaryHover: "#A855F7",
+    accent: "#22D3EE",         // Cursed Energy Cyan
+    border: "#C084FC",         // Neon purple borders
+    shadow: "#000000",
+    badgeBg: "#C084FC",
+    badgeText: "#030712",
   },
 };
