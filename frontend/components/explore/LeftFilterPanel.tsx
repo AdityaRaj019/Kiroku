@@ -1,7 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Search, Settings, X, SlidersHorizontal } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { apiFetch } from "@/utils/api";
+import Image from "next/image";
+import { MangaData } from "./MangaCard";
 
 export interface FilterState {
   search: string;
@@ -53,11 +57,49 @@ export const LeftFilterPanel: React.FC<LeftFilterPanelProps> = ({
 }) => {
   const [isAdvancedModalOpen, setIsAdvancedModalOpen] = useState(false);
   const [searchInput, setSearchInput] = useState(filters.search);
+  const [debouncedInput, setDebouncedInput] = useState(filters.search);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+
+
+  // Debouncing search suggestions trigger
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedInput(searchInput);
+    }, 500);
+    return () => clearTimeout(handler);
+  }, [searchInput]);
+
+  // Query suggestions from endpoint with limit of 6
+  const { data: suggestions = [], isLoading: isSuggestionsLoading } = useQuery({
+    queryKey: ["mangaSuggestions", debouncedInput],
+    queryFn: async () => {
+      if (!debouncedInput || debouncedInput.trim().length < 3) return [];
+      const res = await apiFetch(`/manga?q=${encodeURIComponent(debouncedInput.trim())}&limit=6`);
+      if (!res.ok) return [];
+      const json = await res.json();
+      return (json.data || []) as MangaData[];
+    },
+    enabled: debouncedInput.trim().length >= 3,
+  });
+
+  // Handle clicking outside suggestions list
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setShowSuggestions(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
 
   // Debounced search trigger (or simple form submit)
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onChange({ ...filters, search: searchInput });
+    setShowSuggestions(false);
   };
 
   const handleInputChange = <K extends keyof FilterState>(field: K, value: FilterState[K]) => {
@@ -74,6 +116,7 @@ export const LeftFilterPanel: React.FC<LeftFilterPanelProps> = ({
       minChapters: 0,
       maxChapters: 1000,
     });
+    setShowSuggestions(false);
   };
 
   return (
@@ -93,20 +136,77 @@ export const LeftFilterPanel: React.FC<LeftFilterPanelProps> = ({
       </div>
 
       {/* Search Input */}
-      <form onSubmit={handleSearchSubmit} className="mb-6">
+      <form onSubmit={handleSearchSubmit} className="mb-6 relative">
         <label className="block text-xs font-bold font-sans tracking-wider text-zinc-500 mb-2 uppercase">
           Search Title
         </label>
         <div className="flex gap-2">
-          <div className="relative flex-grow">
+          <div ref={containerRef} className="relative flex-grow">
             <input
               type="text"
               placeholder="e.g. Chainsaw Man..."
               value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
+              onFocus={() => setShowSuggestions(true)}
+              onChange={(e) => {
+                setSearchInput(e.target.value);
+                setShowSuggestions(true);
+              }}
               className="w-full bg-white text-zinc-950 border-2 border-zinc-950 px-3 py-2 pl-9 focus:outline-none focus:ring-2 focus:ring-[#CC0000] focus:ring-offset-1 font-sans text-sm rounded-none"
             />
             <Search className="absolute left-3 top-3 w-4 h-4 text-zinc-400" />
+
+            {/* Suggestions Dropdown */}
+            {showSuggestions && searchInput.trim().length >= 3 && (
+              <div className="absolute left-0 right-0 top-full mt-1.5 bg-white border-4 border-zinc-950 shadow-[4px_4px_0px_#000] z-[100] divide-y-2 divide-zinc-950 max-h-72 overflow-y-auto">
+                {isSuggestionsLoading ? (
+                  <div className="p-3 text-center text-xs font-mono font-bold text-zinc-500 animate-pulse">
+                    SEARCHING...
+                  </div>
+                ) : suggestions.length === 0 ? (
+                  <div className="p-3 text-center text-xs font-mono font-bold text-zinc-500">
+                    NO SUGGESTIONS
+                  </div>
+                ) : (
+                  suggestions.map((manga) => (
+                    <button
+                      key={manga.sourceId}
+                      type="button"
+                      onClick={() => {
+                        setSearchInput(manga.title);
+                        onChange({ ...filters, search: manga.title });
+                        setShowSuggestions(false);
+                      }}
+                      className="w-full text-left p-2.5 hover:bg-[#CC0000]/10 flex gap-2.5 items-center transition-colors cursor-pointer"
+                    >
+                      {manga.coverUrl ? (
+                        <div className="relative w-8 h-10 border-2 border-zinc-950 shrink-0 bg-zinc-100">
+                          <Image
+                            src={manga.coverUrl}
+                            alt={manga.title}
+                            fill
+                            sizes="32px"
+                            className="object-cover"
+                            unoptimized={manga.coverUrl.startsWith("http")}
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-8 h-10 border-2 border-zinc-950 shrink-0 bg-zinc-100 flex items-center justify-center font-bebas text-zinc-400 text-xs">
+                          NO COV
+                        </div>
+                      )}
+                      <div className="min-w-0 flex-grow">
+                        <h4 className="font-bebas text-sm font-bold tracking-wider text-zinc-950 truncate uppercase leading-tight">
+                          {manga.title}
+                        </h4>
+                        <p className="text-[10px] text-zinc-500 truncate font-sans font-medium">
+                          by {manga.author || "Unknown"}
+                        </p>
+                      </div>
+                    </button>
+                  ))
+                )}
+              </div>
+            )}
           </div>
           <button
             type="button"
