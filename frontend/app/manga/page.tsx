@@ -96,7 +96,7 @@ export default function MangaCatalogPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Filter Sidebar Panel (col-span-3 or col-span-4 on desktop) */}
-          <div className="lg:col-span-3 lg:sticky lg:top-28">
+          <div className="lg:col-span-3 lg:sticky lg:top-28 z-20">
             <LeftFilterPanel filters={filters} onChange={setFilters} />
           </div>
 
