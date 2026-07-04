@@ -211,8 +211,7 @@ export default function MangaCatalogPage() {
 
         .manga-theme-scope .border-zinc-200,
         .manga-theme-scope .border-zinc-300 {
-          border-color: var(--theme-border) !important;
-          opacity: 0.4;
+          border-color: var(--theme-text-secondary) !important;
         }
 
         .manga-theme-scope .shadow-\[1px_1px_0px_\#000\] { box-shadow: 1px 1px 0px var(--theme-shadow) !important; }

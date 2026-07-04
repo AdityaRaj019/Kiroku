@@ -94,8 +94,8 @@ export const MangaCard: React.FC<MangaCardProps> = ({ manga, priority = false })
 
           <div className="mt-auto pt-2 border-t-2 border-dashed border-zinc-200 flex items-center justify-between text-zinc-700">
             <div className="flex items-center gap-1 text-xs font-bold font-mono">
-              <BookOpen className="w-3.5 h-3.5 text-zinc-500" />
-              <span className="text-zinc-950">{chaptersCount} Ch.</span>
+              <BookOpen className="w-3.5 h-3.5" style={{ color: "var(--theme-primary)" }} />
+              <span className="font-extrabold" style={{ color: "var(--theme-primary)" }}>{chaptersCount} Ch.</span>
             </div>
             
             <span className="font-bebas text-xs font-bold tracking-widest text-[#CC0000] group-hover:translate-x-1 transition-transform uppercase">
