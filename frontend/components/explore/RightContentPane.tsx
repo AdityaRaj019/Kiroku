@@ -42,7 +42,13 @@ export const RightContentPane: React.FC<RightContentPaneProps> = ({
     enabled: !isSearchActive, // only run when search is not active to optimize calls
   });
 
+  const [currentPage, setCurrentPage] = useState(1);
+
   if (isSearchActive) {
+    const totalPages = Math.ceil(searchResults.length / 5);
+    const startIndex = (currentPage - 1) * 5;
+    const paginatedResults = searchResults.slice(startIndex, startIndex + 5);
+
     return (
       <div className="space-y-12">
         {/* Search Results Content Block */}
@@ -50,7 +56,9 @@ export const RightContentPane: React.FC<RightContentPaneProps> = ({
           <div className="flex items-center justify-between pb-4 border-b-2 border-zinc-950 mb-6">
             <h2 className="font-bebas text-2xl font-bold tracking-wider text-zinc-950 flex items-center gap-2">
               <Grid2X2 className="w-5 h-5 text-[#CC0000]" />
-              <span>SEARCH RESULTS FOR &quot;{searchQuery.toUpperCase()}&quot;</span>
+              <span>
+                {searchQuery ? `SEARCH RESULTS FOR "${searchQuery.toUpperCase()}"` : "FILTERED CATALOG RESULTS"}
+              </span>
             </h2>
             <span className="text-xs font-mono font-bold text-zinc-600 bg-zinc-100 px-2 py-0.5 border border-zinc-300">
               {searchResults.length} FOUND
@@ -73,15 +81,50 @@ export const RightContentPane: React.FC<RightContentPaneProps> = ({
             <div className="py-20 text-center border-4 border-dashed border-zinc-300">
               <p className="font-bebas text-xl text-zinc-800 font-bold mb-2">NO MANGA FOUND</p>
               <p className="text-sm text-zinc-500 max-w-sm mx-auto">
-                No results matched your search. Try searching for popular titles like &quot;Chainsaw Man&quot; or &quot;One Piece&quot;.
+                No results matched your search/filters. Try adjusting your filter parameters or search term.
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-              {searchResults.map((manga, idx) => (
-                <MangaCard key={manga.sourceId} manga={manga} priority={idx < 4} />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+                {paginatedResults.map((manga, idx) => (
+                  <MangaCard key={manga.sourceId} manga={manga} priority={idx < 5} />
+                ))}
+              </div>
+
+              {/* Pagination Controls */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-between pt-6 border-t-2 border-zinc-950 mt-8 font-sans">
+                  <button
+                    disabled={currentPage === 1}
+                    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                    className={`font-bebas text-sm px-4 py-2 border-2 border-zinc-950 shadow-[2px_2px_0px_#000] transition-all cursor-pointer select-none font-bold uppercase ${
+                      currentPage === 1
+                        ? "opacity-40 cursor-not-allowed bg-zinc-100"
+                        : "bg-white text-zinc-950 hover:bg-[#CC0000] hover:text-white hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_#000]"
+                    }`}
+                  >
+                    ← PREV
+                  </button>
+
+                  <span className="font-bebas text-lg font-bold tracking-widest text-zinc-700">
+                    PAGE {currentPage} OF {totalPages}
+                  </span>
+
+                  <button
+                    disabled={currentPage === totalPages}
+                    onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                    className={`font-bebas text-sm px-4 py-2 border-2 border-zinc-950 shadow-[2px_2px_0px_#000] transition-all cursor-pointer select-none font-bold uppercase ${
+                      currentPage === totalPages
+                        ? "opacity-40 cursor-not-allowed bg-zinc-100"
+                        : "bg-white text-zinc-950 hover:bg-[#CC0000] hover:text-white hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_#000]"
+                    }`}
+                  >
+                    NEXT →
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

@@ -216,27 +216,59 @@ class MangaDexService {
    * @returns The full MangaDex collection response.
    */
   async searchManga(
-    query: string,
+    query?: string,
     limit: number = 10,
-    offset: number = 0
+    offset: number = 0,
+    filters?: {
+      genre?: string;
+      status?: string;
+      language?: string;
+    }
   ): Promise<MangaDexCollectionResponse<MangaDexMangaEntity>> {
     const params = new URLSearchParams({
-      title: query,
       limit: String(Math.min(Math.max(limit, 1), 100)),
       offset: String(Math.max(offset, 0)),
       "includes[]": "cover_art",
-      "order[relevance]": "desc",
     });
-    // URLSearchParams won't allow duplicate keys via constructor,
-    // so append additional includes manually.
     params.append("includes[]", "author");
+
+    if (query) {
+      params.append("title", query);
+      params.append("order[relevance]", "desc");
+    } else {
+      params.append("order[followedCount]", "desc");
+    }
+
+    if (filters) {
+      const GENRE_MAP: Record<string, string> = {
+        "thriller": "07251805-a27e-4d59-b488-f0bfbec15168",
+        "sci-fi": "256c8bd9-4904-4360-bf4f-508a76d67183",
+        "action": "391b0423-d847-456f-aff0-8b0cfc03066b",
+        "romance": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+        "comedy": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+        "adventure": "87cc87cd-a395-47af-b27a-93258283bbc6",
+        "drama": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+        "fantasy": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+        "supernatural": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+        "slice-of-life": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      };
+
+      if (filters.genre && GENRE_MAP[filters.genre.toLowerCase()]) {
+        params.append("includedTags[]", GENRE_MAP[filters.genre.toLowerCase()]);
+      }
+      if (filters.status) {
+        params.append("status[]", filters.status.toLowerCase());
+      }
+      if (filters.language) {
+        params.append("originalLanguage[]", filters.language.toLowerCase());
+      }
+    }
 
     const url = `${MANGADEX_BASE_URL}/manga?${params.toString()}`;
 
     // Normalize query for cache key: lowercase, trim, collapse whitespace
-    // so "Chainsaw Man" and "chainsaw  man" hit the same cache entry.
-    const normalizedQuery = query.toLowerCase().trim().replace(/\s+/g, " ");
-    const cacheKey = `${CACHE_PREFIX_SEARCH}${normalizedQuery}:${limit}:${offset}`;
+    const normalizedQuery = (query || "").toLowerCase().trim().replace(/\s+/g, " ");
+    const cacheKey = `${CACHE_PREFIX_SEARCH}${normalizedQuery}:${limit}:${offset}:${filters?.genre || ""}:${filters?.status || ""}:${filters?.language || ""}`;
 
     return this.fetchWithCache<
       MangaDexCollectionResponse<MangaDexMangaEntity>

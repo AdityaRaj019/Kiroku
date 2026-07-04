@@ -14,10 +14,10 @@ import { z } from "zod";
  */
 export const searchQuerySchema = z.object({
   q: z
-    .string({ required_error: "Search query 'q' is required" })
-    .min(1, "Search query must not be empty")
+    .string()
     .max(200, "Search query must be 200 characters or fewer")
-    .transform((v) => v.trim()),
+    .transform((v) => v.trim())
+    .optional(),
 
   limit: z.coerce
     .number()
@@ -31,6 +31,10 @@ export const searchQuerySchema = z.object({
     .int("offset must be an integer")
     .min(0, "offset must be 0 or greater")
     .default(0),
+
+  genre: z.string().optional(),
+  status: z.string().optional(),
+  language: z.string().optional(),
 });
 
 export type SearchQueryInput = z.infer<typeof searchQuerySchema>;

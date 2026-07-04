@@ -302,10 +302,10 @@ export async function searchManga(
   next: NextFunction
 ): Promise<void> {
   try {
-    const { q, limit, offset } = req.query as unknown as SearchQueryInput;
+    const { q, limit, offset, genre, status, language } = req.query as unknown as SearchQueryInput;
 
     // 1. Query MangaDex (internally rate-limited + Redis-cached)
-    const mangaDexResponse = await mangaDexService.searchManga(q, limit, offset);
+    const mangaDexResponse = await mangaDexService.searchManga(q, limit, offset, { genre, status, language });
 
     // 2. Upsert search results into local DB for future reference
     const localRecords = await upsertMangaBatch(mangaDexResponse.data);

@@ -20,53 +20,62 @@ export default function MangaCatalogPage() {
     maxChapters: 1000,
   });
 
-  // Query search results when search is active
-  const { data: searchResults, isLoading, isError } = useQuery<MangaData[]>({
-    queryKey: ["mangaSearch", filters.search],
+  // We define isSearchActive as true when any search or filter parameter is set (aside from the defaults)
+  const isSearchActive = useMemo(() => {
+    return !!(
+      filters.search ||
+      filters.genre ||
+      filters.status ||
+      filters.language ||
+      filters.minChapters > 0 ||
+      filters.maxChapters < 1000
+    );
+  }, [filters]);
+
+  // Query search/filter results when active
+  const { data: searchResults = [], isLoading, isError } = useQuery<MangaData[]>({
+    queryKey: [
+      "mangaSearch",
+      filters.search,
+      filters.genre,
+      filters.status,
+      filters.language,
+    ],
     queryFn: async () => {
-      if (!filters.search) return [];
-      const res = await apiFetch(`/manga?q=${encodeURIComponent(filters.search)}&limit=40`);
+      const params = new URLSearchParams();
+      if (filters.search) params.append("q", filters.search);
+      if (filters.genre) params.append("genre", filters.genre);
+      if (filters.status) params.append("status", filters.status);
+      if (filters.language) params.append("language", filters.language);
+      
+      // Fetch up to 100 results from MangaDex to allow local filtering on frontend
+      params.append("limit", "100");
+
+      const res = await apiFetch(`/manga?${params.toString()}`);
       if (!res.ok) {
-        throw new Error("Failed to search manga");
+        throw new Error("Failed to search/filter manga");
       }
       const json = await res.json();
-      return json.data as MangaData[];
+      return (json.data || []) as MangaData[];
     },
-    enabled: !!filters.search,
+    enabled: isSearchActive,
   });
 
-  // Filter search results locally based on sidebar filter options
+  // Filter search results locally based on sidebar chapter count options
   const finalFilteredResults = useMemo(() => {
     if (!searchResults) return [];
 
     return searchResults.filter((manga) => {
-      // 1. Genre filter (matching tags)
-      if (filters.genre) {
-        const hasGenre = manga.tags?.some(
-          (t) => t.name.toLowerCase() === filters.genre.toLowerCase()
-        );
-        if (!hasGenre) return false;
-      }
-
-      // 2. Status filter
-      if (filters.status) {
-        if (manga.status.toLowerCase() !== filters.status.toLowerCase()) {
-          return false;
-        }
-      }
-
-      // 3. Chapters Count filter (MangaDex search returns lastChapter, parse it)
-      const parsedChapters = manga.lastChapter ? parseInt(manga.lastChapter, 10) : 100;
-      const chCount = isNaN(parsedChapters) ? 100 : parsedChapters;
+      // Chapters Count filter (MangaDex search returns lastChapter, parse it)
+      const parsedChapters = manga.lastChapter ? parseInt(manga.lastChapter, 10) : 120;
+      const chCount = isNaN(parsedChapters) ? 120 : parsedChapters;
       if (chCount < filters.minChapters || chCount > filters.maxChapters) {
         return false;
       }
 
       return true;
     });
-  }, [searchResults, filters]);
-
-  const isSearchActive = !!filters.search;
+  }, [searchResults, filters.minChapters, filters.maxChapters]);
 
   return (
     <div className="min-h-screen bg-[#FAF9F6] text-zinc-950 flex flex-col font-sans">
@@ -103,6 +112,7 @@ export default function MangaCatalogPage() {
           {/* Right Column: Dynamic Content Feed Panel (col-span-9 or col-span-8 on desktop) */}
           <div className="lg:col-span-9">
             <RightContentPane
+              key={`${filters.search}-${filters.genre}-${filters.status}-${filters.language}`}
               isSearchActive={isSearchActive}
               searchQuery={filters.search}
               searchResults={finalFilteredResults}
