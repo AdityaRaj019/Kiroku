@@ -963,7 +963,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L52",
       "id": "services_mangadex_service_mangadexapierror",
-      "community": 55,
+      "community": 50,
       "norm_label": "mangadexapierror"
     },
     {
@@ -972,7 +972,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L56",
       "id": "services_mangadex_service_mangadexapierror_constructor",
-      "community": 55,
+      "community": 50,
       "norm_label": ".constructor()"
     },
     {
@@ -2500,7 +2500,7 @@
       "label": "CharactersPanel()",
       "file_type": "code",
       "source_file": "frontend/components/manga-details/CharactersPanel.tsx",
-      "source_location": "L12",
+      "source_location": "L13",
       "id": "manga_details_characterspanel_characterspanel",
       "community": 49,
       "norm_label": "characterspanel()"
@@ -2581,7 +2581,7 @@
       "label": "MangaTag",
       "file_type": "code",
       "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "id": "manga_details_mangadetailsview_mangatag",
       "community": 49,
       "norm_label": "mangatag"
@@ -2590,7 +2590,7 @@
       "label": "MangaDetailsData",
       "file_type": "code",
       "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "id": "manga_details_mangadetailsview_mangadetailsdata",
       "community": 49,
       "norm_label": "mangadetailsdata"
@@ -2599,7 +2599,7 @@
       "label": "TrackingData",
       "file_type": "code",
       "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
-      "source_location": "L44",
+      "source_location": "L45",
       "id": "manga_details_mangadetailsview_trackingdata",
       "community": 49,
       "norm_label": "trackingdata"
@@ -2608,7 +2608,7 @@
       "label": "ApiResponse",
       "file_type": "code",
       "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
-      "source_location": "L52",
+      "source_location": "L53",
       "id": "manga_details_mangadetailsview_apiresponse",
       "community": 49,
       "norm_label": "apiresponse"
@@ -2617,7 +2617,7 @@
       "label": "MangaDetailsViewProps",
       "file_type": "code",
       "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
-      "source_location": "L57",
+      "source_location": "L58",
       "id": "manga_details_mangadetailsview_mangadetailsviewprops",
       "community": 49,
       "norm_label": "mangadetailsviewprops"
@@ -2626,7 +2626,7 @@
       "label": "MangaDetailsView()",
       "file_type": "code",
       "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
-      "source_location": "L61",
+      "source_location": "L62",
       "id": "manga_details_mangadetailsview_mangadetailsview",
       "community": 49,
       "norm_label": "mangadetailsview()"
@@ -2835,7 +2835,7 @@
       "source_file": "frontend/components/theme/aot.ts",
       "source_location": "L1",
       "id": "frontend_components_theme_aot_ts",
-      "community": 9,
+      "community": 53,
       "norm_label": "aot.ts"
     },
     {
@@ -2844,7 +2844,7 @@
       "source_file": "frontend/components/theme/aot.ts",
       "source_location": "L3",
       "id": "theme_aot_aottheme",
-      "community": 9,
+      "community": 53,
       "norm_label": "aottheme"
     },
     {
@@ -2853,7 +2853,7 @@
       "source_file": "frontend/components/theme/dbz.ts",
       "source_location": "L1",
       "id": "frontend_components_theme_dbz_ts",
-      "community": 9,
+      "community": 53,
       "norm_label": "dbz.ts"
     },
     {
@@ -2862,7 +2862,7 @@
       "source_file": "frontend/components/theme/dbz.ts",
       "source_location": "L3",
       "id": "theme_dbz_dbztheme",
-      "community": 9,
+      "community": 53,
       "norm_label": "dbztheme"
     },
     {
@@ -2871,7 +2871,7 @@
       "source_file": "frontend/components/theme/default.ts",
       "source_location": "L1",
       "id": "frontend_components_theme_default_ts",
-      "community": 9,
+      "community": 53,
       "norm_label": "default.ts"
     },
     {
@@ -2880,7 +2880,7 @@
       "source_file": "frontend/components/theme/default.ts",
       "source_location": "L3",
       "id": "theme_default_defaulttheme",
-      "community": 9,
+      "community": 53,
       "norm_label": "defaulttheme"
     },
     {
@@ -2889,7 +2889,7 @@
       "source_file": "frontend/components/theme/demonslayer.ts",
       "source_location": "L1",
       "id": "frontend_components_theme_demonslayer_ts",
-      "community": 9,
+      "community": 53,
       "norm_label": "demonslayer.ts"
     },
     {
@@ -2898,7 +2898,7 @@
       "source_file": "frontend/components/theme/demonslayer.ts",
       "source_location": "L3",
       "id": "theme_demonslayer_demonslayertheme",
-      "community": 9,
+      "community": 53,
       "norm_label": "demonslayertheme"
     },
     {
@@ -2907,7 +2907,7 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L1",
       "id": "frontend_components_theme_index_ts",
-      "community": 9,
+      "community": 53,
       "norm_label": "index.ts"
     },
     {
@@ -2925,7 +2925,7 @@
       "source_file": "frontend/components/theme/jujutsukaisen.ts",
       "source_location": "L1",
       "id": "frontend_components_theme_jujutsukaisen_ts",
-      "community": 9,
+      "community": 53,
       "norm_label": "jujutsukaisen.ts"
     },
     {
@@ -2934,7 +2934,7 @@
       "source_file": "frontend/components/theme/jujutsukaisen.ts",
       "source_location": "L3",
       "id": "theme_jujutsukaisen_jujutsukaisentheme",
-      "community": 9,
+      "community": 53,
       "norm_label": "jujutsukaisentheme"
     },
     {
@@ -2943,7 +2943,7 @@
       "source_file": "frontend/components/theme/naruto.ts",
       "source_location": "L1",
       "id": "frontend_components_theme_naruto_ts",
-      "community": 9,
+      "community": 53,
       "norm_label": "naruto.ts"
     },
     {
@@ -2952,7 +2952,7 @@
       "source_file": "frontend/components/theme/naruto.ts",
       "source_location": "L3",
       "id": "theme_naruto_narutotheme",
-      "community": 9,
+      "community": 53,
       "norm_label": "narutotheme"
     },
     {
@@ -2961,7 +2961,7 @@
       "source_file": "frontend/components/theme/onepiece.ts",
       "source_location": "L1",
       "id": "frontend_components_theme_onepiece_ts",
-      "community": 9,
+      "community": 53,
       "norm_label": "onepiece.ts"
     },
     {
@@ -2970,7 +2970,7 @@
       "source_file": "frontend/components/theme/onepiece.ts",
       "source_location": "L3",
       "id": "theme_onepiece_onepiecetheme",
-      "community": 9,
+      "community": 53,
       "norm_label": "onepiecetheme"
     },
     {
@@ -3006,7 +3006,7 @@
       "source_file": "frontend/components/theme/types.ts",
       "source_location": "L1",
       "id": "frontend_components_theme_types_ts",
-      "community": 9,
+      "community": 53,
       "norm_label": "types.ts"
     },
     {
@@ -3015,7 +3015,7 @@
       "source_file": "frontend/components/theme/types.ts",
       "source_location": "L1",
       "id": "theme_types_mangatheme",
-      "community": 9,
+      "community": 53,
       "norm_label": "mangatheme"
     },
     {
@@ -3116,6 +3116,33 @@
       "id": "types_auth_refreshresponse",
       "community": 59,
       "norm_label": "refreshresponse"
+    },
+    {
+      "label": "anilist.ts",
+      "file_type": "code",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L1",
+      "id": "frontend_utils_anilist_ts",
+      "community": 49,
+      "norm_label": "anilist.ts"
+    },
+    {
+      "label": "cleanDescriptionToQuote()",
+      "file_type": "code",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L32",
+      "id": "utils_anilist_cleandescriptiontoquote",
+      "community": 49,
+      "norm_label": "cleandescriptiontoquote()"
+    },
+    {
+      "label": "fetchCharactersFromAniList()",
+      "file_type": "code",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L68",
+      "id": "utils_anilist_fetchcharactersfromanilist",
+      "community": 49,
+      "norm_label": "fetchcharactersfromanilist()"
     },
     {
       "label": "animeShowcaseData.ts",
@@ -3924,7 +3951,7 @@
       "source_file": "PRD.md",
       "source_location": "L791",
       "id": "kiroku_prd_codeblock_22",
-      "community": 53,
+      "community": 48,
       "norm_label": "code:json ({)"
     },
     {
@@ -3942,7 +3969,7 @@
       "source_file": "PRD.md",
       "source_location": "L808",
       "id": "kiroku_prd_codeblock_23",
-      "community": 53,
+      "community": 11,
       "norm_label": "code:json ({)"
     },
     {
@@ -3969,7 +3996,7 @@
       "source_file": "PRD.md",
       "source_location": "L837",
       "id": "kiroku_prd_codeblock_26",
-      "community": 11,
+      "community": 62,
       "norm_label": "code:json ({)"
     },
     {
@@ -3978,7 +4005,7 @@
       "source_file": "PRD.md",
       "source_location": "L853",
       "id": "kiroku_prd_codeblock_27",
-      "community": 11,
+      "community": 62,
       "norm_label": "code:json ({)"
     },
     {
@@ -4023,7 +4050,7 @@
       "source_file": "PRD.md",
       "source_location": "L877",
       "id": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
-      "community": 53,
+      "community": 11,
       "norm_label": "11.4 admin/system control endpoints (requires api key header: `x-admin-key`)"
     },
     {
@@ -4032,7 +4059,7 @@
       "source_file": "PRD.md",
       "source_location": "L880",
       "id": "kiroku_prd_codeblock_31",
-      "community": 53,
+      "community": 4,
       "norm_label": "code:json ({ \"queuename\": \"notification-dispatcher\", \"jobid\": \"job-1094)"
     },
     {
@@ -4041,7 +4068,7 @@
       "source_file": "PRD.md",
       "source_location": "L884",
       "id": "kiroku_prd_codeblock_32",
-      "community": 53,
+      "community": 11,
       "norm_label": "code:json ({ \"status\": \"retried\", \"jobid\": \"job-1094\" })"
     },
     {
@@ -4050,7 +4077,7 @@
       "source_file": "PRD.md",
       "source_location": "L890",
       "id": "kiroku_prd_codeblock_33",
-      "community": 53,
+      "community": 11,
       "norm_label": "code:json ({)"
     },
     {
@@ -4239,7 +4266,7 @@
       "source_file": "PRD.md",
       "source_location": "L1017",
       "id": "kiroku_prd_15_ci_cd_strategy",
-      "community": 11,
+      "community": 62,
       "norm_label": "15. ci/cd strategy"
     },
     {
@@ -4248,7 +4275,7 @@
       "source_file": "PRD.md",
       "source_location": "L1021",
       "id": "kiroku_prd_codeblock_35",
-      "community": 11,
+      "community": 62,
       "norm_label": "code:block35 (+----------------------------------+)"
     },
     {
@@ -4257,7 +4284,7 @@
       "source_file": "PRD.md",
       "source_location": "L1048",
       "id": "kiroku_prd_15_1_github_actions_workflow_github_workflows_ci_yml",
-      "community": 11,
+      "community": 62,
       "norm_label": "15.1 github actions workflow: `.github/workflows/ci.yml`"
     },
     {
@@ -4266,7 +4293,7 @@
       "source_file": "PRD.md",
       "source_location": "L1049",
       "id": "kiroku_prd_codeblock_36",
-      "community": 11,
+      "community": 62,
       "norm_label": "code:yaml (name: continuous integration & deployment)"
     },
     {
@@ -4383,7 +4410,7 @@
       "source_file": "PRD.md",
       "source_location": "L1215",
       "id": "kiroku_prd_18_future_roadmap",
-      "community": 53,
+      "community": 4,
       "norm_label": "18. future roadmap"
     },
     {
@@ -4392,7 +4419,7 @@
       "source_file": "PRD.md",
       "source_location": "L1217",
       "id": "kiroku_prd_codeblock_40",
-      "community": 53,
+      "community": 4,
       "norm_label": "code:block40 (+--------------------------------------------------------+)"
     },
     {
@@ -13843,6 +13870,17 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_utils_anilist_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -13991,11 +14029,33 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "utils_anilist_fetchcharactersfromanilist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "frontend_components_manga_details_mangadetailsview_tsx",
       "target": "utils_api_apifetch"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "utils_mangadetailsenricher_character",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -15018,6 +15078,48 @@
       "confidence_score": 1.0,
       "source": "frontend_utils_api_ts",
       "target": "types_auth_refreshresponse"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_utils_anilist_ts",
+      "target": "frontend_utils_mangadetailsenricher_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "frontend_utils_anilist_ts",
+      "target": "utils_anilist_cleandescriptiontoquote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "frontend_utils_anilist_ts",
+      "target": "utils_anilist_fetchcharactersfromanilist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_utils_anilist_ts",
+      "target": "utils_mangadetailsenricher_character",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19324,5 +19426,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d98999416b7a5f59987c141bce966fe75ca5c8df"
+  "built_at_commit": "a81db2da364321e36eb78774621fee31017dfe08"
 }
