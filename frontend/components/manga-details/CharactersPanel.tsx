@@ -7,9 +7,10 @@ import { Character } from "@/utils/mangaDetailsEnricher";
 
 interface CharactersPanelProps {
   characters: Character[];
+  isLoading?: boolean;
 }
 
-export const CharactersPanel: React.FC<CharactersPanelProps> = ({ characters }) => {
+export const CharactersPanel: React.FC<CharactersPanelProps> = ({ characters, isLoading = false }) => {
   return (
     <div className="w-full bg-white border-4 border-zinc-950 p-6 shadow-[6px_6px_0px_#000] space-y-5">
       
@@ -20,7 +21,25 @@ export const CharactersPanel: React.FC<CharactersPanelProps> = ({ characters }) 
       </h2>
 
       {/* Characters List Grid */}
-      {characters && characters.length > 0 ? (
+      {isLoading ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[...Array(6)].map((_, idx) => (
+            <div
+              key={idx}
+              className="bg-zinc-50 border-4 border-zinc-950 p-3.5 flex gap-4 shadow-[4px_4px_0px_#000] animate-pulse"
+            >
+              <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-zinc-950 bg-zinc-200 shrink-0" />
+              <div className="flex-grow flex flex-col justify-between">
+                <div>
+                  <div className="h-3 w-16 bg-zinc-300 mb-2" />
+                  <div className="h-5 w-32 bg-zinc-300" />
+                </div>
+                <div className="h-8 w-full bg-zinc-200 mt-2" />
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : characters && characters.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {characters.map((char, idx) => {
             const isMain = char.role === "Main Character";
