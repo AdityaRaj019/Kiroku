@@ -34,17 +34,45 @@ const ANILIST_CHARACTERS_QUERY = `
 function cleanDescriptionToQuote(description: string, name: string): string {
   if (!description) return `${name} is a key figure in this story.`;
   
+  // Split description by newlines to filter out lines
+  const lines = description.split(/\r?\n/);
+  const biographyLines: string[] = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+
+    // Remove any non-alphanumeric markers to check for prefix matching (e.g. ~!, **, __)
+    const cleanPrefix = trimmed
+      .replace(/^[^a-zA-Z0-9]+/, "")
+      .toLowerCase();
+
+    // Check if the line matches metadata categories
+    const isMetadata = /^(age|height|gender|weight|blood\s*type|birth\s*date|birthday|hair|eyes|relatives|aliases|alias|nationality|affiliation|occupation|voiced\s*by|japanese\s*voice|english\s*voice|class|grade|rank|status|race|type|abilities|signature\s*move):/i.test(cleanPrefix);
+
+    if (isMetadata) {
+      continue; // Skip!
+    }
+
+    biographyLines.push(trimmed);
+  }
+
+  let cleaned = biographyLines.join(" ");
+
+  // Strip Markdown links: [Label](URL) -> Label
+  cleaned = cleaned.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+
   // Strip HTML elements and Markdown symbols
-  let cleaned = description
+  cleaned = cleaned
     .replace(/<[^>]*>/g, "") // Remove HTML
-    .replace(/__|_|\*|~/g, "") // Remove Markdown
+    .replace(/__|_|\*|~|!/g, "") // Remove Markdown and spoiler exclamation marks
     .replace(/\\n|\r/g, " ") // Clean newlines
     .replace(/\s+/g, " ")
     .trim();
 
   // Look for any quotation blocks inside the description first
   const quoteMatch = cleaned.match(/"([^"]+)"/);
-  if (quoteMatch && quoteMatch[1].length > 10 && quoteMatch[1].length < 150) {
+  if (quoteMatch && quoteMatch[1].length > 15 && quoteMatch[1].length < 180) {
     return quoteMatch[1];
   }
 
@@ -52,10 +80,11 @@ function cleanDescriptionToQuote(description: string, name: string): string {
   const sentences = cleaned.split(/(?<=[.!?])\s+/);
   if (sentences.length > 0) {
     let sentence = sentences[0];
-    
-    // Ensure it doesn't end abruptly if too long
-    if (sentence.length > 150) {
-      sentence = sentence.slice(0, 147) + "...";
+    if (sentence.length < 20 && sentences.length > 1) {
+      sentence += " " + sentences[1];
+    }
+    if (sentence.length > 180) {
+      sentence = sentence.slice(0, 177) + "...";
     }
     return sentence;
   }
