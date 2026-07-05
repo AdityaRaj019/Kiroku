@@ -114,7 +114,7 @@ export const TrackingPanel: React.FC<TrackingPanelProps> = ({
       queryClient.invalidateQueries({ queryKey: ["mangaDetails", mangaId] });
       setErrorMessage(null);
     },
-    onError: (err: any) => {
+    onError: (err: Error) => {
       setErrorMessage(err.message || "An error occurred while tracking.");
     },
   });
@@ -132,7 +132,7 @@ export const TrackingPanel: React.FC<TrackingPanelProps> = ({
       setIsChaptersOpen(false);
       setErrorMessage(null);
     },
-    onError: (err: any) => {
+    onError: (err: Error) => {
       setErrorMessage(err.message || "An error occurred while deleting.");
     },
   });
