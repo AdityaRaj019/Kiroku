@@ -16,6 +16,7 @@ import { CharactersPanel } from "./CharactersPanel";
 import { StaffPanel } from "./StaffPanel";
 import { StatsPanel } from "./StatsPanel";
 import { SocialPanel } from "./SocialPanel";
+import { FormattedDescription } from "./FormattedDescription";
 import { ArrowLeft, Loader2, Quote } from "lucide-react";
 
 interface MangaTag {
@@ -231,14 +232,7 @@ export const MangaDetailsView: React.FC<MangaDetailsViewProps> = ({ mangaId }) =
                   )}
                 </div>
 
-                <div className="border-t-2 border-dashed border-zinc-200 pt-3">
-                  <h3 className="font-bebas text-md tracking-wider text-zinc-950 uppercase font-bold mb-1.5">
-                    Synopsis
-                  </h3>
-                  <p className="text-sm text-zinc-700 leading-relaxed font-sans font-medium text-justify">
-                    {manga.synopsis || "No synopsis available."}
-                  </p>
-                </div>
+                <FormattedDescription synopsis={manga.synopsis || ""} />
               </div>
             </div>
 
