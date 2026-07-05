@@ -50,15 +50,21 @@ export const CharactersPanel: React.FC<CharactersPanelProps> = ({ characters, is
                 className="bg-zinc-50 border-4 border-zinc-950 p-3.5 flex gap-4 shadow-[4px_4px_0px_#000] hover:shadow-[6px_6px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200"
               >
                 {/* Square Image Box */}
-                <div className="relative w-20 h-20 md:w-24 md:h-24 border-2 border-zinc-950 shrink-0 bg-zinc-200 overflow-hidden">
-                  <Image
-                    src={char.image}
-                    alt={char.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-w-768px) 80px, 96px"
-                    unoptimized={char.image.startsWith("http")}
-                  />
+                <div className="relative w-20 h-20 md:w-24 md:h-24 border-2 border-zinc-950 shrink-0 bg-zinc-100 overflow-hidden flex items-center justify-center">
+                  {char.image && !char.image.includes("default.jpg") && !char.image.includes("default.png") ? (
+                    <Image
+                      src={char.image}
+                      alt={char.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-w-768px) 80px, 96px"
+                      unoptimized={char.image.startsWith("http")}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-zinc-200 flex items-center justify-center text-zinc-400">
+                      <Users className="w-10 h-10" />
+                    </div>
+                  )}
                   {/* Screentone layout */}
                   <div className="absolute inset-0 bg-[radial-gradient(rgba(204,0,0,0.06)_1.5px,transparent_0)] bg-[size:6px_6px] pointer-events-none" />
                 </div>
