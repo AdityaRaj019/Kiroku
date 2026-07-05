@@ -28,10 +28,18 @@ export function errorMiddleware(
   res: Response,
   _next: NextFunction
 ): void {
-  // Log full error server-side for observability
-  console.error(`[ERROR] ${err.name}: ${err.message}`);
-  if (process.env.NODE_ENV !== "production") {
-    console.error(err.stack);
+  const httpErr = err as Error & { status?: number; statusCode?: number; type?: string };
+  const errStatus = (err instanceof AppError) ? err.statusCode : (httpErr.status ?? httpErr.statusCode ?? 500);
+  const isClientError = errStatus >= 400 && errStatus < 500;
+
+  // Log server-side for observability
+  if (isClientError) {
+    console.warn(`[ClientWarning] ${err.name} (${errStatus}): ${err.message}`);
+  } else {
+    console.error(`[ERROR] ${err.name}: ${err.message}`);
+    if (process.env.NODE_ENV !== "production") {
+      console.error(err.stack);
+    }
   }
 
   if (err instanceof AppError) {
@@ -41,8 +49,6 @@ export function errorMiddleware(
 
   // Handle Express/body-parser errors that carry a status code
   // (e.g., PayloadTooLargeError → 413, SyntaxError from bad JSON → 400)
-  const httpErr = err as Error & { status?: number; statusCode?: number; type?: string };
-  const errStatus = httpErr.status ?? httpErr.statusCode;
   if (errStatus && errStatus >= 400 && errStatus < 600) {
     const safeMessage =
       process.env.NODE_ENV === "production"
