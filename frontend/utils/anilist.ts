@@ -147,7 +147,11 @@ export async function fetchCharactersFromAniList(title: string): Promise<Charact
       };
     });
   } catch (error) {
-    console.error("[AniListService] Failed to fetch characters:", error);
+    console.warn(
+      `[AniListService] Failed to fetch characters from AniList: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    );
     return [];
   }
 }
