@@ -390,6 +390,8 @@ export async function getMangaDetails(
         author: true,
         status: true,
         sourceUrl: true,
+        genres: true,
+        releaseYear: true,
         createdAt: true,
         updatedAt: true,
       },
@@ -409,6 +411,14 @@ export async function getMangaDetails(
         rating: stats ? stats.rating.toFixed(1) : "8.5",
         followsCount: stats ? stats.follows : 0,
         chaptersCount: chapterCount,
+        year: localManga.releaseYear,
+        tags: localManga.genres.map((g, idx) => ({
+          id: `${id}-genre-${idx}`,
+          name: g,
+        })),
+        demographicTag: localManga.genres.find(g => 
+          ["shonen", "shoujo", "seinen", "josei"].includes(g.toLowerCase())
+        ) || "Shonen",
       };
 
       // Return the local copy immediately (with tracking for auth users)
