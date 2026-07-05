@@ -42,13 +42,14 @@ function cleanDescriptionToQuote(description: string, name: string): string {
     const trimmed = line.trim();
     if (!trimmed) continue;
 
-    // Remove any non-alphanumeric markers to check for prefix matching (e.g. ~!, **, __)
+    // Remove any bold/italics/spoiler markers anywhere in the line for testing (e.g. ~!, **, __)
     const cleanPrefix = trimmed
-      .replace(/^[^a-zA-Z0-9]+/, "")
+      .replace(/[*_~!]+/g, "")
+      .trim()
       .toLowerCase();
 
-    // Check if the line matches metadata categories
-    const isMetadata = /^(age|height|gender|weight|blood\s*type|birth\s*date|birthday|hair|eyes|relatives|aliases|alias|nationality|affiliation|occupation|voiced\s*by|japanese\s*voice|english\s*voice|class|grade|rank|status|race|type|abilities|signature\s*move):/i.test(cleanPrefix);
+    // Check if the line matches metadata categories (including JJK cursed techniques and species)
+    const isMetadata = /^(age|height|gender|weight|blood\s*type|birth\s*date|birthday|hair|eyes|relatives|aliases|alias|nationality|affiliation|occupation|voiced\s*by|japanese\s*voice|english\s*voice|class|grade|rank|status|race|type|abilities|signature\s*move|species|cursed\s*technique|domain\s*expansion|classification|family|family\s*members|partner|hobbies|voice\s*actor|seiyuu|prominent\s*three\s*families):/i.test(cleanPrefix);
 
     if (isMetadata) {
       continue; // Skip!
@@ -70,12 +71,6 @@ function cleanDescriptionToQuote(description: string, name: string): string {
     .replace(/\s+/g, " ")
     .trim();
 
-  // Look for any quotation blocks inside the description first
-  const quoteMatch = cleaned.match(/"([^"]+)"/);
-  if (quoteMatch && quoteMatch[1].length > 15 && quoteMatch[1].length < 180) {
-    return quoteMatch[1];
-  }
-
   // Fallback: Use the first descriptive sentence
   const sentences = cleaned.split(/(?<=[.!?])\s+/);
   if (sentences.length > 0) {
@@ -90,6 +85,19 @@ function cleanDescriptionToQuote(description: string, name: string): string {
   }
 
   return `${name} is a vital character in this series.`;
+}
+
+interface AniListCharacterEdge {
+  role: string;
+  node: {
+    name: {
+      full: string;
+    };
+    image: {
+      large: string | null;
+    };
+    description: string | null;
+  };
 }
 
 /**
@@ -114,17 +122,28 @@ export async function fetchCharactersFromAniList(title: string): Promise<Charact
       throw new Error(`AniList HTTP error: ${response.status}`);
     }
 
-    const result = await response.json();
+    const result = (await response.json()) as {
+      data?: {
+        Page?: {
+          media?: Array<{
+            characters?: {
+              edges?: AniListCharacterEdge[];
+            };
+          }>;
+        };
+      };
+    };
+
     const media = result.data?.Page?.media?.[0];
     const edges = media?.characters?.edges || [];
 
-    return edges.map((edge: any) => {
+    return edges.map((edge: AniListCharacterEdge) => {
       const charName = edge.node.name.full;
       return {
         name: charName,
         image: edge.node.image.large || "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300&h=300&fit=crop",
         role: edge.role === "MAIN" ? "Main Character" : "Supporting Character",
-        quote: cleanDescriptionToQuote(edge.node.description, charName),
+        quote: cleanDescriptionToQuote(edge.node.description || "", charName),
       };
     });
   } catch (error) {
