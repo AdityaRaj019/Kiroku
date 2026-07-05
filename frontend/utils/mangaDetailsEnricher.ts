@@ -419,65 +419,6 @@ const popularSeriesContent: Record<string, Partial<EnrichedMangaDetails>> = {
   },
 };
 
-// Lists for fallback generator
-const genericMottos = [
-  "In the face of despair, the only option is to rise.",
-  "Bonds forged in fire are the hardest to break.",
-  "A journey of a thousand pages begins with a single search.",
-  "When dark shadows creep, the light of courage shines brightest.",
-  "Beyond the limits of destiny lies true freedom.",
-];
-
-const genericCharacters = [
-  { name: "Hiroshi Sato", quote: "I will protect this world, even if it costs me everything." },
-  { name: "Ren Tanaka", quote: "Strength isn't about not falling, it's about getting back up." },
-  { name: "Yuki Watanabe", quote: "Sometimes, the quietest hearts have the loudest dreams." },
-  { name: "Aoi Kobayashi", quote: "The future belongs to those who fight for it today." },
-  { name: "Kenji Suzuki", quote: "A sword is only as sharp as the spirit of the one who wields it." },
-  { name: "Mei Takahashi", quote: "Logic can only take you so far. Sometimes you need a little magic." },
-  { name: "Daiki Saito", quote: "No one stands at the top of the world without scars." },
-  { name: "Sakura Ito", quote: "Bonds of friendship are the ultimate armor." },
-];
-
-const characterImages = [
-  "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300&h=300&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=300&h=300&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&q=80",
-];
-
-const genericStaffNames = [
-  "Takeshi Obata",
-  "Yusuke Murata",
-  "Sui Ishida",
-  "Kentaro Miura",
-  "Naoko Takeuchi",
-  "Hirohiko Araki",
-  "Kubo Tite",
-  "Hiromu Arakawa",
-];
-
-const genericComments = [
-  "I stumbled upon this series by accident and now I'm completely hooked. The art style is gorgeous!",
-  "Great pacing and character development. Definitely one of the top reads of this season.",
-  "The lore is so deep! I spent three hours reading wiki theories after the latest chapter.",
-  "Honestly a bit of a slow start, but stick with it. The payoff in the second volume is massive.",
-  "Highly recommended for anyone who loves rich storytelling and stunning battle panels.",
-];
-
-const genericUsernames = [
-  "OtakuSoul",
-  "MangaReader99",
-  "ChibiChan",
-  "WeebWarrior",
-  "KageBunshin",
-  "Shinigami_Ryu",
-  "GamerManga",
-  "SenseiX",
-];
-
 export function getMangaEnrichedDetails(mangaId: string, title: string): EnrichedMangaDetails {
   const normTitle = title.toLowerCase().replace(/[^a-z0-9]/g, "");
   
@@ -509,42 +450,9 @@ export function getMangaEnrichedDetails(mangaId: string, title: string): Enriche
     };
   }
 
-  // 2. Fallback procedural generator using string hashing
+  // 2. Fallback generator using string hashing (returning empty values for names/reviews)
   const hash = getStringHash(mangaId || title);
   
-  const motto = genericMottos[hash % genericMottos.length];
-  
-  // Generate 8-12 characters for generic series
-  const charCount = 8 + (hash % 5); // 8, 9, 10, 11, or 12
-  const characters: Character[] = [];
-  for (let i = 0; i < charCount; i++) {
-    const charHash = hash + i * 17;
-    const charTemplate = genericCharacters[charHash % genericCharacters.length];
-    
-    // Ensure unique names
-    let name = charTemplate.name;
-    if (characters.some(c => c.name === name)) {
-      name = genericCharacters[(charHash + 1) % genericCharacters.length].name;
-    }
-    
-    characters.push({
-      name,
-      image: characterImages[charHash % characterImages.length],
-      role: i === 0 || i === 1 ? "Main Character" : "Supporting Character",
-      quote: charTemplate.quote,
-    });
-  }
-
-  // Generate 2-3 staff members
-  const staff: Staff[] = [];
-  const authorName = genericStaffNames[hash % genericStaffNames.length];
-  const artistName = genericStaffNames[(hash + 3) % genericStaffNames.length];
-  staff.push({ name: authorName, role: "Author" });
-  if (authorName !== artistName) {
-    staff.push({ name: artistName, role: "Illustrator & Designer" });
-  }
-  staff.push({ name: "Kodansha" , role: "Publisher" });
-
   // Generate stats
   const baseReaders = 5000 + (hash % 100000);
   const stats: Stats = {
@@ -558,29 +466,11 @@ export function getMangaEnrichedDetails(mangaId: string, title: string): Enriche
     popularityRank: 10 + (hash % 500),
   };
 
-  // Generate 2-3 comments
-  const commentCount = 2 + (hash % 2);
-  const comments: Comment[] = [];
-  for (let i = 0; i < commentCount; i++) {
-    const commHash = hash + i * 29;
-    const user = genericUsernames[commHash % genericUsernames.length];
-    const userAvatar = `https://images.unsplash.com/photo-${1500000000000 + (commHash % 999999)}?w=80&h=80&fit=crop`;
-    
-    comments.push({
-      username: user,
-      avatar: userAvatar,
-      comment: genericComments[commHash % genericComments.length],
-      rating: 7 + (commHash % 4), // 7, 8, 9, 10
-      likes: commHash % 50,
-      date: `${1 + (commHash % 6)} days ago`,
-    });
-  }
-
   return {
-    motto,
-    characters,
-    staff,
+    motto: "",
+    characters: [],
+    staff: [],
     stats,
-    comments,
+    comments: [],
   };
 }

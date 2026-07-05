@@ -234,7 +234,7 @@
       "source_file": "backend/src/middlewares/auth.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_auth_middleware_ts",
-      "community": 54,
+      "community": 9,
       "norm_label": "auth.middleware.ts"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "backend/src/middlewares/auth.middleware.ts",
       "source_location": "L8",
       "id": "middlewares_auth_middleware_request",
-      "community": 54,
+      "community": 9,
       "norm_label": "request"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "backend/src/middlewares/auth.middleware.ts",
       "source_location": "L26",
       "id": "middlewares_auth_middleware_authmiddleware",
-      "community": 54,
+      "community": 9,
       "norm_label": "authmiddleware()"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "backend/src/middlewares/auth.middleware.ts",
       "source_location": "L69",
       "id": "middlewares_auth_middleware_optionalauthmiddleware",
-      "community": 54,
+      "community": 9,
       "norm_label": "optionalauthmiddleware()"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_error_middleware_ts",
-      "community": 54,
+      "community": 55,
       "norm_label": "error.middleware.ts"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L7",
       "id": "middlewares_error_middleware_apperror",
-      "community": 54,
+      "community": 55,
       "norm_label": "apperror"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L8",
       "id": "middlewares_error_middleware_apperror_constructor",
-      "community": 54,
+      "community": 55,
       "norm_label": ".constructor()"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L25",
       "id": "middlewares_error_middleware_errormiddleware",
-      "community": 54,
+      "community": 31,
       "norm_label": "errormiddleware()"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "backend/src/middlewares/validateParams.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validateparams_middleware_ts",
-      "community": 54,
+      "community": 55,
       "norm_label": "validateparams.middleware.ts"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "backend/src/middlewares/validateParams.middleware.ts",
       "source_location": "L15",
       "id": "middlewares_validateparams_middleware_validateparams",
-      "community": 54,
+      "community": 55,
       "norm_label": "validateparams()"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "backend/src/middlewares/validateQuery.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validatequery_middleware_ts",
-      "community": 54,
+      "community": 55,
       "norm_label": "validatequery.middleware.ts"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "backend/src/middlewares/validateQuery.middleware.ts",
       "source_location": "L15",
       "id": "middlewares_validatequery_middleware_validatequery",
-      "community": 54,
+      "community": 55,
       "norm_label": "validatequery()"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validation_middleware_ts",
-      "community": 54,
+      "community": 55,
       "norm_label": "validation.middleware.ts"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L11",
       "id": "middlewares_validation_middleware_validate",
-      "community": 54,
+      "community": 55,
       "norm_label": "validate()"
     },
     {
@@ -360,7 +360,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L1",
       "id": "backend_src_modules_auth_auth_controller_ts",
-      "community": 54,
+      "community": 9,
       "norm_label": "auth.controller.ts"
     },
     {
@@ -369,7 +369,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L27",
       "id": "auth_auth_controller_setrefreshcookie",
-      "community": 54,
+      "community": 9,
       "norm_label": "setrefreshcookie()"
     },
     {
@@ -378,7 +378,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L38",
       "id": "auth_auth_controller_clearrefreshcookie",
-      "community": 54,
+      "community": 9,
       "norm_label": "clearrefreshcookie()"
     },
     {
@@ -387,7 +387,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L55",
       "id": "auth_auth_controller_register",
-      "community": 54,
+      "community": 9,
       "norm_label": "register()"
     },
     {
@@ -396,7 +396,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L108",
       "id": "auth_auth_controller_login",
-      "community": 54,
+      "community": 9,
       "norm_label": "login()"
     },
     {
@@ -405,7 +405,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L169",
       "id": "auth_auth_controller_refresh",
-      "community": 54,
+      "community": 9,
       "norm_label": "refresh()"
     },
     {
@@ -414,7 +414,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L241",
       "id": "auth_auth_controller_logout",
-      "community": 54,
+      "community": 9,
       "norm_label": "logout()"
     },
     {
@@ -423,7 +423,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L270",
       "id": "auth_auth_controller_profile",
-      "community": 54,
+      "community": 9,
       "norm_label": "profile()"
     },
     {
@@ -432,7 +432,7 @@
       "source_file": "backend/src/modules/auth/auth.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_auth_auth_routes_ts",
-      "community": 54,
+      "community": 9,
       "norm_label": "auth.routes.ts"
     },
     {
@@ -450,7 +450,7 @@
       "source_file": "backend/src/modules/auth/auth.schema.ts",
       "source_location": "L1",
       "id": "backend_src_modules_auth_auth_schema_ts",
-      "community": 54,
+      "community": 9,
       "norm_label": "auth.schema.ts"
     },
     {
@@ -459,7 +459,7 @@
       "source_file": "backend/src/modules/auth/auth.schema.ts",
       "source_location": "L5",
       "id": "auth_auth_schema_registerschema",
-      "community": 54,
+      "community": 9,
       "norm_label": "registerschema"
     },
     {
@@ -468,7 +468,7 @@
       "source_file": "backend/src/modules/auth/auth.schema.ts",
       "source_location": "L28",
       "id": "auth_auth_schema_registerinput",
-      "community": 54,
+      "community": 9,
       "norm_label": "registerinput"
     },
     {
@@ -477,7 +477,7 @@
       "source_file": "backend/src/modules/auth/auth.schema.ts",
       "source_location": "L32",
       "id": "auth_auth_schema_loginschema",
-      "community": 54,
+      "community": 9,
       "norm_label": "loginschema"
     },
     {
@@ -486,7 +486,7 @@
       "source_file": "backend/src/modules/auth/auth.schema.ts",
       "source_location": "L43",
       "id": "auth_auth_schema_logininput",
-      "community": 54,
+      "community": 9,
       "norm_label": "logininput"
     },
     {
@@ -495,7 +495,7 @@
       "source_file": "backend/src/modules/library/library.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_library_library_routes_ts",
-      "community": 54,
+      "community": 55,
       "norm_label": "library.routes.ts"
     },
     {
@@ -504,7 +504,7 @@
       "source_file": "backend/src/modules/library/library.routes.ts",
       "source_location": "L16",
       "id": "library_library_routes_libraryrouter",
-      "community": 31,
+      "community": 55,
       "norm_label": "libraryrouter"
     },
     {
@@ -513,7 +513,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L1",
       "id": "backend_src_modules_library_library_schema_ts",
-      "community": 54,
+      "community": 55,
       "norm_label": "library.schema.ts"
     },
     {
@@ -522,7 +522,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L5",
       "id": "library_library_schema_mediatype",
-      "community": 54,
+      "community": 55,
       "norm_label": "mediatype"
     },
     {
@@ -531,7 +531,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L6",
       "id": "library_library_schema_librarystatus",
-      "community": 54,
+      "community": 55,
       "norm_label": "librarystatus"
     },
     {
@@ -540,7 +540,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L21",
       "id": "library_library_schema_upsertlibraryitemschema",
-      "community": 54,
+      "community": 55,
       "norm_label": "upsertlibraryitemschema"
     },
     {
@@ -549,7 +549,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L89",
       "id": "library_library_schema_upsertlibraryiteminput",
-      "community": 54,
+      "community": 55,
       "norm_label": "upsertlibraryiteminput"
     },
     {
@@ -558,7 +558,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L103",
       "id": "library_library_schema_sortfield",
-      "community": 54,
+      "community": 55,
       "norm_label": "sortfield"
     },
     {
@@ -567,7 +567,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L104",
       "id": "library_library_schema_sortorder",
-      "community": 54,
+      "community": 55,
       "norm_label": "sortorder"
     },
     {
@@ -576,7 +576,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L105",
       "id": "library_library_schema_mangaformatfilter",
-      "community": 54,
+      "community": 55,
       "norm_label": "mangaformatfilter"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L114",
       "id": "library_library_schema_libraryqueryschema",
-      "community": 54,
+      "community": 55,
       "norm_label": "libraryqueryschema"
     },
     {
@@ -594,7 +594,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L190",
       "id": "library_library_schema_libraryqueryinput",
-      "community": 54,
+      "community": 55,
       "norm_label": "libraryqueryinput"
     },
     {
@@ -603,7 +603,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L198",
       "id": "library_library_schema_libraryitemidparamschema",
-      "community": 54,
+      "community": 55,
       "norm_label": "libraryitemidparamschema"
     },
     {
@@ -612,7 +612,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L206",
       "id": "library_library_schema_libraryitemidparam",
-      "community": 54,
+      "community": 55,
       "norm_label": "libraryitemidparam"
     },
     {
@@ -621,7 +621,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L213",
       "id": "library_library_schema_libraryuseridparamschema",
-      "community": 54,
+      "community": 55,
       "norm_label": "libraryuseridparamschema"
     },
     {
@@ -630,7 +630,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L221",
       "id": "library_library_schema_libraryuseridparam",
-      "community": 54,
+      "community": 55,
       "norm_label": "libraryuseridparam"
     },
     {
@@ -639,7 +639,7 @@
       "source_file": "backend/src/modules/library/controllers/delete.ts",
       "source_location": "L1",
       "id": "backend_src_modules_library_controllers_delete_ts",
-      "community": 54,
+      "community": 55,
       "norm_label": "delete.ts"
     },
     {
@@ -648,7 +648,7 @@
       "source_file": "backend/src/modules/library/controllers/delete.ts",
       "source_location": "L14",
       "id": "controllers_delete_removelibraryitem",
-      "community": 54,
+      "community": 55,
       "norm_label": "removelibraryitem()"
     },
     {
@@ -657,7 +657,7 @@
       "source_file": "backend/src/modules/library/controllers/list.ts",
       "source_location": "L1",
       "id": "backend_src_modules_library_controllers_list_ts",
-      "community": 54,
+      "community": 55,
       "norm_label": "list.ts"
     },
     {
@@ -666,7 +666,7 @@
       "source_file": "backend/src/modules/library/controllers/list.ts",
       "source_location": "L15",
       "id": "controllers_list_getuserlibrary",
-      "community": 54,
+      "community": 55,
       "norm_label": "getuserlibrary()"
     },
     {
@@ -675,7 +675,7 @@
       "source_file": "backend/src/modules/library/controllers/list.ts",
       "source_location": "L122",
       "id": "controllers_list_getpublicuserlibrary",
-      "community": 54,
+      "community": 55,
       "norm_label": "getpublicuserlibrary()"
     },
     {
@@ -828,7 +828,7 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L20",
       "id": "manga_manga_routes_mangarouter",
-      "community": 31,
+      "community": 55,
       "norm_label": "mangarouter"
     },
     {
@@ -1224,7 +1224,7 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L1",
       "id": "backend_src_utils_auth_helpers_ts",
-      "community": 54,
+      "community": 55,
       "norm_label": "auth.helpers.ts"
     },
     {
@@ -1233,7 +1233,7 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L15",
       "id": "utils_auth_helpers_parseuserid",
-      "community": 54,
+      "community": 55,
       "norm_label": "parseuserid()"
     },
     {
@@ -1242,7 +1242,7 @@
       "source_file": "backend/src/utils/crypto.ts",
       "source_location": "L1",
       "id": "backend_src_utils_crypto_ts",
-      "community": 54,
+      "community": 9,
       "norm_label": "crypto.ts"
     },
     {
@@ -1251,7 +1251,7 @@
       "source_file": "backend/src/utils/crypto.ts",
       "source_location": "L16",
       "id": "utils_crypto_hashpassword",
-      "community": 54,
+      "community": 9,
       "norm_label": "hashpassword()"
     },
     {
@@ -1260,7 +1260,7 @@
       "source_file": "backend/src/utils/crypto.ts",
       "source_location": "L24",
       "id": "utils_crypto_comparepassword",
-      "community": 54,
+      "community": 9,
       "norm_label": "comparepassword()"
     },
     {
@@ -1269,7 +1269,7 @@
       "source_file": "backend/src/utils/crypto.ts",
       "source_location": "L37",
       "id": "utils_crypto_hashrefreshtoken",
-      "community": 54,
+      "community": 9,
       "norm_label": "hashrefreshtoken()"
     },
     {
@@ -1278,7 +1278,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L1",
       "id": "backend_src_utils_jwt_ts",
-      "community": 54,
+      "community": 9,
       "norm_label": "jwt.ts"
     },
     {
@@ -1287,7 +1287,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L6",
       "id": "utils_jwt_tokenpayload",
-      "community": 54,
+      "community": 9,
       "norm_label": "tokenpayload"
     },
     {
@@ -1296,7 +1296,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L22",
       "id": "utils_jwt_getaccesssecret",
-      "community": 54,
+      "community": 9,
       "norm_label": "getaccesssecret()"
     },
     {
@@ -1305,7 +1305,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L44",
       "id": "utils_jwt_getrefreshsecret",
-      "community": 54,
+      "community": 9,
       "norm_label": "getrefreshsecret()"
     },
     {
@@ -1314,7 +1314,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L76",
       "id": "utils_jwt_generateaccesstoken",
-      "community": 54,
+      "community": 9,
       "norm_label": "generateaccesstoken()"
     },
     {
@@ -1323,7 +1323,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L93",
       "id": "utils_jwt_generaterefreshtoken",
-      "community": 54,
+      "community": 9,
       "norm_label": "generaterefreshtoken()"
     },
     {
@@ -1332,7 +1332,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L111",
       "id": "utils_jwt_verifytoken",
-      "community": 54,
+      "community": 9,
       "norm_label": "verifytoken()"
     },
     {
@@ -1341,7 +1341,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L124",
       "id": "utils_jwt_verifyrefreshtoken",
-      "community": 54,
+      "community": 9,
       "norm_label": "verifyrefreshtoken()"
     },
     {
@@ -1449,7 +1449,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L1",
       "id": "backend_src_utils_prisma_ts",
-      "community": 54,
+      "community": 55,
       "norm_label": "prisma.ts"
     },
     {
@@ -1458,7 +1458,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L14",
       "id": "utils_prisma_createprismaclient",
-      "community": 54,
+      "community": 55,
       "norm_label": "createprismaclient()"
     },
     {
@@ -1467,7 +1467,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L26",
       "id": "utils_prisma_prismaclientinstance",
-      "community": 54,
+      "community": 55,
       "norm_label": "prismaclientinstance"
     },
     {
@@ -1476,7 +1476,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L28",
       "id": "utils_prisma_globalforprisma",
-      "community": 54,
+      "community": 55,
       "norm_label": "globalforprisma"
     },
     {
@@ -2916,7 +2916,7 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L19",
       "id": "theme_index_manga_themes",
-      "community": 62,
+      "community": 53,
       "norm_label": "manga_themes"
     },
     {
@@ -2979,7 +2979,7 @@
       "source_file": "frontend/components/theme/ThemeSelector.tsx",
       "source_location": "L1",
       "id": "frontend_components_theme_themeselector_tsx",
-      "community": 62,
+      "community": 53,
       "norm_label": "themeselector.tsx"
     },
     {
@@ -2988,7 +2988,7 @@
       "source_file": "frontend/components/theme/ThemeSelector.tsx",
       "source_location": "L7",
       "id": "theme_themeselector_themeselectorprops",
-      "community": 62,
+      "community": 53,
       "norm_label": "themeselectorprops"
     },
     {
@@ -2997,7 +2997,7 @@
       "source_file": "frontend/components/theme/ThemeSelector.tsx",
       "source_location": "L11",
       "id": "theme_themeselector_themeselector",
-      "community": 62,
+      "community": 53,
       "norm_label": "themeselector()"
     },
     {
@@ -3154,6 +3154,42 @@
       "norm_label": "fetchcharactersfromanilist()"
     },
     {
+      "label": "JikanCharacterEdge",
+      "file_type": "code",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L175",
+      "id": "utils_anilist_jikancharacteredge",
+      "community": 49,
+      "norm_label": "jikancharacteredge"
+    },
+    {
+      "label": "cleanJikanName()",
+      "file_type": "code",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L190",
+      "id": "utils_anilist_cleanjikanname",
+      "community": 49,
+      "norm_label": "cleanjikanname()"
+    },
+    {
+      "label": "getDynamicFallbackQuote()",
+      "file_type": "code",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L196",
+      "id": "utils_anilist_getdynamicfallbackquote",
+      "community": 49,
+      "norm_label": "getdynamicfallbackquote()"
+    },
+    {
+      "label": "fetchCharactersFromJikan()",
+      "file_type": "code",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L222",
+      "id": "utils_anilist_fetchcharactersfromjikan",
+      "community": 49,
+      "norm_label": "fetchcharactersfromjikan()"
+    },
+    {
       "label": "animeShowcaseData.ts",
       "file_type": "code",
       "source_file": "frontend/utils/animeShowcaseData.ts",
@@ -3307,64 +3343,10 @@
       "norm_label": "popularseriescontent"
     },
     {
-      "label": "genericMottos",
-      "file_type": "code",
-      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L423",
-      "id": "utils_mangadetailsenricher_genericmottos",
-      "community": 49,
-      "norm_label": "genericmottos"
-    },
-    {
-      "label": "genericCharacters",
-      "file_type": "code",
-      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L431",
-      "id": "utils_mangadetailsenricher_genericcharacters",
-      "community": 49,
-      "norm_label": "genericcharacters"
-    },
-    {
-      "label": "characterImages",
-      "file_type": "code",
-      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L442",
-      "id": "utils_mangadetailsenricher_characterimages",
-      "community": 49,
-      "norm_label": "characterimages"
-    },
-    {
-      "label": "genericStaffNames",
-      "file_type": "code",
-      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L451",
-      "id": "utils_mangadetailsenricher_genericstaffnames",
-      "community": 49,
-      "norm_label": "genericstaffnames"
-    },
-    {
-      "label": "genericComments",
-      "file_type": "code",
-      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L462",
-      "id": "utils_mangadetailsenricher_genericcomments",
-      "community": 49,
-      "norm_label": "genericcomments"
-    },
-    {
-      "label": "genericUsernames",
-      "file_type": "code",
-      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L470",
-      "id": "utils_mangadetailsenricher_genericusernames",
-      "community": 49,
-      "norm_label": "genericusernames"
-    },
-    {
       "label": "getMangaEnrichedDetails()",
       "file_type": "code",
       "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L481",
+      "source_location": "L422",
       "id": "utils_mangadetailsenricher_getmangaenricheddetails",
       "community": 49,
       "norm_label": "getmangaenricheddetails()"
@@ -3960,7 +3942,7 @@
       "source_file": "PRD.md",
       "source_location": "L791",
       "id": "kiroku_prd_codeblock_22",
-      "community": 0,
+      "community": 48,
       "norm_label": "code:json ({)"
     },
     {
@@ -3978,7 +3960,7 @@
       "source_file": "PRD.md",
       "source_location": "L808",
       "id": "kiroku_prd_codeblock_23",
-      "community": 0,
+      "community": 11,
       "norm_label": "code:json ({)"
     },
     {
@@ -4005,7 +3987,7 @@
       "source_file": "PRD.md",
       "source_location": "L837",
       "id": "kiroku_prd_codeblock_26",
-      "community": 11,
+      "community": 0,
       "norm_label": "code:json ({)"
     },
     {
@@ -4014,7 +3996,7 @@
       "source_file": "PRD.md",
       "source_location": "L853",
       "id": "kiroku_prd_codeblock_27",
-      "community": 11,
+      "community": 0,
       "norm_label": "code:json ({)"
     },
     {
@@ -4059,7 +4041,7 @@
       "source_file": "PRD.md",
       "source_location": "L877",
       "id": "kiroku_prd_11_4_admin_system_control_endpoints_requires_api_key_header_x_admin_key",
-      "community": 0,
+      "community": 11,
       "norm_label": "11.4 admin/system control endpoints (requires api key header: `x-admin-key`)"
     },
     {
@@ -4068,7 +4050,7 @@
       "source_file": "PRD.md",
       "source_location": "L880",
       "id": "kiroku_prd_codeblock_31",
-      "community": 0,
+      "community": 4,
       "norm_label": "code:json ({ \"queuename\": \"notification-dispatcher\", \"jobid\": \"job-1094)"
     },
     {
@@ -4077,7 +4059,7 @@
       "source_file": "PRD.md",
       "source_location": "L884",
       "id": "kiroku_prd_codeblock_32",
-      "community": 0,
+      "community": 11,
       "norm_label": "code:json ({ \"status\": \"retried\", \"jobid\": \"job-1094\" })"
     },
     {
@@ -4086,7 +4068,7 @@
       "source_file": "PRD.md",
       "source_location": "L890",
       "id": "kiroku_prd_codeblock_33",
-      "community": 0,
+      "community": 11,
       "norm_label": "code:json ({)"
     },
     {
@@ -4275,7 +4257,7 @@
       "source_file": "PRD.md",
       "source_location": "L1017",
       "id": "kiroku_prd_15_ci_cd_strategy",
-      "community": 11,
+      "community": 0,
       "norm_label": "15. ci/cd strategy"
     },
     {
@@ -4284,7 +4266,7 @@
       "source_file": "PRD.md",
       "source_location": "L1021",
       "id": "kiroku_prd_codeblock_35",
-      "community": 11,
+      "community": 0,
       "norm_label": "code:block35 (+----------------------------------+)"
     },
     {
@@ -4293,7 +4275,7 @@
       "source_file": "PRD.md",
       "source_location": "L1048",
       "id": "kiroku_prd_15_1_github_actions_workflow_github_workflows_ci_yml",
-      "community": 11,
+      "community": 0,
       "norm_label": "15.1 github actions workflow: `.github/workflows/ci.yml`"
     },
     {
@@ -4302,7 +4284,7 @@
       "source_file": "PRD.md",
       "source_location": "L1049",
       "id": "kiroku_prd_codeblock_36",
-      "community": 11,
+      "community": 0,
       "norm_label": "code:yaml (name: continuous integration & deployment)"
     },
     {
@@ -4419,7 +4401,7 @@
       "source_file": "PRD.md",
       "source_location": "L1215",
       "id": "kiroku_prd_18_future_roadmap",
-      "community": 0,
+      "community": 4,
       "norm_label": "18. future roadmap"
     },
     {
@@ -4428,7 +4410,7 @@
       "source_file": "PRD.md",
       "source_location": "L1217",
       "id": "kiroku_prd_codeblock_40",
-      "community": 0,
+      "community": 4,
       "norm_label": "code:block40 (+--------------------------------------------------------+)"
     },
     {
@@ -4666,6 +4648,60 @@
       "norm_label": "user library (`/api/v1/library`)"
     },
     {
+      "label": "genericMottos",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L423",
+      "community": 49,
+      "norm_label": "genericmottos",
+      "id": "utils_mangadetailsenricher_genericmottos"
+    },
+    {
+      "label": "genericCharacters",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L431",
+      "community": 49,
+      "norm_label": "genericcharacters",
+      "id": "utils_mangadetailsenricher_genericcharacters"
+    },
+    {
+      "label": "characterImages",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L442",
+      "community": 49,
+      "norm_label": "characterimages",
+      "id": "utils_mangadetailsenricher_characterimages"
+    },
+    {
+      "label": "genericStaffNames",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L451",
+      "community": 49,
+      "norm_label": "genericstaffnames",
+      "id": "utils_mangadetailsenricher_genericstaffnames"
+    },
+    {
+      "label": "genericComments",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L462",
+      "community": 49,
+      "norm_label": "genericcomments",
+      "id": "utils_mangadetailsenricher_genericcomments"
+    },
+    {
+      "label": "genericUsernames",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L470",
+      "community": 49,
+      "norm_label": "genericusernames",
+      "id": "utils_mangadetailsenricher_genericusernames"
+    },
+    {
       "label": "TRENDING_BY_TIME",
       "file_type": "code",
       "source_file": "frontend/components/explore/RightContentPane.tsx",
@@ -4832,7 +4868,7 @@
       "file_type": "code",
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L19",
-      "community": 54,
+      "community": 9,
       "norm_label": "getsecret()",
       "id": "utils_jwt_getsecret"
     },
@@ -15105,9 +15141,9 @@
       "source_file": "frontend/utils/anilist.ts",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_utils_anilist_ts",
-      "target": "utils_anilist_anilistcharacteredge",
-      "confidence_score": 1.0
+      "target": "utils_anilist_anilistcharacteredge"
     },
     {
       "relation": "contains",
@@ -15123,11 +15159,51 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L174",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "frontend_utils_anilist_ts",
+      "target": "utils_anilist_cleanjikanname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/anilist.ts",
       "source_location": "L68",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "frontend_utils_anilist_ts",
       "target": "utils_anilist_fetchcharactersfromanilist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L180",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "frontend_utils_anilist_ts",
+      "target": "utils_anilist_fetchcharactersfromjikan"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "frontend_utils_anilist_ts",
+      "target": "utils_anilist_getdynamicfallbackquote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L159",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "frontend_utils_anilist_ts",
+      "target": "utils_anilist_jikancharacteredge"
     },
     {
       "relation": "imports",
@@ -15139,6 +15215,17 @@
       "confidence_score": 1.0,
       "source": "frontend_utils_anilist_ts",
       "target": "utils_mangadetailsenricher_character"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/anilist.ts",
+      "source_location": "L155",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_anilist_fetchcharactersfromanilist",
+      "target": "utils_anilist_fetchcharactersfromjikan"
     },
     {
       "relation": "contains",
@@ -19445,5 +19532,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d0edcbc617bfac61048792838908676fcd06b121"
+  "built_at_commit": "d64e379a6c178e3fc6e1b0ce4f9757dd377c61f6"
 }

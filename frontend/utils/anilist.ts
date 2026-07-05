@@ -152,6 +152,129 @@ export async function fetchCharactersFromAniList(title: string): Promise<Charact
         error instanceof Error ? error.message : String(error)
       }`
     );
+
+    // Bypass Jikan API fallback for popular series so they fall back to our high-quality hand-crafted mock characters
+    const normTitle = title.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const isPopular =
+      normTitle.includes("onepiece") ||
+      normTitle.includes("naruto") ||
+      normTitle.includes("chainsawman") ||
+      normTitle.includes("jujutsukaisen") ||
+      normTitle.includes("jjk");
+
+    if (isPopular) {
+      console.log(`[AniListService] "${title}" is a popular series. Falling back to curated mock characters.`);
+      return [];
+    }
+
+    console.log(`[AniListService] Falling back to Jikan API for "${title}".`);
+    return await fetchCharactersFromJikan(title);
+  }
+}
+
+interface JikanCharacterEdge {
+  character: {
+    name: string;
+    images?: {
+      webp?: {
+        image_url: string;
+      };
+      jpg?: {
+        image_url: string;
+      };
+    };
+  };
+  role: string;
+}
+
+function cleanJikanName(name: string): string {
+  if (!name.includes(",")) return name;
+  const parts = name.split(",").map((p) => p.trim());
+  return `${parts[1]} ${parts[0]}`;
+}
+
+function getDynamicFallbackQuote(name: string, role: string): string {
+  const hash = name.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  const mainQuotes = [
+    "I will protect this world, even if it costs me everything.",
+    "If you don't take risks, you can't create a future!",
+    "Strength isn't about not falling, it's about getting back up.",
+    "I won't run away anymore. I will face my destiny.",
+    "Bonds of friendship are the ultimate armor.",
+    "The only way to win is to never give up!"
+  ];
+  const supportingQuotes = [
+    "Sometimes, the quietest hearts have the loudest dreams.",
+    "The future belongs to those who fight for it today.",
+    "A sword is only as sharp as the spirit of the one who wields it.",
+    "No one stands at the top of the world without scars.",
+    "Logic can only take you so far. Sometimes you need a little magic.",
+    "Bonds forged in fire are the hardest to break."
+  ];
+
+  if (role === "Main Character") {
+    return mainQuotes[hash % mainQuotes.length];
+  } else {
+    return supportingQuotes[hash % supportingQuotes.length];
+  }
+}
+
+async function fetchCharactersFromJikan(title: string): Promise<Character[]> {
+  try {
+    const cleanTitle = title
+      .replace(/\([^)]*\)/g, "")
+      .replace(/\[[^\]]*\]/g, "")
+      .trim();
+    if (!cleanTitle) return [];
+
+    const searchRes = await fetch(
+      `https://api.jikan.moe/v4/manga?q=${encodeURIComponent(cleanTitle)}&limit=1`
+    );
+    if (!searchRes.ok) {
+      throw new Error(`Jikan search HTTP error: ${searchRes.status}`);
+    }
+
+    const searchData = (await searchRes.json()) as {
+      data?: Array<{ mal_id: number }>;
+    };
+    const malId = searchData.data?.[0]?.mal_id;
+    if (!malId) return [];
+
+    const charRes = await fetch(`https://api.jikan.moe/v4/manga/${malId}/characters`);
+    if (!charRes.ok) {
+      throw new Error(`Jikan characters HTTP error: ${charRes.status}`);
+    }
+
+    const charData = (await charRes.json()) as {
+      data?: JikanCharacterEdge[];
+    };
+    const edges = (charData.data || []).slice(0, 12);
+
+    return edges.map((edge: JikanCharacterEdge) => {
+      const rawName = edge.character.name;
+      const cleanName = cleanJikanName(rawName);
+      const imageUrl =
+        edge.character.images?.webp?.image_url ||
+        edge.character.images?.jpg?.image_url ||
+        "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300&h=300&fit=crop";
+      
+      const roleMapped = edge.role === "Main" ? "Main Character" : "Supporting Character";
+
+      return {
+        name: cleanName,
+        image: imageUrl,
+        role: roleMapped,
+        quote: getDynamicFallbackQuote(cleanName, roleMapped),
+      };
+    });
+  } catch (error) {
+    console.warn(
+      `[JikanService] Failed to fetch characters from Jikan: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    );
     return [];
   }
 }
+
+
