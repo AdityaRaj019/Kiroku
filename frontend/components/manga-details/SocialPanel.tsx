@@ -108,6 +108,7 @@ export const SocialPanel: React.FC<SocialPanelProps> = ({ comments }) => {
                   className="object-cover"
                   sizes="(max-w-768px) 40px, 48px"
                   unoptimized={comm.avatar.startsWith("http")}
+                  referrerPolicy="no-referrer"
                 />
               </div>
 

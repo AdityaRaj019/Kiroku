@@ -150,24 +150,8 @@ export async function fetchCharactersFromAniList(title: string): Promise<Charact
     console.warn(
       `[AniListService] Failed to fetch characters from AniList: ${
         error instanceof Error ? error.message : String(error)
-      }`
+      }. Falling back to Jikan API.`
     );
-
-    // Bypass Jikan API fallback for popular series so they fall back to our high-quality hand-crafted mock characters
-    const normTitle = title.toLowerCase().replace(/[^a-z0-9]/g, "");
-    const isPopular =
-      normTitle.includes("onepiece") ||
-      normTitle.includes("naruto") ||
-      normTitle.includes("chainsawman") ||
-      normTitle.includes("jujutsukaisen") ||
-      normTitle.includes("jjk");
-
-    if (isPopular) {
-      console.log(`[AniListService] "${title}" is a popular series. Falling back to curated mock characters.`);
-      return [];
-    }
-
-    console.log(`[AniListService] Falling back to Jikan API for "${title}".`);
     return await fetchCharactersFromJikan(title);
   }
 }
