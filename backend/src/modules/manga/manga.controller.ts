@@ -253,7 +253,13 @@ async function mapMangaEntitiesWithStats(
 async function fetchUserTracking(
   userId: number,
   mangaLocalId: number
-): Promise<{ isFollowing: boolean; lastReadChapter: string | null; followedAt: Date | null }> {
+): Promise<{
+  isFollowing: boolean;
+  libraryItemId: number | null;
+  status: string | null;
+  lastReadChapter: string | null;
+  followedAt: Date | null;
+}> {
   const item = await prisma.libraryItem.findUnique({
     where: {
       userId_mangaId: {
@@ -262,17 +268,27 @@ async function fetchUserTracking(
       },
     },
     select: {
+      id: true,
       progress: true,
+      status: true,
       createdAt: true,
     },
   });
 
   if (!item) {
-    return { isFollowing: false, lastReadChapter: null, followedAt: null };
+    return {
+      isFollowing: false,
+      libraryItemId: null,
+      status: null,
+      lastReadChapter: null,
+      followedAt: null,
+    };
   }
 
   return {
     isFollowing: true,
+    libraryItemId: item.id,
+    status: item.status,
     lastReadChapter: item.progress.toString(),
     followedAt: item.createdAt,
   };

@@ -234,7 +234,7 @@
       "source_file": "backend/src/middlewares/auth.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_auth_middleware_ts",
-      "community": 0,
+      "community": 61,
       "norm_label": "auth.middleware.ts"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "backend/src/middlewares/auth.middleware.ts",
       "source_location": "L8",
       "id": "middlewares_auth_middleware_request",
-      "community": 0,
+      "community": 61,
       "norm_label": "request"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "backend/src/middlewares/auth.middleware.ts",
       "source_location": "L26",
       "id": "middlewares_auth_middleware_authmiddleware",
-      "community": 0,
+      "community": 61,
       "norm_label": "authmiddleware()"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "backend/src/middlewares/auth.middleware.ts",
       "source_location": "L69",
       "id": "middlewares_auth_middleware_optionalauthmiddleware",
-      "community": 0,
+      "community": 61,
       "norm_label": "optionalauthmiddleware()"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_error_middleware_ts",
-      "community": 31,
+      "community": 56,
       "norm_label": "error.middleware.ts"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L7",
       "id": "middlewares_error_middleware_apperror",
-      "community": 31,
+      "community": 56,
       "norm_label": "apperror"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L8",
       "id": "middlewares_error_middleware_apperror_constructor",
-      "community": 31,
+      "community": 56,
       "norm_label": ".constructor()"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "backend/src/middlewares/error.middleware.ts",
       "source_location": "L25",
       "id": "middlewares_error_middleware_errormiddleware",
-      "community": 31,
+      "community": 56,
       "norm_label": "errormiddleware()"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "backend/src/middlewares/validateParams.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validateparams_middleware_ts",
-      "community": 31,
+      "community": 50,
       "norm_label": "validateparams.middleware.ts"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "backend/src/middlewares/validateParams.middleware.ts",
       "source_location": "L15",
       "id": "middlewares_validateparams_middleware_validateparams",
-      "community": 31,
+      "community": 50,
       "norm_label": "validateparams()"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "backend/src/middlewares/validateQuery.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validatequery_middleware_ts",
-      "community": 31,
+      "community": 50,
       "norm_label": "validatequery.middleware.ts"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "backend/src/middlewares/validateQuery.middleware.ts",
       "source_location": "L15",
       "id": "middlewares_validatequery_middleware_validatequery",
-      "community": 31,
+      "community": 50,
       "norm_label": "validatequery()"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_middlewares_validation_middleware_ts",
-      "community": 31,
+      "community": 62,
       "norm_label": "validation.middleware.ts"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "backend/src/middlewares/validation.middleware.ts",
       "source_location": "L11",
       "id": "middlewares_validation_middleware_validate",
-      "community": 31,
+      "community": 62,
       "norm_label": "validate()"
     },
     {
@@ -423,7 +423,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L270",
       "id": "auth_auth_controller_profile",
-      "community": 0,
+      "community": 56,
       "norm_label": "profile()"
     },
     {
@@ -432,7 +432,7 @@
       "source_file": "backend/src/modules/auth/auth.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_auth_auth_routes_ts",
-      "community": 0,
+      "community": 62,
       "norm_label": "auth.routes.ts"
     },
     {
@@ -441,7 +441,7 @@
       "source_file": "backend/src/modules/auth/auth.routes.ts",
       "source_location": "L7",
       "id": "auth_auth_routes_authrouter",
-      "community": 31,
+      "community": 62,
       "norm_label": "authrouter"
     },
     {
@@ -450,7 +450,7 @@
       "source_file": "backend/src/modules/auth/auth.schema.ts",
       "source_location": "L1",
       "id": "backend_src_modules_auth_auth_schema_ts",
-      "community": 0,
+      "community": 62,
       "norm_label": "auth.schema.ts"
     },
     {
@@ -459,7 +459,7 @@
       "source_file": "backend/src/modules/auth/auth.schema.ts",
       "source_location": "L5",
       "id": "auth_auth_schema_registerschema",
-      "community": 0,
+      "community": 62,
       "norm_label": "registerschema"
     },
     {
@@ -468,7 +468,7 @@
       "source_file": "backend/src/modules/auth/auth.schema.ts",
       "source_location": "L28",
       "id": "auth_auth_schema_registerinput",
-      "community": 0,
+      "community": 62,
       "norm_label": "registerinput"
     },
     {
@@ -477,7 +477,7 @@
       "source_file": "backend/src/modules/auth/auth.schema.ts",
       "source_location": "L32",
       "id": "auth_auth_schema_loginschema",
-      "community": 0,
+      "community": 62,
       "norm_label": "loginschema"
     },
     {
@@ -486,7 +486,7 @@
       "source_file": "backend/src/modules/auth/auth.schema.ts",
       "source_location": "L43",
       "id": "auth_auth_schema_logininput",
-      "community": 0,
+      "community": 62,
       "norm_label": "logininput"
     },
     {
@@ -495,7 +495,7 @@
       "source_file": "backend/src/modules/library/library.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_library_library_routes_ts",
-      "community": 31,
+      "community": 54,
       "norm_label": "library.routes.ts"
     },
     {
@@ -504,7 +504,7 @@
       "source_file": "backend/src/modules/library/library.routes.ts",
       "source_location": "L16",
       "id": "library_library_routes_libraryrouter",
-      "community": 31,
+      "community": 54,
       "norm_label": "libraryrouter"
     },
     {
@@ -513,7 +513,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L1",
       "id": "backend_src_modules_library_library_schema_ts",
-      "community": 31,
+      "community": 54,
       "norm_label": "library.schema.ts"
     },
     {
@@ -522,7 +522,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L5",
       "id": "library_library_schema_mediatype",
-      "community": 31,
+      "community": 54,
       "norm_label": "mediatype"
     },
     {
@@ -531,7 +531,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L6",
       "id": "library_library_schema_librarystatus",
-      "community": 31,
+      "community": 54,
       "norm_label": "librarystatus"
     },
     {
@@ -540,7 +540,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L21",
       "id": "library_library_schema_upsertlibraryitemschema",
-      "community": 31,
+      "community": 54,
       "norm_label": "upsertlibraryitemschema"
     },
     {
@@ -549,7 +549,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L89",
       "id": "library_library_schema_upsertlibraryiteminput",
-      "community": 31,
+      "community": 54,
       "norm_label": "upsertlibraryiteminput"
     },
     {
@@ -558,7 +558,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L103",
       "id": "library_library_schema_sortfield",
-      "community": 31,
+      "community": 54,
       "norm_label": "sortfield"
     },
     {
@@ -567,7 +567,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L104",
       "id": "library_library_schema_sortorder",
-      "community": 31,
+      "community": 54,
       "norm_label": "sortorder"
     },
     {
@@ -576,7 +576,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L105",
       "id": "library_library_schema_mangaformatfilter",
-      "community": 31,
+      "community": 54,
       "norm_label": "mangaformatfilter"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L114",
       "id": "library_library_schema_libraryqueryschema",
-      "community": 31,
+      "community": 54,
       "norm_label": "libraryqueryschema"
     },
     {
@@ -594,7 +594,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L190",
       "id": "library_library_schema_libraryqueryinput",
-      "community": 31,
+      "community": 54,
       "norm_label": "libraryqueryinput"
     },
     {
@@ -603,7 +603,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L198",
       "id": "library_library_schema_libraryitemidparamschema",
-      "community": 31,
+      "community": 54,
       "norm_label": "libraryitemidparamschema"
     },
     {
@@ -612,7 +612,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L206",
       "id": "library_library_schema_libraryitemidparam",
-      "community": 31,
+      "community": 54,
       "norm_label": "libraryitemidparam"
     },
     {
@@ -621,7 +621,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L213",
       "id": "library_library_schema_libraryuseridparamschema",
-      "community": 31,
+      "community": 54,
       "norm_label": "libraryuseridparamschema"
     },
     {
@@ -630,7 +630,7 @@
       "source_file": "backend/src/modules/library/library.schema.ts",
       "source_location": "L221",
       "id": "library_library_schema_libraryuseridparam",
-      "community": 31,
+      "community": 54,
       "norm_label": "libraryuseridparam"
     },
     {
@@ -639,7 +639,7 @@
       "source_file": "backend/src/modules/library/controllers/delete.ts",
       "source_location": "L1",
       "id": "backend_src_modules_library_controllers_delete_ts",
-      "community": 31,
+      "community": 56,
       "norm_label": "delete.ts"
     },
     {
@@ -648,7 +648,7 @@
       "source_file": "backend/src/modules/library/controllers/delete.ts",
       "source_location": "L14",
       "id": "controllers_delete_removelibraryitem",
-      "community": 31,
+      "community": 56,
       "norm_label": "removelibraryitem()"
     },
     {
@@ -657,7 +657,7 @@
       "source_file": "backend/src/modules/library/controllers/list.ts",
       "source_location": "L1",
       "id": "backend_src_modules_library_controllers_list_ts",
-      "community": 31,
+      "community": 56,
       "norm_label": "list.ts"
     },
     {
@@ -666,7 +666,7 @@
       "source_file": "backend/src/modules/library/controllers/list.ts",
       "source_location": "L15",
       "id": "controllers_list_getuserlibrary",
-      "community": 31,
+      "community": 56,
       "norm_label": "getuserlibrary()"
     },
     {
@@ -675,7 +675,7 @@
       "source_file": "backend/src/modules/library/controllers/list.ts",
       "source_location": "L122",
       "id": "controllers_list_getpublicuserlibrary",
-      "community": 31,
+      "community": 54,
       "norm_label": "getpublicuserlibrary()"
     },
     {
@@ -772,7 +772,7 @@
       "label": "searchManga()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L299",
+      "source_location": "L315",
       "id": "manga_manga_controller_searchmanga",
       "community": 55,
       "norm_label": "searchmanga()"
@@ -781,7 +781,7 @@
       "label": "getMangaDetails()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L352",
+      "source_location": "L368",
       "id": "manga_manga_controller_getmangadetails",
       "community": 55,
       "norm_label": "getmangadetails()"
@@ -790,16 +790,16 @@
       "label": "getMangaChapters()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L511",
+      "source_location": "L527",
       "id": "manga_manga_controller_getmangachapters",
-      "community": 55,
+      "community": 50,
       "norm_label": "getmangachapters()"
     },
     {
       "label": "getMangaShowcase()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L572",
+      "source_location": "L588",
       "id": "manga_manga_controller_getmangashowcase",
       "community": 55,
       "norm_label": "getmangashowcase()"
@@ -808,7 +808,7 @@
       "label": "advancedSearchManga()",
       "file_type": "code",
       "source_file": "backend/src/modules/manga/manga.controller.ts",
-      "source_location": "L660",
+      "source_location": "L676",
       "id": "manga_manga_controller_advancedsearchmanga",
       "community": 55,
       "norm_label": "advancedsearchmanga()"
@@ -819,7 +819,7 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_manga_manga_routes_ts",
-      "community": 55,
+      "community": 50,
       "norm_label": "manga.routes.ts"
     },
     {
@@ -828,7 +828,7 @@
       "source_file": "backend/src/modules/manga/manga.routes.ts",
       "source_location": "L20",
       "id": "manga_manga_routes_mangarouter",
-      "community": 31,
+      "community": 50,
       "norm_label": "mangarouter"
     },
     {
@@ -837,7 +837,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L1",
       "id": "backend_src_modules_manga_manga_schema_ts",
-      "community": 55,
+      "community": 50,
       "norm_label": "manga.schema.ts"
     },
     {
@@ -846,7 +846,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L15",
       "id": "manga_manga_schema_searchqueryschema",
-      "community": 55,
+      "community": 50,
       "norm_label": "searchqueryschema"
     },
     {
@@ -855,7 +855,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L40",
       "id": "manga_manga_schema_searchqueryinput",
-      "community": 55,
+      "community": 50,
       "norm_label": "searchqueryinput"
     },
     {
@@ -864,7 +864,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L52",
       "id": "manga_manga_schema_chaptersqueryschema",
-      "community": 55,
+      "community": 50,
       "norm_label": "chaptersqueryschema"
     },
     {
@@ -873,7 +873,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L73",
       "id": "manga_manga_schema_chaptersqueryinput",
-      "community": 55,
+      "community": 50,
       "norm_label": "chaptersqueryinput"
     },
     {
@@ -882,7 +882,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L81",
       "id": "manga_manga_schema_mangaidparamschema",
-      "community": 55,
+      "community": 50,
       "norm_label": "mangaidparamschema"
     },
     {
@@ -891,7 +891,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L85",
       "id": "manga_manga_schema_mangaidparam",
-      "community": 55,
+      "community": 50,
       "norm_label": "mangaidparam"
     },
     {
@@ -900,7 +900,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L92",
       "id": "manga_manga_schema_showcasequeryschema",
-      "community": 55,
+      "community": 50,
       "norm_label": "showcasequeryschema"
     },
     {
@@ -909,7 +909,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L96",
       "id": "manga_manga_schema_showcasequeryinput",
-      "community": 55,
+      "community": 50,
       "norm_label": "showcasequeryinput"
     },
     {
@@ -918,7 +918,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L100",
       "id": "manga_manga_schema_mangaformatenum",
-      "community": 55,
+      "community": 50,
       "norm_label": "mangaformatenum"
     },
     {
@@ -927,7 +927,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L113",
       "id": "manga_manga_schema_splitcommaseparated",
-      "community": 55,
+      "community": 50,
       "norm_label": "splitcommaseparated()"
     },
     {
@@ -936,7 +936,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L136",
       "id": "manga_manga_schema_advancedsearchqueryschema",
-      "community": 55,
+      "community": 50,
       "norm_label": "advancedsearchqueryschema"
     },
     {
@@ -945,7 +945,7 @@
       "source_file": "backend/src/modules/manga/manga.schema.ts",
       "source_location": "L235",
       "id": "manga_manga_schema_advancedsearchqueryinput",
-      "community": 55,
+      "community": 50,
       "norm_label": "advancedsearchqueryinput"
     },
     {
@@ -954,7 +954,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L1",
       "id": "backend_src_services_mangadex_service_ts",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadex.service.ts"
     },
     {
@@ -981,7 +981,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L81",
       "id": "services_mangadex_service_mangadexservice",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadexservice"
     },
     {
@@ -990,7 +990,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L84",
       "id": "services_mangadex_service_mangadexservice_constructor",
-      "community": 49,
+      "community": 55,
       "norm_label": ".constructor()"
     },
     {
@@ -999,7 +999,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L97",
       "id": "services_mangadex_service_mangadexservice_fetchfrommangadex",
-      "community": 49,
+      "community": 55,
       "norm_label": ".fetchfrommangadex()"
     },
     {
@@ -1008,7 +1008,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L131",
       "id": "services_mangadex_service_mangadexservice_cacheget",
-      "community": 49,
+      "community": 55,
       "norm_label": ".cacheget()"
     },
     {
@@ -1017,7 +1017,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L150",
       "id": "services_mangadex_service_mangadexservice_cacheset",
-      "community": 49,
+      "community": 55,
       "norm_label": ".cacheset()"
     },
     {
@@ -1026,7 +1026,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L173",
       "id": "services_mangadex_service_mangadexservice_fetchwithcache",
-      "community": 49,
+      "community": 55,
       "norm_label": ".fetchwithcache()"
     },
     {
@@ -1035,7 +1035,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L218",
       "id": "services_mangadex_service_mangadexservice_searchmanga",
-      "community": 49,
+      "community": 55,
       "norm_label": ".searchmanga()"
     },
     {
@@ -1044,7 +1044,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L281",
       "id": "services_mangadex_service_mangadexservice_advancedsearchmanga",
-      "community": 49,
+      "community": 55,
       "norm_label": ".advancedsearchmanga()"
     },
     {
@@ -1053,7 +1053,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L376",
       "id": "services_mangadex_service_mangadexservice_getmangadetails",
-      "community": 49,
+      "community": 55,
       "norm_label": ".getmangadetails()"
     },
     {
@@ -1062,7 +1062,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L406",
       "id": "services_mangadex_service_mangadexservice_getmangachapters",
-      "community": 49,
+      "community": 55,
       "norm_label": ".getmangachapters()"
     },
     {
@@ -1071,7 +1071,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L434",
       "id": "services_mangadex_service_mangadexservice_getpopularmanga",
-      "community": 49,
+      "community": 55,
       "norm_label": ".getpopularmanga()"
     },
     {
@@ -1080,7 +1080,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L473",
       "id": "services_mangadex_service_mangadexservice_getmangalistbyids",
-      "community": 49,
+      "community": 55,
       "norm_label": ".getmangalistbyids()"
     },
     {
@@ -1089,7 +1089,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L514",
       "id": "services_mangadex_service_mangadexservice_getmangastatistics",
-      "community": 49,
+      "community": 55,
       "norm_label": ".getmangastatistics()"
     },
     {
@@ -1098,7 +1098,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L566",
       "id": "services_mangadex_service_mangadexservice_getmangachaptercount",
-      "community": 49,
+      "community": 55,
       "norm_label": ".getmangachaptercount()"
     },
     {
@@ -1107,7 +1107,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L619",
       "id": "services_mangadex_service_mangadexservice_getmangachaptercounts",
-      "community": 49,
+      "community": 55,
       "norm_label": ".getmangachaptercounts()"
     },
     {
@@ -1116,7 +1116,7 @@
       "source_file": "backend/src/services/mangadex.service.ts",
       "source_location": "L638",
       "id": "services_mangadex_service_globalformangadex",
-      "community": 49,
+      "community": 55,
       "norm_label": "globalformangadex"
     },
     {
@@ -1125,7 +1125,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L1",
       "id": "backend_src_types_mangadex_types_ts",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadex.types.ts"
     },
     {
@@ -1134,7 +1134,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L14",
       "id": "types_mangadex_types_localizedstring",
-      "community": 49,
+      "community": 55,
       "norm_label": "localizedstring"
     },
     {
@@ -1143,7 +1143,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L20",
       "id": "types_mangadex_types_mangadextag",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadextag"
     },
     {
@@ -1152,7 +1152,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L32",
       "id": "types_mangadex_types_mangadexrelationship",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadexrelationship"
     },
     {
@@ -1161,7 +1161,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L41",
       "id": "types_mangadex_types_mangadexmangaattributes",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadexmangaattributes"
     },
     {
@@ -1170,7 +1170,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L64",
       "id": "types_mangadex_types_mangadexmangaentity",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadexmangaentity"
     },
     {
@@ -1179,7 +1179,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L73",
       "id": "types_mangadex_types_mangadexchapterattributes",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadexchapterattributes"
     },
     {
@@ -1188,7 +1188,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L87",
       "id": "types_mangadex_types_mangadexchapterentity",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadexchapterentity"
     },
     {
@@ -1197,7 +1197,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L97",
       "id": "types_mangadex_types_mangadexcollectionresponse",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadexcollectionresponse"
     },
     {
@@ -1206,7 +1206,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L107",
       "id": "types_mangadex_types_mangadexentityresponse",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadexentityresponse"
     },
     {
@@ -1215,7 +1215,7 @@
       "source_file": "backend/src/types/mangadex.types.ts",
       "source_location": "L114",
       "id": "types_mangadex_types_mangadexerrorresponse",
-      "community": 49,
+      "community": 55,
       "norm_label": "mangadexerrorresponse"
     },
     {
@@ -1224,7 +1224,7 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L1",
       "id": "backend_src_utils_auth_helpers_ts",
-      "community": 31,
+      "community": 56,
       "norm_label": "auth.helpers.ts"
     },
     {
@@ -1233,7 +1233,7 @@
       "source_file": "backend/src/utils/auth.helpers.ts",
       "source_location": "L15",
       "id": "utils_auth_helpers_parseuserid",
-      "community": 0,
+      "community": 56,
       "norm_label": "parseuserid()"
     },
     {
@@ -1278,7 +1278,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L1",
       "id": "backend_src_utils_jwt_ts",
-      "community": 0,
+      "community": 61,
       "norm_label": "jwt.ts"
     },
     {
@@ -1287,7 +1287,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L6",
       "id": "utils_jwt_tokenpayload",
-      "community": 0,
+      "community": 61,
       "norm_label": "tokenpayload"
     },
     {
@@ -1296,7 +1296,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L22",
       "id": "utils_jwt_getaccesssecret",
-      "community": 0,
+      "community": 61,
       "norm_label": "getaccesssecret()"
     },
     {
@@ -1305,7 +1305,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L44",
       "id": "utils_jwt_getrefreshsecret",
-      "community": 0,
+      "community": 61,
       "norm_label": "getrefreshsecret()"
     },
     {
@@ -1323,7 +1323,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L93",
       "id": "utils_jwt_generaterefreshtoken",
-      "community": 0,
+      "community": 61,
       "norm_label": "generaterefreshtoken()"
     },
     {
@@ -1332,7 +1332,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L111",
       "id": "utils_jwt_verifytoken",
-      "community": 0,
+      "community": 61,
       "norm_label": "verifytoken()"
     },
     {
@@ -1341,7 +1341,7 @@
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L124",
       "id": "utils_jwt_verifyrefreshtoken",
-      "community": 0,
+      "community": 61,
       "norm_label": "verifyrefreshtoken()"
     },
     {
@@ -1449,7 +1449,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L1",
       "id": "backend_src_utils_prisma_ts",
-      "community": 31,
+      "community": 56,
       "norm_label": "prisma.ts"
     },
     {
@@ -1458,7 +1458,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L14",
       "id": "utils_prisma_createprismaclient",
-      "community": 31,
+      "community": 56,
       "norm_label": "createprismaclient()"
     },
     {
@@ -1467,7 +1467,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L26",
       "id": "utils_prisma_prismaclientinstance",
-      "community": 31,
+      "community": 56,
       "norm_label": "prismaclientinstance"
     },
     {
@@ -1476,7 +1476,7 @@
       "source_file": "backend/src/utils/prisma.ts",
       "source_location": "L28",
       "id": "utils_prisma_globalforprisma",
-      "community": 31,
+      "community": 56,
       "norm_label": "globalforprisma"
     },
     {
@@ -1665,7 +1665,7 @@
       "source_file": "frontend/app/login/page.tsx",
       "source_location": "L1",
       "id": "frontend_app_login_page_tsx",
-      "community": 56,
+      "community": 59,
       "norm_label": "page.tsx"
     },
     {
@@ -1674,7 +1674,7 @@
       "source_file": "frontend/app/login/page.tsx",
       "source_location": "L12",
       "id": "login_page_petal",
-      "community": 56,
+      "community": 59,
       "norm_label": "petal"
     },
     {
@@ -1683,7 +1683,7 @@
       "source_file": "frontend/app/login/page.tsx",
       "source_location": "L23",
       "id": "login_page_loginpage",
-      "community": 56,
+      "community": 59,
       "norm_label": "loginpage()"
     },
     {
@@ -1707,10 +1707,28 @@
     {
       "label": "page.tsx",
       "file_type": "code",
+      "source_file": "frontend/app/manga/[id]/page.tsx",
+      "source_location": "L1",
+      "id": "frontend_app_manga_id_page_tsx",
+      "community": 49,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "MangaDetailsPage()",
+      "file_type": "code",
+      "source_file": "frontend/app/manga/[id]/page.tsx",
+      "source_location": "L7",
+      "id": "id_page_mangadetailspage",
+      "community": 49,
+      "norm_label": "mangadetailspage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
       "source_file": "frontend/app/register/page.tsx",
       "source_location": "L1",
       "id": "frontend_app_register_page_tsx",
-      "community": 50,
+      "community": 59,
       "norm_label": "page.tsx"
     },
     {
@@ -1719,7 +1737,7 @@
       "source_file": "frontend/app/register/page.tsx",
       "source_location": "L24",
       "id": "register_page_fielderrors",
-      "community": 50,
+      "community": 59,
       "norm_label": "fielderrors"
     },
     {
@@ -1728,7 +1746,7 @@
       "source_file": "frontend/app/register/page.tsx",
       "source_location": "L30",
       "id": "register_page_validateregister",
-      "community": 50,
+      "community": 59,
       "norm_label": "validateregister()"
     },
     {
@@ -1737,7 +1755,7 @@
       "source_file": "frontend/app/register/page.tsx",
       "source_location": "L67",
       "id": "register_page_strengthrule",
-      "community": 50,
+      "community": 59,
       "norm_label": "strengthrule"
     },
     {
@@ -1746,7 +1764,7 @@
       "source_file": "frontend/app/register/page.tsx",
       "source_location": "L72",
       "id": "register_page_password_rules",
-      "community": 50,
+      "community": 59,
       "norm_label": "password_rules"
     },
     {
@@ -1755,7 +1773,7 @@
       "source_file": "frontend/app/register/page.tsx",
       "source_location": "L79",
       "id": "register_page_passwordstrength",
-      "community": 50,
+      "community": 59,
       "norm_label": "passwordstrength()"
     },
     {
@@ -1764,7 +1782,7 @@
       "source_file": "frontend/app/register/page.tsx",
       "source_location": "L165",
       "id": "register_page_registerpage",
-      "community": 50,
+      "community": 59,
       "norm_label": "registerpage()"
     },
     {
@@ -2259,7 +2277,7 @@
       "source_file": "frontend/components/layout/Footer.tsx",
       "source_location": "L1",
       "id": "frontend_components_layout_footer_tsx",
-      "community": 62,
+      "community": 9,
       "norm_label": "footer.tsx"
     },
     {
@@ -2268,7 +2286,7 @@
       "source_file": "frontend/components/layout/Footer.tsx",
       "source_location": "L6",
       "id": "layout_footer_githubicon",
-      "community": 62,
+      "community": 9,
       "norm_label": "githubicon()"
     },
     {
@@ -2277,7 +2295,7 @@
       "source_file": "frontend/components/layout/Footer.tsx",
       "source_location": "L13",
       "id": "layout_footer_discordicon",
-      "community": 62,
+      "community": 9,
       "norm_label": "discordicon()"
     },
     {
@@ -2286,7 +2304,7 @@
       "source_file": "frontend/components/layout/Footer.tsx",
       "source_location": "L19",
       "id": "layout_footer_redditicon",
-      "community": 62,
+      "community": 9,
       "norm_label": "redditicon()"
     },
     {
@@ -2295,7 +2313,7 @@
       "source_file": "frontend/components/layout/Footer.tsx",
       "source_location": "L25",
       "id": "layout_footer_footer",
-      "community": 62,
+      "community": 9,
       "norm_label": "footer()"
     },
     {
@@ -2322,7 +2340,7 @@
       "source_file": "frontend/components/login/GlassCard.tsx",
       "source_location": "L1",
       "id": "frontend_components_login_glasscard_tsx",
-      "community": 54,
+      "community": 59,
       "norm_label": "glasscard.tsx"
     },
     {
@@ -2331,7 +2349,7 @@
       "source_file": "frontend/components/login/GlassCard.tsx",
       "source_location": "L3",
       "id": "login_glasscard_glasscardprops",
-      "community": 54,
+      "community": 59,
       "norm_label": "glasscardprops"
     },
     {
@@ -2340,7 +2358,7 @@
       "source_file": "frontend/components/login/GlassCard.tsx",
       "source_location": "L8",
       "id": "login_glasscard_glasscard",
-      "community": 54,
+      "community": 59,
       "norm_label": "glasscard()"
     },
     {
@@ -2349,7 +2367,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L1",
       "id": "frontend_components_login_herosection_tsx",
-      "community": 54,
+      "community": 59,
       "norm_label": "herosection.tsx"
     },
     {
@@ -2358,7 +2376,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L7",
       "id": "login_herosection_herosectionprops",
-      "community": 54,
+      "community": 59,
       "norm_label": "herosectionprops"
     },
     {
@@ -2367,7 +2385,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L11",
       "id": "login_herosection_herotheme",
-      "community": 54,
+      "community": 59,
       "norm_label": "herotheme"
     },
     {
@@ -2376,7 +2394,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L23",
       "id": "login_herosection_hero_themes",
-      "community": 54,
+      "community": 59,
       "norm_label": "hero_themes"
     },
     {
@@ -2385,7 +2403,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L70",
       "id": "login_herosection_petal",
-      "community": 54,
+      "community": 59,
       "norm_label": "petal"
     },
     {
@@ -2394,7 +2412,7 @@
       "source_file": "frontend/components/login/HeroSection.tsx",
       "source_location": "L82",
       "id": "login_herosection_herosection",
-      "community": 54,
+      "community": 59,
       "norm_label": "herosection()"
     },
     {
@@ -2403,7 +2421,7 @@
       "source_file": "frontend/components/login/LoginForm.tsx",
       "source_location": "L1",
       "id": "frontend_components_login_loginform_tsx",
-      "community": 61,
+      "community": 59,
       "norm_label": "loginform.tsx"
     },
     {
@@ -2412,7 +2430,7 @@
       "source_file": "frontend/components/login/LoginForm.tsx",
       "source_location": "L11",
       "id": "login_loginform_fielderrors",
-      "community": 61,
+      "community": 59,
       "norm_label": "fielderrors"
     },
     {
@@ -2421,7 +2439,7 @@
       "source_file": "frontend/components/login/LoginForm.tsx",
       "source_location": "L16",
       "id": "login_loginform_validatelogin",
-      "community": 61,
+      "community": 59,
       "norm_label": "validatelogin()"
     },
     {
@@ -2430,7 +2448,7 @@
       "source_file": "frontend/components/login/LoginForm.tsx",
       "source_location": "L32",
       "id": "login_loginform_loginform",
-      "community": 61,
+      "community": 59,
       "norm_label": "loginform()"
     },
     {
@@ -2439,7 +2457,7 @@
       "source_file": "frontend/components/login/SakuraIcon.tsx",
       "source_location": "L1",
       "id": "frontend_components_login_sakuraicon_tsx",
-      "community": 56,
+      "community": 59,
       "norm_label": "sakuraicon.tsx"
     },
     {
@@ -2448,7 +2466,7 @@
       "source_file": "frontend/components/login/SakuraIcon.tsx",
       "source_location": "L3",
       "id": "login_sakuraicon_sakuraiconprops",
-      "community": 56,
+      "community": 59,
       "norm_label": "sakuraiconprops"
     },
     {
@@ -2457,8 +2475,278 @@
       "source_file": "frontend/components/login/SakuraIcon.tsx",
       "source_location": "L7",
       "id": "login_sakuraicon_sakuraicon",
-      "community": 56,
+      "community": 59,
       "norm_label": "sakuraicon()"
+    },
+    {
+      "label": "CharactersPanel.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/CharactersPanel.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_manga_details_characterspanel_tsx",
+      "community": 49,
+      "norm_label": "characterspanel.tsx"
+    },
+    {
+      "label": "CharactersPanelProps",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/CharactersPanel.tsx",
+      "source_location": "L8",
+      "id": "manga_details_characterspanel_characterspanelprops",
+      "community": 49,
+      "norm_label": "characterspanelprops"
+    },
+    {
+      "label": "CharactersPanel()",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/CharactersPanel.tsx",
+      "source_location": "L12",
+      "id": "manga_details_characterspanel_characterspanel",
+      "community": 49,
+      "norm_label": "characterspanel()"
+    },
+    {
+      "label": "HeaderSection.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/HeaderSection.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_manga_details_headersection_tsx",
+      "community": 49,
+      "norm_label": "headersection.tsx"
+    },
+    {
+      "label": "HeaderSectionProps",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/HeaderSection.tsx",
+      "source_location": "L7",
+      "id": "manga_details_headersection_headersectionprops",
+      "community": 49,
+      "norm_label": "headersectionprops"
+    },
+    {
+      "label": "HeaderSection()",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/HeaderSection.tsx",
+      "source_location": "L14",
+      "id": "manga_details_headersection_headersection",
+      "community": 49,
+      "norm_label": "headersection()"
+    },
+    {
+      "label": "MangaDetailsView.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_manga_details_mangadetailsview_tsx",
+      "community": 49,
+      "norm_label": "mangadetailsview.tsx"
+    },
+    {
+      "label": "MangaTag",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L21",
+      "id": "manga_details_mangadetailsview_mangatag",
+      "community": 49,
+      "norm_label": "mangatag"
+    },
+    {
+      "label": "MangaDetailsData",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L26",
+      "id": "manga_details_mangadetailsview_mangadetailsdata",
+      "community": 49,
+      "norm_label": "mangadetailsdata"
+    },
+    {
+      "label": "TrackingData",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L43",
+      "id": "manga_details_mangadetailsview_trackingdata",
+      "community": 49,
+      "norm_label": "trackingdata"
+    },
+    {
+      "label": "ApiResponse",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L51",
+      "id": "manga_details_mangadetailsview_apiresponse",
+      "community": 49,
+      "norm_label": "apiresponse"
+    },
+    {
+      "label": "MangaDetailsViewProps",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L56",
+      "id": "manga_details_mangadetailsview_mangadetailsviewprops",
+      "community": 49,
+      "norm_label": "mangadetailsviewprops"
+    },
+    {
+      "label": "MangaDetailsView()",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L60",
+      "id": "manga_details_mangadetailsview_mangadetailsview",
+      "community": 49,
+      "norm_label": "mangadetailsview()"
+    },
+    {
+      "label": "MetadataPanel.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MetadataPanel.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_manga_details_metadatapanel_tsx",
+      "community": 49,
+      "norm_label": "metadatapanel.tsx"
+    },
+    {
+      "label": "MangaTag",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MetadataPanel.tsx",
+      "source_location": "L6",
+      "id": "manga_details_metadatapanel_mangatag",
+      "community": 49,
+      "norm_label": "mangatag"
+    },
+    {
+      "label": "MetadataPanelProps",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MetadataPanel.tsx",
+      "source_location": "L12",
+      "id": "manga_details_metadatapanel_metadatapanelprops",
+      "community": 49,
+      "norm_label": "metadatapanelprops"
+    },
+    {
+      "label": "MetadataPanel()",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/MetadataPanel.tsx",
+      "source_location": "L21",
+      "id": "manga_details_metadatapanel_metadatapanel",
+      "community": 49,
+      "norm_label": "metadatapanel()"
+    },
+    {
+      "label": "SocialPanel.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/SocialPanel.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_manga_details_socialpanel_tsx",
+      "community": 49,
+      "norm_label": "socialpanel.tsx"
+    },
+    {
+      "label": "SocialPanelProps",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/SocialPanel.tsx",
+      "source_location": "L8",
+      "id": "manga_details_socialpanel_socialpanelprops",
+      "community": 49,
+      "norm_label": "socialpanelprops"
+    },
+    {
+      "label": "SocialPanel()",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/SocialPanel.tsx",
+      "source_location": "L12",
+      "id": "manga_details_socialpanel_socialpanel",
+      "community": 49,
+      "norm_label": "socialpanel()"
+    },
+    {
+      "label": "StaffPanel.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/StaffPanel.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_manga_details_staffpanel_tsx",
+      "community": 49,
+      "norm_label": "staffpanel.tsx"
+    },
+    {
+      "label": "StaffPanelProps",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/StaffPanel.tsx",
+      "source_location": "L7",
+      "id": "manga_details_staffpanel_staffpanelprops",
+      "community": 49,
+      "norm_label": "staffpanelprops"
+    },
+    {
+      "label": "StaffPanel()",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/StaffPanel.tsx",
+      "source_location": "L11",
+      "id": "manga_details_staffpanel_staffpanel",
+      "community": 49,
+      "norm_label": "staffpanel()"
+    },
+    {
+      "label": "StatsPanel.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/StatsPanel.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_manga_details_statspanel_tsx",
+      "community": 49,
+      "norm_label": "statspanel.tsx"
+    },
+    {
+      "label": "StatsPanelProps",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/StatsPanel.tsx",
+      "source_location": "L7",
+      "id": "manga_details_statspanel_statspanelprops",
+      "community": 49,
+      "norm_label": "statspanelprops"
+    },
+    {
+      "label": "StatsPanel()",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/StatsPanel.tsx",
+      "source_location": "L12",
+      "id": "manga_details_statspanel_statspanel",
+      "community": 49,
+      "norm_label": "statspanel()"
+    },
+    {
+      "label": "TrackingPanel.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L1",
+      "id": "frontend_components_manga_details_trackingpanel_tsx",
+      "community": 59,
+      "norm_label": "trackingpanel.tsx"
+    },
+    {
+      "label": "TrackingPanelProps",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L9",
+      "id": "manga_details_trackingpanel_trackingpanelprops",
+      "community": 59,
+      "norm_label": "trackingpanelprops"
+    },
+    {
+      "label": "Chapter",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L21",
+      "id": "manga_details_trackingpanel_chapter",
+      "community": 59,
+      "norm_label": "chapter"
+    },
+    {
+      "label": "TrackingPanel()",
+      "file_type": "code",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L29",
+      "id": "manga_details_trackingpanel_trackingpanel",
+      "community": 59,
+      "norm_label": "trackingpanel()"
     },
     {
       "label": "QueryProvider.tsx",
@@ -2592,7 +2880,7 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L19",
       "id": "theme_index_manga_themes",
-      "community": 53,
+      "community": 9,
       "norm_label": "manga_themes"
     },
     {
@@ -2655,7 +2943,7 @@
       "source_file": "frontend/components/theme/ThemeSelector.tsx",
       "source_location": "L1",
       "id": "frontend_components_theme_themeselector_tsx",
-      "community": 53,
+      "community": 9,
       "norm_label": "themeselector.tsx"
     },
     {
@@ -2664,7 +2952,7 @@
       "source_file": "frontend/components/theme/ThemeSelector.tsx",
       "source_location": "L7",
       "id": "theme_themeselector_themeselectorprops",
-      "community": 53,
+      "community": 9,
       "norm_label": "themeselectorprops"
     },
     {
@@ -2673,7 +2961,7 @@
       "source_file": "frontend/components/theme/ThemeSelector.tsx",
       "source_location": "L11",
       "id": "theme_themeselector_themeselector",
-      "community": 53,
+      "community": 9,
       "norm_label": "themeselector()"
     },
     {
@@ -2700,7 +2988,7 @@
       "source_file": "frontend/hooks/useAuthStore.ts",
       "source_location": "L1",
       "id": "frontend_hooks_useauthstore_ts",
-      "community": 61,
+      "community": 59,
       "norm_label": "useauthstore.ts"
     },
     {
@@ -2709,7 +2997,7 @@
       "source_file": "frontend/hooks/useAuthStore.ts",
       "source_location": "L6",
       "id": "hooks_useauthstore_authstate",
-      "community": 61,
+      "community": 59,
       "norm_label": "authstate"
     },
     {
@@ -2718,7 +3006,7 @@
       "source_file": "frontend/hooks/useAuthStore.ts",
       "source_location": "L20",
       "id": "hooks_useauthstore_authactions",
-      "community": 61,
+      "community": 59,
       "norm_label": "authactions"
     },
     {
@@ -2727,7 +3015,7 @@
       "source_file": "frontend/hooks/useAuthStore.ts",
       "source_location": "L33",
       "id": "hooks_useauthstore_initialstate",
-      "community": 61,
+      "community": 59,
       "norm_label": "initialstate"
     },
     {
@@ -2763,7 +3051,7 @@
       "source_file": "frontend/types/auth.ts",
       "source_location": "L1",
       "id": "frontend_types_auth_ts",
-      "community": 61,
+      "community": 59,
       "norm_label": "auth.ts"
     },
     {
@@ -2772,7 +3060,7 @@
       "source_file": "frontend/types/auth.ts",
       "source_location": "L9",
       "id": "types_auth_userpayload",
-      "community": 61,
+      "community": 59,
       "norm_label": "userpayload"
     },
     {
@@ -2781,7 +3069,7 @@
       "source_file": "frontend/types/auth.ts",
       "source_location": "L20",
       "id": "types_auth_authresponse",
-      "community": 61,
+      "community": 59,
       "norm_label": "authresponse"
     },
     {
@@ -2790,7 +3078,7 @@
       "source_file": "frontend/types/auth.ts",
       "source_location": "L29",
       "id": "types_auth_refreshresponse",
-      "community": 61,
+      "community": 59,
       "norm_label": "refreshresponse"
     },
     {
@@ -2799,7 +3087,7 @@
       "source_file": "frontend/utils/animeShowcaseData.ts",
       "source_location": "L1",
       "id": "frontend_utils_animeshowcasedata_ts",
-      "community": 50,
+      "community": 59,
       "norm_label": "animeshowcasedata.ts"
     },
     {
@@ -2808,7 +3096,7 @@
       "source_file": "frontend/utils/animeShowcaseData.ts",
       "source_location": "L1",
       "id": "utils_animeshowcasedata_friendactivity",
-      "community": 50,
+      "community": 59,
       "norm_label": "friendactivity"
     },
     {
@@ -2817,7 +3105,7 @@
       "source_file": "frontend/utils/animeShowcaseData.ts",
       "source_location": "L9",
       "id": "utils_animeshowcasedata_floatingcard",
-      "community": 50,
+      "community": 59,
       "norm_label": "floatingcard"
     },
     {
@@ -2826,7 +3114,7 @@
       "source_file": "frontend/utils/animeShowcaseData.ts",
       "source_location": "L17",
       "id": "utils_animeshowcasedata_animeseriesdata",
-      "community": 50,
+      "community": 59,
       "norm_label": "animeseriesdata"
     },
     {
@@ -2835,7 +3123,7 @@
       "source_file": "frontend/utils/animeShowcaseData.ts",
       "source_location": "L43",
       "id": "utils_animeshowcasedata_anime_showcase_data",
-      "community": 50,
+      "community": 59,
       "norm_label": "anime_showcase_data"
     },
     {
@@ -2873,6 +3161,141 @@
       "id": "utils_api_apifetch",
       "community": 59,
       "norm_label": "apifetch()"
+    },
+    {
+      "label": "mangaDetailsEnricher.ts",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L1",
+      "id": "frontend_utils_mangadetailsenricher_ts",
+      "community": 49,
+      "norm_label": "mangadetailsenricher.ts"
+    },
+    {
+      "label": "Character",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L1",
+      "id": "utils_mangadetailsenricher_character",
+      "community": 49,
+      "norm_label": "character"
+    },
+    {
+      "label": "Staff",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L8",
+      "id": "utils_mangadetailsenricher_staff",
+      "community": 49,
+      "norm_label": "staff"
+    },
+    {
+      "label": "Stats",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L13",
+      "id": "utils_mangadetailsenricher_stats",
+      "community": 49,
+      "norm_label": "stats"
+    },
+    {
+      "label": "Comment",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L24",
+      "id": "utils_mangadetailsenricher_comment",
+      "community": 49,
+      "norm_label": "comment"
+    },
+    {
+      "label": "EnrichedMangaDetails",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L33",
+      "id": "utils_mangadetailsenricher_enrichedmangadetails",
+      "community": 49,
+      "norm_label": "enrichedmangadetails"
+    },
+    {
+      "label": "getStringHash()",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L42",
+      "id": "utils_mangadetailsenricher_getstringhash",
+      "community": 49,
+      "norm_label": "getstringhash()"
+    },
+    {
+      "label": "popularSeriesContent",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L51",
+      "id": "utils_mangadetailsenricher_popularseriescontent",
+      "community": 49,
+      "norm_label": "popularseriescontent"
+    },
+    {
+      "label": "genericMottos",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L279",
+      "id": "utils_mangadetailsenricher_genericmottos",
+      "community": 49,
+      "norm_label": "genericmottos"
+    },
+    {
+      "label": "genericCharacters",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L287",
+      "id": "utils_mangadetailsenricher_genericcharacters",
+      "community": 49,
+      "norm_label": "genericcharacters"
+    },
+    {
+      "label": "characterImages",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L298",
+      "id": "utils_mangadetailsenricher_characterimages",
+      "community": 49,
+      "norm_label": "characterimages"
+    },
+    {
+      "label": "genericStaffNames",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L307",
+      "id": "utils_mangadetailsenricher_genericstaffnames",
+      "community": 49,
+      "norm_label": "genericstaffnames"
+    },
+    {
+      "label": "genericComments",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L318",
+      "id": "utils_mangadetailsenricher_genericcomments",
+      "community": 49,
+      "norm_label": "genericcomments"
+    },
+    {
+      "label": "genericUsernames",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L326",
+      "id": "utils_mangadetailsenricher_genericusernames",
+      "community": 49,
+      "norm_label": "genericusernames"
+    },
+    {
+      "label": "getMangaEnrichedDetails()",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L337",
+      "id": "utils_mangadetailsenricher_getmangaenricheddetails",
+      "community": 49,
+      "norm_label": "getmangaenricheddetails()"
     },
     {
       "label": "PRD.md",
@@ -3177,7 +3600,7 @@
       "source_file": "PRD.md",
       "source_location": "L172",
       "id": "kiroku_prd_7_5_4_social_read_along_room_flow",
-      "community": 5,
+      "community": 65,
       "norm_label": "7.5.4 social \"read-along\" room flow"
     },
     {
@@ -3186,7 +3609,7 @@
       "source_file": "PRD.md",
       "source_location": "L173",
       "id": "kiroku_prd_codeblock_8",
-      "community": 5,
+      "community": 65,
       "norm_label": "code:block8 ([social hub] \u2794 [create room] \u2794 [select manga & set target ch)"
     },
     {
@@ -3321,7 +3744,7 @@
       "source_file": "PRD.md",
       "source_location": "L315",
       "id": "kiroku_prd_9_technical_architecture",
-      "community": 5,
+      "community": 65,
       "norm_label": "9. technical architecture"
     },
     {
@@ -3330,7 +3753,7 @@
       "source_file": "PRD.md",
       "source_location": "L319",
       "id": "kiroku_prd_codeblock_15",
-      "community": 5,
+      "community": 65,
       "norm_label": "code:block15 (+-------------------+)"
     },
     {
@@ -3339,7 +3762,7 @@
       "source_file": "PRD.md",
       "source_location": "L349",
       "id": "kiroku_prd_infrastructure_specs",
-      "community": 5,
+      "community": 65,
       "norm_label": "infrastructure specs:"
     },
     {
@@ -3708,7 +4131,7 @@
       "source_file": "PRD.md",
       "source_location": "L972",
       "id": "kiroku_prd_13_scalability_plan",
-      "community": 65,
+      "community": 4,
       "norm_label": "13. scalability plan"
     },
     {
@@ -3717,7 +4140,7 @@
       "source_file": "PRD.md",
       "source_location": "L976",
       "id": "kiroku_prd_13_1_staggered_conditional_polling",
-      "community": 65,
+      "community": 4,
       "norm_label": "13.1 staggered & conditional polling"
     },
     {
@@ -3726,7 +4149,7 @@
       "source_file": "PRD.md",
       "source_location": "L984",
       "id": "kiroku_prd_13_2_queue_prioritization_batching",
-      "community": 65,
+      "community": 4,
       "norm_label": "13.2 queue prioritization & batching"
     },
     {
@@ -3735,7 +4158,7 @@
       "source_file": "PRD.md",
       "source_location": "L988",
       "id": "kiroku_prd_13_3_notification_deduplication_keys",
-      "community": 65,
+      "community": 4,
       "norm_label": "13.3 notification deduplication keys"
     },
     {
@@ -4292,7 +4715,7 @@
       "file_type": "code",
       "source_file": "frontend/app/login/page.tsx",
       "source_location": "L15",
-      "community": 56,
+      "community": 59,
       "norm_label": "fielderrors",
       "id": "login_page_fielderrors"
     },
@@ -4301,7 +4724,7 @@
       "file_type": "code",
       "source_file": "frontend/app/login/page.tsx",
       "source_location": "L20",
-      "community": 56,
+      "community": 59,
       "norm_label": "validatelogin()",
       "id": "login_page_validatelogin"
     },
@@ -4310,7 +4733,7 @@
       "file_type": "code",
       "source_file": "frontend/app/login/page.tsx",
       "source_location": "L38",
-      "community": 56,
+      "community": 59,
       "norm_label": "herotheme",
       "id": "login_page_herotheme"
     },
@@ -4319,7 +4742,7 @@
       "file_type": "code",
       "source_file": "frontend/app/login/page.tsx",
       "source_location": "L50",
-      "community": 56,
+      "community": 59,
       "norm_label": "hero_themes",
       "id": "login_page_hero_themes"
     },
@@ -4328,7 +4751,7 @@
       "file_type": "code",
       "source_file": "frontend/app/login/page.tsx",
       "source_location": "L131",
-      "community": 56,
+      "community": 59,
       "norm_label": "sakuraicon()",
       "id": "login_page_sakuraicon"
     },
@@ -4337,7 +4760,7 @@
       "file_type": "code",
       "source_file": "backend/src/utils/jwt.ts",
       "source_location": "L19",
-      "community": 0,
+      "community": 61,
       "norm_label": "getsecret()",
       "id": "utils_jwt_getsecret"
     },
@@ -11881,9 +12304,9 @@
       "source_file": "frontend/app/manga/page.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_manga_page_tsx",
-      "target": "frontend_components_theme_themeselector_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_themeselector_tsx"
     },
     {
       "relation": "imports_from",
@@ -11935,9 +12358,9 @@
       "source_file": "frontend/app/manga/page.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_manga_page_tsx",
-      "target": "theme_themeselector_themeselector",
-      "confidence_score": 1.0
+      "target": "theme_themeselector_themeselector"
     },
     {
       "relation": "imports",
@@ -11949,6 +12372,38 @@
       "confidence_score": 1.0,
       "source": "frontend_app_manga_page_tsx",
       "target": "utils_api_apifetch"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/[id]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_app_manga_id_page_tsx",
+      "target": "frontend_components_manga_details_mangadetailsview_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/[id]/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_app_manga_id_page_tsx",
+      "target": "id_page_mangadetailspage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/manga/[id]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_app_manga_id_page_tsx",
+      "target": "manga_details_mangadetailsview_mangadetailsview",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -12788,6 +13243,28 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_components_layout_footer_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "layout_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "frontend/components/layout/Navbar.tsx",
       "source_location": "L6",
       "weight": 1.0,
@@ -12837,6 +13314,28 @@
       "confidence_score": 1.0,
       "source": "frontend_components_layout_navbar_tsx",
       "target": "utils_api_apifetch"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_components_layout_navbar_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "layout_navbar_navbar",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -13069,6 +13568,633 @@
       "target": "login_sakuraicon_sakuraiconprops"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/CharactersPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_characterspanel_tsx",
+      "target": "frontend_utils_mangadetailsenricher_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/CharactersPanel.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_characterspanel_tsx",
+      "target": "manga_details_characterspanel_characterspanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/CharactersPanel.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_characterspanel_tsx",
+      "target": "manga_details_characterspanel_characterspanelprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/CharactersPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_characterspanel_tsx",
+      "target": "utils_mangadetailsenricher_character",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_components_manga_details_characterspanel_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/CharactersPanel.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "manga_details_characterspanel_characterspanelprops",
+      "target": "utils_mangadetailsenricher_character",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_characterspanel_characterspanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/HeaderSection.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_headersection_tsx",
+      "target": "manga_details_headersection_headersection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/HeaderSection.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_headersection_tsx",
+      "target": "manga_details_headersection_headersectionprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_components_manga_details_headersection_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_headersection_headersection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_components_manga_details_metadatapanel_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_components_manga_details_socialpanel_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_components_manga_details_staffpanel_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_components_manga_details_statspanel_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_components_manga_details_trackingpanel_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_components_theme_themeselector_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_utils_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "frontend_utils_mangadetailsenricher_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_mangadetailsview_apiresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_mangadetailsview_mangadetailsdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_mangadetailsview_mangadetailsview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_mangadetailsview_mangadetailsviewprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_mangadetailsview_mangatag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_mangadetailsview_trackingdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_metadatapanel_metadatapanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_socialpanel_socialpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_staffpanel_staffpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_statspanel_statspanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "manga_details_trackingpanel_trackingpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "theme_themeselector_themeselector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "utils_api_apifetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_mangadetailsview_tsx",
+      "target": "utils_mangadetailsenricher_getmangaenricheddetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MetadataPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_metadatapanel_tsx",
+      "target": "manga_details_metadatapanel_mangatag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MetadataPanel.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_metadatapanel_tsx",
+      "target": "manga_details_metadatapanel_metadatapanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/MetadataPanel.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_metadatapanel_tsx",
+      "target": "manga_details_metadatapanel_metadatapanelprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/SocialPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_socialpanel_tsx",
+      "target": "frontend_utils_mangadetailsenricher_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/SocialPanel.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_socialpanel_tsx",
+      "target": "manga_details_socialpanel_socialpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/SocialPanel.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_socialpanel_tsx",
+      "target": "manga_details_socialpanel_socialpanelprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/SocialPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_socialpanel_tsx",
+      "target": "utils_mangadetailsenricher_comment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/SocialPanel.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "manga_details_socialpanel_socialpanelprops",
+      "target": "utils_mangadetailsenricher_comment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/StaffPanel.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_staffpanel_tsx",
+      "target": "frontend_utils_mangadetailsenricher_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/StaffPanel.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_staffpanel_tsx",
+      "target": "manga_details_staffpanel_staffpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/StaffPanel.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_staffpanel_tsx",
+      "target": "manga_details_staffpanel_staffpanelprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/StaffPanel.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_staffpanel_tsx",
+      "target": "utils_mangadetailsenricher_staff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/StaffPanel.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "manga_details_staffpanel_staffpanelprops",
+      "target": "utils_mangadetailsenricher_staff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/StatsPanel.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_statspanel_tsx",
+      "target": "frontend_utils_mangadetailsenricher_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/StatsPanel.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_statspanel_tsx",
+      "target": "manga_details_statspanel_statspanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/StatsPanel.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_statspanel_tsx",
+      "target": "manga_details_statspanel_statspanelprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/StatsPanel.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_statspanel_tsx",
+      "target": "utils_mangadetailsenricher_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/StatsPanel.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "manga_details_statspanel_statspanelprops",
+      "target": "utils_mangadetailsenricher_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_trackingpanel_tsx",
+      "target": "frontend_hooks_useauthstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_trackingpanel_tsx",
+      "target": "frontend_utils_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_trackingpanel_tsx",
+      "target": "hooks_useauthstore_useauthstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_trackingpanel_tsx",
+      "target": "manga_details_trackingpanel_chapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_trackingpanel_tsx",
+      "target": "manga_details_trackingpanel_trackingpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_trackingpanel_tsx",
+      "target": "manga_details_trackingpanel_trackingpanelprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_components_manga_details_trackingpanel_tsx",
+      "target": "utils_api_apifetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/components/manga-details/TrackingPanel.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "manga_details_trackingpanel_trackingpanel",
+      "target": "hooks_useauthstore_useauthstore"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/providers/QueryProvider.tsx",
@@ -13149,9 +14275,9 @@
       "source_file": "frontend/components/theme/aot.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_aot_ts",
-      "target": "frontend_components_theme_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_types_ts"
     },
     {
       "relation": "contains",
@@ -13159,9 +14285,9 @@
       "source_file": "frontend/components/theme/aot.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_aot_ts",
-      "target": "theme_aot_aottheme",
-      "confidence_score": 1.0
+      "target": "theme_aot_aottheme"
     },
     {
       "relation": "imports",
@@ -13170,9 +14296,9 @@
       "source_file": "frontend/components/theme/aot.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_aot_ts",
-      "target": "theme_types_mangatheme",
-      "confidence_score": 1.0
+      "target": "theme_types_mangatheme"
     },
     {
       "relation": "re_exports",
@@ -13181,9 +14307,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "frontend_components_theme_aot_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_aot_ts"
     },
     {
       "relation": "imports",
@@ -13192,9 +14318,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "theme_aot_aottheme",
-      "confidence_score": 1.0
+      "target": "theme_aot_aottheme"
     },
     {
       "relation": "imports_from",
@@ -13203,9 +14329,9 @@
       "source_file": "frontend/components/theme/dbz.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_dbz_ts",
-      "target": "frontend_components_theme_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_types_ts"
     },
     {
       "relation": "contains",
@@ -13213,9 +14339,9 @@
       "source_file": "frontend/components/theme/dbz.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_dbz_ts",
-      "target": "theme_dbz_dbztheme",
-      "confidence_score": 1.0
+      "target": "theme_dbz_dbztheme"
     },
     {
       "relation": "imports",
@@ -13224,9 +14350,9 @@
       "source_file": "frontend/components/theme/dbz.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_dbz_ts",
-      "target": "theme_types_mangatheme",
-      "confidence_score": 1.0
+      "target": "theme_types_mangatheme"
     },
     {
       "relation": "re_exports",
@@ -13235,9 +14361,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "frontend_components_theme_dbz_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_dbz_ts"
     },
     {
       "relation": "imports",
@@ -13246,9 +14372,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "theme_dbz_dbztheme",
-      "confidence_score": 1.0
+      "target": "theme_dbz_dbztheme"
     },
     {
       "relation": "imports_from",
@@ -13257,9 +14383,9 @@
       "source_file": "frontend/components/theme/default.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_default_ts",
-      "target": "frontend_components_theme_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_types_ts"
     },
     {
       "relation": "contains",
@@ -13267,9 +14393,9 @@
       "source_file": "frontend/components/theme/default.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_default_ts",
-      "target": "theme_default_defaulttheme",
-      "confidence_score": 1.0
+      "target": "theme_default_defaulttheme"
     },
     {
       "relation": "imports",
@@ -13278,9 +14404,9 @@
       "source_file": "frontend/components/theme/default.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_default_ts",
-      "target": "theme_types_mangatheme",
-      "confidence_score": 1.0
+      "target": "theme_types_mangatheme"
     },
     {
       "relation": "re_exports",
@@ -13289,9 +14415,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "frontend_components_theme_default_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_default_ts"
     },
     {
       "relation": "imports",
@@ -13300,9 +14426,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "theme_default_defaulttheme",
-      "confidence_score": 1.0
+      "target": "theme_default_defaulttheme"
     },
     {
       "relation": "imports_from",
@@ -13311,9 +14437,9 @@
       "source_file": "frontend/components/theme/demonslayer.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_demonslayer_ts",
-      "target": "frontend_components_theme_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_types_ts"
     },
     {
       "relation": "contains",
@@ -13321,9 +14447,9 @@
       "source_file": "frontend/components/theme/demonslayer.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_demonslayer_ts",
-      "target": "theme_demonslayer_demonslayertheme",
-      "confidence_score": 1.0
+      "target": "theme_demonslayer_demonslayertheme"
     },
     {
       "relation": "imports",
@@ -13332,9 +14458,9 @@
       "source_file": "frontend/components/theme/demonslayer.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_demonslayer_ts",
-      "target": "theme_types_mangatheme",
-      "confidence_score": 1.0
+      "target": "theme_types_mangatheme"
     },
     {
       "relation": "re_exports",
@@ -13343,9 +14469,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "frontend_components_theme_demonslayer_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_demonslayer_ts"
     },
     {
       "relation": "imports",
@@ -13354,9 +14480,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "theme_demonslayer_demonslayertheme",
-      "confidence_score": 1.0
+      "target": "theme_demonslayer_demonslayertheme"
     },
     {
       "relation": "re_exports",
@@ -13365,9 +14491,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "frontend_components_theme_jujutsukaisen_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_jujutsukaisen_ts"
     },
     {
       "relation": "re_exports",
@@ -13376,9 +14502,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "frontend_components_theme_naruto_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_naruto_ts"
     },
     {
       "relation": "re_exports",
@@ -13387,9 +14513,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "frontend_components_theme_onepiece_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_onepiece_ts"
     },
     {
       "relation": "re_exports",
@@ -13398,9 +14524,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "frontend_components_theme_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_types_ts"
     },
     {
       "relation": "contains",
@@ -13408,9 +14534,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "theme_index_manga_themes",
-      "confidence_score": 1.0
+      "target": "theme_index_manga_themes"
     },
     {
       "relation": "imports",
@@ -13419,9 +14545,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "theme_jujutsukaisen_jujutsukaisentheme",
-      "confidence_score": 1.0
+      "target": "theme_jujutsukaisen_jujutsukaisentheme"
     },
     {
       "relation": "imports",
@@ -13430,9 +14556,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "theme_naruto_narutotheme",
-      "confidence_score": 1.0
+      "target": "theme_naruto_narutotheme"
     },
     {
       "relation": "imports",
@@ -13441,9 +14567,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "theme_onepiece_onepiecetheme",
-      "confidence_score": 1.0
+      "target": "theme_onepiece_onepiecetheme"
     },
     {
       "relation": "imports",
@@ -13452,9 +14578,9 @@
       "source_file": "frontend/components/theme/index.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_index_ts",
-      "target": "theme_types_mangatheme",
-      "confidence_score": 1.0
+      "target": "theme_types_mangatheme"
     },
     {
       "relation": "imports_from",
@@ -13463,9 +14589,9 @@
       "source_file": "frontend/components/theme/ThemeSelector.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_themeselector_tsx",
-      "target": "frontend_components_theme_index_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_index_ts"
     },
     {
       "relation": "imports",
@@ -13474,9 +14600,9 @@
       "source_file": "frontend/components/theme/ThemeSelector.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_themeselector_tsx",
-      "target": "theme_index_manga_themes",
-      "confidence_score": 1.0
+      "target": "theme_index_manga_themes"
     },
     {
       "relation": "imports_from",
@@ -13485,9 +14611,9 @@
       "source_file": "frontend/components/theme/jujutsukaisen.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_jujutsukaisen_ts",
-      "target": "frontend_components_theme_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_types_ts"
     },
     {
       "relation": "contains",
@@ -13495,9 +14621,9 @@
       "source_file": "frontend/components/theme/jujutsukaisen.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_jujutsukaisen_ts",
-      "target": "theme_jujutsukaisen_jujutsukaisentheme",
-      "confidence_score": 1.0
+      "target": "theme_jujutsukaisen_jujutsukaisentheme"
     },
     {
       "relation": "imports",
@@ -13506,9 +14632,9 @@
       "source_file": "frontend/components/theme/jujutsukaisen.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_jujutsukaisen_ts",
-      "target": "theme_types_mangatheme",
-      "confidence_score": 1.0
+      "target": "theme_types_mangatheme"
     },
     {
       "relation": "imports_from",
@@ -13517,9 +14643,9 @@
       "source_file": "frontend/components/theme/naruto.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_naruto_ts",
-      "target": "frontend_components_theme_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_types_ts"
     },
     {
       "relation": "contains",
@@ -13527,9 +14653,9 @@
       "source_file": "frontend/components/theme/naruto.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_naruto_ts",
-      "target": "theme_naruto_narutotheme",
-      "confidence_score": 1.0
+      "target": "theme_naruto_narutotheme"
     },
     {
       "relation": "imports",
@@ -13538,9 +14664,9 @@
       "source_file": "frontend/components/theme/naruto.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_naruto_ts",
-      "target": "theme_types_mangatheme",
-      "confidence_score": 1.0
+      "target": "theme_types_mangatheme"
     },
     {
       "relation": "imports_from",
@@ -13549,9 +14675,9 @@
       "source_file": "frontend/components/theme/onepiece.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_onepiece_ts",
-      "target": "frontend_components_theme_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_components_theme_types_ts"
     },
     {
       "relation": "contains",
@@ -13559,9 +14685,9 @@
       "source_file": "frontend/components/theme/onepiece.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_onepiece_ts",
-      "target": "theme_onepiece_onepiecetheme",
-      "confidence_score": 1.0
+      "target": "theme_onepiece_onepiecetheme"
     },
     {
       "relation": "imports",
@@ -13570,9 +14696,9 @@
       "source_file": "frontend/components/theme/onepiece.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_onepiece_ts",
-      "target": "theme_types_mangatheme",
-      "confidence_score": 1.0
+      "target": "theme_types_mangatheme"
     },
     {
       "relation": "contains",
@@ -13580,9 +14706,9 @@
       "source_file": "frontend/components/theme/ThemeSelector.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_themeselector_tsx",
-      "target": "theme_themeselector_themeselector",
-      "confidence_score": 1.0
+      "target": "theme_themeselector_themeselector"
     },
     {
       "relation": "contains",
@@ -13590,9 +14716,9 @@
       "source_file": "frontend/components/theme/ThemeSelector.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_themeselector_tsx",
-      "target": "theme_themeselector_themeselectorprops",
-      "confidence_score": 1.0
+      "target": "theme_themeselector_themeselectorprops"
     },
     {
       "relation": "contains",
@@ -13600,9 +14726,9 @@
       "source_file": "frontend/components/theme/types.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_theme_types_ts",
-      "target": "theme_types_mangatheme",
-      "confidence_score": 1.0
+      "target": "theme_types_mangatheme"
     },
     {
       "relation": "imports_from",
@@ -13896,6 +15022,157 @@
       "confidence_score": 1.0,
       "source": "utils_api_apifetch",
       "target": "utils_api_refreshaccesstoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_character",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L298",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_characterimages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_comment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_enrichedmangadetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L287",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_genericcharacters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L318",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_genericcomments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L279",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_genericmottos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L307",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_genericstaffnames",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L326",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_genericusernames",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L337",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_getmangaenricheddetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_getstringhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_popularseriescontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_staff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "frontend_utils_mangadetailsenricher_ts",
+      "target": "utils_mangadetailsenricher_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L369",
+      "weight": 1.0,
+      "source": "utils_mangadetailsenricher_getmangaenricheddetails",
+      "target": "utils_mangadetailsenricher_getstringhash",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17959,5 +19236,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8a88d14b1fe81c703b908b9a95ae4778be841812"
+  "built_at_commit": "b1259071cecf39663ef9e370cb8180465d004856"
 }
