@@ -54,27 +54,63 @@ const popularSeriesContent: Record<string, Partial<EnrichedMangaDetails>> = {
     characters: [
       {
         name: "Monkey D. Luffy",
-        image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/9/31067.jpg",
         role: "Main Character",
         quote: "If you don't take risks, you can't create a future!",
       },
       {
         name: "Roronoa Zoro",
-        image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/3/100534.jpg",
         role: "Main Character",
         quote: "When the world shoves you around, you've just got to stand up and shove back.",
       },
       {
         name: "Nami",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/2/263249.jpg",
         role: "Main Character",
         quote: "Life is like a wind, Luffy! I am the navigator who guides the ship!",
       },
       {
-        name: "Sanji",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80",
+        name: "Vinsmoke Sanji",
+        image: "https://cdn.myanimelist.net/images/characters/5/136769.jpg",
         role: "Main Character",
         quote: "It doesn't matter if a woman is lying, a real man forgives her lies.",
+      },
+      {
+        name: "Nico Robin",
+        image: "https://cdn.myanimelist.net/images/characters/4/263251.jpg",
+        role: "Main Character",
+        quote: "Sometimes the only thing you have to doubt is your own common sense.",
+      },
+      {
+        name: "Tony Tony Chopper",
+        image: "https://cdn.myanimelist.net/images/characters/3/263253.jpg",
+        role: "Main Character",
+        quote: "I realized back then, the reason I wanted to become human, was that I wanted to have friends.",
+      },
+      {
+        name: "Usopp",
+        image: "https://cdn.myanimelist.net/images/characters/3/263255.jpg",
+        role: "Main Character",
+        quote: "There comes a time when a man has to stand and fight!",
+      },
+      {
+        name: "Portgas D. Ace",
+        image: "https://cdn.myanimelist.net/images/characters/4/510107.jpg",
+        role: "Supporting Character",
+        quote: "Thank you for loving someone like me who is good for nothing... with bad blood!",
+      },
+      {
+        name: "Trafalgar Law",
+        image: "https://cdn.myanimelist.net/images/characters/4/114979.jpg",
+        role: "Supporting Character",
+        quote: "The weak don't get to decide anything, not even how they die.",
+      },
+      {
+        name: "Red-Haired Shanks",
+        image: "https://cdn.myanimelist.net/images/characters/13/461719.jpg",
+        role: "Supporting Character",
+        quote: "By experiencing both victory and defeat... that's how a man grows.",
       },
     ],
     staff: [
@@ -116,27 +152,63 @@ const popularSeriesContent: Record<string, Partial<EnrichedMangaDetails>> = {
     characters: [
       {
         name: "Naruto Uzumaki",
-        image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/9/131317.jpg",
         role: "Main Character",
         quote: "If you don't like your destiny, don't accept it. Instead, have the courage to change it!",
       },
       {
         name: "Sasuke Uchiha",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/9/131319.jpg",
         role: "Main Character",
         quote: "I have long since closed my eyes... My only goal is in the darkness.",
       },
       {
         name: "Kakashi Hatake",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/7/284129.jpg",
         role: "Supporting Character",
-        quote: "In the ninja world, those who break the rules are scum. But, those who abandon their friends are worse than scum.",
+        quote: "Those who break the rules are scum, but those who abandon their friends are worse than scum.",
       },
       {
         name: "Sakura Haruno",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/9/131321.jpg",
         role: "Main Character",
-        quote: "I've always considered myself a true shinobi... but those were just empty words!",
+        quote: "The things that are most important aren't written in books. You have to learn them by experiencing them.",
+      },
+      {
+        name: "Itachi Uchiha",
+        image: "https://cdn.myanimelist.net/images/characters/4/504286.jpg",
+        role: "Supporting Character",
+        quote: "People live their lives bound by what they accept as correct and true. That is how they define 'reality'.",
+      },
+      {
+        name: "Jiraiya",
+        image: "https://cdn.myanimelist.net/images/characters/14/50338.jpg",
+        role: "Supporting Character",
+        quote: "A person grows up when he's able to overcome hardships. Protection is important, but there are some things a person must learn on his own.",
+      },
+      {
+        name: "Gaara",
+        image: "https://cdn.myanimelist.net/images/characters/13/284125.jpg",
+        role: "Supporting Character",
+        quote: "Perhaps the companionship of an evil person is preferable to loneliness.",
+      },
+      {
+        name: "Shikamaru Nara",
+        image: "https://cdn.myanimelist.net/images/characters/7/284123.jpg",
+        role: "Supporting Character",
+        quote: "It's because we help out when they're in trouble that we can count on them when we need them.",
+      },
+      {
+        name: "Hinata Hyuga",
+        image: "https://cdn.myanimelist.net/images/characters/9/284121.jpg",
+        role: "Supporting Character",
+        quote: "When I watch you, I feel strong, like I can do anything—that even I am worth something.",
+      },
+      {
+        name: "Minato Namikaze",
+        image: "https://cdn.myanimelist.net/images/characters/16/231189.jpg",
+        role: "Supporting Character",
+        quote: "To be a shinobi is to endure. Pain, loss, and the heavy burden of choice.",
       },
     ],
     staff: [
@@ -170,27 +242,63 @@ const popularSeriesContent: Record<string, Partial<EnrichedMangaDetails>> = {
     characters: [
       {
         name: "Denji",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/3/492407.jpg",
         role: "Main Character",
         quote: "If having a dream is so great, then maybe I'll try to have one too.",
       },
       {
         name: "Power",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/11/492411.jpg",
         role: "Main Character",
         quote: "Bow down before me, humans! My name is Power!",
       },
       {
         name: "Aki Hayakawa",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/3/492409.jpg",
         role: "Main Character",
         quote: "Don't die on me. We've got devils to kill.",
       },
       {
         name: "Makima",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/14/492412.jpg",
         role: "Supporting Character",
         quote: "All devils are born with a name. The more that name is feared, the more powerful the devil itself becomes.",
+      },
+      {
+        name: "Himeno",
+        image: "https://cdn.myanimelist.net/images/characters/8/492414.jpg",
+        role: "Supporting Character",
+        quote: "I want Aki to cry for me when I die. That's all.",
+      },
+      {
+        name: "Kobeni Higashiyama",
+        image: "https://cdn.myanimelist.net/images/characters/2/492415.jpg",
+        role: "Supporting Character",
+        quote: "If I'm going to die anyway, I want to eat something tasty first!",
+      },
+      {
+        name: "Reze",
+        image: "https://cdn.myanimelist.net/images/characters/6/454955.jpg",
+        role: "Supporting Character",
+        quote: "Denji, did you know? The town mouse and the country mouse...",
+      },
+      {
+        name: "Kishibe",
+        image: "https://cdn.myanimelist.net/images/characters/15/496262.jpg",
+        role: "Supporting Character",
+        quote: "The devil hunters that devils fear are the ones with the most screwed-up heads.",
+      },
+      {
+        name: "Angel Devil",
+        image: "https://cdn.myanimelist.net/images/characters/7/496253.jpg",
+        role: "Supporting Character",
+        quote: "I am an angel, but I am also a devil. I gather souls of those whose time has come.",
+      },
+      {
+        name: "Pochita",
+        image: "https://cdn.myanimelist.net/images/characters/8/496255.jpg",
+        role: "Supporting Character",
+        quote: "Denji... show me your dreams.",
       },
     ],
     staff: [
@@ -224,27 +332,63 @@ const popularSeriesContent: Record<string, Partial<EnrichedMangaDetails>> = {
     characters: [
       {
         name: "Yuji Itadori",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/16/381507.jpg",
         role: "Main Character",
         quote: "I don't know how I'll feel when I'm dead, but I don't want to regret the way I lived.",
       },
       {
         name: "Satoru Gojo",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/3/420783.jpg",
         role: "Main Character",
         quote: "Don't worry, I'm the strongest.",
       },
       {
         name: "Megumi Fushiguro",
-        image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/11/381512.jpg",
         role: "Main Character",
         quote: "I save people unequally. That's why I became a jujutsu sorcerer.",
       },
       {
         name: "Nobara Kugisaki",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&q=80",
+        image: "https://cdn.myanimelist.net/images/characters/14/381515.jpg",
         role: "Main Character",
         quote: "What makes us obligated to meet perfection or such absurd standards?",
+      },
+      {
+        name: "Kento Nanami",
+        image: "https://cdn.myanimelist.net/images/characters/3/399316.jpg",
+        role: "Supporting Character",
+        quote: "Jujutsu sorcerers are scum. Working in an office is scum. Since both are equally scum, I chose the one I'm better at.",
+      },
+      {
+        name: "Ryomen Sukuna",
+        image: "https://cdn.myanimelist.net/images/characters/7/424911.jpg",
+        role: "Supporting Character",
+        quote: "Know your place, fool.",
+      },
+      {
+        name: "Maki Zenin",
+        image: "https://cdn.myanimelist.net/images/characters/15/399307.jpg",
+        role: "Supporting Character",
+        quote: "I'm going to become a great sorcerer just to spite my family.",
+      },
+      {
+        name: "Toge Inumaki",
+        image: "https://cdn.myanimelist.net/images/characters/6/399308.jpg",
+        role: "Supporting Character",
+        quote: "Salmon. Bonito flakes. Mustard leaf.",
+      },
+      {
+        name: "Suguru Geto",
+        image: "https://cdn.myanimelist.net/images/characters/3/438780.jpg",
+        role: "Supporting Character",
+        quote: "Are you the strongest because you're Satoru Gojo, or are you Satoru Gojo because you're the strongest?",
+      },
+      {
+        name: "Yuta Okkotsu",
+        image: "https://cdn.myanimelist.net/images/characters/2/450702.jpg",
+        role: "Supporting Character",
+        quote: "I want to have relationships with people. I want to be needed by someone. I want to have the confidence to feel like it's okay to live.",
       },
     ],
     staff: [
@@ -370,8 +514,8 @@ export function getMangaEnrichedDetails(mangaId: string, title: string): Enriche
   
   const motto = genericMottos[hash % genericMottos.length];
   
-  // Generate 3-5 characters
-  const charCount = 3 + (hash % 3); // 3, 4, or 5
+  // Generate 8-12 characters for generic series
+  const charCount = 8 + (hash % 5); // 8, 9, 10, 11, or 12
   const characters: Character[] = [];
   for (let i = 0; i < charCount; i++) {
     const charHash = hash + i * 17;
