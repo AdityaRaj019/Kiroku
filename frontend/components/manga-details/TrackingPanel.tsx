@@ -32,7 +32,6 @@ export const TrackingPanel: React.FC<TrackingPanelProps> = ({
   totalChapters,
 }) => {
   const queryClient = useQueryClient();
-  const user = useAuthStore((state) => state.user);
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
   const [isChaptersOpen, setIsChaptersOpen] = useState(false);
