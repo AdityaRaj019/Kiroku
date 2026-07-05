@@ -4,24 +4,26 @@ const ANILIST_API_URL = "https://graphql.anilist.co";
 
 const ANILIST_CHARACTERS_QUERY = `
   query ($search: String) {
-    Media (search: $search, type: MANGA) {
-      id
-      title {
-        romaji
-        english
-        native
-      }
-      characters (sort: [ROLE, RELEVANCE, ID], perPage: 12) {
-        edges {
-          role
-          node {
-            name {
-              full
+    Page (page: 1, perPage: 1) {
+      media (search: $search, type: MANGA, sort: POPULARITY_DESC) {
+        id
+        title {
+          romaji
+          english
+          native
+        }
+        characters (sort: [ROLE, RELEVANCE, ID], perPage: 12) {
+          edges {
+            role
+            node {
+              name {
+                full
+              }
+              image {
+                large
+              }
+              description
             }
-            image {
-              large
-            }
-            description
           }
         }
       }
@@ -84,7 +86,8 @@ export async function fetchCharactersFromAniList(title: string): Promise<Charact
     }
 
     const result = await response.json();
-    const edges = result.data?.Media?.characters?.edges || [];
+    const media = result.data?.Page?.media?.[0];
+    const edges = media?.characters?.edges || [];
 
     return edges.map((edge: any) => {
       const charName = edge.node.name.full;
