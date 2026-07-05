@@ -3274,7 +3274,7 @@
       "label": "genericMottos",
       "file_type": "code",
       "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L279",
+      "source_location": "L423",
       "id": "utils_mangadetailsenricher_genericmottos",
       "community": 49,
       "norm_label": "genericmottos"
@@ -3283,7 +3283,7 @@
       "label": "genericCharacters",
       "file_type": "code",
       "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L287",
+      "source_location": "L431",
       "id": "utils_mangadetailsenricher_genericcharacters",
       "community": 49,
       "norm_label": "genericcharacters"
@@ -3292,7 +3292,7 @@
       "label": "characterImages",
       "file_type": "code",
       "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L298",
+      "source_location": "L442",
       "id": "utils_mangadetailsenricher_characterimages",
       "community": 49,
       "norm_label": "characterimages"
@@ -3301,7 +3301,7 @@
       "label": "genericStaffNames",
       "file_type": "code",
       "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L307",
+      "source_location": "L451",
       "id": "utils_mangadetailsenricher_genericstaffnames",
       "community": 49,
       "norm_label": "genericstaffnames"
@@ -3310,7 +3310,7 @@
       "label": "genericComments",
       "file_type": "code",
       "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L318",
+      "source_location": "L462",
       "id": "utils_mangadetailsenricher_genericcomments",
       "community": 49,
       "norm_label": "genericcomments"
@@ -3319,7 +3319,7 @@
       "label": "genericUsernames",
       "file_type": "code",
       "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L326",
+      "source_location": "L470",
       "id": "utils_mangadetailsenricher_genericusernames",
       "community": 49,
       "norm_label": "genericusernames"
@@ -3328,7 +3328,7 @@
       "label": "getMangaEnrichedDetails()",
       "file_type": "code",
       "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L337",
+      "source_location": "L481",
       "id": "utils_mangadetailsenricher_getmangaenricheddetails",
       "community": 49,
       "norm_label": "getmangaenricheddetails()"
@@ -13684,9 +13684,9 @@
       "source_file": "frontend/components/manga-details/FormattedDescription.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_manga_details_formatteddescription_tsx",
-      "target": "manga_details_formatteddescription_formatteddescription",
-      "confidence_score": 1.0
+      "target": "manga_details_formatteddescription_formatteddescription"
     },
     {
       "relation": "contains",
@@ -13694,9 +13694,9 @@
       "source_file": "frontend/components/manga-details/FormattedDescription.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_manga_details_formatteddescription_tsx",
-      "target": "manga_details_formatteddescription_formatteddescriptionprops",
-      "confidence_score": 1.0
+      "target": "manga_details_formatteddescription_formatteddescriptionprops"
     },
     {
       "relation": "contains",
@@ -13704,9 +13704,9 @@
       "source_file": "frontend/components/manga-details/FormattedDescription.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_manga_details_formatteddescription_tsx",
-      "target": "manga_details_formatteddescription_parsedlink",
-      "confidence_score": 1.0
+      "target": "manga_details_formatteddescription_parsedlink"
     },
     {
       "relation": "imports_from",
@@ -13715,9 +13715,9 @@
       "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_manga_details_mangadetailsview_tsx",
-      "target": "frontend_components_manga_details_formatteddescription_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_components_manga_details_formatteddescription_tsx"
     },
     {
       "relation": "imports",
@@ -13726,9 +13726,9 @@
       "source_file": "frontend/components/manga-details/MangaDetailsView.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_components_manga_details_mangadetailsview_tsx",
-      "target": "manga_details_formatteddescription_formatteddescription",
-      "confidence_score": 1.0
+      "target": "manga_details_formatteddescription_formatteddescription"
     },
     {
       "relation": "contains",
@@ -19324,5 +19324,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a1df3e9dd221403a20b5bacebb09195ade300c69"
+  "built_at_commit": "d98999416b7a5f59987c141bce966fe75ca5c8df"
 }
