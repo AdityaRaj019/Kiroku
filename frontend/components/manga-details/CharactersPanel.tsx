@@ -22,12 +22,12 @@ export const CharactersPanel: React.FC<CharactersPanelProps> = ({ characters }) 
       {/* Characters List Grid */}
       {characters && characters.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {characters.map((char) => {
+          {characters.map((char, idx) => {
             const isMain = char.role === "Main Character";
             
             return (
               <div
-                key={char.name}
+                key={`${char.name}-${idx}`}
                 className="bg-zinc-50 border-4 border-zinc-950 p-3.5 flex gap-4 shadow-[4px_4px_0px_#000] hover:shadow-[6px_6px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200"
               >
                 {/* Square Image Box */}
