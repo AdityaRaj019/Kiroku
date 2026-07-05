@@ -59,6 +59,7 @@ export const CharactersPanel: React.FC<CharactersPanelProps> = ({ characters, is
                       className="object-cover"
                       sizes="(max-w-768px) 80px, 96px"
                       unoptimized={char.image.startsWith("http")}
+                      referrerPolicy="no-referrer"
                     />
                   ) : (
                     <div className="w-full h-full bg-zinc-200 flex items-center justify-center text-zinc-400">

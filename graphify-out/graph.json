@@ -3157,7 +3157,7 @@
       "label": "JikanCharacterEdge",
       "file_type": "code",
       "source_file": "frontend/utils/anilist.ts",
-      "source_location": "L175",
+      "source_location": "L159",
       "id": "utils_anilist_jikancharacteredge",
       "community": 49,
       "norm_label": "jikancharacteredge"
@@ -3166,7 +3166,7 @@
       "label": "cleanJikanName()",
       "file_type": "code",
       "source_file": "frontend/utils/anilist.ts",
-      "source_location": "L190",
+      "source_location": "L174",
       "id": "utils_anilist_cleanjikanname",
       "community": 49,
       "norm_label": "cleanjikanname()"
@@ -3175,7 +3175,7 @@
       "label": "getDynamicFallbackQuote()",
       "file_type": "code",
       "source_file": "frontend/utils/anilist.ts",
-      "source_location": "L196",
+      "source_location": "L180",
       "id": "utils_anilist_getdynamicfallbackquote",
       "community": 49,
       "norm_label": "getdynamicfallbackquote()"
@@ -3184,7 +3184,7 @@
       "label": "fetchCharactersFromJikan()",
       "file_type": "code",
       "source_file": "frontend/utils/anilist.ts",
-      "source_location": "L222",
+      "source_location": "L206",
       "id": "utils_anilist_fetchcharactersfromjikan",
       "community": 49,
       "norm_label": "fetchcharactersfromjikan()"
@@ -3334,19 +3334,10 @@
       "norm_label": "getstringhash()"
     },
     {
-      "label": "popularSeriesContent",
-      "file_type": "code",
-      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L51",
-      "id": "utils_mangadetailsenricher_popularseriescontent",
-      "community": 49,
-      "norm_label": "popularseriescontent"
-    },
-    {
       "label": "getMangaEnrichedDetails()",
       "file_type": "code",
       "source_file": "frontend/utils/mangaDetailsEnricher.ts",
-      "source_location": "L422",
+      "source_location": "L50",
       "id": "utils_mangadetailsenricher_getmangaenricheddetails",
       "community": 49,
       "norm_label": "getmangaenricheddetails()"
@@ -4646,6 +4637,15 @@
       "id": "kiroku_readme_user_library_api_v1_library",
       "community": 30,
       "norm_label": "user library (`/api/v1/library`)"
+    },
+    {
+      "label": "popularSeriesContent",
+      "file_type": "code",
+      "source_file": "frontend/utils/mangaDetailsEnricher.ts",
+      "source_location": "L51",
+      "community": 49,
+      "norm_label": "popularseriescontent",
+      "id": "utils_mangadetailsenricher_popularseriescontent"
     },
     {
       "label": "genericMottos",
@@ -15191,9 +15191,9 @@
       "source_file": "frontend/utils/anilist.ts",
       "source_location": "L196",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_utils_anilist_ts",
-      "target": "utils_anilist_getdynamicfallbackquote",
-      "confidence_score": 1.0
+      "target": "utils_anilist_getdynamicfallbackquote"
     },
     {
       "relation": "contains",
@@ -19532,5 +19532,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d64e379a6c178e3fc6e1b0ce4f9757dd377c61f6"
+  "built_at_commit": "9e39c8ca977da8ecd325100b80e047acd8eece8c"
 }

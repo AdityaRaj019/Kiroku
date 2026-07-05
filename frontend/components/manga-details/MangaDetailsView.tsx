@@ -200,6 +200,7 @@ export const MangaDetailsView: React.FC<MangaDetailsViewProps> = ({ mangaId }) =
                   sizes="(max-w-768px) 192px, 224px"
                   priority
                   unoptimized={displayCover.startsWith("http")}
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-[radial-gradient(rgba(204,0,0,0.08)_1.5px,transparent_0)] bg-[size:8px_8px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
