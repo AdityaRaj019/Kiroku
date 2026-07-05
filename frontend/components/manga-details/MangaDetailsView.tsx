@@ -238,7 +238,7 @@ export const MangaDetailsView: React.FC<MangaDetailsViewProps> = ({ mangaId }) =
               <div className="relative z-10 space-y-4">
                 <div>
                   <span className="bg-[#CC0000] text-white font-bebas text-xs font-bold tracking-widest px-2 py-0.5 border-2 border-zinc-950 shadow-[1.5px_1.5px_0px_#000] uppercase">
-                    Manga Pulse Catalog
+                    Kiroku Catalog
                   </span>
                   <h1 className="font-bebas text-3xl md:text-5xl font-black tracking-wider text-zinc-950 uppercase mt-2 mb-1">
                     {manga.title}
