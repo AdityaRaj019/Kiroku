@@ -8,7 +8,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ThemeSelector } from "@/components/theme/ThemeSelector";
 import { apiFetch } from "@/utils/api";
-import { getMangaEnrichedDetails } from "@/utils/mangaDetailsEnricher";
+import { getMangaEnrichedDetails, Character } from "@/utils/mangaDetailsEnricher";
 import { HeaderSection } from "./HeaderSection";
 import { TrackingPanel } from "./TrackingPanel";
 import { MetadataPanel } from "./MetadataPanel";
@@ -17,6 +17,7 @@ import { StaffPanel } from "./StaffPanel";
 import { StatsPanel } from "./StatsPanel";
 import { SocialPanel } from "./SocialPanel";
 import { FormattedDescription } from "./FormattedDescription";
+import { fetchCharactersFromAniList } from "@/utils/anilist";
 import { ArrowLeft, Loader2, Quote } from "lucide-react";
 
 interface MangaTag {
@@ -79,11 +80,28 @@ export const MangaDetailsView: React.FC<MangaDetailsViewProps> = ({ mangaId }) =
   const manga = responseData?.data;
   const tracking = responseData?.tracking ?? null;
 
+  // Fetch real characters from AniList API dynamically
+  const { data: aniListCharacters, isLoading: isCharactersLoading } = useQuery<Character[]>({
+    queryKey: ["mangaCharactersAniList", manga?.title],
+    queryFn: async () => {
+      if (!manga?.title) return [];
+      return await fetchCharactersFromAniList(manga.title);
+    },
+    enabled: !!manga?.title,
+  });
+
   // Enrich details (characters, quotes, comments, mottos)
   const enriched = useMemo(() => {
     if (!manga) return null;
     return getMangaEnrichedDetails(manga.sourceId, manga.title);
   }, [manga]);
+
+  const displayCharacters = useMemo(() => {
+    if (aniListCharacters && aniListCharacters.length > 0) {
+      return aniListCharacters;
+    }
+    return enriched?.characters || [];
+  }, [aniListCharacters, enriched]);
 
   const displayCover = manga?.coverUrl || "/images/manga_cover_generic.png";
 
@@ -237,7 +255,7 @@ export const MangaDetailsView: React.FC<MangaDetailsViewProps> = ({ mangaId }) =
             </div>
 
             {/* Characters Panel */}
-            <CharactersPanel characters={enriched.characters} />
+            <CharactersPanel characters={displayCharacters} isLoading={isCharactersLoading} />
 
             {/* Staff Panel */}
             <StaffPanel staff={enriched.staff} />
