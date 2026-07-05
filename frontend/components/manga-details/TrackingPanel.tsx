@@ -57,7 +57,6 @@ export const TrackingPanel: React.FC<TrackingPanelProps> = ({
       const json = await res.json();
       return json.data || [];
     },
-    enabled: isChaptersOpen,
   });
 
   // Filter and sort chapters ascending (1, 2, 3...)
@@ -178,6 +177,16 @@ export const TrackingPanel: React.FC<TrackingPanelProps> = ({
 
   const nextChapterToRead = currentProgress < totalChapters ? currentProgress + 1 : null;
 
+  const nextChapterUrl = useMemo(() => {
+    if (!nextChapterToRead || !sortedChapters.length) {
+      return `https://mangadex.org/title/${mangaId}`;
+    }
+    const match = sortedChapters.find((c) => parseFloat(c.chapter) === nextChapterToRead);
+    return match
+      ? `https://mangadex.org/chapter/${match.sourceId}`
+      : `https://mangadex.org/title/${mangaId}`;
+  }, [nextChapterToRead, sortedChapters, mangaId]);
+
   return (
     <div className="w-full flex flex-col items-center md:items-start gap-4">
       
@@ -262,6 +271,27 @@ export const TrackingPanel: React.FC<TrackingPanelProps> = ({
           </div>
         )}
       </div>
+
+      {/* Read Next Button / Catch Up Banner */}
+      {isFollowing && (
+        <div className="w-full max-w-md text-zinc-950 font-bold">
+          {nextChapterToRead !== null ? (
+            <a
+              href={nextChapterUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full h-12 flex items-center justify-center gap-2 border-4 border-zinc-950 bg-[#FFD700] text-zinc-950 font-bebas text-lg font-bold tracking-wider shadow-[3px_3px_0px_#000] hover:bg-[#FFD700]/90 active:translate-x-[1px] active:translate-y-[1px] active:shadow-[1.5px_1.5px_0px_#000] transition-all select-none uppercase px-6 text-center"
+            >
+              <Play className="w-4 h-4 shrink-0 fill-zinc-950" />
+              Read Next: Chapter {nextChapterToRead} &rarr;
+            </a>
+          ) : (
+            <div className="w-full h-12 flex items-center justify-center gap-2 border-4 border-zinc-950 border-dashed bg-green-50 text-green-800 font-bebas text-md tracking-wider select-none uppercase px-6 font-black">
+              🎉 All Caught Up!
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Error Message */}
       {errorMessage && (
