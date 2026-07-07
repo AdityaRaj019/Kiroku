@@ -1,21 +1,19 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useParams } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useRouteGuard } from "@/hooks/useRouteGuard";
 import { useUserProfile } from "@/hooks/useUserProfile";
 import { useUserLibrary } from "@/hooks/useUserLibrary";
+import { useIsMounted } from "@/hooks/useIsMounted";
 import { ThemeSelector } from "@/components/theme/ThemeSelector";
 import Image from "next/image";
 import Link from "next/link";
 import { 
-  Award, 
-  BookOpen, 
   Calendar, 
   Star, 
-  Trophy, 
   MessageSquare,
   Play, 
   BookMarked,
@@ -31,12 +29,7 @@ export default function PublicProfilePage() {
   const targetUserId = parseInt(idString, 10);
 
   const [activeTab, setActiveTab] = useState<LibraryFilterStatus>("ALL");
-  const [mounted, setMounted] = useState(false);
-
-  // Mount effect to safeguard against SSR hydration mismatches
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useIsMounted();
 
   // Retrieve user statistics, rank, and details
   const { 
@@ -277,7 +270,7 @@ export default function PublicProfilePage() {
                         <span>{formatLocalDate(comment.createdAt)}</span>
                       </div>
                       <p className="text-sm font-sans font-medium text-zinc-700 italic leading-relaxed">
-                        "{comment.body}"
+                        &ldquo;{comment.body}&rdquo;
                       </p>
                     </div>
                   ))}

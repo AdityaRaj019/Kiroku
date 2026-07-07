@@ -1,24 +1,23 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useRouteGuard } from "@/hooks/useRouteGuard";
 import { useAuthStore } from "@/hooks/useAuthStore";
 import { useUserProfile } from "@/hooks/useUserProfile";
 import { useUserLibrary } from "@/hooks/useUserLibrary";
+import { useIsMounted } from "@/hooks/useIsMounted";
 import { EditProfileModal } from "@/components/dashboard/EditProfileModal";
 import { ThemeSelector } from "@/components/theme/ThemeSelector";
 import Image from "next/image";
 import Link from "next/link";
 import { 
   Award, 
-  BookOpen, 
   Calendar, 
   Edit3, 
   Star, 
   Trophy, 
-  CheckCircle2, 
   Play, 
   BookMarked,
   Loader2
@@ -32,12 +31,7 @@ export default function DashboardPage() {
   
   const [activeTab, setActiveTab] = useState<LibraryFilterStatus>("ALL");
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  // Mount effect to safeguard against SSR hydration mismatches
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useIsMounted();
 
   const userId = currentUser?.id;
 
