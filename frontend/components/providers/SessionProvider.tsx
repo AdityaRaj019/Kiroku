@@ -8,6 +8,8 @@ interface SessionProviderProps {
   children: React.ReactNode;
 }
 
+let sessionRestorePromise: Promise<void> | null = null;
+
 export const SessionProvider: React.FC<SessionProviderProps> = ({ children }) => {
   const [isRestoring, setIsRestoring] = useState(true);
   const setSession = useAuthStore((state) => state.setSession);
@@ -27,7 +29,6 @@ export const SessionProvider: React.FC<SessionProviderProps> = ({ children }) =>
 
         if (!refreshRes.ok) {
           clearSession();
-          setIsRestoring(false);
           return;
         }
 
@@ -43,7 +44,6 @@ export const SessionProvider: React.FC<SessionProviderProps> = ({ children }) =>
 
         if (!profileRes.ok) {
           clearSession();
-          setIsRestoring(false);
           return;
         }
 
@@ -52,12 +52,16 @@ export const SessionProvider: React.FC<SessionProviderProps> = ({ children }) =>
       } catch (err) {
         console.error("[SessionProvider] Session restoration failed:", err);
         clearSession();
-      } finally {
-        setIsRestoring(false);
       }
     };
 
-    restoreSession();
+    if (!sessionRestorePromise) {
+      sessionRestorePromise = restoreSession();
+    }
+
+    sessionRestorePromise.finally(() => {
+      setIsRestoring(false);
+    });
   }, [setSession, clearSession]);
 
   if (isRestoring) {

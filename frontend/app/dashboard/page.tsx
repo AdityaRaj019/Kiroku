@@ -28,6 +28,7 @@ type LibraryFilterStatus = "ALL" | "READING" | "COMPLETED" | "PLAN_TO_READ" | "P
 export default function DashboardPage() {
   const isReady = useRouteGuard();
   const currentUser = useAuthStore((state) => state.user);
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
   
   const [activeTab, setActiveTab] = useState<LibraryFilterStatus>("ALL");
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -50,6 +51,7 @@ export default function DashboardPage() {
   } = useUserLibrary({
     status: activeTab === "ALL" ? undefined : activeTab,
     limit: 100, // retrieve all for clean dashboard list
+    enabled: isAuthenticated,
   });
 
   if (!isReady || !mounted) {

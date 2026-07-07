@@ -5,8 +5,9 @@ import { useParams } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useRouteGuard } from "@/hooks/useRouteGuard";
+import { useAuthStore } from "@/hooks/useAuthStore";
 import { useUserProfile } from "@/hooks/useUserProfile";
-import { useUserLibrary } from "@/hooks/useUserLibrary";
+import { usePublicUserLibrary } from "@/hooks/useUserLibrary";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { ThemeSelector } from "@/components/theme/ThemeSelector";
 import Image from "next/image";
@@ -27,6 +28,7 @@ export default function PublicProfilePage() {
   const params = useParams();
   const idString = params.id as string;
   const targetUserId = parseInt(idString, 10);
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
   const [activeTab, setActiveTab] = useState<LibraryFilterStatus>("ALL");
   const mounted = useIsMounted();
@@ -43,9 +45,10 @@ export default function PublicProfilePage() {
     data: libraryData, 
     isLoading: isLibraryLoading, 
     isError: isLibraryError 
-  } = useUserLibrary({
+  } = usePublicUserLibrary(targetUserId, {
     status: activeTab === "ALL" ? undefined : activeTab,
     limit: 100, // retrieve all for clean profile list
+    enabled: isAuthenticated,
   });
 
   if (!isReady || !mounted) {

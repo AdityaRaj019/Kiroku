@@ -36,6 +36,9 @@ export interface LibraryListResponse {
   };
 }
 
+/**
+ * Retrieve followed manga items for the authenticated user (private list).
+ */
 export function useUserLibrary(params: {
   status?: string;
   mediaType?: string;
@@ -44,18 +47,21 @@ export function useUserLibrary(params: {
   order?: string;
   page?: number;
   limit?: number;
+  enabled?: boolean;
 } = {}) {
+  const { enabled = true, ...rest } = params;
+
   return useQuery<LibraryListResponse>({
-    queryKey: ["userLibrary", params],
+    queryKey: ["userLibrary", rest],
     queryFn: async () => {
       const queryParams = new URLSearchParams();
-      if (params.status) queryParams.append("status", params.status);
-      if (params.mediaType) queryParams.append("mediaType", params.mediaType);
-      if (params.favorite !== undefined) queryParams.append("favorite", String(params.favorite));
-      if (params.sort) queryParams.append("sort", params.sort);
-      if (params.order) queryParams.append("order", params.order);
-      if (params.page) queryParams.append("page", String(params.page));
-      if (params.limit) queryParams.append("limit", String(params.limit));
+      if (rest.status) queryParams.append("status", rest.status);
+      if (rest.mediaType) queryParams.append("mediaType", rest.mediaType);
+      if (rest.favorite !== undefined) queryParams.append("favorite", String(rest.favorite));
+      if (rest.sort) queryParams.append("sort", rest.sort);
+      if (rest.order) queryParams.append("order", rest.order);
+      if (rest.page) queryParams.append("page", String(rest.page));
+      if (rest.limit) queryParams.append("limit", String(rest.limit));
 
       const res = await apiFetch(`/library?${queryParams.toString()}`);
       if (!res.ok) {
@@ -63,5 +69,47 @@ export function useUserLibrary(params: {
       }
       return res.json();
     },
+    enabled,
+  });
+}
+
+/**
+ * Retrieve followed manga items for a specific target user (public profile list).
+ */
+export function usePublicUserLibrary(
+  userId: number | undefined,
+  params: {
+    status?: string;
+    mediaType?: string;
+    favorite?: boolean;
+    sort?: string;
+    order?: string;
+    page?: number;
+    limit?: number;
+    enabled?: boolean;
+  } = {}
+) {
+  const { enabled = true, ...rest } = params;
+
+  return useQuery<LibraryListResponse>({
+    queryKey: ["publicUserLibrary", userId, rest],
+    queryFn: async () => {
+      if (!userId) throw new Error("User ID is required");
+      const queryParams = new URLSearchParams();
+      if (rest.status) queryParams.append("status", rest.status);
+      if (rest.mediaType) queryParams.append("mediaType", rest.mediaType);
+      if (rest.favorite !== undefined) queryParams.append("favorite", String(rest.favorite));
+      if (rest.sort) queryParams.append("sort", rest.sort);
+      if (rest.order) queryParams.append("order", rest.order);
+      if (rest.page) queryParams.append("page", String(rest.page));
+      if (rest.limit) queryParams.append("limit", String(rest.limit));
+
+      const res = await apiFetch(`/library/users/${userId}?${queryParams.toString()}`);
+      if (!res.ok) {
+        throw new Error("Failed to fetch public user library");
+      }
+      return res.json();
+    },
+    enabled: enabled && !!userId,
   });
 }
