@@ -40,9 +40,30 @@ const preHashHex = createHash("sha256").update(TEST_PASSWORD).digest("hex");
 const HASHED_PASSWORD = hashSync(preHashHex, 12); // Matches crypto.ts (12 rounds + pre-hash)
 
 const usersData = [
-  { email: "alice@mangapulse.dev", name: "Alice Nakamura", passwordHash: HASHED_PASSWORD },
-  { email: "bob@mangapulse.dev", name: "Bob Tanaka", passwordHash: HASHED_PASSWORD },
-  { email: "carol@mangapulse.dev", name: "Carol Suzuki", passwordHash: HASHED_PASSWORD },
+  {
+    email: "alice@mangapulse.dev",
+    name: "Alice Nakamura",
+    passwordHash: HASHED_PASSWORD,
+    avatarUrl: "https://api.dicebear.com/7.x/adventurer/svg?seed=Alice",
+    bio: "Avid shonen reader and anime enthusiast. Looking for my next 10/10 manga!",
+    exp: 1250,
+  },
+  {
+    email: "bob@mangapulse.dev",
+    name: "Bob Tanaka",
+    passwordHash: HASHED_PASSWORD,
+    avatarUrl: "https://api.dicebear.com/7.x/adventurer/svg?seed=Bob",
+    bio: "Weekly reader of Jujutsu Kaisen and Chainsaw Man. Let's debate powerscaling.",
+    exp: 420,
+  },
+  {
+    email: "carol@mangapulse.dev",
+    name: "Carol Suzuki",
+    passwordHash: HASHED_PASSWORD,
+    avatarUrl: "https://api.dicebear.com/7.x/adventurer/svg?seed=Carol",
+    bio: "I prefer psychological thriller and sci-fi manga. Monster is a masterpiece!",
+    exp: 650,
+  },
 ];
 
 const mangaData = [
@@ -157,7 +178,13 @@ async function main() {
   for (const data of usersData) {
     const user = await prisma.user.upsert({
       where: { email: data.email },
-      update: { name: data.name, passwordHash: data.passwordHash },
+      update: {
+        name: data.name,
+        passwordHash: data.passwordHash,
+        avatarUrl: data.avatarUrl,
+        bio: data.bio,
+        exp: data.exp,
+      },
       create: data,
     });
     users.push(user);

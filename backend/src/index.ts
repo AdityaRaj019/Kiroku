@@ -16,6 +16,7 @@ import { verifyToken } from "./utils/jwt";
 import { authRouter } from "./modules/auth/auth.routes";
 import { mangaRouter } from "./modules/manga/manga.routes";
 import { libraryRouter } from "./modules/library/library.routes";
+import { userRouter } from "./modules/user/user.routes";
 import { errorMiddleware } from "./middlewares/error.middleware";
 
 const app = express();
@@ -126,6 +127,9 @@ app.use("/api/v1/manga", mangaRouter);
 
 // Library routes (rate limited)
 app.use("/api/v1/library", libraryLimiter, libraryRouter);
+
+// User routes (rate limited)
+app.use("/api/v1/users", libraryLimiter, userRouter);
 
 // Health check
 app.get("/health", async (_req, res) => {
