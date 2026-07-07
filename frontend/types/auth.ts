@@ -10,6 +10,9 @@ export interface UserPayload {
   id: number;
   email: string;
   name: string | null;
+  avatarUrl?: string | null;
+  bio?: string | null;
+  exp?: number;
   createdAt: string;
   updatedAt?: string;
 }

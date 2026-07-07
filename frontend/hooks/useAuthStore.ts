@@ -26,6 +26,9 @@ interface AuthActions {
 
   /** Clear all session state (logout / token revocation). */
   clearSession: () => void;
+
+  /** Update user profile fields dynamically inside the active session. */
+  updateUserProfile: (profile: Partial<Pick<UserPayload, "name" | "avatarUrl" | "bio">>) => void;
 }
 
 // ─── Initial State ───────────────────────────────────────────
@@ -47,4 +50,9 @@ export const useAuthStore = create<AuthState & AuthActions>()((set) => ({
   setAccessToken: (token) => set({ accessToken: token }),
 
   clearSession: () => set({ ...initialState }),
+
+  updateUserProfile: (profile) =>
+    set((state) => ({
+      user: state.user ? { ...state.user, ...profile } : null,
+    })),
 }));
